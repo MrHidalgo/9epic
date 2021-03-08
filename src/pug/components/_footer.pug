@@ -1,7 +1,101 @@
 // FOOTER :: START
 
 footer#footer.footer
+
+  .footer__bg
+
   .c-grid
-    .footer__wrapper
+    .footer__wrapper.footer__wrapper-1
+
+      .footer__wrapper-bg
+
+      form.footer__form(action='' method='' autocomplete='off')
+        p.footer__form-title Want us to get back to you?
+        .footer__form-group
+          div
+            .footer__form-field
+              label
+                span First Name*
+                input(type='text' placeholder='Enter your first name')
+          div
+            .footer__form-field
+              label
+                span last Name*
+                input(type='text' placeholder='Enter your last name')
+          div
+            .footer__form-field
+              label
+                span Business email*
+                input(type='email' placeholder='example@mymail.com')
+        .footer__form-group
+          div
+            .footer__form-field
+              label
+                span Mobile number
+                input(type='text' placeholder='Phone number')
+          div
+            .footer__form-field
+              label
+                span job title
+                input(type='text' placeholder='Enter here a job title')
+          div
+            .footer__form-field
+              label
+                span organization
+                input(type='text' placeholder='Enter your organization')
+
+        .footer__form-field
+          label
+            span your message for us
+            textarea(placeholder='How can we help you?')
+
+        .footer__form-field.footer__form-field--btn
+
+          .c-btn__wrapper
+            button.c-btn.c-btn__border(type='button')
+              span Send
+
+
+    .footer__wrapper.footer__wrapper-2
+      div
+        div
+          p.footer__heading Interested to work with us?
+          p.footer__address!= "100 Overlook Center, 2 nd Floor, Princeton, NJ 08540, USA <img src='img/img-usa.svg'>"
+        div
+          p.footer__heading Interested to work with us?
+          p.footer__address!= "Mytri Square, 2-41/11, 6/2, Gachibowli - Miyapur Road, Prashanth Nagar Colony, Hyderabad, Telangana 500084, India <img src='img/img-india.svg'>"
+      div
+        div
+          p.footer__heading Contact us
+          a.footer__link(href="#") +1 (732) 328-9119
+        div
+          p.footer__heading Have a question?
+          a.footer__link(href="#") info@epic9.io
+
+    .footer__wrapper.footer__wrapper-3
+      div
+
+        .logo.logo--footer
+          a.logo__btn(href="#")
+            img.logo__img(src="img/logo-color.svg" alt="")
+
+      div
+
+        p.footer__title Foundation for Digital Innovation
+        p.footer__desc Epic9 is a solution-led Cloud consulting company driven by a passion for delivering the “Faster, Better, Cheaper” promise of Cloud, Automation, and NextGen technologies.
+
+      div
+
+        .c-btn__wrapper
+          a.c-btn.c-btn__border(href="#")
+            span Contact us
+          a.c-btn.c-btn__bg(href="#")
+            span Sign up
+
+
+    .footer__wrapper.footer__wrapper-4
+
+      .copyright
+        p.copyright__text Copyright ©Epic9 2021. All rights reserved
 
 // FOOTER :: END

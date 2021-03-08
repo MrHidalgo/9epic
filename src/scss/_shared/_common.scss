@@ -1,3 +1,16 @@
 // COMMON :: START
 
+.copyright {
+	display: flex;
+	justify-content: center;
+
+	&__text {
+		@extend %fontOpenSans;
+		font-size: 12px;
+		line-height: 16px;
+		text-align: center;
+		color: #FFFFFF;
+	}
+}
+
 // COMMON :: END

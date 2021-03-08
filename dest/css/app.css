@@ -1,6 +1,12 @@
 @charset "UTF-8";
 /* line 26, src/scss/_utilities/_extend.scss */
-.approach__tab > div span, .approach__tab-desc ul span {
+.copyright__text, .c-btn span, .footer__form-field label > span, .footer__form-field label input,
+.footer__form-field label textarea, .footer__form-field label input.placeholder,
+.footer__form-field label textarea.placeholder, .footer__form-field label input:-moz-placeholder,
+.footer__form-field label textarea:-moz-placeholder, .footer__form-field label input::-moz-placeholder,
+.footer__form-field label textarea::-moz-placeholder, .footer__form-field label input:-ms-input-placeholder,
+.footer__form-field label textarea:-ms-input-placeholder, .footer__form-field label input::-webkit-input-placeholder,
+.footer__form-field label textarea::-webkit-input-placeholder, .footer__desc, .approach__tab > div span, .approach__tab-desc ul span {
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -259,6 +265,26 @@ picture {
   max-width: 100%;
 }
 
+/* line 3, src/scss/_shared/_common.scss */
+.copyright {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/* line 7, src/scss/_shared/_common.scss */
+.copyright__text {
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
 /* line 1, src/scss/_shared/_iconFont.scss */
 .icon-font {
   display: -webkit-box;
@@ -268,6 +294,25 @@ picture {
   line-height: 1;
 }
 
+/* line 6, src/scss/_macros/_logotype.scss */
+.logo__btn {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+/* line 11, src/scss/_macros/_logotype.scss */
+.logo__img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 /* line 3, src/scss/_macros/_title.scss */
 .c-title {
   font-weight: bold;
@@ -275,6 +320,481 @@ picture {
   line-height: 73px;
   text-align: center;
   color: #121E31;
+}
+
+/* line 3, src/scss/_macros/_btn.scss */
+.c-btn {
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: auto;
+  height: 50px;
+  padding-left: 32px;
+  padding-right: 32px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-border-radius: 2rem;
+          border-radius: 2rem;
+}
+
+/* line 17, src/scss/_macros/_btn.scss */
+.c-btn__wrapper {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* line 22, src/scss/_macros/_btn.scss */
+.c-btn__wrapper--center {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/* line 25, src/scss/_macros/_btn.scss */
+.c-btn__wrapper--end {
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+/* line 30, src/scss/_macros/_btn.scss */
+.c-btn__border {
+  border: 1px solid #fff;
+  background-color: transparent;
+}
+
+/* line 35, src/scss/_macros/_btn.scss */
+.c-btn__bg {
+  overflow: hidden;
+  background-color: #00B94F;
+}
+
+/* line 39, src/scss/_macros/_btn.scss */
+.c-btn__bg:after {
+  content: '';
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: -webkit-linear-gradient(272.44deg, #4097D9 -48.98%, #30C4A0 68.87%, #00B94F 180.55%);
+  background: -o-linear-gradient(272.44deg, #4097D9 -48.98%, #30C4A0 68.87%, #00B94F 180.55%);
+  background: linear-gradient(177.56deg, #4097D9 -48.98%, #30C4A0 68.87%, #00B94F 180.55%);
+}
+
+/* line 51, src/scss/_macros/_btn.scss */
+.c-btn span {
+  z-index: 2;
+  position: relative;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 19px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+/* line 3, src/scss/_components/_footer.scss */
+.footer {
+  position: relative;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+/* line 8, src/scss/_components/_footer.scss */
+.footer__bg {
+  z-index: 0;
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: -webkit-calc(100% - 100px);
+  max-width: calc(100% - 100px);
+  height: 600px;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+  background-color: #0A0A0A;
+}
+
+/* line 23, src/scss/_components/_footer.scss */
+.footer__wrapper {
+  z-index: 2;
+  position: relative;
+}
+
+/* line 27, src/scss/_components/_footer.scss */
+.footer__wrapper-1 {
+  overflow: hidden;
+  padding: 50px 60px;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+  background-color: #4097D9;
+}
+
+/* line 34, src/scss/_components/_footer.scss */
+.footer__wrapper-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 50px;
+  margin-bottom: 50px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* line 42, src/scss/_components/_footer.scss */
+.footer__wrapper-2 > div:nth-of-type(1) {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  max-width: 680px;
+}
+
+/* line 48, src/scss/_components/_footer.scss */
+.footer__wrapper-2 > div:nth-of-type(1) > div:nth-of-type(1) {
+  width: 100%;
+  max-width: 230px;
+}
+
+/* line 52, src/scss/_components/_footer.scss */
+.footer__wrapper-2 > div:nth-of-type(1) > div:nth-of-type(2) {
+  position: relative;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  min-width: 1px;
+  max-width: 100%;
+  padding-left: 20px;
+  margin-left: 20px;
+}
+
+/* line 60, src/scss/_components/_footer.scss */
+.footer__wrapper-2 > div:nth-of-type(1) > div:nth-of-type(2):after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 0;
+  width: 1px;
+  height: 30px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* line 71, src/scss/_components/_footer.scss */
+.footer__wrapper-2 > div:nth-of-type(1) > div:nth-of-type(2) .footer__heading {
+  opacity: 0;
+}
+
+/* line 77, src/scss/_components/_footer.scss */
+.footer__wrapper-2 > div:nth-of-type(2) {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  min-width: 1px;
+  max-width: 100%;
+  padding-left: 90px;
+}
+
+/* line 85, src/scss/_components/_footer.scss */
+.footer__wrapper-2 > div:nth-of-type(2) > div {
+  white-space: nowrap;
+}
+
+/* line 92, src/scss/_components/_footer.scss */
+.footer__wrapper-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* line 97, src/scss/_components/_footer.scss */
+.footer__wrapper-3 > div:nth-of-type(2) {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  min-width: 1px;
+  max-width: 100%;
+  padding-left: 30px;
+  padding-right: 55px;
+}
+
+/* line 107, src/scss/_components/_footer.scss */
+.footer__wrapper-3 .c-btn:not(:last-of-type) {
+  margin-right: 11px;
+}
+
+/* line 113, src/scss/_components/_footer.scss */
+.footer__wrapper-4 {
+  padding-top: 100px;
+  padding-bottom: 35px;
+}
+
+/* line 118, src/scss/_components/_footer.scss */
+.footer__wrapper-bg {
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/img-footer-pattern.svg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  -webkit-background-size: cover;
+          background-size: cover;
+}
+
+/* line 132, src/scss/_components/_footer.scss */
+.footer__form {
+  z-index: 2;
+  position: relative;
+}
+
+/* line 136, src/scss/_components/_footer.scss */
+.footer__form-title {
+  padding-bottom: 60px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  color: #FFFFFF;
+}
+
+/* line 144, src/scss/_components/_footer.scss */
+.footer__form-group {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+/* line 148, src/scss/_components/_footer.scss */
+.footer__form-group > div {
+  width: 100%;
+  max-width: -webkit-calc((100% - 80px) / 3);
+  max-width: calc((100% - 80px) / 3);
+  padding-bottom: 50px;
+}
+
+/* line 155, src/scss/_components/_footer.scss */
+.footer__form-field {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+/* line 159, src/scss/_components/_footer.scss */
+.footer__form-field.footer__form-field--btn {
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding-top: 15px;
+}
+
+/* line 164, src/scss/_components/_footer.scss */
+.footer__form-field .c-btn {
+  min-width: 140px;
+}
+
+/* line 168, src/scss/_components/_footer.scss */
+.footer__form-field label {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+/* line 173, src/scss/_components/_footer.scss */
+.footer__form-field label > span {
+  display: block;
+  font-weight: 800;
+  font-size: 10px;
+  line-height: 14px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+/* line 183, src/scss/_components/_footer.scss */
+.footer__form-field label input,
+.footer__form-field label textarea {
+  outline: none;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 35px;
+  padding: 0;
+  border: none;
+  border-bottom: 2px solid transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-border-radius: 0;
+          border-radius: 0;
+  background-color: transparent;
+  font-size: 14px;
+  line-height: 19px;
+  color: #ffffff;
+  -webkit-transition: border-color 0.3s ease-in-out;
+  -o-transition: border-color 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out;
+}
+
+/* line 88, src/scss/_utilities/_mixin.scss */
+.footer__form-field label input.placeholder,
+.footer__form-field label textarea.placeholder {
+  font-size: 14px;
+  line-height: 19px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* line 89, src/scss/_utilities/_mixin.scss */
+.footer__form-field label input:-moz-placeholder,
+.footer__form-field label textarea:-moz-placeholder {
+  font-size: 14px;
+  line-height: 19px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* line 90, src/scss/_utilities/_mixin.scss */
+.footer__form-field label input::-moz-placeholder,
+.footer__form-field label textarea::-moz-placeholder {
+  font-size: 14px;
+  line-height: 19px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* line 91, src/scss/_utilities/_mixin.scss */
+.footer__form-field label input:-ms-input-placeholder,
+.footer__form-field label textarea:-ms-input-placeholder {
+  font-size: 14px;
+  line-height: 19px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* line 92, src/scss/_utilities/_mixin.scss */
+.footer__form-field label input::-webkit-input-placeholder,
+.footer__form-field label textarea::-webkit-input-placeholder {
+  font-size: 14px;
+  line-height: 19px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* line 208, src/scss/_components/_footer.scss */
+.footer__form-field label input:focus,
+.footer__form-field label textarea:focus {
+  border-color: #fff;
+  -webkit-transition: border-color 0.3s ease-in-out;
+  -o-transition: border-color 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out;
+}
+
+/* line 214, src/scss/_components/_footer.scss */
+.footer__form-field label textarea {
+  resize: none;
+}
+
+/* line 221, src/scss/_components/_footer.scss */
+.footer__title {
+  padding-bottom: 10px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  color: #FFFFFF;
+}
+
+/* line 229, src/scss/_components/_footer.scss */
+.footer__desc {
+  font-size: 14px;
+  line-height: 24px;
+  color: #FFFFFF;
+}
+
+/* line 236, src/scss/_components/_footer.scss */
+.footer__heading {
+  padding-bottom: 10px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #FFFFFF;
+}
+
+/* line 244, src/scss/_components/_footer.scss */
+.footer__link {
+  font-size: 14px;
+  line-height: 19px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* line 250, src/scss/_components/_footer.scss */
+.footer__address {
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* line 255, src/scss/_components/_footer.scss */
+.footer__address img {
+  display: inline-block;
+  vertical-align: middle;
 }
 
 /* line 3, src/scss/_components/homepage/_approach.scss */
