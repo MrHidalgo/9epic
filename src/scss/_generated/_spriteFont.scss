@@ -1,0 +1,100 @@
+@font-face {
+	font-family: "iconFont";
+	src: url('../fonts/iconFont.eot');
+	src: url('../fonts/iconFont.eot?#iefix') format('eot'),
+		url('../fonts/iconFont.woff2') format('woff2'),
+		url('../fonts/iconFont.woff') format('woff'),
+		url('../fonts/iconFont.ttf') format('truetype'),
+		url('../fonts/iconFont.svg#iconFont') format('svg');
+}
+
+@mixin icon-styles {
+	font-family: "iconFont", sans-serif;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	// speak: none; // only necessary if not using the private unicode range (firstGlyph option)
+	text-decoration: none;
+	text-transform: none;
+}
+
+%icon {
+	@include icon-styles;
+}
+
+@function icon-char($filename) {
+	$char: "";
+
+	@if $filename == build {
+		$char: "\E001";
+	}
+	@if $filename == circle-checked {
+		$char: "\E002";
+	}
+	@if $filename == cloud-check {
+		$char: "\E003";
+	}
+	@if $filename == cloud {
+		$char: "\E004";
+	}
+	@if $filename == database {
+		$char: "\E005";
+	}
+	@if $filename == list-dots {
+		$char: "\E006";
+	}
+	@if $filename == pen {
+		$char: "\E007";
+	}
+	@if $filename == rocket {
+		$char: "\E008";
+	}
+
+	@return $char;
+}
+
+@mixin icon($filename, $insert: before, $extend: true) {
+	&:#{$insert} {
+		@if $extend {
+			@extend %icon;
+		} @else {
+			@include icon-styles;
+		}
+		content: icon-char($filename);
+	}
+}
+
+.icon-build {
+	@include icon(build);
+
+}
+.icon-circle-checked {
+	@include icon(circle-checked);
+
+}
+.icon-cloud-check {
+	@include icon(cloud-check);
+
+}
+.icon-cloud {
+	@include icon(cloud);
+
+}
+.icon-database {
+	@include icon(database);
+
+}
+.icon-list-dots {
+	@include icon(list-dots);
+
+}
+.icon-pen {
+	@include icon(pen);
+
+}
+.icon-rocket {
+	@include icon(rocket);
+
+}

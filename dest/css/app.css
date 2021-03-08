@@ -1,0 +1,726 @@
+@charset "UTF-8";
+/* line 26, src/scss/_utilities/_extend.scss */
+.approach__tab > div span, .approach__tab-desc ul span {
+  font-family: 'Open Sans', sans-serif;
+}
+
+@font-face {
+  font-family: "iconFont";
+  src: url("../fonts/iconFont.eot");
+  src: url("../fonts/iconFont.eot?#iefix") format("eot"), url("../fonts/iconFont.woff2") format("woff2"), url("../fonts/iconFont.woff") format("woff"), url("../fonts/iconFont.ttf") format("truetype"), url("../fonts/iconFont.svg#iconFont") format("svg");
+}
+
+/* line 23, src/scss/_generated/_spriteFont.scss */
+.icon-build:before, .icon-circle-checked:before, .icon-cloud-check:before, .icon-cloud:before, .icon-database:before, .icon-list-dots:before, .icon-pen:before, .icon-rocket:before {
+  font-family: "iconFont", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  text-decoration: none;
+  text-transform: none;
+}
+
+/* line 59, src/scss/_generated/_spriteFont.scss */
+.icon-build:before {
+  content: "";
+}
+
+/* line 59, src/scss/_generated/_spriteFont.scss */
+.icon-circle-checked:before {
+  content: "";
+}
+
+/* line 59, src/scss/_generated/_spriteFont.scss */
+.icon-cloud-check:before {
+  content: "";
+}
+
+/* line 59, src/scss/_generated/_spriteFont.scss */
+.icon-cloud:before {
+  content: "";
+}
+
+/* line 59, src/scss/_generated/_spriteFont.scss */
+.icon-database:before {
+  content: "";
+}
+
+/* line 59, src/scss/_generated/_spriteFont.scss */
+.icon-list-dots:before {
+  content: "";
+}
+
+/* line 59, src/scss/_generated/_spriteFont.scss */
+.icon-pen:before {
+  content: "";
+}
+
+/* line 59, src/scss/_generated/_spriteFont.scss */
+.icon-rocket:before {
+  content: "";
+}
+
+/* line 1, src/scss/_shared/_main-setting-reset.scss */
+html,
+body {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* line 6, src/scss/_shared/_main-setting-reset.scss */
+html.is-hideScroll,
+body.is-hideScroll {
+  width: 100%;
+  overflow: hidden !important;
+}
+
+/* line 13, src/scss/_shared/_main-setting-reset.scss */
+html {
+  -ms-overflow-style: scrollbar;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* line 19, src/scss/_shared/_main-setting-reset.scss */
+body {
+  overflow-x: hidden;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  line-height: 1.42857143;
+  font-size: 14px;
+  font-weight: normal;
+  font-family: "Prompt", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 33, src/scss/_shared/_main-setting-reset.scss */
+body {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+}
+
+/* line 38, src/scss/_shared/_main-setting-reset.scss */
+body > .body {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 auto;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+}
+
+/* line 44, src/scss/_shared/_main-setting-reset.scss */
+body > .body--start {
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+/* line 51, src/scss/_shared/_main-setting-reset.scss */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* line 54, src/scss/_shared/_main-setting-reset.scss */
+*:before, *:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* line 61, src/scss/_shared/_main-setting-reset.scss */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-size: 100%;
+  margin: 0;
+}
+
+/* line 71, src/scss/_shared/_main-setting-reset.scss */
+button,
+input {
+  overflow: visible;
+}
+
+/* line 77, src/scss/_shared/_main-setting-reset.scss */
+button[disabled] {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+/* line 83, src/scss/_shared/_main-setting-reset.scss */
+[type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+/* line 89, src/scss/_shared/_main-setting-reset.scss */
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/* line 95, src/scss/_shared/_main-setting-reset.scss */
+textarea {
+  overflow: auto;
+}
+
+/* line 100, src/scss/_shared/_main-setting-reset.scss */
+p,
+h1, h2, h3, h4, h5, h6,
+hr {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 108, src/scss/_shared/_main-setting-reset.scss */
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 113, src/scss/_shared/_main-setting-reset.scss */
+ul li {
+  list-style: none;
+}
+
+/* line 119, src/scss/_shared/_main-setting-reset.scss */
+a {
+  outline: none;
+  text-decoration: none;
+}
+
+/* line 124, src/scss/_shared/_main-setting-reset.scss */
+a:hover, a:focus {
+  text-decoration: none;
+}
+
+/* line 131, src/scss/_shared/_main-setting-reset.scss */
+input[type="text"] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+/* line 135, src/scss/_shared/_main-setting-reset.scss */
+picture {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 8, src/scss/_shared/_grid.scss */
+.c-grid, .c-grid-fluid {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+/* line 20, src/scss/_shared/_grid.scss */
+.c-grid {
+  max-width: 1170px;
+}
+
+/* line 26, src/scss/_shared/_grid.scss */
+.c-grid-fluid {
+  max-width: 100%;
+}
+
+/* line 1, src/scss/_shared/_iconFont.scss */
+.icon-font {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: 1;
+}
+
+/* line 3, src/scss/_macros/_title.scss */
+.c-title {
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 73px;
+  text-align: center;
+  color: #121E31;
+}
+
+/* line 3, src/scss/_components/homepage/_approach.scss */
+.approach {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+/* line 7, src/scss/_components/homepage/_approach.scss */
+.approach__title {
+  padding-bottom: 70px;
+}
+
+/* line 11, src/scss/_components/homepage/_approach.scss */
+.approach__subtitle {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 100px;
+  -webkit-border-radius: 6px;
+          border-radius: 6px;
+  background-color: rgba(64, 151, 217, 0.05);
+}
+
+/* line 19, src/scss/_components/homepage/_approach.scss */
+.approach__subtitle p {
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+  color: #4097D9;
+}
+
+/* line 27, src/scss/_components/homepage/_approach.scss */
+.approach__tab {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  min-width: 1px;
+  max-width: 100%;
+  padding-left: 60px;
+}
+
+/* line 36, src/scss/_components/homepage/_approach.scss */
+.approach__tab:after {
+  content: '';
+  z-index: 5;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: scaleY(0);
+      -ms-transform: scaleY(0);
+          transform: scaleY(0);
+  position: absolute;
+  left: 0;
+  bottom: -30px;
+  width: 100%;
+  height: 4px;
+  background-color: #4097D9;
+  -webkit-transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, -webkit-transform 0.45s 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, -webkit-transform 0.45s 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, transform 0.45s 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, transform 0.45s 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, transform 0.45s 0.3s ease-in-out, -webkit-transform 0.45s 0.3s ease-in-out;
+}
+
+/* line 54, src/scss/_components/homepage/_approach.scss */
+.approach__tab:hover > div:nth-of-type(1), .approach__tab.is-active > div:nth-of-type(1) {
+  background-color: rgba(64, 151, 217, 0.1);
+  -webkit-transition: background-color 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* line 58, src/scss/_components/homepage/_approach.scss */
+.approach__tab:hover > div:nth-of-type(1) .icon-font, .approach__tab.is-active > div:nth-of-type(1) .icon-font {
+  color: #4097d9;
+  -webkit-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+
+/* line 64, src/scss/_components/homepage/_approach.scss */
+.approach__tab:hover > div span, .approach__tab.is-active > div span {
+  color: #4097d9;
+  -webkit-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+
+/* line 69, src/scss/_components/homepage/_approach.scss */
+.approach__tab:hover > div p, .approach__tab.is-active > div p {
+  color: #121e31;
+  -webkit-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+
+/* line 77, src/scss/_components/homepage/_approach.scss */
+.approach__tab.is-active:after {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: scaleY(1);
+      -ms-transform: scaleY(1);
+          transform: scaleY(1);
+  -webkit-transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, -webkit-transform 0.45s 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, -webkit-transform 0.45s 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, transform 0.45s 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, transform 0.45s 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, transform 0.45s 0.3s ease-in-out, -webkit-transform 0.45s 0.3s ease-in-out;
+}
+
+/* line 86, src/scss/_components/homepage/_approach.scss */
+.approach__tab > div:nth-of-type(1) {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 50px;
+  height: 50px;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+  background-color: rgba(196, 207, 221, 0.15);
+  -webkit-transition: background-color 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* line 96, src/scss/_components/homepage/_approach.scss */
+.approach__tab > div:nth-of-type(1) .icon-font {
+  color: #6E7E92;
+  font-size: 15px;
+  -webkit-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+
+/* line 101, src/scss/_components/homepage/_approach.scss */
+.approach__tab > div:nth-of-type(1) .icon-font.icon-rocket {
+  font-size: 22px;
+}
+
+/* line 107, src/scss/_components/homepage/_approach.scss */
+.approach__tab > div:nth-of-type(2) {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  min-width: 1px;
+  max-width: 100%;
+  padding-left: 20px;
+}
+
+/* line 114, src/scss/_components/homepage/_approach.scss */
+.approach__tab > div span {
+  font-size: 14px;
+  line-height: 19px;
+  color: #6E7E92;
+  -webkit-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+
+/* line 122, src/scss/_components/homepage/_approach.scss */
+.approach__tab > div p {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 27px;
+  color: #6E7E92;
+  -webkit-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+
+/* line 131, src/scss/_components/homepage/_approach.scss */
+.approach__tab-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+/* line 136, src/scss/_components/homepage/_approach.scss */
+.approach__tab-header {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 60px;
+}
+
+/* line 142, src/scss/_components/homepage/_approach.scss */
+.approach__tab-header:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 31px;
+  width: 100%;
+  height: 2px;
+  background-color: #DFF1FF;
+}
+
+/* line 153, src/scss/_components/homepage/_approach.scss */
+.approach__tab-body {
+  padding-bottom: 30px;
+}
+
+/* line 157, src/scss/_components/homepage/_approach.scss */
+.approach__tab-footer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+/* line 162, src/scss/_components/homepage/_approach.scss */
+.approach__tab-content {
+  display: none;
+}
+
+/* line 166, src/scss/_components/homepage/_approach.scss */
+.approach__tab-section {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px;
+  border: 2px solid #DFF1FF;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.3);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+}
+
+/* line 174, src/scss/_components/homepage/_approach.scss */
+.approach__tab-section > div {
+  width: 100%;
+  padding: 40px;
+  -webkit-box-shadow: 0px 4px 70px rgba(192, 218, 238, 0.5);
+          box-shadow: 0px 4px 70px rgba(192, 218, 238, 0.5);
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+  background-color: #FFFFFF;
+}
+
+/* line 182, src/scss/_components/homepage/_approach.scss */
+.approach__tab-section:not(:last-of-type) {
+  margin-bottom: 38px;
+}
+
+/* line 187, src/scss/_components/homepage/_approach.scss */
+.approach__tab-heading {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 20px;
+}
+
+/* line 193, src/scss/_components/homepage/_approach.scss */
+.approach__tab-heading > div:nth-of-type(1) {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  min-width: 1px;
+  max-width: 100%;
+}
+
+/* line 201, src/scss/_components/homepage/_approach.scss */
+.approach__tab-heading > div:nth-of-type(1) > div:nth-of-type(1) {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 60px;
+  height: 60px;
+  -webkit-border-radius: 8px;
+          border-radius: 8px;
+  background-color: rgba(64, 151, 217, 0.1);
+}
+
+/* line 210, src/scss/_components/homepage/_approach.scss */
+.approach__tab-heading > div:nth-of-type(1) > div:nth-of-type(1) .icon-font {
+  font-size: 20px;
+  color: #4097d9;
+}
+
+/* line 214, src/scss/_components/homepage/_approach.scss */
+.approach__tab-heading > div:nth-of-type(1) > div:nth-of-type(1) .icon-font.icon-pen {
+  -webkit-transform: scaleX(-1);
+      -ms-transform: scaleX(-1);
+          transform: scaleX(-1);
+}
+
+/* line 219, src/scss/_components/homepage/_approach.scss */
+.approach__tab-heading > div:nth-of-type(1) > div:nth-of-type(2) {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  min-width: 1px;
+  max-width: 100%;
+  padding-left: 24px;
+}
+
+/* line 230, src/scss/_components/homepage/_approach.scss */
+.approach__tab-heading p {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 42px;
+  color: #121E31;
+}
+
+/* line 237, src/scss/_components/homepage/_approach.scss */
+.approach__tab-heading span {
+  font-size: 18px;
+  line-height: 27px;
+  color: #4097D9;
+}
+
+/* line 245, src/scss/_components/homepage/_approach.scss */
+.approach__tab-desc > p {
+  padding-bottom: 15px;
+  font-size: 16px;
+  line-height: 24px;
+  color: #121E31;
+}
+
+/* line 252, src/scss/_components/homepage/_approach.scss */
+.approach__tab-desc ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+/* line 256, src/scss/_components/homepage/_approach.scss */
+.approach__tab-desc ul li {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* line 260, src/scss/_components/homepage/_approach.scss */
+.approach__tab-desc ul li:not(:last-of-type) {
+  padding-bottom: 15px;
+}
+
+/* line 265, src/scss/_components/homepage/_approach.scss */
+.approach__tab-desc ul li > div:nth-of-type(1) {
+  width: 40px;
+}
+
+/* line 268, src/scss/_components/homepage/_approach.scss */
+.approach__tab-desc ul li > div:nth-of-type(1) .icon-font {
+  font-size: 11px;
+  color: #4097d9;
+}
+
+/* line 273, src/scss/_components/homepage/_approach.scss */
+.approach__tab-desc ul li > div:nth-of-type(2) {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  min-width: 1px;
+  max-width: 100%;
+}
+
+/* line 281, src/scss/_components/homepage/_approach.scss */
+.approach__tab-desc ul span {
+  font-size: 14px;
+  line-height: 19px;
+  color: #636B73;
+}
+
+/*# sourceMappingURL=maps/app.css.map */
