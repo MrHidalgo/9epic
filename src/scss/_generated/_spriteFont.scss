@@ -45,14 +45,29 @@
 	@if $filename == database {
 		$char: "\E006";
 	}
-	@if $filename == list-dots {
+	@if $filename == eye {
 		$char: "\E007";
 	}
-	@if $filename == pen {
+	@if $filename == governance {
 		$char: "\E008";
 	}
-	@if $filename == rocket {
+	@if $filename == list-dots {
 		$char: "\E009";
+	}
+	@if $filename == pen {
+		$char: "\E00A";
+	}
+	@if $filename == rocket {
+		$char: "\E00B";
+	}
+	@if $filename == security {
+		$char: "\E00C";
+	}
+	@if $filename == square-dashed {
+		$char: "\E00D";
+	}
+	@if $filename == terminal {
+		$char: "\E00E";
 	}
 
 	@return $char;
@@ -93,6 +108,14 @@
 	@include icon(database);
 
 }
+.icon-eye {
+	@include icon(eye);
+
+}
+.icon-governance {
+	@include icon(governance);
+
+}
 .icon-list-dots {
 	@include icon(list-dots);
 
@@ -103,5 +126,17 @@
 }
 .icon-rocket {
 	@include icon(rocket);
+
+}
+.icon-security {
+	@include icon(security);
+
+}
+.icon-square-dashed {
+	@include icon(square-dashed);
+
+}
+.icon-terminal {
+	@include icon(terminal);
 
 }

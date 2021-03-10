@@ -86,6 +86,20 @@ const solutionCB = () => {
 	helperSlider('.solution__slider-head-2 a','.solution__slider-footer-2 .solution__slider-row');
 	helperSlider('.solution__slider-head-3 a','.solution__slider-footer-3 .solution__slider-row');
 };
+
+
+const foundationCB = () => {
+	$('.foundation__tab').on('click', (ev) => {
+		const el = $(ev.currentTarget),
+			elID = el.attr('data-tab-id');
+		
+		$('.foundation__tab').removeClass('is-active');
+		el.addClass('is-active');
+		
+		$('.foundation__tab-content').hide();
+		$('.foundation__tab-content[data-content-id="' + elID + '"]').fadeIn(550);
+	});
+};
 /*
 * CALLBACK :: end
 * ============================================= */
@@ -108,6 +122,7 @@ const initNative = () => {
 	// callback
 	approachTabCB();
 	solutionCB();
+	foundationCB();
 	// ==========================================
 };
 

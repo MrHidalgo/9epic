@@ -112,7 +112,7 @@
 			}
 
 			span {
-				@extend %fontOpenSans;
+				font-family: 'Open Sans', sans-serif;
 				font-size: 14px;
 				line-height: 19px;
 				color: #6E7E92;
@@ -120,6 +120,7 @@
 			}
 
 			p {
+				font-family: 'Open Sans', sans-serif;
 				font-weight: 600;
 				font-size: 20px;
 				line-height: 27px;
@@ -279,7 +280,7 @@
 				}
 
 				span {
-					@extend %fontOpenSans;
+					font-family: 'Open Sans', sans-serif;
 					font-size: 14px;
 					line-height: 19px;
 					color: #636B73;

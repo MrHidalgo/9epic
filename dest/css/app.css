@@ -1,12 +1,6 @@
 @charset "UTF-8";
 /* line 26, src/scss/_utilities/_extend.scss */
-.copyright__text, .c-btn span, .footer__form-field label > span, .footer__form-field label input,
-.footer__form-field label textarea, .footer__form-field label input.placeholder,
-.footer__form-field label textarea.placeholder, .footer__form-field label input:-moz-placeholder,
-.footer__form-field label textarea:-moz-placeholder, .footer__form-field label input::-moz-placeholder,
-.footer__form-field label textarea::-moz-placeholder, .footer__form-field label input:-ms-input-placeholder,
-.footer__form-field label textarea:-ms-input-placeholder, .footer__form-field label input::-webkit-input-placeholder,
-.footer__form-field label textarea::-webkit-input-placeholder, .footer__desc, .solution__tab > div span, .solution__tab-desc p, .solution__list p, .solution__slider-head a, .approach__tab > div span, .approach__tab-desc ul span {
+.copyright__text, .c-btn span {
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -17,7 +11,7 @@
 }
 
 /* line 23, src/scss/_generated/_spriteFont.scss */
-.icon-arrow:before, .icon-build:before, .icon-circle-checked:before, .icon-cloud-check:before, .icon-cloud:before, .icon-database:before, .icon-list-dots:before, .icon-pen:before, .icon-rocket:before {
+.icon-arrow:before, .icon-build:before, .icon-circle-checked:before, .icon-cloud-check:before, .icon-cloud:before, .icon-database:before, .icon-eye:before, .icon-governance:before, .icon-list-dots:before, .icon-pen:before, .icon-rocket:before, .icon-security:before, .icon-square-dashed:before, .icon-terminal:before {
   font-family: "iconFont", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -28,49 +22,74 @@
   text-transform: none;
 }
 
-/* line 62, src/scss/_generated/_spriteFont.scss */
+/* line 77, src/scss/_generated/_spriteFont.scss */
 .icon-arrow:before {
   content: "";
 }
 
-/* line 62, src/scss/_generated/_spriteFont.scss */
+/* line 77, src/scss/_generated/_spriteFont.scss */
 .icon-build:before {
   content: "";
 }
 
-/* line 62, src/scss/_generated/_spriteFont.scss */
+/* line 77, src/scss/_generated/_spriteFont.scss */
 .icon-circle-checked:before {
   content: "";
 }
 
-/* line 62, src/scss/_generated/_spriteFont.scss */
+/* line 77, src/scss/_generated/_spriteFont.scss */
 .icon-cloud-check:before {
   content: "";
 }
 
-/* line 62, src/scss/_generated/_spriteFont.scss */
+/* line 77, src/scss/_generated/_spriteFont.scss */
 .icon-cloud:before {
   content: "";
 }
 
-/* line 62, src/scss/_generated/_spriteFont.scss */
+/* line 77, src/scss/_generated/_spriteFont.scss */
 .icon-database:before {
   content: "";
 }
 
-/* line 62, src/scss/_generated/_spriteFont.scss */
-.icon-list-dots:before {
+/* line 77, src/scss/_generated/_spriteFont.scss */
+.icon-eye:before {
   content: "";
 }
 
-/* line 62, src/scss/_generated/_spriteFont.scss */
-.icon-pen:before {
+/* line 77, src/scss/_generated/_spriteFont.scss */
+.icon-governance:before {
   content: "";
 }
 
-/* line 62, src/scss/_generated/_spriteFont.scss */
-.icon-rocket:before {
+/* line 77, src/scss/_generated/_spriteFont.scss */
+.icon-list-dots:before {
   content: "";
+}
+
+/* line 77, src/scss/_generated/_spriteFont.scss */
+.icon-pen:before {
+  content: "";
+}
+
+/* line 77, src/scss/_generated/_spriteFont.scss */
+.icon-rocket:before {
+  content: "";
+}
+
+/* line 77, src/scss/_generated/_spriteFont.scss */
+.icon-security:before {
+  content: "";
+}
+
+/* line 77, src/scss/_generated/_spriteFont.scss */
+.icon-square-dashed:before {
+  content: "";
+}
+
+/* line 77, src/scss/_generated/_spriteFont.scss */
+.icon-terminal:before {
+  content: "";
 }
 
 /* line 1, src/scss/_shared/_main-setting-reset.scss */
@@ -679,6 +698,7 @@ picture {
 /* line 173, src/scss/_components/_footer.scss */
 .footer__form-field label > span {
   display: block;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 800;
   font-size: 10px;
   line-height: 14px;
@@ -705,6 +725,7 @@ picture {
   -webkit-border-radius: 0;
           border-radius: 0;
   background-color: transparent;
+  font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   line-height: 19px;
   color: #ffffff;
@@ -716,6 +737,7 @@ picture {
 /* line 88, src/scss/_utilities/_mixin.scss */
 .footer__form-field label input.placeholder,
 .footer__form-field label textarea.placeholder {
+  font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   line-height: 19px;
   color: rgba(255, 255, 255, 0.7);
@@ -724,6 +746,7 @@ picture {
 /* line 89, src/scss/_utilities/_mixin.scss */
 .footer__form-field label input:-moz-placeholder,
 .footer__form-field label textarea:-moz-placeholder {
+  font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   line-height: 19px;
   color: rgba(255, 255, 255, 0.7);
@@ -732,6 +755,7 @@ picture {
 /* line 90, src/scss/_utilities/_mixin.scss */
 .footer__form-field label input::-moz-placeholder,
 .footer__form-field label textarea::-moz-placeholder {
+  font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   line-height: 19px;
   color: rgba(255, 255, 255, 0.7);
@@ -740,6 +764,7 @@ picture {
 /* line 91, src/scss/_utilities/_mixin.scss */
 .footer__form-field label input:-ms-input-placeholder,
 .footer__form-field label textarea:-ms-input-placeholder {
+  font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   line-height: 19px;
   color: rgba(255, 255, 255, 0.7);
@@ -748,6 +773,7 @@ picture {
 /* line 92, src/scss/_utilities/_mixin.scss */
 .footer__form-field label input::-webkit-input-placeholder,
 .footer__form-field label textarea::-webkit-input-placeholder {
+  font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   line-height: 19px;
   color: rgba(255, 255, 255, 0.7);
@@ -778,6 +804,7 @@ picture {
 
 /* line 229, src/scss/_components/_footer.scss */
 .footer__desc {
+  font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   line-height: 24px;
   color: #FFFFFF;
@@ -810,6 +837,386 @@ picture {
 .footer__address img {
   display: inline-block;
   vertical-align: middle;
+}
+
+/* line 3, src/scss/_components/homepage/_foundation.scss */
+.foundation {
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+
+/* line 7, src/scss/_components/homepage/_foundation.scss */
+.foundation__title {
+  padding-bottom: 70px;
+}
+
+/* line 11, src/scss/_components/homepage/_foundation.scss */
+.foundation__subtitle {
+  padding-bottom: 30px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  color: #121E31;
+}
+
+/* line 19, src/scss/_components/homepage/_foundation.scss */
+.foundation__desc {
+  padding-bottom: 50px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 26px;
+  color: #636B73;
+}
+
+/* line 28, src/scss/_components/homepage/_foundation.scss */
+.foundation__describe {
+  position: relative;
+  left: -15px;
+  width: -webkit-calc(100% + 15px);
+  width: calc(100% + 15px);
+  padding-top: 50px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #636B73;
+}
+
+/* line 40, src/scss/_components/homepage/_foundation.scss */
+.foundation__tab {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  min-width: 1px;
+  max-width: 100%;
+  padding-left: 60px;
+}
+
+/* line 49, src/scss/_components/homepage/_foundation.scss */
+.foundation__tab:after {
+  content: '';
+  z-index: 5;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: scaleY(0);
+      -ms-transform: scaleY(0);
+          transform: scaleY(0);
+  position: absolute;
+  left: 0;
+  bottom: -30px;
+  width: 100%;
+  height: 4px;
+  background-color: #4097D9;
+  -webkit-transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, -webkit-transform 0.45s 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, -webkit-transform 0.45s 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, transform 0.45s 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, transform 0.45s 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, transform 0.45s 0.3s ease-in-out, -webkit-transform 0.45s 0.3s ease-in-out;
+}
+
+/* line 67, src/scss/_components/homepage/_foundation.scss */
+.foundation__tab:hover > div:nth-of-type(1), .foundation__tab.is-active > div:nth-of-type(1) {
+  background-color: rgba(64, 151, 217, 0.1);
+  -webkit-transition: background-color 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* line 71, src/scss/_components/homepage/_foundation.scss */
+.foundation__tab:hover > div:nth-of-type(1) .icon-font, .foundation__tab.is-active > div:nth-of-type(1) .icon-font {
+  color: #4097D9;
+  -webkit-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+
+/* line 77, src/scss/_components/homepage/_foundation.scss */
+.foundation__tab:hover > div p, .foundation__tab.is-active > div p {
+  color: #121E31;
+  -webkit-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+
+/* line 85, src/scss/_components/homepage/_foundation.scss */
+.foundation__tab.is-active:after {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: scaleY(1);
+      -ms-transform: scaleY(1);
+          transform: scaleY(1);
+  -webkit-transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, -webkit-transform 0.45s 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, -webkit-transform 0.45s 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, transform 0.45s 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, transform 0.45s 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, transform 0.45s 0.3s ease-in-out, -webkit-transform 0.45s 0.3s ease-in-out;
+}
+
+/* line 94, src/scss/_components/homepage/_foundation.scss */
+.foundation__tab > div:nth-of-type(1) {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 50px;
+  height: 50px;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+  background-color: rgba(196, 207, 221, 0.15);
+  -webkit-transition: background-color 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* line 104, src/scss/_components/homepage/_foundation.scss */
+.foundation__tab > div:nth-of-type(1) .icon-font {
+  color: #6e7e92;
+  font-size: 15px;
+  -webkit-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+
+/* line 109, src/scss/_components/homepage/_foundation.scss */
+.foundation__tab > div:nth-of-type(1) .icon-font.icon-rocket {
+  font-size: 22px;
+}
+
+/* line 115, src/scss/_components/homepage/_foundation.scss */
+.foundation__tab > div:nth-of-type(2) {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  min-width: 1px;
+  max-width: 100%;
+  padding-left: 20px;
+}
+
+/* line 122, src/scss/_components/homepage/_foundation.scss */
+.foundation__tab > div p {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 27px;
+  color: #6e7e92;
+  -webkit-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+
+/* line 132, src/scss/_components/homepage/_foundation.scss */
+.foundation__tab-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+/* line 137, src/scss/_components/homepage/_foundation.scss */
+.foundation__tab-header {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 60px;
+}
+
+/* line 143, src/scss/_components/homepage/_foundation.scss */
+.foundation__tab-header:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 31px;
+  width: 100%;
+  height: 2px;
+  background-color: #dff1ff;
+}
+
+/* line 154, src/scss/_components/homepage/_foundation.scss */
+.foundation__tab-body {
+  padding-top: 40px;
+  padding-bottom: 30px;
+}
+
+/* line 159, src/scss/_components/homepage/_foundation.scss */
+.foundation__tab-content {
+  display: none;
+}
+
+/* line 164, src/scss/_components/homepage/_foundation.scss */
+.foundation__box {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  padding: 20px;
+  border: 2px solid #DFF1FF;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+  background: rgba(255, 255, 255, 0.3);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+}
+
+/* line 173, src/scss/_components/homepage/_foundation.scss */
+.foundation__box > div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  padding: 30px 24px 20px 30px;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+  -webkit-box-shadow: 0px 4px 70px rgba(192, 218, 238, 0.5);
+          box-shadow: 0px 4px 70px rgba(192, 218, 238, 0.5);
+  background-color: #FFFFFF;
+}
+
+/* line 183, src/scss/_components/homepage/_foundation.scss */
+.foundation__box > div > div:nth-of-type(2) {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  min-height: 1px;
+  max-height: 100%;
+}
+
+/* line 191, src/scss/_components/homepage/_foundation.scss */
+.foundation__box-wrapper {
+  position: relative;
+  left: -20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  width: -webkit-calc(100% + 20px);
+  width: calc(100% + 20px);
+}
+
+/* line 200, src/scss/_components/homepage/_foundation.scss */
+.foundation__box-wrapper-1 > div:nth-of-type(1) {
+  width: -webkit-calc(100% + 20px);
+  width: calc(100% + 20px);
+  padding-left: 5px;
+}
+
+/* line 209, src/scss/_components/homepage/_foundation.scss */
+.foundation__box-wrapper-2 > div:nth-of-type(1) {
+  max-width: -webkit-calc((100% / 3) * 2);
+  max-width: calc((100% / 3) * 2);
+  padding-left: 5px;
+}
+
+/* line 218, src/scss/_components/homepage/_foundation.scss */
+.foundation__box-wrapper-3 > div:nth-of-type(1) {
+  max-width: 100%;
+  padding-left: 5px;
+}
+
+/* line 225, src/scss/_components/homepage/_foundation.scss */
+.foundation__box-wrapper > div {
+  position: relative;
+  width: 100%;
+  max-width: -webkit-calc(100% / 3);
+  max-width: calc(100% / 3);
+  padding-left: 20px;
+  padding-bottom: 20px;
+}
+
+/* line 234, src/scss/_components/homepage/_foundation.scss */
+.foundation__box-icon {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 50px;
+  height: 50px;
+  -webkit-border-radius: 8px;
+          border-radius: 8px;
+  background-color: rgba(64, 151, 217, 0.1);
+}
+
+/* line 244, src/scss/_components/homepage/_foundation.scss */
+.foundation__box-icon .icon-font {
+  color: #4097d9;
+  font-size: 20px;
+}
+
+/* line 250, src/scss/_components/homepage/_foundation.scss */
+.foundation__box-title {
+  padding-top: 20px;
+  padding-bottom: 10px;
+  font-size: 18px;
+  line-height: 27px;
+  color: #121E31;
+}
+
+/* line 258, src/scss/_components/homepage/_foundation.scss */
+.foundation__box-desc {
+  padding-bottom: 43px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #636B73;
+}
+
+/* line 266, src/scss/_components/homepage/_foundation.scss */
+.foundation__box-link {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 22px;
+  color: #4097D9;
 }
 
 /* line 3, src/scss/_components/homepage/_solution.scss */
@@ -964,6 +1371,7 @@ picture {
 
 /* line 100, src/scss/_components/homepage/_solution.scss */
 .solution__tab > div span {
+  font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   line-height: 19px;
   color: rgba(255, 255, 255, 0.5);
@@ -974,6 +1382,7 @@ picture {
 
 /* line 108, src/scss/_components/homepage/_solution.scss */
 .solution__tab > div p {
+  font-family: 'Open Sans', sans-serif;
   font-weight: 600;
   font-size: 20px;
   line-height: 27px;
@@ -983,7 +1392,7 @@ picture {
   transition: color 0.3s ease-in-out;
 }
 
-/* line 117, src/scss/_components/homepage/_solution.scss */
+/* line 118, src/scss/_components/homepage/_solution.scss */
 .solution__tab-wrapper {
   display: -webkit-box;
   display: -webkit-flex;
@@ -996,7 +1405,7 @@ picture {
           flex-direction: column;
 }
 
-/* line 122, src/scss/_components/homepage/_solution.scss */
+/* line 123, src/scss/_components/homepage/_solution.scss */
 .solution__tab-header {
   position: relative;
   display: -webkit-box;
@@ -1010,7 +1419,7 @@ picture {
   padding-bottom: 60px;
 }
 
-/* line 128, src/scss/_components/homepage/_solution.scss */
+/* line 129, src/scss/_components/homepage/_solution.scss */
 .solution__tab-header:after {
   content: '';
   position: absolute;
@@ -1021,17 +1430,17 @@ picture {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-/* line 139, src/scss/_components/homepage/_solution.scss */
+/* line 140, src/scss/_components/homepage/_solution.scss */
 .solution__tab-body {
   padding-bottom: 30px;
 }
 
-/* line 143, src/scss/_components/homepage/_solution.scss */
+/* line 144, src/scss/_components/homepage/_solution.scss */
 .solution__tab-content {
   display: none;
 }
 
-/* line 147, src/scss/_components/homepage/_solution.scss */
+/* line 148, src/scss/_components/homepage/_solution.scss */
 .solution__tab-desc {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1044,22 +1453,23 @@ picture {
   padding-bottom: 60px;
 }
 
-/* line 152, src/scss/_components/homepage/_solution.scss */
+/* line 153, src/scss/_components/homepage/_solution.scss */
 .solution__tab-desc > div {
   width: 100%;
   max-width: -webkit-calc((100% - 40px) / 2);
   max-width: calc((100% - 40px) / 2);
 }
 
-/* line 157, src/scss/_components/homepage/_solution.scss */
+/* line 158, src/scss/_components/homepage/_solution.scss */
 .solution__tab-desc p {
+  font-family: 'Open Sans', sans-serif;
   font-weight: 600;
   font-size: 15px;
   line-height: 26px;
   color: #FFFFFF;
 }
 
-/* line 167, src/scss/_components/homepage/_solution.scss */
+/* line 168, src/scss/_components/homepage/_solution.scss */
 .solution__list {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1072,7 +1482,7 @@ picture {
           flex-direction: column;
 }
 
-/* line 171, src/scss/_components/homepage/_solution.scss */
+/* line 172, src/scss/_components/homepage/_solution.scss */
 .solution__list li {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1084,23 +1494,23 @@ picture {
           align-items: center;
 }
 
-/* line 175, src/scss/_components/homepage/_solution.scss */
+/* line 176, src/scss/_components/homepage/_solution.scss */
 .solution__list li:not(:last-of-type) {
   padding-bottom: 15px;
 }
 
-/* line 180, src/scss/_components/homepage/_solution.scss */
+/* line 181, src/scss/_components/homepage/_solution.scss */
 .solution__list li > div:nth-of-type(1) {
   width: 40px;
 }
 
-/* line 183, src/scss/_components/homepage/_solution.scss */
+/* line 184, src/scss/_components/homepage/_solution.scss */
 .solution__list li > div:nth-of-type(1) .icon-font {
   font-size: 10px;
   color: #00B94F;
 }
 
-/* line 188, src/scss/_components/homepage/_solution.scss */
+/* line 189, src/scss/_components/homepage/_solution.scss */
 .solution__list li > div:nth-of-type(2) {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
@@ -1110,14 +1520,15 @@ picture {
   max-width: 100%;
 }
 
-/* line 196, src/scss/_components/homepage/_solution.scss */
+/* line 197, src/scss/_components/homepage/_solution.scss */
 .solution__list p {
+  font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 22px;
   color: #fff;
 }
 
-/* line 203, src/scss/_components/homepage/_solution.scss */
+/* line 204, src/scss/_components/homepage/_solution.scss */
 .solution__list-wrapper {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1128,18 +1539,18 @@ picture {
   margin-bottom: 50px;
 }
 
-/* line 209, src/scss/_components/homepage/_solution.scss */
+/* line 210, src/scss/_components/homepage/_solution.scss */
 .solution__list-wrapper > div {
   position: relative;
   width: 50%;
 }
 
-/* line 213, src/scss/_components/homepage/_solution.scss */
+/* line 214, src/scss/_components/homepage/_solution.scss */
 .solution__list-wrapper > div:nth-of-type(1) {
   padding-right: 60px;
 }
 
-/* line 216, src/scss/_components/homepage/_solution.scss */
+/* line 217, src/scss/_components/homepage/_solution.scss */
 .solution__list-wrapper > div:nth-of-type(1):after {
   content: '';
   position: absolute;
@@ -1151,12 +1562,12 @@ picture {
   background: rgba(196, 196, 196, 0.07);
 }
 
-/* line 226, src/scss/_components/homepage/_solution.scss */
+/* line 227, src/scss/_components/homepage/_solution.scss */
 .solution__list-wrapper > div:nth-of-type(2) {
   padding-left: 60px;
 }
 
-/* line 234, src/scss/_components/homepage/_solution.scss */
+/* line 235, src/scss/_components/homepage/_solution.scss */
 .solution__slider-wrapper {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1169,7 +1580,7 @@ picture {
           flex-direction: column;
 }
 
-/* line 239, src/scss/_components/homepage/_solution.scss */
+/* line 240, src/scss/_components/homepage/_solution.scss */
 .solution__slider-head {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1186,7 +1597,7 @@ picture {
   padding-bottom: 30px;
 }
 
-/* line 245, src/scss/_components/homepage/_solution.scss */
+/* line 246, src/scss/_components/homepage/_solution.scss */
 .solution__slider-head a {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1208,6 +1619,7 @@ picture {
   -webkit-border-radius: 10px;
           border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.1);
+  font-family: 'Open Sans', sans-serif;
   font-weight: bold;
   font-size: 14px;
   line-height: 19px;
@@ -1215,12 +1627,12 @@ picture {
   color: #FFFFFF;
 }
 
-/* line 263, src/scss/_components/homepage/_solution.scss */
+/* line 264, src/scss/_components/homepage/_solution.scss */
 .solution__slider-head a.is-active {
   background-color: #00B94F;
 }
 
-/* line 269, src/scss/_components/homepage/_solution.scss */
+/* line 270, src/scss/_components/homepage/_solution.scss */
 .solution__slider-body {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1232,12 +1644,12 @@ picture {
           align-items: center;
 }
 
-/* line 274, src/scss/_components/homepage/_solution.scss */
+/* line 275, src/scss/_components/homepage/_solution.scss */
 .solution__slider-body > div:nth-of-type(1) {
   width: 130px;
 }
 
-/* line 278, src/scss/_components/homepage/_solution.scss */
+/* line 279, src/scss/_components/homepage/_solution.scss */
 .solution__slider-body > div:nth-of-type(2) {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
@@ -1247,7 +1659,7 @@ picture {
   max-width: 100%;
 }
 
-/* line 283, src/scss/_components/homepage/_solution.scss */
+/* line 284, src/scss/_components/homepage/_solution.scss */
 .solution__slider-body > div:nth-of-type(3) {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1260,12 +1672,12 @@ picture {
   width: 130px;
 }
 
-/* line 291, src/scss/_components/homepage/_solution.scss */
+/* line 292, src/scss/_components/homepage/_solution.scss */
 .solution__slider-footer {
   position: relative;
 }
 
-/* line 295, src/scss/_components/homepage/_solution.scss */
+/* line 296, src/scss/_components/homepage/_solution.scss */
 .solution__slider-btn {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1291,7 +1703,7 @@ picture {
   transition: background-color 0.3s ease-in-out;
 }
 
-/* line 306, src/scss/_components/homepage/_solution.scss */
+/* line 307, src/scss/_components/homepage/_solution.scss */
 .solution__slider-btn.swiper-button-disabled {
   pointer-events: none;
   background-color: rgba(255, 255, 255, 0.2);
@@ -1300,29 +1712,29 @@ picture {
   transition: background-color 0.3s ease-in-out;
 }
 
-/* line 312, src/scss/_components/homepage/_solution.scss */
+/* line 313, src/scss/_components/homepage/_solution.scss */
 .solution__slider-btn--prev {
   padding-right: 4px;
 }
 
-/* line 316, src/scss/_components/homepage/_solution.scss */
+/* line 317, src/scss/_components/homepage/_solution.scss */
 .solution__slider-btn--next {
   padding-left: 4px;
 }
 
-/* line 318, src/scss/_components/homepage/_solution.scss */
+/* line 319, src/scss/_components/homepage/_solution.scss */
 .solution__slider-btn--next .icon-font {
   -webkit-transform: scaleX(-1);
       -ms-transform: scaleX(-1);
           transform: scaleX(-1);
 }
 
-/* line 323, src/scss/_components/homepage/_solution.scss */
+/* line 324, src/scss/_components/homepage/_solution.scss */
 .solution__slider-btn .icon-font {
   color: #ffffff;
 }
 
-/* line 328, src/scss/_components/homepage/_solution.scss */
+/* line 329, src/scss/_components/homepage/_solution.scss */
 .solution__slider-row {
   opacity: 0;
   visibility: hidden;
@@ -1331,7 +1743,7 @@ picture {
   transition: opacity 0.55s ease-in-out, visibility 0.3s ease-in-out;
 }
 
-/* line 333, src/scss/_components/homepage/_solution.scss */
+/* line 334, src/scss/_components/homepage/_solution.scss */
 .solution__slider-row.is-show {
   opacity: 1;
   visibility: visible;
@@ -1340,7 +1752,7 @@ picture {
   transition: opacity 0.55s ease-in-out, visibility 0.3s ease-in-out;
 }
 
-/* line 339, src/scss/_components/homepage/_solution.scss */
+/* line 340, src/scss/_components/homepage/_solution.scss */
 .solution__slider-row:not(:first-of-type) {
   position: absolute;
   top: 0;
@@ -1349,7 +1761,7 @@ picture {
   height: 100%;
 }
 
-/* line 350, src/scss/_components/homepage/_solution.scss */
+/* line 351, src/scss/_components/homepage/_solution.scss */
 .solution .swiper-slide {
   position: relative;
   display: -webkit-box;
@@ -1366,17 +1778,17 @@ picture {
           border-radius: 10px;
 }
 
-/* line 358, src/scss/_components/homepage/_solution.scss */
+/* line 359, src/scss/_components/homepage/_solution.scss */
 .solution .swiper-slide > div {
   width: 50%;
 }
 
-/* line 361, src/scss/_components/homepage/_solution.scss */
+/* line 362, src/scss/_components/homepage/_solution.scss */
 .solution .swiper-slide > div:nth-of-type(1) {
   padding-right: 60px;
 }
 
-/* line 364, src/scss/_components/homepage/_solution.scss */
+/* line 365, src/scss/_components/homepage/_solution.scss */
 .solution .swiper-slide > div:nth-of-type(1) h4 {
   padding-bottom: 20px;
   font-weight: 600;
@@ -1385,7 +1797,7 @@ picture {
   color: #121E31;
 }
 
-/* line 372, src/scss/_components/homepage/_solution.scss */
+/* line 373, src/scss/_components/homepage/_solution.scss */
 .solution .swiper-slide > div:nth-of-type(1) p {
   padding-bottom: 64px;
   font-size: 15px;
@@ -1393,12 +1805,12 @@ picture {
   color: #636B73;
 }
 
-/* line 380, src/scss/_components/homepage/_solution.scss */
+/* line 381, src/scss/_components/homepage/_solution.scss */
 .solution .swiper-slide > div:nth-of-type(1) .c-btn:not(:last-of-type) {
   margin-right: 10px;
 }
 
-/* line 386, src/scss/_components/homepage/_solution.scss */
+/* line 387, src/scss/_components/homepage/_solution.scss */
 .solution .swiper-slide > div:nth-of-type(2) img {
   display: block;
   max-width: 100%;
@@ -1585,6 +1997,7 @@ picture {
 
 /* line 114, src/scss/_components/homepage/_approach.scss */
 .approach__tab > div span {
+  font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   line-height: 19px;
   color: #6E7E92;
@@ -1595,6 +2008,7 @@ picture {
 
 /* line 122, src/scss/_components/homepage/_approach.scss */
 .approach__tab > div p {
+  font-family: 'Open Sans', sans-serif;
   font-weight: 600;
   font-size: 20px;
   line-height: 27px;
@@ -1604,7 +2018,7 @@ picture {
   transition: color 0.3s ease-in-out;
 }
 
-/* line 131, src/scss/_components/homepage/_approach.scss */
+/* line 132, src/scss/_components/homepage/_approach.scss */
 .approach__tab-wrapper {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1617,7 +2031,7 @@ picture {
           flex-direction: column;
 }
 
-/* line 136, src/scss/_components/homepage/_approach.scss */
+/* line 137, src/scss/_components/homepage/_approach.scss */
 .approach__tab-header {
   position: relative;
   display: -webkit-box;
@@ -1631,7 +2045,7 @@ picture {
   padding-bottom: 60px;
 }
 
-/* line 142, src/scss/_components/homepage/_approach.scss */
+/* line 143, src/scss/_components/homepage/_approach.scss */
 .approach__tab-header:after {
   content: '';
   position: absolute;
@@ -1642,12 +2056,12 @@ picture {
   background-color: #DFF1FF;
 }
 
-/* line 153, src/scss/_components/homepage/_approach.scss */
+/* line 154, src/scss/_components/homepage/_approach.scss */
 .approach__tab-body {
   padding-bottom: 30px;
 }
 
-/* line 157, src/scss/_components/homepage/_approach.scss */
+/* line 158, src/scss/_components/homepage/_approach.scss */
 .approach__tab-footer {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1660,12 +2074,12 @@ picture {
           flex-direction: column;
 }
 
-/* line 162, src/scss/_components/homepage/_approach.scss */
+/* line 163, src/scss/_components/homepage/_approach.scss */
 .approach__tab-content {
   display: none;
 }
 
-/* line 166, src/scss/_components/homepage/_approach.scss */
+/* line 167, src/scss/_components/homepage/_approach.scss */
 .approach__tab-section {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1680,7 +2094,7 @@ picture {
           backdrop-filter: blur(4px);
 }
 
-/* line 174, src/scss/_components/homepage/_approach.scss */
+/* line 175, src/scss/_components/homepage/_approach.scss */
 .approach__tab-section > div {
   width: 100%;
   padding: 40px;
@@ -1691,12 +2105,12 @@ picture {
   background-color: #FFFFFF;
 }
 
-/* line 182, src/scss/_components/homepage/_approach.scss */
+/* line 183, src/scss/_components/homepage/_approach.scss */
 .approach__tab-section:not(:last-of-type) {
   margin-bottom: 38px;
 }
 
-/* line 187, src/scss/_components/homepage/_approach.scss */
+/* line 188, src/scss/_components/homepage/_approach.scss */
 .approach__tab-heading {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1709,7 +2123,7 @@ picture {
   padding-bottom: 20px;
 }
 
-/* line 193, src/scss/_components/homepage/_approach.scss */
+/* line 194, src/scss/_components/homepage/_approach.scss */
 .approach__tab-heading > div:nth-of-type(1) {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1727,7 +2141,7 @@ picture {
   max-width: 100%;
 }
 
-/* line 201, src/scss/_components/homepage/_approach.scss */
+/* line 202, src/scss/_components/homepage/_approach.scss */
 .approach__tab-heading > div:nth-of-type(1) > div:nth-of-type(1) {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1748,20 +2162,20 @@ picture {
   background-color: rgba(64, 151, 217, 0.1);
 }
 
-/* line 210, src/scss/_components/homepage/_approach.scss */
+/* line 211, src/scss/_components/homepage/_approach.scss */
 .approach__tab-heading > div:nth-of-type(1) > div:nth-of-type(1) .icon-font {
   font-size: 20px;
   color: #4097d9;
 }
 
-/* line 214, src/scss/_components/homepage/_approach.scss */
+/* line 215, src/scss/_components/homepage/_approach.scss */
 .approach__tab-heading > div:nth-of-type(1) > div:nth-of-type(1) .icon-font.icon-pen {
   -webkit-transform: scaleX(-1);
       -ms-transform: scaleX(-1);
           transform: scaleX(-1);
 }
 
-/* line 219, src/scss/_components/homepage/_approach.scss */
+/* line 220, src/scss/_components/homepage/_approach.scss */
 .approach__tab-heading > div:nth-of-type(1) > div:nth-of-type(2) {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
@@ -1772,7 +2186,7 @@ picture {
   padding-left: 24px;
 }
 
-/* line 230, src/scss/_components/homepage/_approach.scss */
+/* line 231, src/scss/_components/homepage/_approach.scss */
 .approach__tab-heading p {
   font-weight: 600;
   font-size: 28px;
@@ -1780,14 +2194,14 @@ picture {
   color: #121E31;
 }
 
-/* line 237, src/scss/_components/homepage/_approach.scss */
+/* line 238, src/scss/_components/homepage/_approach.scss */
 .approach__tab-heading span {
   font-size: 18px;
   line-height: 27px;
   color: #4097D9;
 }
 
-/* line 245, src/scss/_components/homepage/_approach.scss */
+/* line 246, src/scss/_components/homepage/_approach.scss */
 .approach__tab-desc > p {
   padding-bottom: 15px;
   font-size: 16px;
@@ -1795,7 +2209,7 @@ picture {
   color: #121E31;
 }
 
-/* line 252, src/scss/_components/homepage/_approach.scss */
+/* line 253, src/scss/_components/homepage/_approach.scss */
 .approach__tab-desc ul {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1808,7 +2222,7 @@ picture {
           flex-direction: column;
 }
 
-/* line 256, src/scss/_components/homepage/_approach.scss */
+/* line 257, src/scss/_components/homepage/_approach.scss */
 .approach__tab-desc ul li {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1820,23 +2234,23 @@ picture {
           align-items: center;
 }
 
-/* line 260, src/scss/_components/homepage/_approach.scss */
+/* line 261, src/scss/_components/homepage/_approach.scss */
 .approach__tab-desc ul li:not(:last-of-type) {
   padding-bottom: 15px;
 }
 
-/* line 265, src/scss/_components/homepage/_approach.scss */
+/* line 266, src/scss/_components/homepage/_approach.scss */
 .approach__tab-desc ul li > div:nth-of-type(1) {
   width: 40px;
 }
 
-/* line 268, src/scss/_components/homepage/_approach.scss */
+/* line 269, src/scss/_components/homepage/_approach.scss */
 .approach__tab-desc ul li > div:nth-of-type(1) .icon-font {
   font-size: 11px;
   color: #4097d9;
 }
 
-/* line 273, src/scss/_components/homepage/_approach.scss */
+/* line 274, src/scss/_components/homepage/_approach.scss */
 .approach__tab-desc ul li > div:nth-of-type(2) {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
@@ -1846,8 +2260,9 @@ picture {
   max-width: 100%;
 }
 
-/* line 281, src/scss/_components/homepage/_approach.scss */
+/* line 282, src/scss/_components/homepage/_approach.scss */
 .approach__tab-desc ul span {
+  font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   line-height: 19px;
   color: #636B73;

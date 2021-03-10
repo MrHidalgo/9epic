@@ -98,7 +98,7 @@
 			}
 
 			span {
-				@extend %fontOpenSans;
+				font-family: 'Open Sans', sans-serif;
 				font-size: 14px;
 				line-height: 19px;
 				color: rgba(#fff, 0.5);
@@ -106,6 +106,7 @@
 			}
 
 			p {
+				font-family: 'Open Sans', sans-serif;
 				font-weight: 600;
 				font-size: 20px;
 				line-height: 27px;
@@ -155,7 +156,7 @@
 			}
 
 			p {
-				@extend %fontOpenSans;
+				font-family: 'Open Sans', sans-serif;
 				font-weight: 600;
 				font-size: 15px;
 				line-height: 26px;
@@ -194,7 +195,7 @@
 		}
 
 		p {
-			@extend %fontOpenSans;
+			font-family: 'Open Sans', sans-serif;
 			font-size: 16px;
 			line-height: 22px;
 			color: #fff;
@@ -253,7 +254,7 @@
 				padding-right: 35px;
 				border-radius: 10px;
 				background-color: rgba(255, 255, 255, 0.1);
-				@extend %fontOpenSans;
+				font-family: 'Open Sans', sans-serif;
 				font-weight: bold;
 				font-size: 14px;
 				line-height: 19px;
