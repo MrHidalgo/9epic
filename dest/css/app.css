@@ -527,7 +527,19 @@ picture {
   padding-right: 50px;
 }
 
-/* line 38, src/scss/_components/_header.scss */
+/* line 37, src/scss/_components/_header.scss */
+.header__wrapper-right {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+/* line 43, src/scss/_components/_header.scss */
 .header__nav {
   display: -webkit-box;
   display: -webkit-flex;
@@ -535,7 +547,7 @@ picture {
   display: flex;
 }
 
-/* line 41, src/scss/_components/_header.scss */
+/* line 46, src/scss/_components/_header.scss */
 .header__nav a {
   display: -webkit-box;
   display: -webkit-flex;

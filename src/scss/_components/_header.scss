@@ -33,6 +33,11 @@
 			padding-left: 50px;
 			padding-right: 50px;
 		}
+
+		&-right {
+			display: flex;
+			justify-content: flex-end;
+		}
 	}
 
 	&__nav {
