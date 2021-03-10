@@ -30,6 +30,14 @@
   &__border {
     border: 1px solid #fff;
     background-color: transparent;
+
+    &.c-btn__border--dark {
+      border-color: #0A0A0A;
+
+      span {
+        color: #0a0a0a;
+      }
+    }
   }
 
   &__bg {

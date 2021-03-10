@@ -27,29 +27,32 @@
 @function icon-char($filename) {
 	$char: "";
 
-	@if $filename == build {
+	@if $filename == arrow {
 		$char: "\E001";
 	}
-	@if $filename == circle-checked {
+	@if $filename == build {
 		$char: "\E002";
 	}
-	@if $filename == cloud-check {
+	@if $filename == circle-checked {
 		$char: "\E003";
 	}
-	@if $filename == cloud {
+	@if $filename == cloud-check {
 		$char: "\E004";
 	}
-	@if $filename == database {
+	@if $filename == cloud {
 		$char: "\E005";
 	}
-	@if $filename == list-dots {
+	@if $filename == database {
 		$char: "\E006";
 	}
-	@if $filename == pen {
+	@if $filename == list-dots {
 		$char: "\E007";
 	}
-	@if $filename == rocket {
+	@if $filename == pen {
 		$char: "\E008";
+	}
+	@if $filename == rocket {
+		$char: "\E009";
 	}
 
 	@return $char;
@@ -66,6 +69,10 @@
 	}
 }
 
+.icon-arrow {
+	@include icon(arrow);
+
+}
 .icon-build {
 	@include icon(build);
 

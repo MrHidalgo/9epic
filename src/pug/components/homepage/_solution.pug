@@ -1,0 +1,38 @@
+// SECTION :: START
+
+section#solution.solution
+  .c-grid
+
+    p.solution__title.c-title Solutions
+
+    .solution__wrapper
+
+      .solution__tab-wrapper
+
+        .solution__tab-header
+          a.solution__tab.is-active(href="#" data-tab-id='0')
+            div
+              i.icon-font.icon-cloud
+            div
+              span BuiltRight
+              p Cloud Foundation
+          a.solution__tab(href="#" data-tab-id='1')
+            div
+              i.icon-font.icon-rocket
+            div
+              span HeadStart
+              p Digital Accelerators
+          a.solution__tab(href="#" data-tab-id='2')
+            div
+              i.icon-font.icon-cloud-check
+            div
+              span ZeroFriction
+              p Operations Readiness
+
+        .solution__tab-body
+
+          include _solution-1
+          include _solution-2
+          include _solution-3
+
+// SECTION :: END
