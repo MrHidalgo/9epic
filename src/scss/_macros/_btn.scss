@@ -44,6 +44,18 @@
     overflow: hidden;
     background-color: #00B94F;
 
+    &.c-btn__bg--white {
+      background-color: #ffffff;
+
+      &:after {
+        display: none;
+      }
+
+      span {
+        color: #00b94f;
+      }
+    }
+
     &:after {
       content: '';
       z-index: 0;
