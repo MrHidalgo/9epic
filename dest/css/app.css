@@ -424,22 +424,65 @@ picture {
   background-color: #00B94F;
 }
 
-/* line 47, src/scss/_macros/_btn.scss */
+/* line 48, src/scss/_macros/_btn.scss */
+.c-btn__bg:hover:before, .c-btn__bg:hover:after {
+  -webkit-transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+/* line 53, src/scss/_macros/_btn.scss */
+.c-btn__bg:hover:before {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* line 58, src/scss/_macros/_btn.scss */
+.c-btn__bg:hover:after {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* line 64, src/scss/_macros/_btn.scss */
 .c-btn__bg.c-btn__bg--white {
   background-color: #ffffff;
 }
 
-/* line 50, src/scss/_macros/_btn.scss */
-.c-btn__bg.c-btn__bg--white:after {
+/* line 67, src/scss/_macros/_btn.scss */
+.c-btn__bg.c-btn__bg--white:before, .c-btn__bg.c-btn__bg--white:after {
   display: none;
 }
 
-/* line 54, src/scss/_macros/_btn.scss */
+/* line 72, src/scss/_macros/_btn.scss */
 .c-btn__bg.c-btn__bg--white span {
   color: #00b94f;
 }
 
-/* line 59, src/scss/_macros/_btn.scss */
+/* line 77, src/scss/_macros/_btn.scss */
+.c-btn__bg:before, .c-btn__bg:after {
+  -webkit-transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+/* line 82, src/scss/_macros/_btn.scss */
+.c-btn__bg:before {
+  content: '';
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: -webkit-linear-gradient(272.44deg, #3396E1 -48.98%, #2AB492 68.87%, #038A3D 180.55%);
+  background: -o-linear-gradient(272.44deg, #3396E1 -48.98%, #2AB492 68.87%, #038A3D 180.55%);
+  background: linear-gradient(177.56deg, #3396E1 -48.98%, #2AB492 68.87%, #038A3D 180.55%);
+  -webkit-box-shadow: 0px 6px 20px rgba(40, 223, 153, 0.2), 0px 20px 30px rgba(40, 223, 153, 0.2);
+          box-shadow: 0px 6px 20px rgba(40, 223, 153, 0.2), 0px 20px 30px rgba(40, 223, 153, 0.2);
+}
+
+/* line 95, src/scss/_macros/_btn.scss */
 .c-btn__bg:after {
   content: '';
   z-index: 0;
@@ -453,7 +496,7 @@ picture {
   background: linear-gradient(177.56deg, #4097D9 -48.98%, #30C4A0 68.87%, #00B94F 180.55%);
 }
 
-/* line 71, src/scss/_macros/_btn.scss */
+/* line 107, src/scss/_macros/_btn.scss */
 .c-btn span {
   z-index: 2;
   position: relative;
@@ -998,6 +1041,17 @@ picture {
 }
 
 /* line 28, src/scss/_components/homepage/_main.scss */
+.main__wrapper-right video,
+.main__wrapper-right img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  max-height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 40, src/scss/_components/homepage/_main.scss */
 .main__title {
   font-weight: bold;
   font-size: 72px;
@@ -1005,7 +1059,7 @@ picture {
   color: #121E31;
 }
 
-/* line 35, src/scss/_components/homepage/_main.scss */
+/* line 47, src/scss/_components/homepage/_main.scss */
 .main__subtitle {
   padding-bottom: 20px;
   font-weight: 600;
@@ -1014,7 +1068,7 @@ picture {
   color: #121E31;
 }
 
-/* line 43, src/scss/_components/homepage/_main.scss */
+/* line 55, src/scss/_components/homepage/_main.scss */
 .main__desc {
   padding-bottom: 60px;
   font-family: 'Open Sans', sans-serif;
@@ -1023,7 +1077,7 @@ picture {
   color: #636B73;
 }
 
-/* line 51, src/scss/_components/homepage/_main.scss */
+/* line 63, src/scss/_components/homepage/_main.scss */
 .main__heading {
   font-weight: bold;
   font-size: 48px;
@@ -1031,7 +1085,7 @@ picture {
   color: #121E31;
 }
 
-/* line 58, src/scss/_components/homepage/_main.scss */
+/* line 70, src/scss/_components/homepage/_main.scss */
 .main__label {
   padding-bottom: 20px;
   font-weight: 600;
@@ -1040,13 +1094,13 @@ picture {
   color: #121E31;
 }
 
-/* line 66, src/scss/_components/homepage/_main.scss */
+/* line 78, src/scss/_components/homepage/_main.scss */
 .main .c-btn {
   min-width: 200px;
   height: 69px;
 }
 
-/* line 70, src/scss/_components/homepage/_main.scss */
+/* line 82, src/scss/_components/homepage/_main.scss */
 .main .c-btn span {
   font-weight: bold;
   font-size: 17px;
