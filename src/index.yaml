@@ -18,7 +18,7 @@ PageList:
   ready: 55
 - file: confirm.html
   titleName: Confiirm
-  ready: 1
+  ready: 55
 - file: reset-password.html
   titleName: Reset Password
   ready: 1

@@ -2631,6 +2631,11 @@ picture {
 }
 
 /* line 62, src/scss/_components/sign/_sign-in.scss */
+.sign__form-field--action {
+  padding-top: 25px;
+}
+
+/* line 66, src/scss/_components/sign/_sign-in.scss */
 .sign__form-field label {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2642,7 +2647,7 @@ picture {
   color: #636B73;
 }
 
-/* line 71, src/scss/_components/sign/_sign-in.scss */
+/* line 75, src/scss/_components/sign/_sign-in.scss */
 .sign__form-field input {
   outline: none;
   position: relative;
@@ -2683,7 +2688,7 @@ picture {
   color: rgba(49, 55, 49, 0.5);
 }
 
-/* line 90, src/scss/_components/sign/_sign-in.scss */
+/* line 94, src/scss/_components/sign/_sign-in.scss */
 .sign__form-link {
   font-weight: 600;
   font-size: 14px;
@@ -2693,7 +2698,7 @@ picture {
   color: #4097D9;
 }
 
-/* line 100, src/scss/_components/sign/_sign-in.scss */
+/* line 104, src/scss/_components/sign/_sign-in.scss */
 .sign__form-info {
   text-align: right;
   font-size: 14px;
@@ -2701,7 +2706,7 @@ picture {
   color: #3C3C3C;
 }
 
-/* line 107, src/scss/_components/sign/_sign-in.scss */
+/* line 111, src/scss/_components/sign/_sign-in.scss */
 .sign__form-info a {
   margin-left: 5px;
   font-weight: 600;
@@ -2712,7 +2717,7 @@ picture {
   color: #4097D9;
 }
 
-/* line 118, src/scss/_components/sign/_sign-in.scss */
+/* line 122, src/scss/_components/sign/_sign-in.scss */
 .sign__form-pass {
   z-index: 5;
   position: absolute;
@@ -2735,13 +2740,13 @@ picture {
   height: calc(100% - (15px + 29px));
 }
 
-/* line 129, src/scss/_components/sign/_sign-in.scss */
+/* line 133, src/scss/_components/sign/_sign-in.scss */
 .sign__form-pass .icon-font {
   font-size: 16px;
   color: #182135;
 }
 
-/* line 135, src/scss/_components/sign/_sign-in.scss */
+/* line 139, src/scss/_components/sign/_sign-in.scss */
 .sign__form-confirm {
   font-weight: 600;
   font-size: 14px;
@@ -2750,7 +2755,7 @@ picture {
   color: #4097D9;
 }
 
-/* line 144, src/scss/_components/sign/_sign-in.scss */
+/* line 148, src/scss/_components/sign/_sign-in.scss */
 .sign__form-back {
   margin-top: 35px;
   font-weight: 600;
@@ -2760,7 +2765,7 @@ picture {
   color: rgba(99, 107, 115, 0.8);
 }
 
-/* line 154, src/scss/_components/sign/_sign-in.scss */
+/* line 158, src/scss/_components/sign/_sign-in.scss */
 .sign__form .c-btn {
   width: 100%;
   max-width: 250px;

@@ -59,6 +59,10 @@
 			flex-direction: column;
 			padding-bottom: 15px;
 
+			&--action {
+				padding-top: 25px;
+			}
+
 			label {
 				display: flex;
 				padding-bottom: 10px;
