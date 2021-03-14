@@ -1,0 +1,32 @@
+// SECTION :: START
+
+section#sign.sign.sign--in
+  .c-grid
+    .sign__wrapper
+
+      h1.sign__title Welcome back
+
+      form.sign__form(action='' method='' autocomplete='off')
+        .sign__form-field
+          label(for='sing_in_login') Login
+          input(type='text' id='sing_in_login' name='sing_in_login' placeholder='Enter your login' required)
+        .sign__form-field
+          label(for='sing_in_email') Email
+          input(type='email' id='sing_in_email' name='sing_in_email' placeholder='example@mail.com' required)
+        .sign__form-field
+          label(for='sing_in_password') Password
+          input(type='text' id='sing_in_password' name='sing_in_password' placeholder='Enter your password' required)
+        .sign__form-field
+          a.sign__form-link(href="#") Forget password?
+        .sign__form-group.sign__form-group--action
+          div
+            .sign__form-field
+              .c-btn__wrapper
+                a.c-btn.c-btn__bg(href="#")
+                  span Sign in
+          div
+            .sign__form-field
+              p.sign__form-info!= "Don’t have an account? <a href='#'>Sign up</a>"
+
+
+// SECTION :: END

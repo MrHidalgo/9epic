@@ -3,4 +3,25 @@ ProjectTitle: 9epic
 PageList:
 - file: index.html
   titleName: Home
+  ready: 55
+- file: career.html
+  titleName: Career
+  ready: 55
+- file: contacts.html
+  titleName: Contact Us
+  ready: 55
+- file: sign-in.html
+  titleName: Sign In
+  ready: 1
+- file: sign-up.html
+  titleName: Sign Up
+  ready: 1
+- file: confirm.html
+  titleName: Confiirm
+  ready: 1
+- file: reset-password.html
+  titleName: Reset Password
+  ready: 1
+- file: new-password.html
+  titleName: Set a New Password
   ready: 1
