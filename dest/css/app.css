@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* line 26, src/scss/_utilities/_extend.scss */
-.copyright__text, .c-btn span, .sign__form-field label, .sign__form-field input, .sign__form-link, .sign__form-info {
+.copyright__text, .c-btn span, .sign__form-field label, .sign__form-field input, .sign__form-link, .sign__form-info, .sign__form-confirm {
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -2560,7 +2560,21 @@ picture {
   color: #121E31;
 }
 
-/* line 25, src/scss/_components/sign/_sign-in.scss */
+/* line 24, src/scss/_components/sign/_sign-in.scss */
+.sign__title.sign__title--pb0 {
+  padding-bottom: 0;
+}
+
+/* line 29, src/scss/_components/sign/_sign-in.scss */
+.sign__desc {
+  padding-bottom: 40px;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  color: #636B73;
+}
+
+/* line 37, src/scss/_components/sign/_sign-in.scss */
 .sign__form {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2573,7 +2587,7 @@ picture {
           flex-direction: column;
 }
 
-/* line 29, src/scss/_components/sign/_sign-in.scss */
+/* line 41, src/scss/_components/sign/_sign-in.scss */
 .sign__form-group {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2585,28 +2599,25 @@ picture {
           justify-content: space-between;
 }
 
-/* line 33, src/scss/_components/sign/_sign-in.scss */
+/* line 45, src/scss/_components/sign/_sign-in.scss */
 .sign__form-group--action {
   -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-top: 25px;
 }
 
-/* line 37, src/scss/_components/sign/_sign-in.scss */
+/* line 50, src/scss/_components/sign/_sign-in.scss */
 .sign__form-group > div {
   width: 100%;
-  max-width: -webkit-calc((100% - 15px) / 2);
-  max-width: calc((100% - 15px) / 2);
+  max-width: -webkit-calc((100% - 10px) / 2);
+  max-width: calc((100% - 10px) / 2);
 }
 
-/* line 42, src/scss/_components/sign/_sign-in.scss */
-.sign__form-group .sign__form-field {
-  padding-bottom: 0;
-}
-
-/* line 47, src/scss/_components/sign/_sign-in.scss */
+/* line 56, src/scss/_components/sign/_sign-in.scss */
 .sign__form-field {
+  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2616,14 +2627,10 @@ picture {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
-}
-
-/* line 51, src/scss/_components/sign/_sign-in.scss */
-.sign__form-field:not(:last-of-type) {
   padding-bottom: 15px;
 }
 
-/* line 55, src/scss/_components/sign/_sign-in.scss */
+/* line 62, src/scss/_components/sign/_sign-in.scss */
 .sign__form-field label {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2635,13 +2642,13 @@ picture {
   color: #636B73;
 }
 
-/* line 64, src/scss/_components/sign/_sign-in.scss */
+/* line 71, src/scss/_components/sign/_sign-in.scss */
 .sign__form-field input {
   outline: none;
   position: relative;
   width: 100%;
   height: 57px;
-  padding: 0 30px;
+  padding: 0 65px 0 30px;
   -webkit-border-radius: 10px;
           border-radius: 10px;
   border: 1px solid #CBDBE3;
@@ -2676,7 +2683,7 @@ picture {
   color: rgba(49, 55, 49, 0.5);
 }
 
-/* line 83, src/scss/_components/sign/_sign-in.scss */
+/* line 90, src/scss/_components/sign/_sign-in.scss */
 .sign__form-link {
   font-weight: 600;
   font-size: 14px;
@@ -2686,7 +2693,7 @@ picture {
   color: #4097D9;
 }
 
-/* line 93, src/scss/_components/sign/_sign-in.scss */
+/* line 100, src/scss/_components/sign/_sign-in.scss */
 .sign__form-info {
   text-align: right;
   font-size: 14px;
@@ -2694,7 +2701,7 @@ picture {
   color: #3C3C3C;
 }
 
-/* line 100, src/scss/_components/sign/_sign-in.scss */
+/* line 107, src/scss/_components/sign/_sign-in.scss */
 .sign__form-info a {
   margin-left: 5px;
   font-weight: 600;
@@ -2705,7 +2712,45 @@ picture {
   color: #4097D9;
 }
 
-/* line 111, src/scss/_components/sign/_sign-in.scss */
+/* line 118, src/scss/_components/sign/_sign-in.scss */
+.sign__form-pass {
+  z-index: 5;
+  position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  top: 29px;
+  right: 0;
+  width: 65px;
+  height: -webkit-calc(100% - (15px + 29px));
+  height: calc(100% - (15px + 29px));
+}
+
+/* line 129, src/scss/_components/sign/_sign-in.scss */
+.sign__form-pass .icon-font {
+  font-size: 16px;
+  color: #182135;
+}
+
+/* line 135, src/scss/_components/sign/_sign-in.scss */
+.sign__form-confirm {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  text-align: center;
+  color: #4097D9;
+}
+
+/* line 144, src/scss/_components/sign/_sign-in.scss */
 .sign__form .c-btn {
   width: 100%;
   max-width: 250px;

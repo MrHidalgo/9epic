@@ -1,0 +1,41 @@
+// SECTION :: START
+
+section#sign.sign.sign--up
+  .c-grid
+    .sign__wrapper
+
+      h1.sign__title.sign__title--pb0 Get started with Epic9
+      p.sign__desc It’s your fastest path to value in AWS...guaranteed!
+
+      form.sign__form(action='' method='' autocomplete='off')
+        .sign__form-group
+          div
+            .sign__form-field
+              label(for='sing_up_fname') First name
+              input(type='text' id='sing_up_fname' name='sing_up_fname' placeholder='Enter your name' required)
+          div
+            .sign__form-field
+              label(for='sing_up_lname') Last name
+              input(type='text' id='sing_up_lname' name='sing_up_lname' placeholder='Enter your last name' required)
+        .sign__form-field
+          label(for='sing_in_email') Email
+          input(type='email' id='sing_in_email' name='sing_in_email' placeholder='example@mail.com' required)
+        .sign__form-field
+          label(for='sing_in_password') Password
+          input(type='text' id='sing_in_password' name='sing_in_password' placeholder='Enter your password' required)
+          a.sign__form-pass(href="#")
+            i.icon-font.icon-eye
+        .sign__form-group.sign__form-group--action
+          div
+            .sign__form-field
+              .c-btn__wrapper
+                a.c-btn.c-btn__bg(href="#")
+                  span Sign up
+          div
+            .sign__form-field
+              p.sign__form-info!= "Already have an account? <a href='#'>Log in</a>"
+        .sign__form-field
+          a.sign__form-confirm(href="#") Confirm Sign up
+
+
+// SECTION :: END

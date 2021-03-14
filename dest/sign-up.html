@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=0">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <!-- TITLE-->
-    <title>9epic | Sign In</title>
+    <title>9epic | Sign Up</title>
     <!-- FAVICON-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&amp;family=Prompt:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
@@ -34,14 +34,25 @@
     <!-- HEADER :: END-->
     <div class="body body--start p-sign-in">
       <!-- SECTION :: START-->
-      <section class="sign sign--in" id="sign">
+      <section class="sign sign--up" id="sign">
         <div class="c-grid">
           <div class="sign__wrapper">
-            <h1 class="sign__title">Welcome back</h1>
+            <h1 class="sign__title sign__title--pb0">Get started with Epic9</h1>
+            <p class="sign__desc">It’s your fastest path to value in AWS...guaranteed!</p>
             <form class="sign__form" action="" method="" autocomplete="off">
-              <div class="sign__form-field">
-                <label for="sing_in_login">Login</label>
-                <input type="text" id="sing_in_login" name="sing_in_login" placeholder="Enter your login" required>
+              <div class="sign__form-group">
+                <div>
+                  <div class="sign__form-field">
+                    <label for="sing_up_fname">First name</label>
+                    <input type="text" id="sing_up_fname" name="sing_up_fname" placeholder="Enter your name" required>
+                  </div>
+                </div>
+                <div>
+                  <div class="sign__form-field">
+                    <label for="sing_up_lname">Last name</label>
+                    <input type="text" id="sing_up_lname" name="sing_up_lname" placeholder="Enter your last name" required>
+                  </div>
+                </div>
               </div>
               <div class="sign__form-field">
                 <label for="sing_in_email">Email</label>
@@ -51,19 +62,19 @@
                 <label for="sing_in_password">Password</label>
                 <input type="text" id="sing_in_password" name="sing_in_password" placeholder="Enter your password" required><a class="sign__form-pass" href="#"><i class="icon-font icon-eye"></i></a>
               </div>
-              <div class="sign__form-field"><a class="sign__form-link" href="#">Forget password?</a></div>
               <div class="sign__form-group sign__form-group--action">
                 <div>
                   <div class="sign__form-field">
-                    <div class="c-btn__wrapper"><a class="c-btn c-btn__bg" href="#"><span>Sign in</span></a></div>
+                    <div class="c-btn__wrapper"><a class="c-btn c-btn__bg" href="#"><span>Sign up</span></a></div>
                   </div>
                 </div>
                 <div>
                   <div class="sign__form-field">
-                    <p class="sign__form-info">Don’t have an account? <a href='#'>Sign up</a></p>
+                    <p class="sign__form-info">Already have an account? <a href='#'>Log in</a></p>
                   </div>
                 </div>
               </div>
+              <div class="sign__form-field"><a class="sign__form-confirm" href="#">Confirm Sign up</a></div>
             </form>
           </div>
         </div>
