@@ -141,6 +141,16 @@
 			color: #4097D9;
 		}
 
+		&-back {
+			margin-top: 35px;
+			@extend %fontOpenSans;
+			font-weight: 600;
+			font-size: 14px;
+			line-height: 19px;
+			text-align: center;
+			color: rgba(#636B73, 0.8);
+		}
+
 		.c-btn {
 			width: 100%;
 			max-width: 250px;

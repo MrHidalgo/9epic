@@ -12,10 +12,10 @@ PageList:
   ready: 55
 - file: sign-in.html
   titleName: Sign In
-  ready: 1
+  ready: 55
 - file: sign-up.html
   titleName: Sign Up
-  ready: 1
+  ready: 55
 - file: confirm.html
   titleName: Confiirm
   ready: 1

@@ -1,0 +1,30 @@
+// SECTION :: START
+
+section#sign.sign.sign--up
+  .c-grid
+    .sign__wrapper
+
+      h1.sign__title.sign__title--pb0 Confirm Sign-up
+      p.sign__desc Enter the verification code sent to your registered email address
+
+      form.sign__form(action='' method='' autocomplete='off')
+        .sign__form-field
+          label(for='confirm_email') Email
+          input(type='email' id='confirm_email' name='confirm_email' placeholder='example@mail.com' required)
+        .sign__form-field
+          label(for='confirm_ver_code') Verification Code
+          input(type='text' id='confirm_ver_code' name='confirm_ver_code' placeholder='Enter your code' required)
+        .sign__form-group.sign__form-group--action
+          div
+            .sign__form-field
+              .c-btn__wrapper
+                a.c-btn.c-btn__bg(href="#")
+                  span Confirm
+          div
+            .sign__form-field
+              p.sign__form-info!= "Lost your code? <a href='#'>Resend Code</a>"
+        .sign__form-field
+          a.sign__form-back(href="#") Back to Sign up
+
+
+// SECTION :: END
