@@ -6,10 +6,10 @@ PageList:
   ready: 55
 - file: career.html
   titleName: Career
-  ready: 1
+  ready: 55
 - file: contacts.html
   titleName: Contact Us
-  ready: 1
+  ready: 55
 - file: sign-in.html
   titleName: Sign In
   ready: 55
