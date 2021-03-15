@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* line 14, src/scss/_utilities/_extend.scss */
-.career__bg img {
+.career__bg img, .describe__block-media img {
   position: absolute;
   top: 0;
   left: 0;
@@ -13,7 +13,7 @@
 }
 
 /* line 26, src/scss/_utilities/_extend.scss */
-.copyright__text, .c-btn span, .sign__form-field label, .sign__form-field input, .sign__form-link, .sign__form-info, .sign__form-confirm, .sign__form-back, .career__wrapper-2 p, .career__slogan {
+.copyright__text, .c-btn span, .sign__form-field label, .sign__form-field input, .sign__form-link, .sign__form-info, .sign__form-confirm, .sign__form-back, .career__wrapper-2 p, .career__slogan, .describe__block-desc p {
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -2872,6 +2872,108 @@ picture {
 .describe {
   padding-top: 50px;
   padding-bottom: 100px;
+}
+
+/* line 7, src/scss/_components/career/_describe.scss */
+.describe__block {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* line 13, src/scss/_components/career/_describe.scss */
+.describe__block--reverse .describe__block-left {
+  -webkit-box-ordinal-group: 3;
+  -webkit-order: 2;
+      -ms-flex-order: 2;
+          order: 2;
+  padding-right: 0;
+  padding-left: 75px;
+}
+
+/* line 18, src/scss/_components/career/_describe.scss */
+.describe__block--reverse .describe__block-right {
+  -webkit-box-ordinal-group: 2;
+  -webkit-order: 1;
+      -ms-flex-order: 1;
+          order: 1;
+  padding-left: 40px;
+  padding-right: 75px;
+}
+
+/* line 26, src/scss/_components/career/_describe.scss */
+.describe__block-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+/* line 31, src/scss/_components/career/_describe.scss */
+.describe__block-wrapper > div:not(:last-of-type) {
+  padding-bottom: 76px;
+}
+
+/* line 37, src/scss/_components/career/_describe.scss */
+.describe__block-left, .describe__block-right {
+  width: 50%;
+}
+
+/* line 42, src/scss/_components/career/_describe.scss */
+.describe__block-left {
+  padding-right: 75px;
+}
+
+/* line 45, src/scss/_components/career/_describe.scss */
+.describe__block-right {
+  padding-left: 75px;
+  padding-right: 40px;
+}
+
+/* line 50, src/scss/_components/career/_describe.scss */
+.describe__block-media {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  height: 600px;
+}
+
+/* line 62, src/scss/_components/career/_describe.scss */
+.describe__block-title, .describe__block-desc {
+  width: 100%;
+  max-width: 450px;
+}
+
+/* line 68, src/scss/_components/career/_describe.scss */
+.describe__block-title {
+  padding-bottom: 20px;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 54px;
+  color: #121E31;
+}
+
+/* line 77, src/scss/_components/career/_describe.scss */
+.describe__block-desc p {
+  font-size: 16px;
+  line-height: 26px;
+  color: #636B73;
+}
+
+/* line 83, src/scss/_components/career/_describe.scss */
+.describe__block-desc p:not(:last-of-type) {
+  padding-bottom: 20px;
 }
 
 /*# sourceMappingURL=maps/app.css.map */
