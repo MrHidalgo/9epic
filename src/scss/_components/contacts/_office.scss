@@ -1,0 +1,159 @@
+// SECTION :: START
+
+.office {
+	padding-top: 50px;
+	padding-bottom: 80px;
+
+	&__wrapper {
+		&-1 {
+			padding-bottom: 140px;
+		}
+
+		&-2 {}
+	}
+
+	&__title {
+		padding-bottom: 55px;
+		font-weight: bold;
+		font-size: 36px;
+		line-height: 54px;
+		color: #121E31;
+	}
+
+	&__block {
+		display: flex;
+		flex-direction: column;
+
+		&-wrapper {
+			position: relative;
+			left: -40px;
+			display: flex;
+			width: calc(100% + 40px);
+
+			> div {
+				width: 100%;
+				max-width: calc(100% / 2);
+				padding-left: 40px;
+				padding-bottom: 40px;
+			}
+		}
+
+		&-head {
+			overflow: hidden;
+			position: relative;
+			height: 400px;
+
+			iframe,
+			img,
+			video {
+				@extend %imageResCoverAbs;
+			}
+		}
+
+		&-body {
+			height: 200px;
+			padding: 40px 40px 55px;
+			background-color: #121e31;
+
+			p {
+				padding-bottom: 10px;
+				font-weight: bold;
+				font-size: 30px;
+				line-height: 45px;
+				color: #FFFFFF;
+			}
+
+			span {
+				@extend %fontOpenSans;
+				font-weight: 600;
+				font-size: 16px;
+				line-height: 24px;
+				color: #FFFFFF;
+			}
+		}
+	}
+
+	&__box {
+		display: flex;
+		height: 100%;
+		padding: 20px;
+		border: 2px solid #DFF1FF;
+		border-radius: 10px;
+		background-color: rgba(255, 255, 255, 0.3);
+		backdrop-filter: blur(4px);
+
+		> div {
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+			padding: 30px;
+			border-radius: 10px;
+			box-shadow: 0 4px 70px 0 rgba(192, 218, 238, 0.5);
+			background-color: #FFFFFF;
+		}
+
+		&-wrapper {
+			position: relative;
+			left: -20px;
+			display: flex;
+			flex-wrap: wrap;
+			width: calc(100% + 20px);
+
+			> div {
+				width: 100%;
+				max-width: calc(100% / 3);
+				padding-left: 20px;
+				padding-bottom: 20px;
+			}
+		}
+
+		&-icon {
+			position: relative;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 50px;
+			height: 50px;
+			margin-bottom: 20px;
+			border-radius: 8px;
+			background-color: rgba(#4097D9, 0.1);
+
+			.icon-font {
+				color: #4097d9;
+				font-size: 16px;
+
+				&.icon-governance {
+					font-size: 22px;
+				}
+				&.icon-terminal {
+					font-size: 18px;
+				}
+			}
+		}
+
+		&-title {
+			padding-bottom: 10px;
+			font-size: 18px;
+			line-height: 27px;
+			color: #121E31;
+		}
+
+		&-desc {
+			padding-bottom: 30px;
+			@extend %fontOpenSans;
+			font-size: 14px;
+			line-height: 22px;
+			color: #636B73;
+		}
+
+		.c-btn {
+			width: 100%;
+
+			&__wrapper {
+				width: 100%;
+			}
+		}
+	}
+}
+
+// SECTION :: END
