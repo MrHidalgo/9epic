@@ -1,0 +1,37 @@
+// SECTION :: START
+
+section#sign.sign.sign--newPass
+  .c-grid
+    .sign__wrapper
+
+      h1.sign__title.sign__title--pb0 Set a new password
+      p.sign__desc Enter the verification code sent to your registered email address
+
+      form.sign__form(action='' method='' autocomplete='off')
+        .sign__form-field
+          label(for='new_pass_ver_code') Verification Code
+          input(type='text' id='new_pass_ver_code' name='new_pass_ver_code' placeholder='ХХХХХХХХ' required)
+        .sign__form-field
+          label(for='new_pass_new_pass') New password
+          input(type='password' id='new_pass_new_pass' name='new_pass_new_pass' placeholder='Enter your new password' required)
+          a.sign__form-pass(href="#")
+            i.icon-font.icon-eye
+        .sign__form-field
+          label(for='new_pass_new_pass_ver') Verify password
+          input(type='password' id='new_pass_new_pass_ver' name='new_pass_new_pass_ver' placeholder='Repeat your new password' required)
+          a.sign__form-pass(href="#")
+            i.icon-font.icon-eye
+        .sign__form-group.sign__form-group--action
+          div
+            .sign__form-field
+              .c-btn__wrapper
+                a.c-btn.c-btn__bg(href="#")
+                  span Set Password
+          div
+            .sign__form-field
+              p.sign__form-info!= "<a href='#'>Resend Code</a>"
+        .sign__form-field
+          a.sign__form-back(href="#") Back to Reset Password
+
+
+// SECTION :: END

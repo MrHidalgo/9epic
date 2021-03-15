@@ -6,10 +6,10 @@ PageList:
   ready: 55
 - file: career.html
   titleName: Career
-  ready: 55
+  ready: 1
 - file: contacts.html
   titleName: Contact Us
-  ready: 55
+  ready: 1
 - file: sign-in.html
   titleName: Sign In
   ready: 55
@@ -21,7 +21,7 @@ PageList:
   ready: 55
 - file: reset-password.html
   titleName: Reset Password
-  ready: 1
+  ready: 55
 - file: new-password.html
   titleName: Set a New Password
-  ready: 1
+  ready: 55
