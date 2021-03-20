@@ -15,9 +15,10 @@ section#main.main
 
       .main__wrapper-right
 
-        video(autoplay loop muted)
-          source(src='img/video-main-1.mp4' type='video/mp4')
-          | Your browser does not support the video tag.
+        #video1Wrapper
+          video#video1(autoplay loop muted)
+            source(src='img/video-main-1.mp4' type='video/mp4')
+            | Your browser does not support the video tag.
 
     .main__wrapper.main__wrapper-2
       .main__wrapper-left
@@ -32,7 +33,8 @@ section#main.main
 
       .main__wrapper-right
 
-        img(src="img/img-main-svg-1.svg" alt="")
+        #mainSVG1
+          include _main-svg-1
 
     .main__wrapper.main__wrapper-3
       .main__wrapper-left
@@ -48,9 +50,10 @@ section#main.main
 
       .main__wrapper-right
 
-        video(autoplay loop muted)
-          source(src='img/video-main-2.mp4' type='video/mp4')
-          | Your browser does not support the video tag.
+        #video2Wrapper
+          video#video2(autoplay loop muted)
+            source(src='img/video-main-2.mp4' type='video/mp4')
+            | Your browser does not support the video tag.
 
     .main__wrapper.main__wrapper-4
       .main__wrapper-left
@@ -66,7 +69,8 @@ section#main.main
 
       .main__wrapper-right
 
-        img(src="img/img-main-svg-2.svg" alt="")
+        #mainSVG2
+          include _main-svg-2
 
     .main__wrapper.main__wrapper-5
       .main__wrapper-left
@@ -82,8 +86,9 @@ section#main.main
 
       .main__wrapper-right
 
-        video(autoplay loop muted)
-          source(src='img/video-main-3.mp4' type='video/mp4')
-          | Your browser does not support the video tag.
+        #video3Wrapper
+          video#video3(autoplay loop muted)
+            source(src='img/video-main-3.mp4' type='video/mp4')
+            | Your browser does not support the video tag.
 
 // SECTION :: END

@@ -5,11 +5,35 @@
 	padding-bottom: 200px;
 
 	&__wrapper {
+		position: relative;
 		display: flex;
-		align-items: center;
 
-		&:not(:last-of-type) {
-			padding-bottom: 250px;
+		&-1 {
+			.main__wrapper-left {
+				padding-bottom: 600px;
+			}
+		}
+		&-2 {
+			.main__wrapper-left {
+				padding-bottom: 1000px;
+			}
+		}
+		&-3 {
+			z-index: 3;
+			.main__wrapper-left {
+				padding-bottom: 800px;
+			}
+		}
+		&-4 {
+			z-index: 2;
+			.main__wrapper-left {
+				padding-bottom: 1200px;
+			}
+		}
+		&-5 {
+			.main__wrapper-left {
+				padding-bottom: 800px;
+			}
 		}
 
 		&-left,
@@ -25,14 +49,28 @@
 		}
 
 		&-right {
+			display: flex;
+			align-items: flex-start;
+			justify-content: center;
+
+			> div {
+				position: sticky;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+
 			video,
+			svg,
 			img {
+				visibility: hidden;
 				display: block;
 				max-width: 100%;
 				height: auto;
 				max-height: 100%;
 				margin-left: auto;
 				margin-right: auto;
+				backface-visibility: hidden;
+				transform-origin: center;
 			}
 		}
 	}
