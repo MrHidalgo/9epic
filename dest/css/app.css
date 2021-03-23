@@ -1023,110 +1023,231 @@ picture {
 
 /* line 3, src/scss/_components/homepage/_main.scss */
 .main {
-  padding-top: 356px;
+  overflow: hidden;
+  position: relative;
   padding-bottom: 200px;
 }
 
-/* line 7, src/scss/_components/homepage/_main.scss */
-.main__wrapper {
+/* line 8, src/scss/_components/homepage/_main.scss */
+.main__bg {
+  z-index: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 17, src/scss/_components/homepage/_main.scss */
+.main__bg-grid {
+  width: 100%;
+  max-width: 1170px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 25, src/scss/_components/homepage/_main.scss */
+.main__bg-grid > div {
+  position: fixed;
+  top: 0;
+  right: 10%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  max-width: 40%;
+  height: 100vh;
+  margin-left: auto;
+}
+
+/* line 37, src/scss/_components/homepage/_main.scss */
+.main__bg-grid > div > div {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+/* line 53, src/scss/_components/homepage/_main.scss */
+.main__bg-grid > div > div#video1Wrapper video {
+  z-index: 0;
+  position: relative;
+}
+
+/* line 58, src/scss/_components/homepage/_main.scss */
+.main__bg-grid > div > div#video1Wrapper #video1WrapperBorder {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-}
-
-/* line 12, src/scss/_components/homepage/_main.scss */
-.main__wrapper-1 .main__wrapper-left {
-  padding-bottom: 600px;
-}
-
-/* line 17, src/scss/_components/homepage/_main.scss */
-.main__wrapper-2 .main__wrapper-left {
-  padding-bottom: 1000px;
-}
-
-/* line 21, src/scss/_components/homepage/_main.scss */
-.main__wrapper-3 {
-  z-index: 3;
-}
-
-/* line 23, src/scss/_components/homepage/_main.scss */
-.main__wrapper-3 .main__wrapper-left {
-  padding-bottom: 800px;
-}
-
-/* line 27, src/scss/_components/homepage/_main.scss */
-.main__wrapper-4 {
-  z-index: 2;
-}
-
-/* line 29, src/scss/_components/homepage/_main.scss */
-.main__wrapper-4 .main__wrapper-left {
-  padding-bottom: 1200px;
-}
-
-/* line 34, src/scss/_components/homepage/_main.scss */
-.main__wrapper-5 .main__wrapper-left {
-  padding-bottom: 800px;
-}
-
-/* line 39, src/scss/_components/homepage/_main.scss */
-.main__wrapper-left, .main__wrapper-right {
-  width: 50%;
-}
-
-/* line 45, src/scss/_components/homepage/_main.scss */
-.main__wrapper-left > div {
-  width: 100%;
-  max-width: 465px;
-}
-
-/* line 51, src/scss/_components/homepage/_main.scss */
-.main__wrapper-right {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: start;
-  -webkit-align-items: flex-start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
-/* line 56, src/scss/_components/homepage/_main.scss */
-.main__wrapper-right > div {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
+/* line 64, src/scss/_components/homepage/_main.scss */
+.main__bg-grid > div > div#video1Wrapper #video1WrapperBorder i {
+  z-index: 5;
+  opacity: 0;
+  position: absolute;
+  width: 516px;
+  height: 315px;
+  border-top: 7px solid #333;
+  border-left: 10px solid #333;
+  border-right: 10px solid #333;
+  border-bottom: 7px solid #333;
+  -webkit-border-radius: 12px 12px 0 0;
+          border-radius: 12px 12px 0 0;
+  -webkit-transform-origin: center;
+      -ms-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: scale(1.75) translateY(7px);
+      -ms-transform: scale(1.75) translateY(7px);
+          transform: scale(1.75) translateY(7px);
 }
 
-/* line 62, src/scss/_components/homepage/_main.scss */
-.main__wrapper-right video,
-.main__wrapper-right svg,
-.main__wrapper-right img {
-  visibility: hidden;
+/* line 82, src/scss/_components/homepage/_main.scss */
+.main__bg-grid > div > div#mainSVG1 #pc-bg,
+.main__bg-grid > div > div#mainSVG1 #pc-top,
+.main__bg-grid > div > div#mainSVG1 #pc-bottom,
+.main__bg-grid > div > div#mainSVG1 #pc-shadow {
+  opacity: 0;
+}
+
+/* line 89, src/scss/_components/homepage/_main.scss */
+.main__bg-grid > div > div#mainSVG1 #pc-bg {
+  rx: 6px;
+  -webkit-transform: translate(1px, 1px);
+      -ms-transform: translate(1px, 1px);
+          transform: translate(1px, 1px);
+  -webkit-transform-origin: center;
+      -ms-transform-origin: center;
+          transform-origin: center;
+  stroke: #333;
+  stroke-width: 5px;
+}
+
+/* line 97, src/scss/_components/homepage/_main.scss */
+.main__bg-grid > div > div#mainSVG1 #pc-bottom {
+  opacity: 0;
+}
+
+/* line 102, src/scss/_components/homepage/_main.scss */
+.main__bg-grid > div > div#video1Wrapper, .main__bg-grid > div > div#mainSVG1 {
+  opacity: 1;
+}
+
+/* line 107, src/scss/_components/homepage/_main.scss */
+.main__bg-grid > div > div#video2Wrapper {
+  opacity: 1;
+  z-index: 3;
+}
+
+/* line 112, src/scss/_components/homepage/_main.scss */
+.main__bg-grid > div > div video,
+.main__bg-grid > div > div img,
+.main__bg-grid > div > div svg {
   display: block;
+  width: 100%;
   max-width: 100%;
   height: auto;
-  max-height: 100%;
-  margin-left: auto;
   margin-right: auto;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
   -webkit-transform-origin: center;
       -ms-transform-origin: center;
           transform-origin: center;
 }
 
-/* line 78, src/scss/_components/homepage/_main.scss */
+/* line 122, src/scss/_components/homepage/_main.scss */
+.main__bg-grid > div > div video #anim2-box-1,
+.main__bg-grid > div > div video #anim2-box-2,
+.main__bg-grid > div > div video #anim2-box-3,
+.main__bg-grid > div > div video #anim2-box-4,
+.main__bg-grid > div > div video #anim2-box-5,
+.main__bg-grid > div > div img #anim2-box-1,
+.main__bg-grid > div > div img #anim2-box-2,
+.main__bg-grid > div > div img #anim2-box-3,
+.main__bg-grid > div > div img #anim2-box-4,
+.main__bg-grid > div > div img #anim2-box-5,
+.main__bg-grid > div > div svg #anim2-box-1,
+.main__bg-grid > div > div svg #anim2-box-2,
+.main__bg-grid > div > div svg #anim2-box-3,
+.main__bg-grid > div > div svg #anim2-box-4,
+.main__bg-grid > div > div svg #anim2-box-5 {
+  z-index: 5;
+  position: relative;
+  opacity: 0;
+}
+
+/* line 137, src/scss/_components/homepage/_main.scss */
+.main__wrapper {
+  z-index: 2;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: -webkit-calc(100vh + 75vh);
+  min-height: calc(100vh + 75vh);
+}
+
+/* line 143, src/scss/_components/homepage/_main.scss */
+.main__wrapper-1 {
+  padding-top: 356px;
+}
+
+/* line 147, src/scss/_components/homepage/_main.scss */
+.main__wrapper:last-of-type {
+  min-height: 100vh;
+}
+
+/* line 151, src/scss/_components/homepage/_main.scss */
+.main__wrapper-left {
+  width: 50%;
+}
+
+/* line 156, src/scss/_components/homepage/_main.scss */
+.main__wrapper-left > div {
+  width: 100%;
+  max-width: 465px;
+}
+
+/* line 163, src/scss/_components/homepage/_main.scss */
 .main__title {
   font-weight: bold;
   font-size: 72px;
@@ -1134,7 +1255,7 @@ picture {
   color: #121E31;
 }
 
-/* line 85, src/scss/_components/homepage/_main.scss */
+/* line 170, src/scss/_components/homepage/_main.scss */
 .main__subtitle {
   padding-bottom: 20px;
   font-weight: 600;
@@ -1143,7 +1264,7 @@ picture {
   color: #121E31;
 }
 
-/* line 93, src/scss/_components/homepage/_main.scss */
+/* line 178, src/scss/_components/homepage/_main.scss */
 .main__desc {
   padding-bottom: 60px;
   font-family: 'Open Sans', sans-serif;
@@ -1152,7 +1273,7 @@ picture {
   color: #636B73;
 }
 
-/* line 101, src/scss/_components/homepage/_main.scss */
+/* line 186, src/scss/_components/homepage/_main.scss */
 .main__heading {
   font-weight: bold;
   font-size: 48px;
@@ -1160,7 +1281,7 @@ picture {
   color: #121E31;
 }
 
-/* line 108, src/scss/_components/homepage/_main.scss */
+/* line 193, src/scss/_components/homepage/_main.scss */
 .main__label {
   padding-bottom: 20px;
   font-weight: 600;
@@ -1169,13 +1290,13 @@ picture {
   color: #121E31;
 }
 
-/* line 116, src/scss/_components/homepage/_main.scss */
+/* line 201, src/scss/_components/homepage/_main.scss */
 .main .c-btn {
   min-width: 200px;
   height: 69px;
 }
 
-/* line 120, src/scss/_components/homepage/_main.scss */
+/* line 205, src/scss/_components/homepage/_main.scss */
 .main .c-btn span {
   font-weight: bold;
   font-size: 17px;
