@@ -333,8 +333,30 @@ picture {
   line-height: 1;
 }
 
-/* line 6, src/scss/_macros/_logotype.scss */
+/* line 3, src/scss/_macros/_logotype.scss */
+.logo {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* line 8, src/scss/_macros/_logotype.scss */
+.logo.logo--header .logo__img {
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* line 11, src/scss/_macros/_logotype.scss */
+.logo.logo--header .logo__img--mobile {
+  opacity: 0;
+  position: absolute;
+}
+
+/* line 21, src/scss/_macros/_logotype.scss */
 .logo__btn {
+  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -345,11 +367,12 @@ picture {
           align-items: flex-start;
 }
 
-/* line 11, src/scss/_macros/_logotype.scss */
+/* line 27, src/scss/_macros/_logotype.scss */
 .logo__img {
   display: block;
   max-width: 100%;
   height: auto;
+  max-height: 100%;
 }
 
 /* line 3, src/scss/_macros/_title.scss */
@@ -525,6 +548,7 @@ picture {
 /* line 3, src/scss/_components/_header.scss */
 .header {
   z-index: 999;
+  overflow: hidden;
   position: fixed;
   top: 25px;
   left: 25px;
@@ -532,16 +556,96 @@ picture {
   width: calc(100% - 50px);
   -webkit-border-radius: 10px;
           border-radius: 10px;
-  -webkit-box-shadow: 0px 10px 40px rgba(64, 151, 217, 0.25);
-          box-shadow: 0px 10px 40px rgba(64, 151, 217, 0.25);
+  -webkit-box-shadow: 0 10px 40px 0 rgba(64, 151, 217, 0.25);
+          box-shadow: 0 10px 40px 0 rgba(64, 151, 217, 0.25);
   background: -webkit-gradient(linear, left top, right top, color-stop(-14.97%, #4097D9), color-stop(54.44%, #30C4A0), color-stop(120.21%, #00B94F));
   background: -webkit-linear-gradient(left, #4097D9 -14.97%, #30C4A0 54.44%, #00B94F 120.21%);
   background: -o-linear-gradient(left, #4097D9 -14.97%, #30C4A0 54.44%, #00B94F 120.21%);
   background: linear-gradient(90deg, #4097D9 -14.97%, #30C4A0 54.44%, #00B94F 120.21%);
+  -webkit-transition: -webkit-box-shadow 0.3s ease-in-out;
+  transition: -webkit-box-shadow 0.3s ease-in-out;
+  -o-transition: box-shadow 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
 }
 
-/* line 13, src/scss/_components/_header.scss */
+/* line 15, src/scss/_components/_header.scss */
+.header:after {
+  content: '';
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  -webkit-transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+/* line 30, src/scss/_components/_header.scss */
+.header.is-fixed .header__wrapper {
+  height: 100px;
+  padding-top: 0;
+  padding-bottom: 0;
+  -webkit-transition: height 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;
+  -o-transition: height 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;
+  transition: height 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;
+}
+
+/* line 39, src/scss/_components/_header.scss */
+.header.is-color {
+  -webkit-box-shadow: 0 10px 40px 0 rgba(64, 151, 217, 0.25);
+          box-shadow: 0 10px 40px 0 rgba(64, 151, 217, 0.25);
+  -webkit-transition: -webkit-box-shadow 0.3s ease-in-out;
+  transition: -webkit-box-shadow 0.3s ease-in-out;
+  -o-transition: box-shadow 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+}
+
+/* line 43, src/scss/_components/_header.scss */
+.header.is-color:after {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+/* line 52, src/scss/_components/_header.scss */
+.header.is-color .header__btn .c-btn:after {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+/* line 58, src/scss/_components/_header.scss */
+.header.is-color .header__btn .c-btn span {
+  color: #ffffff;
+  -webkit-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+
+/* line 69, src/scss/_components/_header.scss */
+.header.is-color .logo.logo--header .logo__img--desktop {
+  opacity: 0;
+}
+
+/* line 72, src/scss/_components/_header.scss */
+.header.is-color .logo.logo--header .logo__img--mobile {
+  opacity: 1;
+}
+
+/* line 80, src/scss/_components/_header.scss */
 .header__wrapper {
+  z-index: 2;
+  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -553,15 +657,18 @@ picture {
   width: 100%;
   height: 120px;
   padding: 10px 50px;
+  -webkit-transition: height 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;
+  -o-transition: height 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;
+  transition: height 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;
 }
 
-/* line 20, src/scss/_components/_header.scss */
+/* line 90, src/scss/_components/_header.scss */
 .header__wrapper-left, .header__wrapper-right {
   width: 100%;
   max-width: 200px;
 }
 
-/* line 26, src/scss/_components/_header.scss */
+/* line 96, src/scss/_components/_header.scss */
 .header__wrapper-middle {
   display: -webkit-box;
   display: -webkit-flex;
@@ -585,7 +692,7 @@ picture {
   padding-right: 50px;
 }
 
-/* line 37, src/scss/_components/_header.scss */
+/* line 107, src/scss/_components/_header.scss */
 .header__wrapper-right {
   display: -webkit-box;
   display: -webkit-flex;
@@ -597,7 +704,7 @@ picture {
           justify-content: flex-end;
 }
 
-/* line 43, src/scss/_components/_header.scss */
+/* line 113, src/scss/_components/_header.scss */
 .header__nav {
   display: -webkit-box;
   display: -webkit-flex;
@@ -605,7 +712,7 @@ picture {
   display: flex;
 }
 
-/* line 46, src/scss/_components/_header.scss */
+/* line 116, src/scss/_components/_header.scss */
 .header__nav a {
   display: -webkit-box;
   display: -webkit-flex;
@@ -629,6 +736,34 @@ picture {
   line-height: 22px;
   text-align: center;
   color: #FFFFFF;
+}
+
+/* line 135, src/scss/_components/_header.scss */
+.header__btn .c-btn:after {
+  content: '';
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-border-radius: 2rem;
+          border-radius: 2rem;
+  background: -webkit-linear-gradient(272.44deg, #4097D9 -48.98%, #30C4A0 68.87%, #00B94F 180.55%), #FFFFFF;
+  background: -o-linear-gradient(272.44deg, #4097D9 -48.98%, #30C4A0 68.87%, #00B94F 180.55%), #FFFFFF;
+  background: linear-gradient(177.56deg, #4097D9 -48.98%, #30C4A0 68.87%, #00B94F 180.55%), #FFFFFF;
+  -webkit-transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+/* line 150, src/scss/_components/_header.scss */
+.header__btn .c-btn span {
+  -webkit-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
 }
 
 /* line 3, src/scss/_components/_footer.scss */
@@ -1029,6 +1164,11 @@ picture {
 }
 
 /* line 8, src/scss/_components/homepage/_main.scss */
+.main [main-content-js] {
+  opacity: 0;
+}
+
+/* line 12, src/scss/_components/homepage/_main.scss */
 .main__bg {
   opacity: 0;
   position: absolute;
@@ -1038,7 +1178,7 @@ picture {
   height: 100%;
 }
 
-/* line 25, src/scss/_components/homepage/_main.scss */
+/* line 29, src/scss/_components/homepage/_main.scss */
 .main__bg-grid > div {
   position: fixed;
   top: 0;
@@ -1061,7 +1201,7 @@ picture {
   margin-left: auto;
 }
 
-/* line 39, src/scss/_components/homepage/_main.scss */
+/* line 43, src/scss/_components/homepage/_main.scss */
 .main__bg-grid > div > div {
   opacity: 0;
   position: absolute;
@@ -1087,18 +1227,18 @@ picture {
   padding-right: 50px;
 }
 
-/* line 54, src/scss/_components/homepage/_main.scss */
+/* line 58, src/scss/_components/homepage/_main.scss */
 .main__bg-grid > div > div#video1Wrapper {
   opacity: 1;
 }
 
-/* line 58, src/scss/_components/homepage/_main.scss */
+/* line 62, src/scss/_components/homepage/_main.scss */
 .main__bg-grid > div > div#video1Wrapper video {
   z-index: 0;
   position: relative;
 }
 
-/* line 63, src/scss/_components/homepage/_main.scss */
+/* line 67, src/scss/_components/homepage/_main.scss */
 .main__bg-grid > div > div#video1Wrapper #video1WrapperBorder {
   position: relative;
   display: -webkit-box;
@@ -1115,7 +1255,7 @@ picture {
           justify-content: center;
 }
 
-/* line 69, src/scss/_components/homepage/_main.scss */
+/* line 73, src/scss/_components/homepage/_main.scss */
 .main__bg-grid > div > div#video1Wrapper #video1WrapperBorder i {
   z-index: 5;
   overflow: hidden;
@@ -1137,7 +1277,7 @@ picture {
           transform: translate(10px, 30px);
 }
 
-/* line 78, src/scss/_components/homepage/_main.scss */
+/* line 82, src/scss/_components/homepage/_main.scss */
 .main__bg-grid > div > div#video1Wrapper #video1WrapperBorder i video {
   position: fixed;
   margin-left: auto;
@@ -1146,35 +1286,35 @@ picture {
           transform-origin: center;
 }
 
-/* line 87, src/scss/_components/homepage/_main.scss */
+/* line 91, src/scss/_components/homepage/_main.scss */
 .main__bg-grid > div > div#mainSVG1 {
   z-index: 1;
   opacity: 1;
 }
 
-/* line 92, src/scss/_components/homepage/_main.scss */
+/* line 96, src/scss/_components/homepage/_main.scss */
 .main__bg-grid > div > div#mainSVG2 {
   z-index: 2;
   opacity: 1;
 }
 
-/* line 97, src/scss/_components/homepage/_main.scss */
+/* line 101, src/scss/_components/homepage/_main.scss */
 .main__bg-grid > div > div#mainSVG3 {
   z-index: 4;
   opacity: 1;
 }
 
-/* line 101, src/scss/_components/homepage/_main.scss */
+/* line 105, src/scss/_components/homepage/_main.scss */
 .main__bg-grid > div > div#mainSVG3 #anim4-bg rect {
   rx: 80;
 }
 
-/* line 106, src/scss/_components/homepage/_main.scss */
+/* line 110, src/scss/_components/homepage/_main.scss */
 .main__bg-grid > div > div#mainSVG4 {
   opacity: 1;
 }
 
-/* line 110, src/scss/_components/homepage/_main.scss */
+/* line 114, src/scss/_components/homepage/_main.scss */
 .main__bg-grid > div > div video,
 .main__bg-grid > div > div img,
 .main__bg-grid > div > div svg {
@@ -1183,7 +1323,7 @@ picture {
   max-width: 650px;
 }
 
-/* line 122, src/scss/_components/homepage/_main.scss */
+/* line 126, src/scss/_components/homepage/_main.scss */
 .main__wrapper {
   z-index: 2;
   position: relative;
@@ -1224,14 +1364,14 @@ picture {
 		}*/
 }
 
-/* line 162, src/scss/_components/homepage/_main.scss */
+/* line 166, src/scss/_components/homepage/_main.scss */
 .main__wrapper:last-of-type .main__wrapper-left {
   -webkit-transform: translateY(0);
       -ms-transform: translateY(0);
           transform: translateY(0);
 }
 
-/* line 168, src/scss/_components/homepage/_main.scss */
+/* line 172, src/scss/_components/homepage/_main.scss */
 .main__wrapper-left {
   position: fixed;
   top: 0;
@@ -1257,7 +1397,7 @@ picture {
           transform: translateY(100%);
 }
 
-/* line 183, src/scss/_components/homepage/_main.scss */
+/* line 187, src/scss/_components/homepage/_main.scss */
 .main__wrapper-left:after {
   position: absolute;
   right: 0;
@@ -1267,13 +1407,13 @@ picture {
   color: #000000;
 }
 
-/* line 195, src/scss/_components/homepage/_main.scss */
+/* line 199, src/scss/_components/homepage/_main.scss */
 .main__wrapper-left > div {
   width: 100%;
   max-width: 465px;
 }
 
-/* line 202, src/scss/_components/homepage/_main.scss */
+/* line 206, src/scss/_components/homepage/_main.scss */
 .main__title {
   font-weight: bold;
   font-size: 72px;
@@ -1281,7 +1421,7 @@ picture {
   color: #121E31;
 }
 
-/* line 209, src/scss/_components/homepage/_main.scss */
+/* line 213, src/scss/_components/homepage/_main.scss */
 .main__subtitle {
   padding-bottom: 20px;
   font-weight: 600;
@@ -1290,7 +1430,7 @@ picture {
   color: #121E31;
 }
 
-/* line 217, src/scss/_components/homepage/_main.scss */
+/* line 221, src/scss/_components/homepage/_main.scss */
 .main__desc {
   padding-bottom: 60px;
   font-family: 'Open Sans', sans-serif;
@@ -1299,7 +1439,7 @@ picture {
   color: #636B73;
 }
 
-/* line 225, src/scss/_components/homepage/_main.scss */
+/* line 229, src/scss/_components/homepage/_main.scss */
 .main__heading {
   font-weight: bold;
   font-size: 48px;
@@ -1307,7 +1447,7 @@ picture {
   color: #121E31;
 }
 
-/* line 232, src/scss/_components/homepage/_main.scss */
+/* line 236, src/scss/_components/homepage/_main.scss */
 .main__label {
   padding-bottom: 20px;
   font-weight: 600;
@@ -1316,13 +1456,13 @@ picture {
   color: #121E31;
 }
 
-/* line 240, src/scss/_components/homepage/_main.scss */
+/* line 244, src/scss/_components/homepage/_main.scss */
 .main .c-btn {
   min-width: 200px;
   height: 69px;
 }
 
-/* line 244, src/scss/_components/homepage/_main.scss */
+/* line 248, src/scss/_components/homepage/_main.scss */
 .main .c-btn span {
   font-weight: bold;
   font-size: 17px;
@@ -1331,7 +1471,7 @@ picture {
 
 /* line 3, src/scss/_components/homepage/_foundation.scss */
 .foundation {
-  padding-top: 250px;
+  padding-top: 50px;
   padding-bottom: 100px;
 }
 

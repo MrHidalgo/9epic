@@ -16,6 +16,23 @@
 * */
 
 /**
+ * @name initHeaderFixed
+ *
+ * @description Fixing the site header in the scrolling page.
+ */
+var initHeaderFixed = function initHeaderFixed() {
+
+	var countScroll = $(window).scrollTop(),
+	    headerElement = $('.header');
+
+	if (countScroll > 10) {
+		headerElement.addClass("is-fixed");
+	} else {
+		headerElement.removeClass("is-fixed");
+	}
+};
+
+/**
  * @name initPreventBehavior
  *
  * @description
@@ -55,6 +72,25 @@ var initSwiper = function initSwiper() {
 		});
 	}
 };
+
+/**
+ * @description Window on load.
+ */
+window.addEventListener('load', function (ev) {
+	initHeaderFixed();
+});
+
+/**
+ * @description Window on resize.
+ */
+window.addEventListener('resize', function (ev) {});
+
+/**
+ * @description Window on scroll.
+ */
+window.addEventListener('scroll', function (ev) {
+	initHeaderFixed();
+});
 
 /*
 * CALLBACK :: start
@@ -157,13 +193,10 @@ var foundationCB = function foundationCB() {
 
 var homepageMainScrollAnimation = function homepageMainScrollAnimation() {
 	$('.main__wrapper-left').css({ left: $('.main__wrapper')[0].getBoundingClientRect().left });
-	$('.main__wrapper-1 .main__wrapper-left').css({ zIndex: 10, visibility: 'visible' });
-	$('.main__wrapper-1 .main__wrapper-left > div').css({ opacity: 1 });
+	$('[main-content-js]').animate({ opacity: 1 }, 1000);
 
 	$(window).on('resize', function () {
 		$('.main__wrapper-left').css({ left: $('.main__wrapper')[0].getBoundingClientRect().left });
-		$('.main__wrapper-1 .main__wrapper-left').css({ zIndex: 10, visibility: 'visible' });
-		$('.main__wrapper-1 .main__wrapper-left > div').css({ opacity: 1 });
 	});
 
 	$('.main__bg').css({ opacity: 1 });
@@ -371,7 +404,7 @@ var homepageMainScrollAnimation = function homepageMainScrollAnimation() {
 
 	tween51.fromTo('#cloud-border', 10, { opacity: 0, scale: 0.5, transformOrigin: 'center' }, { opacity: 1, scale: 1, ease: Linear.easeNone }, '-=0').fromTo('#cloud-fill', 10, { opacity: 0, scale: 0.85, transformOrigin: 'center' }, { opacity: 1, scale: 1, ease: Linear.easeNone }, '-=8').fromTo('#cloud-visual', 10, { opacity: 0, scale: 0, transformOrigin: 'center' }, { opacity: 0.3, scale: 1, ease: Elastic.easeOut.config(1.2, 0.8) }, '-=7').fromTo('#cloud-circle-1', 10, { opacity: 0, scale: 0, transformOrigin: 'center' }, { opacity: 1, scale: 1, ease: Elastic.easeOut.config(1, 0.4) }, '-=6').fromTo('#cloud-circle-2', 10, { opacity: 0, scale: 0, transformOrigin: 'center' }, { opacity: 1, scale: 1, ease: Elastic.easeOut.config(1, 0.4) }, '-=6');
 
-	tween52.to('#mainSVG4', 1, { opacity: 0, y: '-25%', ease: Linear.easeNone }, '-=0');
+	tween52.to('#mainSVG4', 1, { opacity: 1, y: '-75%', ease: Linear.easeNone }, '-=0');
 
 	scene5 = new ScrollMagic.Scene({
 		triggerElement: ".main__wrapper-1",
@@ -392,7 +425,7 @@ var homepageMainScrollAnimation = function homepageMainScrollAnimation() {
 	scene52 = new ScrollMagic.Scene({
 		triggerElement: ".main__wrapper-1",
 		offset: $('.main__wrapper-1').outerHeight(true) - 300,
-		duration: 600
+		duration: 1000
 	}).setTween(tween52)
 	// .addIndicators({name: 'last-svg'})
 	.addTo(controller52);
@@ -431,7 +464,7 @@ var homepageMainScrollAnimation = function homepageMainScrollAnimation() {
 
 	tweenTXT5.fromTo('.main__wrapper-4 .main__wrapper-left', 1, { opacity: 1 }, { opacity: 0, y: '-100%', ease: Linear.easeNone }, '-=0').fromTo('.main__wrapper-5 .main__wrapper-left', 1, { opacity: 0 }, { opacity: 1, y: 0, ease: Linear.easeNone }, '-=1');
 
-	tweenTXT6.to('.main__wrapper-5 .main__wrapper-left', 1, { opacity: 0, y: '-25%', ease: Linear.easeNone }, '-=0');
+	tweenTXT6.to('.main__wrapper-5 .main__wrapper-left', 1, { opacity: 1, y: '-75%', ease: Linear.easeNone }, '-=0');
 
 	sceneTXT1 = new ScrollMagic.Scene({
 		triggerElement: ".main__wrapper-4",
@@ -476,12 +509,41 @@ var homepageMainScrollAnimation = function homepageMainScrollAnimation() {
 	sceneTXT6 = new ScrollMagic.Scene({
 		triggerElement: ".main__wrapper-1",
 		offset: $('.main__wrapper-1').outerHeight(true) - 300,
-		duration: 600
+		duration: 1000
 	}).setTween(tweenTXT6)
 	// .addIndicators({name: '5 text'})
 	.addTo(controllerTXT6);
 	/* end :: TEXT
  * ==================== */
+};
+
+var headerChangeColor = function headerChangeColor() {
+	function isAnyPartOfElementInViewport(el) {
+		var rect = el.getBoundingClientRect();
+		var windowHeight = window.innerHeight || document.documentElement.clientHeight;
+		var windowWidth = window.innerWidth || document.documentElement.clientWidth;
+		var vertInView = rect.top <= windowHeight && rect.top + rect.height >= 0;
+		var horInView = rect.left <= windowWidth && rect.left + rect.width >= 0;
+
+		return vertInView && horInView;
+	}
+
+	var containerNode = $('#container')[0],
+	    header = $('#header');
+
+	if (isAnyPartOfElementInViewport(containerNode) && containerNode.getBoundingClientRect().top < 0) {
+		header.addClass('is-color');
+	} else {
+		header.removeClass('is-color');
+	}
+
+	$(window).on('scroll', function (ev) {
+		if (isAnyPartOfElementInViewport(containerNode) && containerNode.getBoundingClientRect().top < 0) {
+			header.addClass('is-color');
+		} else {
+			header.removeClass('is-color');
+		}
+	});
 };
 /*
 * CALLBACK :: end
@@ -506,6 +568,7 @@ var initNative = function initNative() {
 	solutionCB();
 	foundationCB();
 	homepageMainScrollAnimation();
+	headerChangeColor();
 	// ==========================================
 };
 

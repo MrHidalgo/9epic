@@ -104,13 +104,10 @@ const foundationCB = () => {
 
 const homepageMainScrollAnimation =() => {
 	$('.main__wrapper-left').css({left: $('.main__wrapper')[0].getBoundingClientRect().left});
-	$('.main__wrapper-1 .main__wrapper-left').css({zIndex: 10, visibility: 'visible'});
-	$('.main__wrapper-1 .main__wrapper-left > div').css({opacity: 1});
+	$('[main-content-js]').animate({opacity: 1}, 1000);
 	
 	$(window).on('resize', () => {
 		$('.main__wrapper-left').css({left: $('.main__wrapper')[0].getBoundingClientRect().left});
-		$('.main__wrapper-1 .main__wrapper-left').css({zIndex: 10, visibility: 'visible'});
-		$('.main__wrapper-1 .main__wrapper-left > div').css({opacity: 1});
 	});
 	
 	$('.main__bg').css({opacity: 1});
@@ -497,7 +494,7 @@ const homepageMainScrollAnimation =() => {
 	;
 	
 	tween52
-		.to('#mainSVG4', 1, {opacity: 0, y: '-25%', ease: Linear.easeNone}, '-=0')
+		.to('#mainSVG4', 1, {opacity: 1, y: '-75%', ease: Linear.easeNone}, '-=0')
 	
 	scene5 = new ScrollMagic.Scene({
 		triggerElement: ".main__wrapper-1",
@@ -520,7 +517,7 @@ const homepageMainScrollAnimation =() => {
 	scene52 = new ScrollMagic.Scene({
 		triggerElement: ".main__wrapper-1",
 		offset: $('.main__wrapper-1').outerHeight(true) - 300,
-		duration: 600
+		duration: 1000
 	})
 		.setTween(tween52)
 		// .addIndicators({name: 'last-svg'})
@@ -571,7 +568,7 @@ const homepageMainScrollAnimation =() => {
 		.fromTo('.main__wrapper-5 .main__wrapper-left', 1, {opacity: 0}, {opacity: 1, y: 0, ease: Linear.easeNone}, '-=1');
 	
 	tweenTXT6
-		.to('.main__wrapper-5 .main__wrapper-left', 1, {opacity: 0, y: '-25%', ease: Linear.easeNone}, '-=0');
+		.to('.main__wrapper-5 .main__wrapper-left', 1, {opacity: 1, y: '-75%', ease: Linear.easeNone}, '-=0');
 	
 	sceneTXT1 = new ScrollMagic.Scene({
 		triggerElement: ".main__wrapper-4",
@@ -621,13 +618,43 @@ const homepageMainScrollAnimation =() => {
 	sceneTXT6 = new ScrollMagic.Scene({
 		triggerElement: ".main__wrapper-1",
 		offset: $('.main__wrapper-1').outerHeight(true) - 300,
-		duration: 600
+		duration: 1000
 	})
 		.setTween(tweenTXT6)
 		// .addIndicators({name: '5 text'})
 		.addTo(controllerTXT6);
 	/* end :: TEXT
 	* ==================== */
+};
+
+
+const headerChangeColor = () => {
+	function isAnyPartOfElementInViewport(el) {
+		const rect = el.getBoundingClientRect();
+		const windowHeight = (window.innerHeight || document.documentElement.clientHeight);
+		const windowWidth = (window.innerWidth || document.documentElement.clientWidth);
+		const vertInView = (rect.top <= windowHeight) && ((rect.top + rect.height) >= 0);
+		const horInView = (rect.left <= windowWidth) && ((rect.left + rect.width) >= 0);
+
+		return (vertInView && horInView);
+	}
+	
+	let containerNode = $('#container')[0],
+		header = $('#header');
+	
+	if(isAnyPartOfElementInViewport(containerNode) && containerNode.getBoundingClientRect().top < 0) {
+		header.addClass('is-color');
+	} else {
+		header.removeClass('is-color');
+	}
+	
+	$(window).on('scroll', (ev) => {
+	 	if(isAnyPartOfElementInViewport(containerNode) && containerNode.getBoundingClientRect().top < 0) {
+		  header.addClass('is-color');
+	  } else {
+		  header.removeClass('is-color');
+	  }
+	 });
 };
 /*
 * CALLBACK :: end
@@ -653,6 +680,7 @@ const initNative = () => {
 	solutionCB();
 	foundationCB();
 	homepageMainScrollAnimation();
+	headerChangeColor();
 	// ==========================================
 };
 

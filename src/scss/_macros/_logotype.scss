@@ -1,9 +1,25 @@
 // LOGOTYPE :: START
 
 .logo {
+	display: flex;
+
+	&.logo--header {
+		.logo {
+			&__img {
+				@include transition(opacity);
+
+				&--mobile {
+					opacity: 0;
+					position: absolute;
+				}
+			}
+		}
+	}
+
 	&.logo--footer {}
 
 	&__btn {
+		position: relative;
 		display: flex;
 		align-items: flex-start;
 	}
@@ -12,6 +28,7 @@
 		display: block;
 		max-width: 100%;
 		height: auto;
+		max-height: 100%;
 	}
 }
 

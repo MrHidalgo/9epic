@@ -5,6 +5,10 @@
 	position: relative;
 	padding-bottom: 200px;
 
+	[main-content-js] {
+		opacity: 0;
+	}
+
 	&__bg {
 		//z-index: 10;
 		opacity: 0;
