@@ -28,26 +28,26 @@ const srcPath = configPath.src.templates + '/*.pug';
  */
 const renderPug = () => {
 	return gulp
-		.src(srcPath)
+		.src('src/template/*.html')
 		.pipe(plumber(configOption.pipeBreaking.err))
 		// .pipe(gulpif(global.isPugWatching, emitty.stream(global.emittyChangedPugFile)))
 		// .pipe(emitty.stream(global.emittyChangedPugFile))
-		.pipe(frontMatter({
-			property: 'data'
-		}))
-		.pipe(pug({
-			pretty: true,
-			data: {
-				env : (argv.prod) ? 'production' : ""
-			},
-		}))
-		.pipe(gulpif(argv.prod, htmlmin({
-			collapseBooleanAttributes: true,
-			collapseWhitespace: true,
-			removeEmptyAttributes: true,
-			removeComments: true
-		})))
-		.pipe(changedInPlace(configOption.changed))
+		// .pipe(frontMatter({
+		// 	property: 'data'
+		// }))
+		// .pipe(pug({
+		// 	pretty: true,
+		// 	data: {
+		// 		env : (argv.prod) ? 'production' : ""
+		// 	},
+		// }))
+		// .pipe(gulpif(argv.prod, htmlmin({
+		// 	collapseBooleanAttributes: true,
+		// 	collapseWhitespace: true,
+		// 	removeEmptyAttributes: true,
+		// 	removeComments: true
+		// })))
+		// .pipe(changedInPlace(configOption.changed))
 		.pipe(gulp.dest(configPath.dest.html));
 };
 
@@ -63,9 +63,7 @@ gulp.task('pug:watch', function() {
 	// global.isPugWatching = true;
 
 	gulp.watch([
-		configPath.src.templates + '/**',
-		configPath.src.templates + '/**/**',
-		configPath.src.templates + '/**/**/**',
+		'src/template/**',
 	], ['pug']).on('all', (event, filepath) => {
 		// global.emittyChangedPugFile = filepath;
 	});

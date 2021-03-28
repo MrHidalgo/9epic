@@ -133,7 +133,7 @@ body {
   position: relative;
   margin: 0;
   padding: 0;
-  background-color: #fff;
+  background-color: white;
   line-height: 1.42857143;
   font-size: 14px;
   font-weight: normal;
@@ -1030,23 +1030,12 @@ picture {
 
 /* line 8, src/scss/_components/homepage/_main.scss */
 .main__bg {
-  z-index: 0;
   opacity: 0;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-}
-
-/* line 17, src/scss/_components/homepage/_main.scss */
-.main__bg-grid {
-  width: 100%;
-  max-width: 1170px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 /* line 25, src/scss/_components/homepage/_main.scss */
@@ -1072,7 +1061,7 @@ picture {
   margin-left: auto;
 }
 
-/* line 37, src/scss/_components/homepage/_main.scss */
+/* line 39, src/scss/_components/homepage/_main.scss */
 .main__bg-grid > div > div {
   opacity: 0;
   position: absolute;
@@ -1098,13 +1087,18 @@ picture {
   padding-right: 50px;
 }
 
-/* line 53, src/scss/_components/homepage/_main.scss */
+/* line 54, src/scss/_components/homepage/_main.scss */
+.main__bg-grid > div > div#video1Wrapper {
+  opacity: 1;
+}
+
+/* line 58, src/scss/_components/homepage/_main.scss */
 .main__bg-grid > div > div#video1Wrapper video {
   z-index: 0;
   position: relative;
 }
 
-/* line 58, src/scss/_components/homepage/_main.scss */
+/* line 63, src/scss/_components/homepage/_main.scss */
 .main__bg-grid > div > div#video1Wrapper #video1WrapperBorder {
   position: relative;
   display: -webkit-box;
@@ -1121,100 +1115,75 @@ picture {
           justify-content: center;
 }
 
-/* line 64, src/scss/_components/homepage/_main.scss */
+/* line 69, src/scss/_components/homepage/_main.scss */
 .main__bg-grid > div > div#video1Wrapper #video1WrapperBorder i {
   z-index: 5;
-  opacity: 0;
+  overflow: hidden;
   position: absolute;
-  width: 516px;
-  height: 315px;
-  border-top: 7px solid #333;
-  border-left: 10px solid #333;
-  border-right: 10px solid #333;
-  border-bottom: 7px solid #333;
-  -webkit-border-radius: 12px 12px 0 0;
-          border-radius: 12px 12px 0 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transform: translate(10px, 30px);
+      -ms-transform: translate(10px, 30px);
+          transform: translate(10px, 30px);
+}
+
+/* line 78, src/scss/_components/homepage/_main.scss */
+.main__bg-grid > div > div#video1Wrapper #video1WrapperBorder i video {
+  position: fixed;
+  margin-left: auto;
   -webkit-transform-origin: center;
       -ms-transform-origin: center;
           transform-origin: center;
-  -webkit-transform: scale(1.75) translateY(7px);
-      -ms-transform: scale(1.75) translateY(7px);
-          transform: scale(1.75) translateY(7px);
 }
 
-/* line 82, src/scss/_components/homepage/_main.scss */
-.main__bg-grid > div > div#mainSVG1 #pc-bg,
-.main__bg-grid > div > div#mainSVG1 #pc-top,
-.main__bg-grid > div > div#mainSVG1 #pc-bottom,
-.main__bg-grid > div > div#mainSVG1 #pc-shadow {
-  opacity: 0;
+/* line 87, src/scss/_components/homepage/_main.scss */
+.main__bg-grid > div > div#mainSVG1 {
+  z-index: 1;
+  opacity: 1;
 }
 
-/* line 89, src/scss/_components/homepage/_main.scss */
-.main__bg-grid > div > div#mainSVG1 #pc-bg {
-  rx: 6px;
-  -webkit-transform: translate(1px, 1px);
-      -ms-transform: translate(1px, 1px);
-          transform: translate(1px, 1px);
-  -webkit-transform-origin: center;
-      -ms-transform-origin: center;
-          transform-origin: center;
-  stroke: #333;
-  stroke-width: 5px;
+/* line 92, src/scss/_components/homepage/_main.scss */
+.main__bg-grid > div > div#mainSVG2 {
+  z-index: 2;
+  opacity: 1;
 }
 
 /* line 97, src/scss/_components/homepage/_main.scss */
-.main__bg-grid > div > div#mainSVG1 #pc-bottom {
-  opacity: 0;
-}
-
-/* line 102, src/scss/_components/homepage/_main.scss */
-.main__bg-grid > div > div#video1Wrapper, .main__bg-grid > div > div#mainSVG1 {
+.main__bg-grid > div > div#mainSVG3 {
+  z-index: 4;
   opacity: 1;
 }
 
-/* line 107, src/scss/_components/homepage/_main.scss */
-.main__bg-grid > div > div#video2Wrapper {
-  opacity: 1;
-  z-index: 3;
+/* line 101, src/scss/_components/homepage/_main.scss */
+.main__bg-grid > div > div#mainSVG3 #anim4-bg rect {
+  rx: 80;
 }
 
-/* line 112, src/scss/_components/homepage/_main.scss */
+/* line 106, src/scss/_components/homepage/_main.scss */
+.main__bg-grid > div > div#mainSVG4 {
+  opacity: 1;
+}
+
+/* line 110, src/scss/_components/homepage/_main.scss */
 .main__bg-grid > div > div video,
 .main__bg-grid > div > div img,
 .main__bg-grid > div > div svg {
   display: block;
   width: 100%;
-  max-width: 100%;
-  height: auto;
-  margin-right: auto;
-  -webkit-transform-origin: center;
-      -ms-transform-origin: center;
-          transform-origin: center;
+  max-width: 650px;
 }
 
 /* line 122, src/scss/_components/homepage/_main.scss */
-.main__bg-grid > div > div video #anim2-box-1,
-.main__bg-grid > div > div video #anim2-box-2,
-.main__bg-grid > div > div video #anim2-box-3,
-.main__bg-grid > div > div video #anim2-box-4,
-.main__bg-grid > div > div video #anim2-box-5,
-.main__bg-grid > div > div img #anim2-box-1,
-.main__bg-grid > div > div img #anim2-box-2,
-.main__bg-grid > div > div img #anim2-box-3,
-.main__bg-grid > div > div img #anim2-box-4,
-.main__bg-grid > div > div img #anim2-box-5,
-.main__bg-grid > div > div svg #anim2-box-1,
-.main__bg-grid > div > div svg #anim2-box-2,
-.main__bg-grid > div > div svg #anim2-box-3,
-.main__bg-grid > div > div svg #anim2-box-4,
-.main__bg-grid > div > div svg #anim2-box-5 {
-  z-index: 5;
-  position: relative;
-  opacity: 0;
-}
-
-/* line 137, src/scss/_components/homepage/_main.scss */
 .main__wrapper {
   z-index: 2;
   position: relative;
@@ -1222,32 +1191,89 @@ picture {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  min-height: -webkit-calc(100vh + 75vh);
-  min-height: calc(100vh + 75vh);
+  height: 200vh;
+  /*&-1 {
+			.main__wrapper-left {
+				//background-color: silver;
+				&:after {content: '1 silver';}
+			}
+		}
+		&-2 {
+			.main__wrapper-left {
+				//background-color: red;
+				&:after {content: '2 red';}
+			}
+		}
+		&-3 {
+			.main__wrapper-left {
+				//background-color: gray;
+				&:after {content: '3 gray';}
+			}
+		}
+		&-4 {
+			.main__wrapper-left {
+				//background-color: blue;
+				&:after {content: '4 blue';}
+			}
+		}
+		&-5 {
+			.main__wrapper-left {
+				//background-color: green;
+				&:after {content: '5 green';}
+			}
+		}*/
 }
 
-/* line 143, src/scss/_components/homepage/_main.scss */
-.main__wrapper-1 {
-  padding-top: 356px;
+/* line 162, src/scss/_components/homepage/_main.scss */
+.main__wrapper:last-of-type .main__wrapper-left {
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
 }
 
-/* line 147, src/scss/_components/homepage/_main.scss */
-.main__wrapper:last-of-type {
-  min-height: 100vh;
-}
-
-/* line 151, src/scss/_components/homepage/_main.scss */
+/* line 168, src/scss/_components/homepage/_main.scss */
 .main__wrapper-left {
-  width: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  max-width: 50%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform-origin: center;
+      -ms-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: translateY(100%);
+      -ms-transform: translateY(100%);
+          transform: translateY(100%);
 }
 
-/* line 156, src/scss/_components/homepage/_main.scss */
+/* line 183, src/scss/_components/homepage/_main.scss */
+.main__wrapper-left:after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  font-size: 30px;
+  font-weight: 700;
+  color: #000000;
+}
+
+/* line 195, src/scss/_components/homepage/_main.scss */
 .main__wrapper-left > div {
   width: 100%;
   max-width: 465px;
 }
 
-/* line 163, src/scss/_components/homepage/_main.scss */
+/* line 202, src/scss/_components/homepage/_main.scss */
 .main__title {
   font-weight: bold;
   font-size: 72px;
@@ -1255,7 +1281,7 @@ picture {
   color: #121E31;
 }
 
-/* line 170, src/scss/_components/homepage/_main.scss */
+/* line 209, src/scss/_components/homepage/_main.scss */
 .main__subtitle {
   padding-bottom: 20px;
   font-weight: 600;
@@ -1264,7 +1290,7 @@ picture {
   color: #121E31;
 }
 
-/* line 178, src/scss/_components/homepage/_main.scss */
+/* line 217, src/scss/_components/homepage/_main.scss */
 .main__desc {
   padding-bottom: 60px;
   font-family: 'Open Sans', sans-serif;
@@ -1273,7 +1299,7 @@ picture {
   color: #636B73;
 }
 
-/* line 186, src/scss/_components/homepage/_main.scss */
+/* line 225, src/scss/_components/homepage/_main.scss */
 .main__heading {
   font-weight: bold;
   font-size: 48px;
@@ -1281,7 +1307,7 @@ picture {
   color: #121E31;
 }
 
-/* line 193, src/scss/_components/homepage/_main.scss */
+/* line 232, src/scss/_components/homepage/_main.scss */
 .main__label {
   padding-bottom: 20px;
   font-weight: 600;
@@ -1290,13 +1316,13 @@ picture {
   color: #121E31;
 }
 
-/* line 201, src/scss/_components/homepage/_main.scss */
+/* line 240, src/scss/_components/homepage/_main.scss */
 .main .c-btn {
   min-width: 200px;
   height: 69px;
 }
 
-/* line 205, src/scss/_components/homepage/_main.scss */
+/* line 244, src/scss/_components/homepage/_main.scss */
 .main .c-btn span {
   font-weight: bold;
   font-size: 17px;
@@ -1305,7 +1331,7 @@ picture {
 
 /* line 3, src/scss/_components/homepage/_foundation.scss */
 .foundation {
-  padding-top: 50px;
+  padding-top: 250px;
   padding-bottom: 100px;
 }
 
