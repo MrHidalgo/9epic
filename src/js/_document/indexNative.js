@@ -116,7 +116,8 @@ const homepageMainScrollAnimation =() => {
 	* ==================== */
 	let tween1 = new TimelineMax(),
 		scene1 = null,
-		controller1 = new ScrollMagic.Controller();
+		controller1 = new ScrollMagic.Controller()
+	;
 	
 	let laptopDimension = $('#laptop-fill')[0].getBoundingClientRect(),
 		laptopDimensionW = laptopDimension.width - 5,
@@ -125,7 +126,7 @@ const homepageMainScrollAnimation =() => {
 	tween1
 		.fromTo('#video1WrapperBorder > i', 0.5,
 			{
-				width: '100vw',
+				width: '50vw',
 				height: '100vh',
 				borderRadius: 0,
 				boxShadow: '0px 5px 15px rgba(64, 62, 61, 0)', transformOrigin: 'center'},
@@ -167,7 +168,7 @@ const homepageMainScrollAnimation =() => {
 	
 	tween2
 		.fromTo('#video1Wrapper video', 10,
-			{opacity: 1, x: 0}, {opacity: 1, x: '-100%', ease: Linear.easeNone}, '-=0'
+			{opacity: 1}, {opacity: 0, ease: Linear.easeNone}, '-=0'
 		)
 	;
 	
@@ -252,68 +253,71 @@ const homepageMainScrollAnimation =() => {
 		wrapperNode3H = wrapperNode3.outerHeight(true);
 	
 	tween3
-		.to('#video1WrapperBorder > i', 1,
+		.to(['#video1WrapperBorder > i', '#mainSVG1'], 1,
 			{opacity: 0, ease: Power1.easeInOut}, '-=0'
 		)
-		.to(['#laptop-screen', '#laptop-fill'], 1,
-			{opacity: 0, ease: Linear.easeNone}, '-=1'
+		.fromTo('#video2Wrapper', 1,
+			{opacity: 0}, {opacity: 1, ease: Power1.easeInOut}, '-=1'
 		)
-		.to('#laptop-border', 1,
-			{opacity: 0, ease: Linear.easeNone}, '-=1'
-		)
-		.to('#laptop-shadow', 1,
-			{opacity: 0, y: -10, scale: 0, ease: Linear.easeNone}, '-=1'
-		)
-		.to('#laptop-line', 1,
-			{opacity: 0, ease: Linear.easeNone}, '-=1'
-		)
-		.to('#laptop-bottom', 1,
-			{opacity: 0, scaleX: 0.5, scaleY: 0, ease: Linear.easeNone}, '-=1'
-		)
-		.to('#mainSVG1 .text', 1,
-			{opacity: 0, ease: Linear.easeNone}, '-=1'
-		)
+		// .to(['#laptop-screen', '#laptop-fill'], 1,
+		// 	{opacity: 0, ease: Linear.easeNone}, '-=1'
+		// )
+		// .to('#laptop-border', 1,
+		// 	{opacity: 0, ease: Linear.easeNone}, '-=1'
+		// )
+		// .to('#laptop-shadow', 1,
+		// 	{opacity: 0, y: -10, scale: 0, ease: Linear.easeNone}, '-=1'
+		// )
+		// .to('#laptop-line', 1,
+		// 	{opacity: 0, ease: Linear.easeNone}, '-=1'
+		// )
+		// .to('#laptop-bottom', 1,
+		// 	{opacity: 0, scaleX: 0.5, scaleY: 0, ease: Linear.easeNone}, '-=1'
+		// )
+		// .to('#mainSVG1 .text', 1,
+		// 	{opacity: 0, ease: Linear.easeNone}, '-=1'
+		// )
 	;
 	
-	tween31
-		.fromTo(['#device-border', '#device-fill'], 1,
-			{opacity: 0, x: 10, y: 30, scale: 0.7, transformOrigin: 'center'}, {opacity: 1, x: 0, y: 0, scale: 1, ease: Linear.easeNone}, '-=0'
-		)
-		.fromTo('#device-option', 1,
-			{opacity: 0}, {opacity: 1, ease: Linear.easeNone}, '-=0'
-		)
-	;
+	// tween31
+	// 	.fromTo(['#device-border', '#device-fill'], 1,
+	// 		{opacity: 0, x: 10, y: 30, scale: 0.7, transformOrigin: 'center'}, {opacity: 1, x: 0, y: 0, scale: 1, ease: Linear.easeNone}, '-=0'
+	// 	)
+	// 	.fromTo('#device-option', 1,
+	// 		{opacity: 0}, {opacity: 1, ease: Linear.easeNone}, '-=0'
+	// 	)
+	// ;
 	
-	tween32
-		.fromTo('#device-circle-1', 10,
-			{opacity: 0, x: -80, y: -93, transformOrigin: 'center'}, {opacity: 1, x: 0, y: 0, ease: Linear.easeNone}, '-=0')
-		.to('#laptop-circle-1', 0.5,
-			{opacity: 0, ease: Linear.easeNone}, '-=9.9'
-		)
-		.fromTo('#device-circle-2', 10,
-			{opacity: 0, x: -113, y: -93, transformOrigin: 'center'}, {opacity: 1, x: 0, y: 0, ease: Linear.easeNone}, '-=0')
-		.to('#laptop-circle-2', 0.5,
-			{opacity: 0, ease: Linear.easeNone}, '-=10'
-		)
-		.fromTo('#device-circle-3', 10,
-			{opacity: 0, x: -145, y: -93, transformOrigin: 'center'}, {opacity: 1, x: 0, y: 0, ease: Linear.easeNone}, '-=0')
-		.to('#laptop-circle-3', 0.5,
-			{opacity: 0, ease: Linear.easeNone}, '-=10'
-		)
-		.fromTo('#device-circle-4', 10,
-			{opacity: 0, x: 282, y: -220, transformOrigin: 'center'}, {opacity: 1, x: 0, y: 0, ease: Linear.easeNone}, '-=0')
-		.to('#laptop-circle-4', 0.5,
-			{opacity: 0, ease: Linear.easeNone}, '-=10'
-		)
-		.fromTo('#device-circle-5', 10,
-			{opacity: 0, x: 250, y: -220, transformOrigin: 'center'}, {opacity: 1, x: 0, y: 0, ease: Linear.easeNone}, '-=0')
-		.to('#laptop-circle-5', 0.5,
-			{opacity: 0, ease: Linear.easeNone}, '-=10'
-		)
-		.fromTo('#device-circle-6', 10,
-			{opacity: 0, x: -153, y: 0, transformOrigin: 'center'}, {opacity: 1, x: 0, y: 0, ease: Linear.easeNone}, '-=0'
-		)
-	;
+	// tween32
+	// 	.fromTo('#device-circle-1', 10,
+	// 		{opacity: 0, x: -80, y: -93, transformOrigin: 'center'}, {opacity: 1, x: 0, y: 0, ease: Linear.easeNone}, '-=0')
+	// 	.to('#laptop-circle-1', 0.5,
+	// 		{opacity: 0, ease: Linear.easeNone}, '-=9.9'
+	// 	)
+	// 	.fromTo('#device-circle-2', 10,
+	// 		{opacity: 0, x: -113, y: -93, transformOrigin: 'center'}, {opacity: 1, x: 0, y: 0, ease: Linear.easeNone}, '-=0')
+	// 	.to('#laptop-circle-2', 0.5,
+	// 		{opacity: 0, ease: Linear.easeNone}, '-=10'
+	// 	)
+	// 	.fromTo('#device-circle-3', 10,
+	// 		{opacity: 0, x: -145, y: -93, transformOrigin: 'center'}, {opacity: 1, x: 0, y: 0, ease: Linear.easeNone}, '-=0')
+	// 	.to('#laptop-circle-3', 0.5,
+	// 		{opacity: 0, ease: Linear.easeNone}, '-=10'
+	// 	)
+	// 	.fromTo('#device-circle-4', 10,
+	// 		{opacity: 0, x: 282, y: -220, transformOrigin: 'center'}, {opacity: 1, x: 0, y: 0, ease: Linear.easeNone}, '-=0')
+	// 	.to('#laptop-circle-4', 0.5,
+	// 		{opacity: 0, ease: Linear.easeNone}, '-=10'
+	// 	)
+	// 	.fromTo('#device-circle-5', 10,
+	// 		{opacity: 0, x: 250, y: -220, transformOrigin: 'center'}, {opacity: 1, x: 0, y: 0, ease: Linear.easeNone}, '-=0')
+	// 	.to('#laptop-circle-5', 0.5,
+	// 		{opacity: 0, ease: Linear.easeNone}, '-=10'
+	// 	)
+	// 	.fromTo('#device-circle-6', 10,
+	// 		{opacity: 0, x: -153, y: 0, transformOrigin: 'center'}, {opacity: 1, x: 0, y: 0, ease: Linear.easeNone}, '-=0'
+	// 	)
+	// ;
 	
 	scene3 = new ScrollMagic.Scene({
 		triggerElement: ".main__wrapper-3",
@@ -324,23 +328,23 @@ const homepageMainScrollAnimation =() => {
 		// .addIndicators({name: 'video-laptop'})
 		.addTo(controller3);
 	
-	scene31 = new ScrollMagic.Scene({
-		triggerElement: ".main__wrapper-3",
-		offset: 0,
-		duration: wrapperNode3H / 3
-	})
-		.setTween(tween31)
-		// .addIndicators({name: 'device'})
-		.addTo(controller31);
-	
-	scene32 = new ScrollMagic.Scene({
-		triggerElement: ".main__wrapper-3",
-		offset: wrapperNode3H / 3,
-		duration: (wrapperNode3H - (wrapperNode3H / 3)) - 100
-	})
-		.setTween(tween32)
-		// .addIndicators({name: 'device-laptop-circle'})
-		.addTo(controller32);
+	// scene31 = new ScrollMagic.Scene({
+	// 	triggerElement: ".main__wrapper-3",
+	// 	offset: 0,
+	// 	duration: wrapperNode3H / 3
+	// })
+	// 	.setTween(tween31)
+	// 	// .addIndicators({name: 'device'})
+	// 	.addTo(controller31);
+	//
+	// scene32 = new ScrollMagic.Scene({
+	// 	triggerElement: ".main__wrapper-3",
+	// 	offset: wrapperNode3H / 3,
+	// 	duration: (wrapperNode3H - (wrapperNode3H / 3)) - 100
+	// })
+	// 	.setTween(tween32)
+	// 	// .addIndicators({name: 'device-laptop-circle'})
+	// 	.addTo(controller32);
 	/* end :: SCENE 3
 	* ==================== */
 	
@@ -361,12 +365,15 @@ const homepageMainScrollAnimation =() => {
 		wrapperNode4H = wrapperNode4.outerHeight(true);
 	
 	tween4
-		.to(['#device-border', '#device-fill', '#device-option'], 1,
-			{opacity: 0, ease: Linear.easeNone}, '-=0'
-		)
+		// .to(['#device-border', '#device-fill', '#device-option'], 1,
+		// 	{opacity: 0, ease: Linear.easeNone}, '-=0'
+		// )
 	;
 	
 	tween41
+		.to('#video2Wrapper', 0.5,
+			{opacity: 0, ease: Power1.easeInOut}, '-=0'
+		)
 		.fromTo('#anim4-bg rect', 1,
 			{
 				opacity: 0,
@@ -382,51 +389,51 @@ const homepageMainScrollAnimation =() => {
 				rotation: 45,
 				ease: Linear.easeNone
 			},
-			'-=1'
+			'-=0.5'
 		)
 	;
 	
 	tween42
 		.fromTo('#anim4-box-1', 1,
 			{opacity: 0, x: 14, y: 76, scale: 0.5, transformOrigin: 'center'}, {opacity: 1, x: 0, y: 0, scale: 1, ease: Bounce.easeOut}, '-=0')
-		.to('#device-circle-1', 1,
-			{opacity: 0, ease: Linear.easeNone}, '-=0.9'
-		)
+		// .to('#device-circle-1', 1,
+		// 	{opacity: 0, ease: Linear.easeNone}, '-=0.9'
+		// )
 		.fromTo('#anim4-box-2', 1,
 			{opacity: 0, x: -23, y: 76, scale: 0.5, transformOrigin: 'center'}, {opacity: 1, x: 0, y: 0, scale: 1, ease: Bounce.easeOut}, '-=0')
-		.to('#device-circle-2', 1,
-			{opacity: 0, ease: Linear.easeNone}, '-=1'
-		)
+		// .to('#device-circle-2', 1,
+		// 	{opacity: 0, ease: Linear.easeNone}, '-=1'
+		// )
 		.fromTo('#anim4-box-3', 1,
 			{opacity: 0, x: -58, y: 76, scale: 0.5, transformOrigin: 'center'}, {opacity: 1, x: 0, y: 0, scale: 1, ease: Bounce.easeOut}, '-=0')
-		.to('#device-circle-3', 1,
-			{opacity: 0, ease: Linear.easeNone}, '-=1'
-		)
+		// .to('#device-circle-3', 1,
+		// 	{opacity: 0, ease: Linear.easeNone}, '-=1'
+		// )
 		.fromTo('#anim4-box-4', 1,
 			{opacity: 0, x: 62, y: 11, scale: 0.5, transformOrigin: 'center'}, {opacity: 1, x: 0, y: 0, scale: 1, ease: Bounce.easeOut}, '-=0')
-		.to('#device-circle-4', 1,
-			{opacity: 0, ease: Linear.easeNone}, '-=1'
-		)
+		// .to('#device-circle-4', 1,
+		// 	{opacity: 0, ease: Linear.easeNone}, '-=1'
+		// )
 		.fromTo('#anim4-box-5', 1,
 			{opacity: 0, x: 27, y: 11, scale: 0.5, transformOrigin: 'center'}, {opacity: 1, x: 0, y: 0, scale: 1, ease: Bounce.easeOut}, '-=0')
-		.to('#device-circle-5', 1,
-			{opacity: 0, ease: Linear.easeNone}, '-=1'
-		)
+		// .to('#device-circle-5', 1,
+		// 	{opacity: 0, ease: Linear.easeNone}, '-=1'
+		// )
 		.fromTo('#anim4-box-6', 1,
 			{opacity: 0, x: -9, y: 11, scale: 0.5, transformOrigin: 'center'}, {opacity: 1, x: 0, y: 0, scale: 1, ease: Bounce.easeOut}, '-=0')
-		.to('#device-circle-6', 1,
-			{opacity: 0, ease: Linear.easeNone}, '-=1'
-		)
+		// .to('#device-circle-6', 1,
+		// 	{opacity: 0, ease: Linear.easeNone}, '-=1'
+		// )
 	;
 	
-	scene4 = new ScrollMagic.Scene({
-		triggerElement: ".main__wrapper-2",
-		offset: -100,
-		duration: wrapperNode4H / 4 + 100
-	})
-		.setTween(tween4)
-		// .addIndicators({name: 'device'})
-		.addTo(controller4);
+	// scene4 = new ScrollMagic.Scene({
+	// 	triggerElement: ".main__wrapper-2",
+	// 	offset: -100,
+	// 	duration: wrapperNode4H / 4 + 100
+	// })
+	// 	.setTween(tween4)
+	// 	// .addIndicators({name: 'device'})
+	// 	.addTo(controller4);
 	
 	scene41 = new ScrollMagic.Scene({
 		triggerElement: ".main__wrapper-2",
@@ -473,28 +480,31 @@ const homepageMainScrollAnimation =() => {
 			{opacity: 0, scale: 0.5, transformOrigin: 'center', ease: Linear.easeNone},
 			'-=10'
 		)
+		.fromTo('#video3Wrapper', 1,
+			{opacity: 0}, {opacity: 1, ease: Linear.easeNone}, '-=10'
+		)
 	;
 	
-	tween51
-		.fromTo('#cloud-border', 10,
-			{opacity: 0, scale: 0.5, transformOrigin: 'center'}, {opacity: 1, scale: 1, ease: Linear.easeNone}, '-=0'
-		)
-		.fromTo('#cloud-fill', 10,
-			{opacity: 0, scale: 0.85, transformOrigin: 'center'}, {opacity: 1, scale: 1, ease: Linear.easeNone}, '-=8'
-		)
-		.fromTo('#cloud-visual', 10,
-			{opacity: 0, scale: 0, transformOrigin: 'center'}, {opacity: 0.3, scale: 1, ease: Elastic.easeOut.config(1.2,0.8)}, '-=7'
-		)
-		.fromTo('#cloud-circle-1', 10,
-			{opacity: 0, scale: 0, transformOrigin: 'center'}, {opacity: 1, scale: 1, ease: Elastic.easeOut.config(1,0.4)}, '-=6'
-		)
-		.fromTo('#cloud-circle-2', 10,
-			{opacity: 0, scale: 0, transformOrigin: 'center'}, {opacity: 1, scale: 1, ease: Elastic.easeOut.config(1,0.4)}, '-=6'
-		)
-	;
+	// tween51
+	// 	.fromTo('#cloud-border', 10,
+	// 		{opacity: 0, scale: 0.5, transformOrigin: 'center'}, {opacity: 1, scale: 1, ease: Linear.easeNone}, '-=0'
+	// 	)
+	// 	.fromTo('#cloud-fill', 10,
+	// 		{opacity: 0, scale: 0.85, transformOrigin: 'center'}, {opacity: 1, scale: 1, ease: Linear.easeNone}, '-=8'
+	// 	)
+	// 	.fromTo('#cloud-visual', 10,
+	// 		{opacity: 0, scale: 0, transformOrigin: 'center'}, {opacity: 0.3, scale: 1, ease: Elastic.easeOut.config(1.2,0.8)}, '-=7'
+	// 	)
+	// 	.fromTo('#cloud-circle-1', 10,
+	// 		{opacity: 0, scale: 0, transformOrigin: 'center'}, {opacity: 1, scale: 1, ease: Elastic.easeOut.config(1,0.4)}, '-=6'
+	// 	)
+	// 	.fromTo('#cloud-circle-2', 10,
+	// 		{opacity: 0, scale: 0, transformOrigin: 'center'}, {opacity: 1, scale: 1, ease: Elastic.easeOut.config(1,0.4)}, '-=6'
+	// 	)
+	// ;
 	
 	tween52
-		.to('#mainSVG4', 1, {opacity: 1, y: '-75%', ease: Linear.easeNone}, '-=0')
+		.to('#video3Wrapper', 1, {opacity: 1, y: '-75%', ease: Linear.easeNone}, '-=0')
 	
 	scene5 = new ScrollMagic.Scene({
 		triggerElement: ".main__wrapper-1",
@@ -504,15 +514,15 @@ const homepageMainScrollAnimation =() => {
 		.setTween(tween5)
 		// .addIndicators({name: 'rect'})
 		.addTo(controller5);
-	
-	scene51 = new ScrollMagic.Scene({
-		triggerElement: ".main__wrapper-1",
-		offset: 0,
-		duration: wrapperNode5H - 100
-	})
-		.setTween(tween51)
-		// .addIndicators({name: 'last-svg'})
-		.addTo(controller51);
+
+	// scene51 = new ScrollMagic.Scene({
+	// 	triggerElement: ".main__wrapper-1",
+	// 	offset: 0,
+	// 	duration: wrapperNode5H - 100
+	// })
+	// 	.setTween(tween51)
+	// 	// .addIndicators({name: 'last-svg'})
+	// 	.addTo(controller51);
 	
 	scene52 = new ScrollMagic.Scene({
 		triggerElement: ".main__wrapper-1",
@@ -571,9 +581,9 @@ const homepageMainScrollAnimation =() => {
 		.to('.main__wrapper-5 .main__wrapper-left', 1, {opacity: 1, y: '-75%', ease: Linear.easeNone}, '-=0');
 	
 	sceneTXT1 = new ScrollMagic.Scene({
-		triggerElement: ".main__wrapper-4",
-		offset: 0,
-		duration: wrapperNode4H
+		triggerElement: ".main__wrapper-5",
+		offset: (wrapperNode5H / 4),
+		duration: wrapperNode5H + (wrapperNode5H / 1.5)
 	})
 		.setTween(tweenTXT1)
 		// .addIndicators({name: '1 text'})

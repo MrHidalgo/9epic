@@ -1,7 +1,7 @@
 // HEADER :: START
 
 .header {
-	z-index: 999;
+	z-index: 1999;
 	overflow: hidden;
 	position: fixed;
 	top: 25px;
@@ -10,7 +10,7 @@
 	border-radius: 10px;
 	box-shadow: 0 10px 40px 0 rgba(64, 151, 217, 0.25);
 	background: linear-gradient(90deg, #4097D9 -14.97%, #30C4A0 54.44%, #00B94F 120.21%);
-	@include transition(box-shadow);
+	@include transition(top, left, width, border-radius, box-shadow);
 
 	&:after {
 		content: '';
@@ -26,6 +26,12 @@
 	}
 
 	&.is-fixed {
+		top: 0;
+		left: 0;
+		width: 100%;
+		border-radius: 0 0 10px 10px;
+		@include transition(top, left, width, border-radius, box-shadow);
+
 		.header {
 			&__wrapper {
 				height: 100px;
