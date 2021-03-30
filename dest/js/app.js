@@ -63,6 +63,8 @@ var initSmoothScroll = function initSmoothScroll() {
 
 	$(btnName).on("click", function (e) {
 
+		if ($(e.currentTarget).attr('href').length === 1) return;
+
 		var linkHref = $(e.currentTarget).attr('href'),
 		    headerHeight = $(".header").outerHeight() || 0,
 		    topHeightOffset = $(linkHref).offset().top - headerHeight;
@@ -662,10 +664,6 @@ var headerChangeColor = function headerChangeColor() {
 
 	if (isAnyPartOfElementInViewport(containerNode) && containerNode.getBoundingClientRect().top < 0) {
 		header.addClass('is-color');
-
-		setTimeout(function () {
-			header.animate({ opacity: 1 });
-		}, 350);
 	} else {
 		header.removeClass('is-color');
 	}
@@ -677,6 +675,10 @@ var headerChangeColor = function headerChangeColor() {
 			header.removeClass('is-color');
 		}
 	});
+
+	setTimeout(function () {
+		header.animate({ opacity: 1 });
+	}, 350);
 };
 
 var approachCollapse = function approachCollapse() {

@@ -658,10 +658,6 @@ const headerChangeColor = () => {
 	
 	if(isAnyPartOfElementInViewport(containerNode) && containerNode.getBoundingClientRect().top < 0) {
 		header.addClass('is-color');
-		
-		setTimeout(() => {
-			header.animate({opacity: 1});
-		}, 350);
 	} else {
 		header.removeClass('is-color');
 	}
@@ -672,7 +668,11 @@ const headerChangeColor = () => {
 	  } else {
 		  header.removeClass('is-color');
 	  }
-	 });
+  });
+	
+	setTimeout(() => {
+		header.animate({opacity: 1});
+	}, 350);
 };
 
 
