@@ -17,6 +17,13 @@ const initSwiper = () => {
       navigation: {
         nextEl: '.solution__slider-wrapper-1 .solution__slider-row-' + j + ' .solution__slider-btn--next',
         prevEl: '.solution__slider-wrapper-1 .solution__slider-row-' + j + ' .solution__slider-btn--prev',
+      },
+      on: {
+        init: function (swiper) {
+          if(swiper.slides.length > 1) {
+            $('.solution__slider-wrapper-1 .solution__slider-row-' + j + ' .solution__slider-btn').animate({opacity: 1}, 550);
+          }
+        }
       }
     });
   }

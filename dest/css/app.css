@@ -2314,6 +2314,7 @@ picture {
 
 /* line 298, src/scss/_components/homepage/_solution.scss */
 .solution__slider-btn {
+  opacity: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2338,7 +2339,7 @@ picture {
   transition: background-color 0.3s ease-in-out;
 }
 
-/* line 309, src/scss/_components/homepage/_solution.scss */
+/* line 310, src/scss/_components/homepage/_solution.scss */
 .solution__slider-btn.swiper-button-disabled {
   pointer-events: none;
   background-color: rgba(255, 255, 255, 0.2);
@@ -2347,29 +2348,29 @@ picture {
   transition: background-color 0.3s ease-in-out;
 }
 
-/* line 315, src/scss/_components/homepage/_solution.scss */
+/* line 316, src/scss/_components/homepage/_solution.scss */
 .solution__slider-btn--prev {
   padding-right: 4px;
 }
 
-/* line 319, src/scss/_components/homepage/_solution.scss */
+/* line 320, src/scss/_components/homepage/_solution.scss */
 .solution__slider-btn--next {
   padding-left: 4px;
 }
 
-/* line 321, src/scss/_components/homepage/_solution.scss */
+/* line 322, src/scss/_components/homepage/_solution.scss */
 .solution__slider-btn--next .icon-font {
   -webkit-transform: scaleX(-1);
       -ms-transform: scaleX(-1);
           transform: scaleX(-1);
 }
 
-/* line 326, src/scss/_components/homepage/_solution.scss */
+/* line 327, src/scss/_components/homepage/_solution.scss */
 .solution__slider-btn .icon-font {
   color: #ffffff;
 }
 
-/* line 331, src/scss/_components/homepage/_solution.scss */
+/* line 332, src/scss/_components/homepage/_solution.scss */
 .solution__slider-row {
   opacity: 0;
   visibility: hidden;
@@ -2378,7 +2379,7 @@ picture {
   transition: opacity 0.55s ease-in-out, visibility 0.3s ease-in-out;
 }
 
-/* line 336, src/scss/_components/homepage/_solution.scss */
+/* line 337, src/scss/_components/homepage/_solution.scss */
 .solution__slider-row.is-show {
   opacity: 1;
   visibility: visible;
@@ -2387,7 +2388,7 @@ picture {
   transition: opacity 0.55s ease-in-out, visibility 0.3s ease-in-out;
 }
 
-/* line 342, src/scss/_components/homepage/_solution.scss */
+/* line 343, src/scss/_components/homepage/_solution.scss */
 .solution__slider-row:not(:first-of-type) {
   position: absolute;
   top: 0;
@@ -2396,7 +2397,7 @@ picture {
   height: 100%;
 }
 
-/* line 353, src/scss/_components/homepage/_solution.scss */
+/* line 354, src/scss/_components/homepage/_solution.scss */
 .solution .swiper-slide {
   position: relative;
   display: -webkit-box;
@@ -2413,17 +2414,17 @@ picture {
           border-radius: 10px;
 }
 
-/* line 361, src/scss/_components/homepage/_solution.scss */
+/* line 362, src/scss/_components/homepage/_solution.scss */
 .solution .swiper-slide > div {
   width: 50%;
 }
 
-/* line 364, src/scss/_components/homepage/_solution.scss */
+/* line 365, src/scss/_components/homepage/_solution.scss */
 .solution .swiper-slide > div:nth-of-type(1) {
   padding-right: 60px;
 }
 
-/* line 367, src/scss/_components/homepage/_solution.scss */
+/* line 368, src/scss/_components/homepage/_solution.scss */
 .solution .swiper-slide > div:nth-of-type(1) h4 {
   padding-bottom: 20px;
   font-weight: 600;
@@ -2432,7 +2433,7 @@ picture {
   color: #121E31;
 }
 
-/* line 375, src/scss/_components/homepage/_solution.scss */
+/* line 376, src/scss/_components/homepage/_solution.scss */
 .solution .swiper-slide > div:nth-of-type(1) p {
   padding-bottom: 64px;
   font-size: 15px;
@@ -2440,12 +2441,12 @@ picture {
   color: #636B73;
 }
 
-/* line 383, src/scss/_components/homepage/_solution.scss */
+/* line 384, src/scss/_components/homepage/_solution.scss */
 .solution .swiper-slide > div:nth-of-type(1) .c-btn:not(:last-of-type) {
   margin-right: 10px;
 }
 
-/* line 389, src/scss/_components/homepage/_solution.scss */
+/* line 390, src/scss/_components/homepage/_solution.scss */
 .solution .swiper-slide > div:nth-of-type(2) img {
   display: block;
   max-width: 100%;

@@ -81,8 +81,7 @@ var initSmoothScroll = function initSmoothScroll() {
  * @description initialize Swiper
  */
 var initSwiper = function initSwiper() {
-
-	for (var i = 0, j = 1; i < $('.solution__slider-wrapper-1 .solution__slider-row').length; i++, j++) {
+	var _loop = function _loop(i, j) {
 		new Swiper('.solutionSlider1' + i, {
 			effect: 'flip',
 			flipEffect: {
@@ -92,8 +91,19 @@ var initSwiper = function initSwiper() {
 			navigation: {
 				nextEl: '.solution__slider-wrapper-1 .solution__slider-row-' + j + ' .solution__slider-btn--next',
 				prevEl: '.solution__slider-wrapper-1 .solution__slider-row-' + j + ' .solution__slider-btn--prev'
+			},
+			on: {
+				init: function init(swiper) {
+					if (swiper.slides.length > 1) {
+						$('.solution__slider-wrapper-1 .solution__slider-row-' + j + ' .solution__slider-btn').animate({ opacity: 1 }, 550);
+					}
+				}
 			}
 		});
+	};
+
+	for (var i = 0, j = 1; i < $('.solution__slider-wrapper-1 .solution__slider-row').length; i++, j++) {
+		_loop(i, j);
 	}
 };
 
@@ -162,7 +172,7 @@ var solutionCB = function solutionCB() {
 		setTimeout(function () {
 
 			if (parseInt(elID) === 1 && partBool2) {
-				for (var i = 0, j = 1; i < $('.solution__slider-wrapper-2 .solution__slider-row').length; i++, j++) {
+				var _loop2 = function _loop2(i, j) {
 					new Swiper('.solutionSlider2' + i, {
 						effect: 'flip',
 						flipEffect: {
@@ -172,24 +182,46 @@ var solutionCB = function solutionCB() {
 						navigation: {
 							nextEl: '.solution__slider-wrapper-2 .solution__slider-row-' + j + ' .solution__slider-btn--next',
 							prevEl: '.solution__slider-wrapper-2 .solution__slider-row-' + j + ' .solution__slider-btn--prev'
+						},
+						on: {
+							init: function init(swiper) {
+								if (swiper.slides.length > 1) {
+									$('.solution__slider-wrapper-2 .solution__slider-row-' + j + ' .solution__slider-btn').animate({ opacity: 1 }, 550);
+								}
+							}
 						}
 					});
+				};
+
+				for (var i = 0, j = 1; i < $('.solution__slider-wrapper-2 .solution__slider-row').length; i++, j++) {
+					_loop2(i, j);
 				}
 
 				partBool2 = false;
 			} else if (parseInt(elID) === 2 && partBool3) {
-				for (var _i = 0, _j = 1; _i < $('.solution__slider-wrapper-3 .solution__slider-row').length; _i++, _j++) {
-					new Swiper('.solutionSlider3' + _i, {
+				var _loop3 = function _loop3(i, j) {
+					new Swiper('.solutionSlider3' + i, {
 						effect: 'flip',
 						flipEffect: {
 							slideShadows: false
 						},
 						speed: 1000,
 						navigation: {
-							nextEl: '.solution__slider-wrapper-3 .solution__slider-row-' + _j + ' .solution__slider-btn--next',
-							prevEl: '.solution__slider-wrapper-3 .solution__slider-row-' + _j + ' .solution__slider-btn--prev'
+							nextEl: '.solution__slider-wrapper-3 .solution__slider-row-' + j + ' .solution__slider-btn--next',
+							prevEl: '.solution__slider-wrapper-3 .solution__slider-row-' + j + ' .solution__slider-btn--prev'
+						},
+						on: {
+							init: function init(swiper) {
+								if (swiper.slides.length > 1) {
+									$('.solution__slider-wrapper-3 .solution__slider-row-' + j + ' .solution__slider-btn').animate({ opacity: 1 }, 550);
+								}
+							}
 						}
 					});
+				};
+
+				for (var i = 0, j = 1; i < $('.solution__slider-wrapper-3 .solution__slider-row').length; i++, j++) {
+					_loop3(i, j);
 				}
 
 				partBool3 = false;
