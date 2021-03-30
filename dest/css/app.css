@@ -548,6 +548,7 @@ picture {
 /* line 3, src/scss/_components/_header.scss */
 .header {
   z-index: 1999;
+  opacity: 0;
   overflow: hidden;
   position: fixed;
   top: 25px;
@@ -569,7 +570,7 @@ picture {
   transition: top 0.3s ease-in-out, left 0.3s ease-in-out, width 0.3s ease-in-out, border-radius 0.3s ease-in-out, box-shadow 0.3s ease-in-out, -webkit-border-radius 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
 }
 
-/* line 15, src/scss/_components/_header.scss */
+/* line 16, src/scss/_components/_header.scss */
 .header:after {
   content: '';
   opacity: 0;
@@ -585,7 +586,7 @@ picture {
   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
 
-/* line 28, src/scss/_components/_header.scss */
+/* line 29, src/scss/_components/_header.scss */
 .header.is-fixed {
   top: 0;
   left: 0;
@@ -599,7 +600,7 @@ picture {
   transition: top 0.3s ease-in-out, left 0.3s ease-in-out, width 0.3s ease-in-out, border-radius 0.3s ease-in-out, box-shadow 0.3s ease-in-out, -webkit-border-radius 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
 }
 
-/* line 36, src/scss/_components/_header.scss */
+/* line 37, src/scss/_components/_header.scss */
 .header.is-fixed .header__wrapper {
   height: 100px;
   padding-top: 0;
@@ -609,7 +610,7 @@ picture {
   transition: height 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;
 }
 
-/* line 45, src/scss/_components/_header.scss */
+/* line 46, src/scss/_components/_header.scss */
 .header.is-color {
   -webkit-box-shadow: 0 10px 40px 0 rgba(64, 151, 217, 0.25);
           box-shadow: 0 10px 40px 0 rgba(64, 151, 217, 0.25);
@@ -620,7 +621,7 @@ picture {
   transition: box-shadow 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
 }
 
-/* line 49, src/scss/_components/_header.scss */
+/* line 50, src/scss/_components/_header.scss */
 .header.is-color:after {
   opacity: 1;
   visibility: visible;
@@ -629,7 +630,7 @@ picture {
   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
 
-/* line 58, src/scss/_components/_header.scss */
+/* line 59, src/scss/_components/_header.scss */
 .header.is-color .header__btn .c-btn:after {
   opacity: 1;
   visibility: visible;
@@ -638,7 +639,7 @@ picture {
   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
 
-/* line 64, src/scss/_components/_header.scss */
+/* line 65, src/scss/_components/_header.scss */
 .header.is-color .header__btn .c-btn span {
   color: #ffffff;
   -webkit-transition: color 0.3s ease-in-out;
@@ -646,17 +647,17 @@ picture {
   transition: color 0.3s ease-in-out;
 }
 
-/* line 75, src/scss/_components/_header.scss */
+/* line 76, src/scss/_components/_header.scss */
 .header.is-color .logo.logo--header .logo__img--desktop {
   opacity: 0;
 }
 
-/* line 78, src/scss/_components/_header.scss */
+/* line 79, src/scss/_components/_header.scss */
 .header.is-color .logo.logo--header .logo__img--mobile {
   opacity: 1;
 }
 
-/* line 86, src/scss/_components/_header.scss */
+/* line 87, src/scss/_components/_header.scss */
 .header__wrapper {
   z-index: 2;
   position: relative;
@@ -676,13 +677,13 @@ picture {
   transition: height 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;
 }
 
-/* line 96, src/scss/_components/_header.scss */
+/* line 97, src/scss/_components/_header.scss */
 .header__wrapper-left, .header__wrapper-right {
   width: 100%;
   max-width: 200px;
 }
 
-/* line 102, src/scss/_components/_header.scss */
+/* line 103, src/scss/_components/_header.scss */
 .header__wrapper-middle {
   display: -webkit-box;
   display: -webkit-flex;
@@ -706,7 +707,7 @@ picture {
   padding-right: 50px;
 }
 
-/* line 113, src/scss/_components/_header.scss */
+/* line 114, src/scss/_components/_header.scss */
 .header__wrapper-right {
   display: -webkit-box;
   display: -webkit-flex;
@@ -718,7 +719,7 @@ picture {
           justify-content: flex-end;
 }
 
-/* line 119, src/scss/_components/_header.scss */
+/* line 120, src/scss/_components/_header.scss */
 .header__nav {
   display: -webkit-box;
   display: -webkit-flex;
@@ -726,7 +727,7 @@ picture {
   display: flex;
 }
 
-/* line 122, src/scss/_components/_header.scss */
+/* line 123, src/scss/_components/_header.scss */
 .header__nav a {
   display: -webkit-box;
   display: -webkit-flex;
@@ -752,7 +753,7 @@ picture {
   color: #FFFFFF;
 }
 
-/* line 141, src/scss/_components/_header.scss */
+/* line 142, src/scss/_components/_header.scss */
 .header__btn .c-btn:after {
   content: '';
   opacity: 0;
@@ -773,7 +774,7 @@ picture {
   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
 
-/* line 156, src/scss/_components/_header.scss */
+/* line 157, src/scss/_components/_header.scss */
 .header__btn .c-btn span {
   -webkit-transition: color 0.3s ease-in-out;
   -o-transition: color 0.3s ease-in-out;
@@ -2458,15 +2459,14 @@ picture {
   z-index: 999;
   position: relative;
   padding-top: 50px;
-  padding-bottom: 50px;
 }
 
-/* line 9, src/scss/_components/homepage/_approach.scss */
+/* line 8, src/scss/_components/homepage/_approach.scss */
 .approach__title {
   padding-bottom: 70px;
 }
 
-/* line 13, src/scss/_components/homepage/_approach.scss */
+/* line 12, src/scss/_components/homepage/_approach.scss */
 .approach__subtitle {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2486,7 +2486,7 @@ picture {
   background-color: rgba(64, 151, 217, 0.05);
 }
 
-/* line 21, src/scss/_components/homepage/_approach.scss */
+/* line 20, src/scss/_components/homepage/_approach.scss */
 .approach__subtitle p {
   font-size: 20px;
   line-height: 30px;
@@ -2494,7 +2494,7 @@ picture {
   color: #4097D9;
 }
 
-/* line 29, src/scss/_components/homepage/_approach.scss */
+/* line 28, src/scss/_components/homepage/_approach.scss */
 .approach__tab {
   position: relative;
   display: -webkit-box;
@@ -2514,7 +2514,7 @@ picture {
   padding-left: 60px;
 }
 
-/* line 38, src/scss/_components/homepage/_approach.scss */
+/* line 37, src/scss/_components/homepage/_approach.scss */
 .approach__tab:after {
   content: '';
   z-index: 5;
@@ -2536,7 +2536,7 @@ picture {
   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, transform 0.45s 0.3s ease-in-out, -webkit-transform 0.45s 0.3s ease-in-out;
 }
 
-/* line 56, src/scss/_components/homepage/_approach.scss */
+/* line 55, src/scss/_components/homepage/_approach.scss */
 .approach__tab:hover > div:nth-of-type(1), .approach__tab.is-active > div:nth-of-type(1) {
   background-color: rgba(64, 151, 217, 0.1);
   -webkit-transition: background-color 0.3s ease-in-out;
@@ -2544,7 +2544,7 @@ picture {
   transition: background-color 0.3s ease-in-out;
 }
 
-/* line 60, src/scss/_components/homepage/_approach.scss */
+/* line 59, src/scss/_components/homepage/_approach.scss */
 .approach__tab:hover > div:nth-of-type(1) .icon-font, .approach__tab.is-active > div:nth-of-type(1) .icon-font {
   color: #4097d9;
   -webkit-transition: color 0.3s ease-in-out;
@@ -2552,7 +2552,7 @@ picture {
   transition: color 0.3s ease-in-out;
 }
 
-/* line 66, src/scss/_components/homepage/_approach.scss */
+/* line 65, src/scss/_components/homepage/_approach.scss */
 .approach__tab:hover > div span, .approach__tab.is-active > div span {
   color: #4097d9;
   -webkit-transition: color 0.3s ease-in-out;
@@ -2560,7 +2560,7 @@ picture {
   transition: color 0.3s ease-in-out;
 }
 
-/* line 71, src/scss/_components/homepage/_approach.scss */
+/* line 70, src/scss/_components/homepage/_approach.scss */
 .approach__tab:hover > div p, .approach__tab.is-active > div p {
   color: #121e31;
   -webkit-transition: color 0.3s ease-in-out;
@@ -2568,7 +2568,7 @@ picture {
   transition: color 0.3s ease-in-out;
 }
 
-/* line 79, src/scss/_components/homepage/_approach.scss */
+/* line 78, src/scss/_components/homepage/_approach.scss */
 .approach__tab.is-active:after {
   opacity: 1;
   visibility: visible;
@@ -2582,7 +2582,7 @@ picture {
   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, transform 0.45s 0.3s ease-in-out, -webkit-transform 0.45s 0.3s ease-in-out;
 }
 
-/* line 88, src/scss/_components/homepage/_approach.scss */
+/* line 87, src/scss/_components/homepage/_approach.scss */
 .approach__tab > div:nth-of-type(1) {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2606,7 +2606,7 @@ picture {
   transition: background-color 0.3s ease-in-out;
 }
 
-/* line 98, src/scss/_components/homepage/_approach.scss */
+/* line 97, src/scss/_components/homepage/_approach.scss */
 .approach__tab > div:nth-of-type(1) .icon-font {
   color: #6E7E92;
   font-size: 15px;
@@ -2615,12 +2615,12 @@ picture {
   transition: color 0.3s ease-in-out;
 }
 
-/* line 103, src/scss/_components/homepage/_approach.scss */
+/* line 102, src/scss/_components/homepage/_approach.scss */
 .approach__tab > div:nth-of-type(1) .icon-font.icon-rocket {
   font-size: 22px;
 }
 
-/* line 109, src/scss/_components/homepage/_approach.scss */
+/* line 108, src/scss/_components/homepage/_approach.scss */
 .approach__tab > div:nth-of-type(2) {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
@@ -2631,7 +2631,7 @@ picture {
   padding-left: 20px;
 }
 
-/* line 116, src/scss/_components/homepage/_approach.scss */
+/* line 115, src/scss/_components/homepage/_approach.scss */
 .approach__tab > div span {
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
@@ -2642,7 +2642,7 @@ picture {
   transition: color 0.3s ease-in-out;
 }
 
-/* line 124, src/scss/_components/homepage/_approach.scss */
+/* line 123, src/scss/_components/homepage/_approach.scss */
 .approach__tab > div p {
   font-family: 'Open Sans', sans-serif;
   font-weight: 600;
@@ -2654,7 +2654,7 @@ picture {
   transition: color 0.3s ease-in-out;
 }
 
-/* line 134, src/scss/_components/homepage/_approach.scss */
+/* line 133, src/scss/_components/homepage/_approach.scss */
 .approach__tab-wrapper {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2667,7 +2667,7 @@ picture {
           flex-direction: column;
 }
 
-/* line 139, src/scss/_components/homepage/_approach.scss */
+/* line 138, src/scss/_components/homepage/_approach.scss */
 .approach__tab-header {
   position: relative;
   display: -webkit-box;
@@ -2681,7 +2681,7 @@ picture {
   padding-bottom: 60px;
 }
 
-/* line 145, src/scss/_components/homepage/_approach.scss */
+/* line 144, src/scss/_components/homepage/_approach.scss */
 .approach__tab-header:after {
   content: '';
   position: absolute;
@@ -2692,12 +2692,12 @@ picture {
   background-color: #DFF1FF;
 }
 
-/* line 156, src/scss/_components/homepage/_approach.scss */
+/* line 155, src/scss/_components/homepage/_approach.scss */
 .approach__tab-body {
   padding-bottom: 30px;
 }
 
-/* line 160, src/scss/_components/homepage/_approach.scss */
+/* line 159, src/scss/_components/homepage/_approach.scss */
 .approach__tab-footer {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2710,12 +2710,12 @@ picture {
           flex-direction: column;
 }
 
-/* line 165, src/scss/_components/homepage/_approach.scss */
+/* line 164, src/scss/_components/homepage/_approach.scss */
 .approach__tab-content {
   display: none;
 }
 
-/* line 169, src/scss/_components/homepage/_approach.scss */
+/* line 168, src/scss/_components/homepage/_approach.scss */
 .approach__tab-section {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2730,7 +2730,7 @@ picture {
           backdrop-filter: blur(4px);
 }
 
-/* line 177, src/scss/_components/homepage/_approach.scss */
+/* line 176, src/scss/_components/homepage/_approach.scss */
 .approach__tab-section > div {
   width: 100%;
   padding: 40px;
@@ -2741,12 +2741,12 @@ picture {
   background-color: #FFFFFF;
 }
 
-/* line 185, src/scss/_components/homepage/_approach.scss */
+/* line 184, src/scss/_components/homepage/_approach.scss */
 .approach__tab-section:not(:last-of-type) {
   margin-bottom: 38px;
 }
 
-/* line 190, src/scss/_components/homepage/_approach.scss */
+/* line 189, src/scss/_components/homepage/_approach.scss */
 .approach__tab-heading {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2759,7 +2759,7 @@ picture {
   padding-bottom: 20px;
 }
 
-/* line 196, src/scss/_components/homepage/_approach.scss */
+/* line 195, src/scss/_components/homepage/_approach.scss */
 .approach__tab-heading > div:nth-of-type(1) {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2777,7 +2777,7 @@ picture {
   max-width: 100%;
 }
 
-/* line 204, src/scss/_components/homepage/_approach.scss */
+/* line 203, src/scss/_components/homepage/_approach.scss */
 .approach__tab-heading > div:nth-of-type(1) > div:nth-of-type(1) {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2798,20 +2798,20 @@ picture {
   background-color: rgba(64, 151, 217, 0.1);
 }
 
-/* line 213, src/scss/_components/homepage/_approach.scss */
+/* line 212, src/scss/_components/homepage/_approach.scss */
 .approach__tab-heading > div:nth-of-type(1) > div:nth-of-type(1) .icon-font {
   font-size: 20px;
   color: #4097d9;
 }
 
-/* line 217, src/scss/_components/homepage/_approach.scss */
+/* line 216, src/scss/_components/homepage/_approach.scss */
 .approach__tab-heading > div:nth-of-type(1) > div:nth-of-type(1) .icon-font.icon-pen {
   -webkit-transform: scaleX(-1);
       -ms-transform: scaleX(-1);
           transform: scaleX(-1);
 }
 
-/* line 222, src/scss/_components/homepage/_approach.scss */
+/* line 221, src/scss/_components/homepage/_approach.scss */
 .approach__tab-heading > div:nth-of-type(1) > div:nth-of-type(2) {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
@@ -2822,7 +2822,7 @@ picture {
   padding-left: 24px;
 }
 
-/* line 233, src/scss/_components/homepage/_approach.scss */
+/* line 232, src/scss/_components/homepage/_approach.scss */
 .approach__tab-heading p {
   font-weight: 600;
   font-size: 28px;
@@ -2830,22 +2830,21 @@ picture {
   color: #121E31;
 }
 
-/* line 240, src/scss/_components/homepage/_approach.scss */
+/* line 239, src/scss/_components/homepage/_approach.scss */
 .approach__tab-heading span {
   font-size: 18px;
   line-height: 27px;
   color: #4097D9;
 }
 
-/* line 248, src/scss/_components/homepage/_approach.scss */
+/* line 247, src/scss/_components/homepage/_approach.scss */
 .approach__tab-desc > p {
-  padding-bottom: 15px;
   font-size: 16px;
   line-height: 24px;
   color: #121E31;
 }
 
-/* line 255, src/scss/_components/homepage/_approach.scss */
+/* line 254, src/scss/_components/homepage/_approach.scss */
 .approach__tab-desc ul {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2858,7 +2857,7 @@ picture {
           flex-direction: column;
 }
 
-/* line 259, src/scss/_components/homepage/_approach.scss */
+/* line 258, src/scss/_components/homepage/_approach.scss */
 .approach__tab-desc ul li {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2870,23 +2869,23 @@ picture {
           align-items: center;
 }
 
-/* line 263, src/scss/_components/homepage/_approach.scss */
+/* line 262, src/scss/_components/homepage/_approach.scss */
 .approach__tab-desc ul li:not(:last-of-type) {
   padding-bottom: 15px;
 }
 
-/* line 268, src/scss/_components/homepage/_approach.scss */
+/* line 267, src/scss/_components/homepage/_approach.scss */
 .approach__tab-desc ul li > div:nth-of-type(1) {
   width: 40px;
 }
 
-/* line 271, src/scss/_components/homepage/_approach.scss */
+/* line 270, src/scss/_components/homepage/_approach.scss */
 .approach__tab-desc ul li > div:nth-of-type(1) .icon-font {
   font-size: 11px;
   color: #4097d9;
 }
 
-/* line 276, src/scss/_components/homepage/_approach.scss */
+/* line 275, src/scss/_components/homepage/_approach.scss */
 .approach__tab-desc ul li > div:nth-of-type(2) {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
@@ -2896,12 +2895,40 @@ picture {
   max-width: 100%;
 }
 
-/* line 284, src/scss/_components/homepage/_approach.scss */
+/* line 283, src/scss/_components/homepage/_approach.scss */
 .approach__tab-desc ul span {
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   line-height: 19px;
   color: #636B73;
+}
+
+/* line 293, src/scss/_components/homepage/_approach.scss */
+.approach__collapse {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+/* line 297, src/scss/_components/homepage/_approach.scss */
+.approach__collapse-head {
+  cursor: pointer;
+}
+
+/* line 301, src/scss/_components/homepage/_approach.scss */
+.approach__collapse-body {
+  display: none;
+}
+
+/* line 304, src/scss/_components/homepage/_approach.scss */
+.approach__collapse-body > div {
+  padding-top: 15px;
 }
 
 /* line 3, src/scss/_components/sign/_sign-in.scss */

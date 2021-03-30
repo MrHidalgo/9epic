@@ -103,6 +103,10 @@ const foundationCB = () => {
 
 
 const homepageMainScrollAnimation =() => {
+	if($('#main').length <= 0) {
+		return;
+	}
+	
 	$('.main__wrapper-left').css({left: $('.main__wrapper')[0].getBoundingClientRect().left});
 	$('[main-content-js]').animate({opacity: 1}, 1000);
 	
@@ -654,6 +658,10 @@ const headerChangeColor = () => {
 	
 	if(isAnyPartOfElementInViewport(containerNode) && containerNode.getBoundingClientRect().top < 0) {
 		header.addClass('is-color');
+		
+		setTimeout(() => {
+			header.animate({opacity: 1});
+		}, 350);
 	} else {
 		header.removeClass('is-color');
 	}
@@ -665,6 +673,15 @@ const headerChangeColor = () => {
 		  header.removeClass('is-color');
 	  }
 	 });
+};
+
+
+const approachCollapse = () => {
+	$('.approach__collapse-head').on('click', (ev) => {
+		const el = $(ev.currentTarget);
+		
+		el.siblings('.approach__collapse-body').slideToggle(550);
+	});
 };
 /*
 * CALLBACK :: end
@@ -691,6 +708,7 @@ const initNative = () => {
 	foundationCB();
 	homepageMainScrollAnimation();
 	headerChangeColor();
+	approachCollapse();
 	// ==========================================
 };
 

@@ -192,6 +192,10 @@ var foundationCB = function foundationCB() {
 };
 
 var homepageMainScrollAnimation = function homepageMainScrollAnimation() {
+	if ($('#main').length <= 0) {
+		return;
+	}
+
 	$('.main__wrapper-left').css({ left: $('.main__wrapper')[0].getBoundingClientRect().left });
 	$('[main-content-js]').animate({ opacity: 1 }, 1000);
 
@@ -636,6 +640,10 @@ var headerChangeColor = function headerChangeColor() {
 
 	if (isAnyPartOfElementInViewport(containerNode) && containerNode.getBoundingClientRect().top < 0) {
 		header.addClass('is-color');
+
+		setTimeout(function () {
+			header.animate({ opacity: 1 });
+		}, 350);
 	} else {
 		header.removeClass('is-color');
 	}
@@ -646,6 +654,14 @@ var headerChangeColor = function headerChangeColor() {
 		} else {
 			header.removeClass('is-color');
 		}
+	});
+};
+
+var approachCollapse = function approachCollapse() {
+	$('.approach__collapse-head').on('click', function (ev) {
+		var el = $(ev.currentTarget);
+
+		el.siblings('.approach__collapse-body').slideToggle(550);
 	});
 };
 /*
@@ -672,6 +688,7 @@ var initNative = function initNative() {
 	foundationCB();
 	homepageMainScrollAnimation();
 	headerChangeColor();
+	approachCollapse();
 	// ==========================================
 };
 

@@ -4,7 +4,6 @@
 	z-index: 999;
 	position: relative;
 	padding-top: 50px;
-	padding-bottom: 50px;
 
 	&__title {
 		padding-bottom: 70px;
@@ -246,7 +245,7 @@
 
 		&-desc {
 			> p {
-				padding-bottom: 15px;
+				//padding-bottom: 15px;
 				font-size: 16px;
 				line-height: 24px;
 				color: #121E31;
@@ -287,6 +286,23 @@
 					line-height: 19px;
 					color: #636B73;
 				}
+			}
+		}
+	}
+
+	&__collapse {
+		display: flex;
+		flex-direction: column;
+
+		&-head {
+			cursor: pointer;
+		}
+
+		&-body {
+			display: none;
+
+			> div {
+				padding-top: 15px;
 			}
 		}
 	}
