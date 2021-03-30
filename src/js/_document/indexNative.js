@@ -700,6 +700,7 @@ const initNative = () => {
 	
 	// lib
 	initSwiper();
+	initSmoothScroll();
 	// ==========================================
 	
 	// callback
