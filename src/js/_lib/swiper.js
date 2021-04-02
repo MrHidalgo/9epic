@@ -17,6 +17,11 @@ const initSwiper = () => {
         nextEl: '.solution__slider-wrapper-1 .solution__slider-row-' + j + ' .solution__slider-btn--next',
         prevEl: '.solution__slider-wrapper-1 .solution__slider-row-' + j + ' .solution__slider-btn--prev',
       },
+      touchMoveStopPropagation:false,
+      simulateTouch : false,
+      allowSwipeToNext: true,
+      allowSwipeToPrev: true,
+      allowPageScroll: "auto ",
       on: {
         init: function (swiper) {
           if(swiper.slides.length > 1) {

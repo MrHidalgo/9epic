@@ -91,6 +91,11 @@ var initSwiper = function initSwiper() {
 				nextEl: '.solution__slider-wrapper-1 .solution__slider-row-' + j + ' .solution__slider-btn--next',
 				prevEl: '.solution__slider-wrapper-1 .solution__slider-row-' + j + ' .solution__slider-btn--prev'
 			},
+			touchMoveStopPropagation: false,
+			simulateTouch: false,
+			allowSwipeToNext: true,
+			allowSwipeToPrev: true,
+			allowPageScroll: "auto ",
 			on: {
 				init: function init(swiper) {
 					if (swiper.slides.length > 1) {
@@ -164,6 +169,10 @@ function helperSolutionTabCB(id) {
 	helperInnerSliderCB(id);
 }
 
+/**
+ *
+ * @param id
+ */
 function helperInnerSliderCB(id) {
 	var partBool2 = true,
 	    partBool3 = true;
@@ -181,6 +190,11 @@ function helperInnerSliderCB(id) {
 						nextEl: '.solution__slider-wrapper-2 .solution__slider-row-' + j + ' .solution__slider-btn--next',
 						prevEl: '.solution__slider-wrapper-2 .solution__slider-row-' + j + ' .solution__slider-btn--prev'
 					},
+					touchMoveStopPropagation: false,
+					simulateTouch: false,
+					allowSwipeToNext: true,
+					allowSwipeToPrev: true,
+					allowPageScroll: "auto ",
 					on: {
 						init: function init(swiper) {
 							if (swiper.slides.length > 1) {
@@ -207,6 +221,11 @@ function helperInnerSliderCB(id) {
 						nextEl: '.solution__slider-wrapper-3 .solution__slider-row-' + j + ' .solution__slider-btn--next',
 						prevEl: '.solution__slider-wrapper-3 .solution__slider-row-' + j + ' .solution__slider-btn--prev'
 					},
+					touchMoveStopPropagation: false,
+					simulateTouch: false,
+					allowSwipeToNext: true,
+					allowSwipeToPrev: true,
+					allowPageScroll: "auto ",
 					on: {
 						init: function init(swiper) {
 							if (swiper.slides.length > 1) {
