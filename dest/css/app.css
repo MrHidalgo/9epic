@@ -2408,23 +2408,25 @@ picture {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  height: auto;
+  min-height: 100%;
   padding: 60px 20px 60px 60px;
   background: #FFFFFF;
   -webkit-border-radius: 10px;
           border-radius: 10px;
 }
 
-/* line 362, src/scss/_components/homepage/_solution.scss */
+/* line 364, src/scss/_components/homepage/_solution.scss */
 .solution .swiper-slide > div {
   width: 50%;
 }
 
-/* line 365, src/scss/_components/homepage/_solution.scss */
+/* line 367, src/scss/_components/homepage/_solution.scss */
 .solution .swiper-slide > div:nth-of-type(1) {
   padding-right: 60px;
 }
 
-/* line 368, src/scss/_components/homepage/_solution.scss */
+/* line 370, src/scss/_components/homepage/_solution.scss */
 .solution .swiper-slide > div:nth-of-type(1) h4 {
   padding-bottom: 20px;
   font-weight: 600;
@@ -2433,7 +2435,7 @@ picture {
   color: #121E31;
 }
 
-/* line 376, src/scss/_components/homepage/_solution.scss */
+/* line 378, src/scss/_components/homepage/_solution.scss */
 .solution .swiper-slide > div:nth-of-type(1) p {
   padding-bottom: 64px;
   font-size: 15px;
@@ -2441,12 +2443,12 @@ picture {
   color: #636B73;
 }
 
-/* line 384, src/scss/_components/homepage/_solution.scss */
+/* line 386, src/scss/_components/homepage/_solution.scss */
 .solution .swiper-slide > div:nth-of-type(1) .c-btn:not(:last-of-type) {
   margin-right: 10px;
 }
 
-/* line 390, src/scss/_components/homepage/_solution.scss */
+/* line 392, src/scss/_components/homepage/_solution.scss */
 .solution .swiper-slide > div:nth-of-type(2) img {
   display: block;
   max-width: 100%;
@@ -2797,22 +2799,28 @@ picture {
   -webkit-border-radius: 8px;
           border-radius: 8px;
   background-color: rgba(64, 151, 217, 0.1);
+  -webkit-transition: background-color 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
 }
 
-/* line 212, src/scss/_components/homepage/_approach.scss */
+/* line 213, src/scss/_components/homepage/_approach.scss */
 .approach__tab-heading > div:nth-of-type(1) > div:nth-of-type(1) .icon-font {
   font-size: 20px;
   color: #4097d9;
+  -webkit-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
 }
 
-/* line 216, src/scss/_components/homepage/_approach.scss */
+/* line 218, src/scss/_components/homepage/_approach.scss */
 .approach__tab-heading > div:nth-of-type(1) > div:nth-of-type(1) .icon-font.icon-pen {
   -webkit-transform: scaleX(-1);
       -ms-transform: scaleX(-1);
           transform: scaleX(-1);
 }
 
-/* line 221, src/scss/_components/homepage/_approach.scss */
+/* line 223, src/scss/_components/homepage/_approach.scss */
 .approach__tab-heading > div:nth-of-type(1) > div:nth-of-type(2) {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
@@ -2823,7 +2831,7 @@ picture {
   padding-left: 24px;
 }
 
-/* line 232, src/scss/_components/homepage/_approach.scss */
+/* line 234, src/scss/_components/homepage/_approach.scss */
 .approach__tab-heading p {
   font-weight: 600;
   font-size: 28px;
@@ -2831,21 +2839,21 @@ picture {
   color: #121E31;
 }
 
-/* line 239, src/scss/_components/homepage/_approach.scss */
+/* line 241, src/scss/_components/homepage/_approach.scss */
 .approach__tab-heading span {
   font-size: 18px;
   line-height: 27px;
   color: #4097D9;
 }
 
-/* line 247, src/scss/_components/homepage/_approach.scss */
+/* line 249, src/scss/_components/homepage/_approach.scss */
 .approach__tab-desc > p {
   font-size: 16px;
   line-height: 24px;
   color: #121E31;
 }
 
-/* line 254, src/scss/_components/homepage/_approach.scss */
+/* line 256, src/scss/_components/homepage/_approach.scss */
 .approach__tab-desc ul {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2858,7 +2866,7 @@ picture {
           flex-direction: column;
 }
 
-/* line 258, src/scss/_components/homepage/_approach.scss */
+/* line 260, src/scss/_components/homepage/_approach.scss */
 .approach__tab-desc ul li {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2870,23 +2878,23 @@ picture {
           align-items: center;
 }
 
-/* line 262, src/scss/_components/homepage/_approach.scss */
+/* line 264, src/scss/_components/homepage/_approach.scss */
 .approach__tab-desc ul li:not(:last-of-type) {
   padding-bottom: 15px;
 }
 
-/* line 267, src/scss/_components/homepage/_approach.scss */
+/* line 269, src/scss/_components/homepage/_approach.scss */
 .approach__tab-desc ul li > div:nth-of-type(1) {
   width: 40px;
 }
 
-/* line 270, src/scss/_components/homepage/_approach.scss */
+/* line 272, src/scss/_components/homepage/_approach.scss */
 .approach__tab-desc ul li > div:nth-of-type(1) .icon-font {
   font-size: 11px;
   color: #4097d9;
 }
 
-/* line 275, src/scss/_components/homepage/_approach.scss */
+/* line 277, src/scss/_components/homepage/_approach.scss */
 .approach__tab-desc ul li > div:nth-of-type(2) {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
@@ -2896,7 +2904,7 @@ picture {
   max-width: 100%;
 }
 
-/* line 283, src/scss/_components/homepage/_approach.scss */
+/* line 285, src/scss/_components/homepage/_approach.scss */
 .approach__tab-desc ul span {
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
@@ -2904,7 +2912,7 @@ picture {
   color: #636B73;
 }
 
-/* line 293, src/scss/_components/homepage/_approach.scss */
+/* line 295, src/scss/_components/homepage/_approach.scss */
 .approach__collapse {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2917,17 +2925,33 @@ picture {
           flex-direction: column;
 }
 
-/* line 297, src/scss/_components/homepage/_approach.scss */
+/* line 299, src/scss/_components/homepage/_approach.scss */
 .approach__collapse-head {
   cursor: pointer;
 }
 
-/* line 301, src/scss/_components/homepage/_approach.scss */
+/* line 306, src/scss/_components/homepage/_approach.scss */
+.approach__collapse-head:hover .approach__tab-heading > div:nth-of-type(1) > div:nth-of-type(1), .approach__collapse-head.is-active .approach__tab-heading > div:nth-of-type(1) > div:nth-of-type(1) {
+  background-color: #4097d9;
+  -webkit-transition: background-color 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* line 310, src/scss/_components/homepage/_approach.scss */
+.approach__collapse-head:hover .approach__tab-heading > div:nth-of-type(1) > div:nth-of-type(1) .icon-font, .approach__collapse-head.is-active .approach__tab-heading > div:nth-of-type(1) > div:nth-of-type(1) .icon-font {
+  color: #ffffff;
+  -webkit-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+
+/* line 320, src/scss/_components/homepage/_approach.scss */
 .approach__collapse-body {
   display: none;
 }
 
-/* line 304, src/scss/_components/homepage/_approach.scss */
+/* line 323, src/scss/_components/homepage/_approach.scss */
 .approach__collapse-body > div {
   padding-top: 15px;
 }

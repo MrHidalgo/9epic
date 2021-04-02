@@ -355,6 +355,8 @@
 			position: relative;
 			display: flex;
 			align-items: center;
+			height: auto;
+			min-height: 100%;
 			padding: 60px 20px 60px 60px;
 			background: #FFFFFF;
 			border-radius: 10px;

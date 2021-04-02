@@ -1,16 +1,122 @@
 /*
 * CALLBACK :: start
 * ============================================= */
-const approachTabCB = () => {
-	$('.approach__tab').on('click', (ev) => {
+
+/**
+ *
+ * @param id
+ */
+function helperFoundationTabCB(id) {
+	$('.foundation__tab')
+		.removeClass('is-active')
+		.eq(id)
+		.addClass('is-active');
+	
+	$('.foundation__tab-content').hide();
+	$('.foundation__tab-content[data-content-id="' + id + '"]').fadeIn(550);
+}
+
+/**
+ *
+ * @param id
+ */
+function helperApproachTabCB(id) {
+	$('.approach__tab')
+		.removeClass('is-active')
+		.eq(id)
+		.addClass('is-active');
+	
+	$('.approach__tab-content').hide();
+	$('.approach__tab-content[data-tab-content="' + id + '"]').fadeIn(550);
+}
+
+/**
+ *
+ * @param id
+ */
+function helperSolutionTabCB(id) {
+	$('.solution__tab')
+		.removeClass('is-active')
+		.eq(id)
+		.addClass('is-active');
+	
+	$('.solution__tab-content').hide();
+	$('.solution__tab-content[data-tab-content="' + id + '"]').fadeIn(550);
+	
+	helperInnerSliderCB(id);
+}
+
+function helperInnerSliderCB(id) {
+	let partBool2 = true,
+		partBool3 = true;
+	
+	setTimeout(() => {
+		
+		if(parseInt(id) === 1 && partBool2) {
+			for(let i = 0, j = 1; i < $('.solution__slider-wrapper-2 .solution__slider-row').length; i++, j++) {
+				new Swiper('.solutionSlider2' + i, {
+					effect: 'slide',
+					slidesPerView: 1,
+					spaceBetween: 20,
+					speed: 1000,
+					navigation: {
+						nextEl: '.solution__slider-wrapper-2 .solution__slider-row-' + j + ' .solution__slider-btn--next',
+						prevEl: '.solution__slider-wrapper-2 .solution__slider-row-' + j + ' .solution__slider-btn--prev',
+					},
+					on: {
+						init: function (swiper) {
+							if(swiper.slides.length > 1) {
+								$('.solution__slider-wrapper-2 .solution__slider-row-' + j + ' .solution__slider-btn').animate({opacity: 1}, 550);
+							}
+						}
+					}
+				});
+			}
+			
+			partBool2 = false;
+		} else if(parseInt(id) === 2 && partBool3) {
+			for(let i = 0, j = 1; i < $('.solution__slider-wrapper-3 .solution__slider-row').length; i++, j++) {
+				new Swiper('.solutionSlider3' + i, {
+					effect: 'slide',
+					slidesPerView: 1,
+					spaceBetween: 20,
+					speed: 1000,
+					navigation: {
+						nextEl: '.solution__slider-wrapper-3 .solution__slider-row-' + j + ' .solution__slider-btn--next',
+						prevEl: '.solution__slider-wrapper-3 .solution__slider-row-' + j + ' .solution__slider-btn--prev',
+					},
+					on: {
+						init: function (swiper) {
+							if(swiper.slides.length > 1) {
+								$('.solution__slider-wrapper-3 .solution__slider-row-' + j + ' .solution__slider-btn').animate({opacity: 1}, 550);
+							}
+						}
+					}
+				});
+			}
+			
+			partBool3 = false;
+		}
+		
+	}, 100);
+}
+
+
+const foundationCB = () => {
+	$('.foundation__tab').on('click', (ev) => {
+		console.log(ev);
+		
 		const el = $(ev.currentTarget),
 			elID = el.attr('data-tab-id');
 		
-		$('.approach__tab').removeClass('is-active');
+		$('.foundation__tab').removeClass('is-active');
 		el.addClass('is-active');
 		
-		$('.approach__tab-content').hide();
-		$('.approach__tab-content[data-tab-content="' + elID + '"]').fadeIn(550);
+		$('.foundation__tab-content').hide();
+		$('.foundation__tab-content[data-content-id="' + elID + '"]').fadeIn(550);
+		
+		helperApproachTabCB(elID);
+		helperSolutionTabCB(elID);
 	});
 };
 
@@ -30,8 +136,6 @@ const solutionCB = () => {
 	}
 	
 	
-	let partBool2 = true,
-		partBool3 = true;
 	
 	$('.solution__tab').on('click', (ev) => {
 		const el = $(ev.currentTarget),
@@ -43,57 +147,9 @@ const solutionCB = () => {
 		$('.solution__tab-content').hide();
 		$('.solution__tab-content[data-tab-content="' + elID + '"]').fadeIn(550);
 		
-		setTimeout(() => {
-			
-			if(parseInt(elID) === 1 && partBool2) {
-				for(let i = 0, j = 1; i < $('.solution__slider-wrapper-2 .solution__slider-row').length; i++, j++) {
-					new Swiper('.solutionSlider2' + i, {
-						effect: 'flip',
-						flipEffect: {
-							slideShadows: false,
-						},
-						speed: 1000,
-						navigation: {
-							nextEl: '.solution__slider-wrapper-2 .solution__slider-row-' + j + ' .solution__slider-btn--next',
-							prevEl: '.solution__slider-wrapper-2 .solution__slider-row-' + j + ' .solution__slider-btn--prev',
-						},
-						on: {
-							init: function (swiper) {
-								if(swiper.slides.length > 1) {
-									$('.solution__slider-wrapper-2 .solution__slider-row-' + j + ' .solution__slider-btn').animate({opacity: 1}, 550);
-								}
-							}
-						}
-					});
-				}
-				
-				partBool2 = false;
-			} else if(parseInt(elID) === 2 && partBool3) {
-				for(let i = 0, j = 1; i < $('.solution__slider-wrapper-3 .solution__slider-row').length; i++, j++) {
-					new Swiper('.solutionSlider3' + i, {
-						effect: 'flip',
-						flipEffect: {
-							slideShadows: false,
-						},
-						speed: 1000,
-						navigation: {
-							nextEl: '.solution__slider-wrapper-3 .solution__slider-row-' + j + ' .solution__slider-btn--next',
-							prevEl: '.solution__slider-wrapper-3 .solution__slider-row-' + j + ' .solution__slider-btn--prev',
-						},
-						on: {
-							init: function (swiper) {
-								if(swiper.slides.length > 1) {
-									$('.solution__slider-wrapper-3 .solution__slider-row-' + j + ' .solution__slider-btn').animate({opacity: 1}, 550);
-								}
-							}
-						}
-					});
-				}
-				
-				partBool3 = false;
-			}
-			
-		}, 100);
+		helperApproachTabCB(elID);
+		helperFoundationTabCB(elID);
+		helperInnerSliderCB(elID);
 	})
 	
 	helperSlider('.solution__slider-head-1 a','.solution__slider-footer-1 .solution__slider-row');
@@ -102,16 +158,19 @@ const solutionCB = () => {
 };
 
 
-const foundationCB = () => {
-	$('.foundation__tab').on('click', (ev) => {
+const approachTabCB = () => {
+	$('.approach__tab').on('click', (ev) => {
 		const el = $(ev.currentTarget),
 			elID = el.attr('data-tab-id');
 		
-		$('.foundation__tab').removeClass('is-active');
+		$('.approach__tab').removeClass('is-active');
 		el.addClass('is-active');
 		
-		$('.foundation__tab-content').hide();
-		$('.foundation__tab-content[data-content-id="' + elID + '"]').fadeIn(550);
+		$('.approach__tab-content').hide();
+		$('.approach__tab-content[data-tab-content="' + elID + '"]').fadeIn(550);
+		
+		helperSolutionTabCB(elID);
+		helperFoundationTabCB(elID);
 	});
 };
 
@@ -693,6 +752,8 @@ const headerChangeColor = () => {
 const approachCollapse = () => {
 	$('.approach__collapse-head').on('click', (ev) => {
 		const el = $(ev.currentTarget);
+		
+		el.toggleClass('is-active');
 		
 		el.siblings('.approach__collapse-body').slideToggle(550);
 	});
