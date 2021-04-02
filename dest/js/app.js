@@ -420,7 +420,7 @@ var homepageMainScrollAnimation = function homepageMainScrollAnimation() {
 	var wrapperNode3 = $('.main__wrapper-3'),
 	    wrapperNode3H = wrapperNode3.outerHeight(true);
 
-	tween3.to(['#video1WrapperBorder > i', '#mainSVG1'], 1, { opacity: 0, ease: Power1.easeInOut }, '-=0').fromTo('#video2Wrapper', 1, { opacity: 0 }, { opacity: 1, ease: Power1.easeInOut }, '-=1')
+	tween3.to(['#video1WrapperBorder > i', '#mainSVG1'], 0.5, { opacity: 0, ease: Power1.easeInOut }, '-=0').fromTo('#video2Wrapper', 1, { opacity: 0 }, { opacity: 1, ease: Power1.easeInOut }, '-=0.5')
 	// .to(['#laptop-screen', '#laptop-fill'], 1,
 	// 	{opacity: 0, ease: Linear.easeNone}, '-=1'
 	// )
@@ -528,9 +528,9 @@ var homepageMainScrollAnimation = function homepageMainScrollAnimation() {
 	// .to(['#device-border', '#device-fill', '#device-option'], 1,
 	// 	{opacity: 0, ease: Linear.easeNone}, '-=0'
 	// )
-	;
+	.fromTo('#video2Wrapper', 0.5, { opacity: 1 }, { opacity: 0, ease: Power1.easeInOut }, '-=0');
 
-	tween41.to('#video2Wrapper', 0.5, { opacity: 0, ease: Power1.easeInOut }, '-=0').fromTo('#anim4-bg rect', 1, {
+	tween41.fromTo('#anim4-bg rect', 0.5, {
 		opacity: 0,
 		x: 30, y: 128,
 		width: '677px', height: '453px',
@@ -570,27 +570,26 @@ var homepageMainScrollAnimation = function homepageMainScrollAnimation() {
 	// )
 	;
 
-	// scene4 = new ScrollMagic.Scene({
-	// 	triggerElement: ".main__wrapper-2",
-	// 	offset: -100,
-	// 	duration: wrapperNode4H / 4 + 100
-	// })
-	// 	.setTween(tween4)
-	// 	// .addIndicators({name: 'device'})
-	// 	.addTo(controller4);
+	scene4 = new ScrollMagic.Scene({
+		triggerElement: ".main__wrapper-2",
+		offset: -100,
+		duration: wrapperNode4H / 4 - 100
+	}).setTween(tween4)
+	// .addIndicators({name: 'device'})
+	.addTo(controller4);
 
 	scene41 = new ScrollMagic.Scene({
 		triggerElement: ".main__wrapper-2",
 		offset: 0,
 		duration: wrapperNode4H - 200
 	}).setTween(tween41)
-	// .addIndicators({name: 'rect'})
+	// .addIndicators({name: 'video'})
 	.addTo(controller41);
 
 	scene42 = new ScrollMagic.Scene({
 		triggerElement: ".main__wrapper-2",
-		offset: 0,
-		duration: wrapperNode4H - 100
+		offset: 300,
+		duration: wrapperNode4H - 500
 	}).setTween(tween42)
 	// .addIndicators({name:'box-sq'})
 	.addTo(controller42);
@@ -602,17 +601,28 @@ var homepageMainScrollAnimation = function homepageMainScrollAnimation() {
 	var tween5 = new TimelineMax(),
 	    tween51 = new TimelineMax(),
 	    tween52 = new TimelineMax(),
+	    tween53 = new TimelineMax(),
 	    scene5 = null,
 	    scene51 = null,
 	    scene52 = null,
+	    scene53 = null,
 	    controller5 = new ScrollMagic.Controller(),
 	    controller51 = new ScrollMagic.Controller(),
-	    controller52 = new ScrollMagic.Controller();
+	    controller52 = new ScrollMagic.Controller(),
+	    controller53 = new ScrollMagic.Controller();
 
 	var wrapperNode5 = $('.main__wrapper-1'),
 	    wrapperNode5H = wrapperNode5.outerHeight(true);
 
-	tween5.to('#anim4-bg rect', 10, { opacity: 0, x: 30, y: 128, width: '677px', height: '453px', rotation: 0, transformOrigin: '140px 460px' }, '-=0').to(['#anim4-box-1', '#anim4-box-2', '#anim4-box-3', '#anim4-box-4', '#anim4-box-5', '#anim4-box-6'], 10, { opacity: 0, scale: 0.5, transformOrigin: 'center', ease: Linear.easeNone }, '-=10').fromTo('#video3Wrapper', 1, { opacity: 0 }, { opacity: 1, ease: Linear.easeNone }, '-=10');
+	tween5.to('#mainSVG3', 0.5, { opacity: 0 }, '-=0')
+	// .to(['#anim4-box-1', '#anim4-box-2', '#anim4-box-3', '#anim4-box-4', '#anim4-box-5', '#anim4-box-6'], 10,
+	// 	{opacity: 0, scale: 0.5, transformOrigin: 'center', ease: Linear.easeNone},
+	// 	'-=10'
+	// )
+	// .fromTo('#video3Wrapper', 1,
+	// 	{opacity: 0}, {opacity: 1, ease: Linear.easeNone}, '-=10'
+	// )
+	;
 
 	// tween51
 	// 	.fromTo('#cloud-border', 10,
@@ -632,12 +642,18 @@ var homepageMainScrollAnimation = function homepageMainScrollAnimation() {
 	// 	)
 	// ;
 
-	tween52.to('#video3Wrapper', 1, { opacity: 1, y: '-75%', ease: Linear.easeNone }, '-=0');
+	tween52.fromTo('#video3Wrapper', 1, { opacity: 0 }, { opacity: 1, ease: Linear.easeNone }, '-=0');
+
+	// tween53
+	// 	.to(['#video3Wrapper', '.main__wrapper-5 .main__wrapper-left > div'], 0.5,
+	// 		{opacity: 0, y: '-500px', ease: Linear.easeNone}, '-=0'
+	// 	)
+	// ;
 
 	scene5 = new ScrollMagic.Scene({
 		triggerElement: ".main__wrapper-1",
 		offset: 0,
-		duration: wrapperNode5H / 4
+		duration: 300
 	}).setTween(tween5)
 	// .addIndicators({name: 'rect'})
 	.addTo(controller5);
@@ -653,11 +669,20 @@ var homepageMainScrollAnimation = function homepageMainScrollAnimation() {
 
 	scene52 = new ScrollMagic.Scene({
 		triggerElement: ".main__wrapper-1",
-		offset: $('.main__wrapper-1').outerHeight(true) - 300,
-		duration: 1000
+		offset: 200,
+		duration: 800
 	}).setTween(tween52)
 	// .addIndicators({name: 'last-svg'})
 	.addTo(controller52);
+
+	// scene53 = new ScrollMagic.Scene({
+	// 	triggerElement: ".main__wrapper-1",
+	// 	offset: $('.main__wrapper-1').outerHeight(true) / 1.075,
+	// 	duration: ($('.main__wrapper-1').outerHeight(true) - ($('.main__wrapper-1').outerHeight(true) / 1.075)) + 200
+	// })
+	// 	.setTween(tween53)
+	// .addIndicators({name: 'last-animation'})
+	// .addTo(controller53);
 
 	/* end :: SCENE 5
  * ==================== */
@@ -678,10 +703,11 @@ var homepageMainScrollAnimation = function homepageMainScrollAnimation() {
 	    controllerTXT4 = new ScrollMagic.Controller(),
 	    tweenTXT5 = new TimelineMax(),
 	    sceneTXT5 = null,
-	    controllerTXT5 = new ScrollMagic.Controller(),
-	    tweenTXT6 = new TimelineMax(),
-	    sceneTXT6 = null,
-	    controllerTXT6 = new ScrollMagic.Controller();
+	    controllerTXT5 = new ScrollMagic.Controller()
+	// tweenTXT6 = new TimelineMax(),
+	// sceneTXT6 = null,
+	// controllerTXT6 = new ScrollMagic.Controller()
+	;
 
 	tweenTXT1.fromTo('.main__wrapper-1 .main__wrapper-left', 1, { opacity: 1, y: 0 }, { opacity: 0, y: '-100%', ease: Linear.easeNone }, '-=0');
 
@@ -693,7 +719,9 @@ var homepageMainScrollAnimation = function homepageMainScrollAnimation() {
 
 	tweenTXT5.fromTo('.main__wrapper-4 .main__wrapper-left', 1, { opacity: 1 }, { opacity: 0, y: '-100%', ease: Linear.easeNone }, '-=0').fromTo('.main__wrapper-5 .main__wrapper-left', 1, { opacity: 0 }, { opacity: 1, y: 0, ease: Linear.easeNone }, '-=1');
 
-	tweenTXT6.to('.main__wrapper-5 .main__wrapper-left', 1, { opacity: 1, y: '-75%', ease: Linear.easeNone }, '-=0');
+	// tweenTXT6
+	// 	.to('.main__wrapper-5 .main__wrapper-left', 1, {opacity: 1, y: '-75%', ease: Linear.easeNone}, '-=0')
+	// ;
 
 	sceneTXT1 = new ScrollMagic.Scene({
 		triggerElement: ".main__wrapper-5",
@@ -735,13 +763,14 @@ var homepageMainScrollAnimation = function homepageMainScrollAnimation() {
 	// .addIndicators({name: '5 text'})
 	.addTo(controllerTXT5);
 
-	sceneTXT6 = new ScrollMagic.Scene({
-		triggerElement: ".main__wrapper-1",
-		offset: $('.main__wrapper-1').outerHeight(true) - 300,
-		duration: 1000
-	}).setTween(tweenTXT6)
+	// sceneTXT6 = new ScrollMagic.Scene({
+	// 	triggerElement: ".main__wrapper-1",
+	// 	offset: $('.main__wrapper-1').outerHeight(true) - 300,
+	// 	duration: 1000
+	// })
+	// 	.setTween(tweenTXT6)
 	// .addIndicators({name: '5 text'})
-	.addTo(controllerTXT6);
+	// .addTo(controllerTXT6);
 	/* end :: TEXT
  * ==================== */
 };

@@ -1,5 +1,12 @@
 // COMMON :: START
 
+#container {
+	z-index: 999;
+	position: relative;
+	padding-top: 150px;
+	background-color: #ffffff;
+}
+
 .copyright {
 	display: flex;
 	justify-content: center;
