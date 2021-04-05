@@ -9,9 +9,7 @@ const initSmoothScroll = (
   btnName = "[anchor-js]",
   animateSpeed = 1000
 ) => {
-
   $(btnName).on("click", (e) => {
-    
     if($(e.currentTarget).attr('href').length === 1) return;
  
     let linkHref = $(e.currentTarget).attr('href'),
@@ -21,7 +19,5 @@ const initSmoothScroll = (
     $('body, html').animate({
       scrollTop: topHeightOffset
     }, animateSpeed);
-
   });
-
 };

@@ -86,9 +86,7 @@ var initSmoothScroll = function initSmoothScroll() {
 	var btnName = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "[anchor-js]";
 	var animateSpeed = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1000;
 
-
 	$(btnName).on("click", function (e) {
-
 		if ($(e.currentTarget).attr('href').length === 1) return;
 
 		var linkHref = $(e.currentTarget).attr('href'),

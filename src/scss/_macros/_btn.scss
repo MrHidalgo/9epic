@@ -30,12 +30,36 @@
   &__border {
     border: 1px solid #fff;
     background-color: transparent;
+    @include transition(background-color);
+
+    &:hover {
+      background-color: #fff;
+      @include transition(background-color);
+
+      span {
+        color: #0A0A0A;
+        @include transition(color);
+      }
+    }
 
     &.c-btn__border--dark {
       border-color: #0A0A0A;
+      background-color: transparent;
+      @include transition(background-color);
+
+      &:hover {
+        background-color: #0a0a0a;
+        @include transition(background-color);
+
+        span {
+          color: #ffffff;
+          @include transition(color);
+        }
+      }
 
       span {
         color: #0a0a0a;
+        @include transition(color);
       }
     }
   }

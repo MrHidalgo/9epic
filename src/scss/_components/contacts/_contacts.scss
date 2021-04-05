@@ -44,6 +44,9 @@
 			margin-left: auto;
 			margin-right: auto;
 			padding-bottom: 137px;
+			@include adaptive(1023) {
+				padding: 125px 50px;
+			}
 		}
 
 		&-2 {
@@ -67,6 +70,18 @@
 		line-height: 80px;
 		text-align: center;
 		color: #FFFFFF;
+		@include adaptive(1439) {
+			font-size: 62px;
+			line-height: 70px;
+		}
+		@include adaptive(1279) {
+			font-size: 52px;
+			line-height: 60px;
+		}
+		@include adaptive(1023) {
+			font-size: 42px;
+			line-height: 50px;
+		}
 	}
 
 	&__slogan {
@@ -76,6 +91,10 @@
 		line-height: 32px;
 		text-align: center;
 		color: #FFFFFF;
+		@include adaptive(1023) {
+			font-size: 18px;
+			line-height: 26px;
+		}
 	}
 }
 

@@ -17,7 +17,7 @@ PageList:
   titleName: Sign Up
   ready: 95
 - file: confirm.html
-  titleName: Confiirm
+  titleName: Confirm
   ready: 95
 - file: reset-password.html
   titleName: Reset Password
@@ -25,3 +25,6 @@ PageList:
 - file: new-password.html
   titleName: Set a New Password
   ready: 95
+- file: dashboard.html
+  titleName: Dashboard
+  ready: 0
