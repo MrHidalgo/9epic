@@ -4008,7 +4008,15 @@ picture {
   padding-bottom: 50px;
 }
 
-/* line 8, src/scss/_components/career/_career.scss */
+@media screen and (max-width: 767px) {
+  /* line 3, src/scss/_components/career/_career.scss */
+  .career {
+    padding-top: 80px;
+    padding-bottom: 0;
+  }
+}
+
+/* line 12, src/scss/_components/career/_career.scss */
 .career__bg {
   z-index: 0;
   position: absolute;
@@ -4023,7 +4031,16 @@ picture {
   margin-right: auto;
 }
 
-/* line 20, src/scss/_components/career/_career.scss */
+@media screen and (max-width: 767px) {
+  /* line 12, src/scss/_components/career/_career.scss */
+  .career__bg {
+    top: 0;
+    max-width: 100%;
+    height: 360px;
+  }
+}
+
+/* line 29, src/scss/_components/career/_career.scss */
 .career__bg:after {
   content: '';
   z-index: 1;
@@ -4035,14 +4052,14 @@ picture {
   background-color: rgba(18, 30, 49, 0.5);
 }
 
-/* line 36, src/scss/_components/career/_career.scss */
+/* line 45, src/scss/_components/career/_career.scss */
 .career__wrapper {
   z-index: 2;
   position: relative;
   padding-top: 143px;
 }
 
-/* line 41, src/scss/_components/career/_career.scss */
+/* line 50, src/scss/_components/career/_career.scss */
 .career__wrapper-1 {
   width: 100%;
   max-width: 615px;
@@ -4051,7 +4068,21 @@ picture {
   padding-bottom: 137px;
 }
 
-/* line 49, src/scss/_components/career/_career.scss */
+@media screen and (max-width: 1023px) {
+  /* line 50, src/scss/_components/career/_career.scss */
+  .career__wrapper-1 {
+    padding: 125px 50px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* line 50, src/scss/_components/career/_career.scss */
+  .career__wrapper-1 {
+    padding: 50px 15px 38px;
+  }
+}
+
+/* line 64, src/scss/_components/career/_career.scss */
 .career__wrapper-2 {
   padding: 50px 60px;
   -webkit-box-shadow: 0 10px 80px 0 rgba(18, 30, 49, 0.05);
@@ -4059,14 +4090,29 @@ picture {
   background-color: #FFFFFF;
 }
 
-/* line 54, src/scss/_components/career/_career.scss */
+@media screen and (max-width: 767px) {
+  /* line 64, src/scss/_components/career/_career.scss */
+  .career__wrapper-2 {
+    padding: 20px;
+  }
+}
+
+/* line 72, src/scss/_components/career/_career.scss */
 .career__wrapper-2 p {
   font-size: 14px;
   line-height: 24px;
   color: #1D284A;
 }
 
-/* line 63, src/scss/_components/career/_career.scss */
+@media screen and (max-width: 767px) {
+  /* line 72, src/scss/_components/career/_career.scss */
+  .career__wrapper-2 p {
+    font-size: 13px;
+    line-height: 20px;
+  }
+}
+
+/* line 85, src/scss/_components/career/_career.scss */
 .career__title {
   padding-bottom: 30px;
   font-weight: bold;
@@ -4076,7 +4122,40 @@ picture {
   color: #FFFFFF;
 }
 
-/* line 72, src/scss/_components/career/_career.scss */
+@media screen and (max-width: 1439px) {
+  /* line 85, src/scss/_components/career/_career.scss */
+  .career__title {
+    font-size: 62px;
+    line-height: 70px;
+  }
+}
+
+@media screen and (max-width: 1279px) {
+  /* line 85, src/scss/_components/career/_career.scss */
+  .career__title {
+    font-size: 52px;
+    line-height: 60px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  /* line 85, src/scss/_components/career/_career.scss */
+  .career__title {
+    font-size: 42px;
+    line-height: 50px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* line 85, src/scss/_components/career/_career.scss */
+  .career__title {
+    padding-bottom: 10px;
+    font-size: 30px;
+    line-height: 38px;
+  }
+}
+
+/* line 111, src/scss/_components/career/_career.scss */
 .career__slogan {
   font-weight: 600;
   font-size: 20px;
@@ -4085,13 +4164,36 @@ picture {
   color: #FFFFFF;
 }
 
+@media screen and (max-width: 1023px) {
+  /* line 111, src/scss/_components/career/_career.scss */
+  .career__slogan {
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* line 111, src/scss/_components/career/_career.scss */
+  .career__slogan {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
 /* line 3, src/scss/_components/career/_describe.scss */
 .describe {
   padding-top: 50px;
   padding-bottom: 100px;
 }
 
-/* line 7, src/scss/_components/career/_describe.scss */
+@media screen and (max-width: 767px) {
+  /* line 3, src/scss/_components/career/_describe.scss */
+  .describe {
+    padding-bottom: 50px;
+  }
+}
+
+/* line 10, src/scss/_components/career/_describe.scss */
 .describe__block {
   display: -webkit-box;
   display: -webkit-flex;
@@ -4103,7 +4205,16 @@ picture {
           align-items: center;
 }
 
-/* line 13, src/scss/_components/career/_describe.scss */
+@media screen and (max-width: 767px) {
+  /* line 10, src/scss/_components/career/_describe.scss */
+  .describe__block {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+  }
+}
+
+/* line 19, src/scss/_components/career/_describe.scss */
 .describe__block--reverse .describe__block-left {
   -webkit-box-ordinal-group: 3;
   -webkit-order: 2;
@@ -4113,7 +4224,24 @@ picture {
   padding-left: 75px;
 }
 
-/* line 18, src/scss/_components/career/_describe.scss */
+@media screen and (max-width: 1023px) {
+  /* line 19, src/scss/_components/career/_describe.scss */
+  .describe__block--reverse .describe__block-left {
+    padding-left: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* line 19, src/scss/_components/career/_describe.scss */
+  .describe__block--reverse .describe__block-left {
+    -webkit-box-ordinal-group: 2;
+    -webkit-order: 1;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+}
+
+/* line 30, src/scss/_components/career/_describe.scss */
 .describe__block--reverse .describe__block-right {
   -webkit-box-ordinal-group: 2;
   -webkit-order: 1;
@@ -4123,7 +4251,19 @@ picture {
   padding-right: 75px;
 }
 
-/* line 26, src/scss/_components/career/_describe.scss */
+@media screen and (max-width: 767px) {
+  /* line 30, src/scss/_components/career/_describe.scss */
+  .describe__block--reverse .describe__block-right {
+    -webkit-box-ordinal-group: 3;
+    -webkit-order: 2;
+        -ms-flex-order: 2;
+            order: 2;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+/* line 43, src/scss/_components/career/_describe.scss */
 .describe__block-wrapper {
   display: -webkit-box;
   display: -webkit-flex;
@@ -4136,28 +4276,57 @@ picture {
           flex-direction: column;
 }
 
-/* line 31, src/scss/_components/career/_describe.scss */
+/* line 48, src/scss/_components/career/_describe.scss */
 .describe__block-wrapper > div:not(:last-of-type) {
   padding-bottom: 76px;
 }
 
-/* line 37, src/scss/_components/career/_describe.scss */
+@media screen and (max-width: 767px) {
+  /* line 48, src/scss/_components/career/_describe.scss */
+  .describe__block-wrapper > div:not(:last-of-type) {
+    padding-bottom: 32px;
+  }
+}
+
+/* line 57, src/scss/_components/career/_describe.scss */
 .describe__block-left, .describe__block-right {
   width: 50%;
 }
 
-/* line 42, src/scss/_components/career/_describe.scss */
+@media screen and (max-width: 767px) {
+  /* line 57, src/scss/_components/career/_describe.scss */
+  .describe__block-left, .describe__block-right {
+    width: 100%;
+  }
+}
+
+/* line 65, src/scss/_components/career/_describe.scss */
 .describe__block-left {
   padding-right: 75px;
 }
 
-/* line 45, src/scss/_components/career/_describe.scss */
+@media screen and (max-width: 1023px) {
+  /* line 65, src/scss/_components/career/_describe.scss */
+  .describe__block-left {
+    padding-right: 0;
+  }
+}
+
+/* line 71, src/scss/_components/career/_describe.scss */
 .describe__block-right {
   padding-left: 75px;
   padding-right: 40px;
 }
 
-/* line 50, src/scss/_components/career/_describe.scss */
+@media screen and (max-width: 767px) {
+  /* line 71, src/scss/_components/career/_describe.scss */
+  .describe__block-right {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+/* line 80, src/scss/_components/career/_describe.scss */
 .describe__block-media {
   overflow: hidden;
   position: relative;
@@ -4166,13 +4335,34 @@ picture {
   height: 600px;
 }
 
-/* line 62, src/scss/_components/career/_describe.scss */
+@media screen and (max-width: 1023px) {
+  /* line 80, src/scss/_components/career/_describe.scss */
+  .describe__block-media {
+    height: 500px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* line 80, src/scss/_components/career/_describe.scss */
+  .describe__block-media {
+    height: 300px;
+  }
+}
+
+/* line 98, src/scss/_components/career/_describe.scss */
 .describe__block-title, .describe__block-desc {
   width: 100%;
   max-width: 450px;
 }
 
-/* line 68, src/scss/_components/career/_describe.scss */
+@media screen and (max-width: 767px) {
+  /* line 98, src/scss/_components/career/_describe.scss */
+  .describe__block-title, .describe__block-desc {
+    max-width: 100%;
+  }
+}
+
+/* line 107, src/scss/_components/career/_describe.scss */
 .describe__block-title {
   padding-bottom: 20px;
   font-weight: bold;
@@ -4181,16 +4371,48 @@ picture {
   color: #121E31;
 }
 
-/* line 77, src/scss/_components/career/_describe.scss */
+@media screen and (max-width: 1023px) {
+  /* line 107, src/scss/_components/career/_describe.scss */
+  .describe__block-title {
+    font-size: 30px;
+    line-height: 50px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* line 107, src/scss/_components/career/_describe.scss */
+  .describe__block-title {
+    padding-top: 20px;
+    font-size: 24px;
+    line-height: 36px;
+  }
+}
+
+/* line 125, src/scss/_components/career/_describe.scss */
 .describe__block-desc p {
   font-size: 16px;
   line-height: 26px;
   color: #636B73;
 }
 
-/* line 83, src/scss/_components/career/_describe.scss */
+@media screen and (max-width: 767px) {
+  /* line 125, src/scss/_components/career/_describe.scss */
+  .describe__block-desc p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+/* line 135, src/scss/_components/career/_describe.scss */
 .describe__block-desc p:not(:last-of-type) {
   padding-bottom: 20px;
+}
+
+@media screen and (max-width: 767px) {
+  /* line 135, src/scss/_components/career/_describe.scss */
+  .describe__block-desc p:not(:last-of-type) {
+    padding-bottom: 10px;
+  }
 }
 
 /* line 3, src/scss/_components/contacts/_contacts.scss */

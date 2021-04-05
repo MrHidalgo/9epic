@@ -3,10 +3,16 @@
 .describe {
 	padding-top: 50px;
 	padding-bottom: 100px;
+	@include adaptive(767) {
+		padding-bottom: 50px;
+	}
 
 	&__block {
 		display: flex;
 		align-items: center;
+		@include adaptive(767) {
+			flex-wrap: wrap;
+		}
 
 		&--reverse {
 			.describe__block {
@@ -14,11 +20,22 @@
 					order: 2;
 					padding-right: 0;
 					padding-left: 75px;
+					@include adaptive(1023) {
+						padding-left: 0;
+					}
+					@include adaptive(767) {
+						order: 1;
+					}
 				}
 				&-right {
 					order: 1;
 					padding-left: 40px;
 					padding-right: 75px;
+					@include adaptive(767) {
+						order: 2;
+						padding-left: 0;
+						padding-right: 0;
+					}
 				}
 			}
 		}
@@ -30,6 +47,9 @@
 			> div {
 				&:not(:last-of-type) {
 					padding-bottom: 76px;
+					@include adaptive(767) {
+						padding-bottom: 32px;
+					}
 				}
 			}
 		}
@@ -37,14 +57,24 @@
 		&-left,
 		&-right {
 			width: 50%;
+			@include adaptive(767) {
+				width: 100%;
+			}
 		}
 
 		&-left {
 			padding-right: 75px;
+			@include adaptive(1023) {
+				padding-right: 0;
+			}
 		}
 		&-right {
 			padding-left: 75px;
 			padding-right: 40px;
+			@include adaptive(767) {
+				padding-left: 0;
+				padding-right: 0;
+			}
 		}
 
 		&-media {
@@ -53,6 +83,12 @@
 			width: 100%;
 			max-width: 500px;
 			height: 600px;
+			@include adaptive(1023) {
+				height: 500px;
+			}
+			@include adaptive(767) {
+				height: 300px;
+			}
 
 			img {
 				@extend %imageResCoverAbs;
@@ -63,6 +99,9 @@
 		&-desc {
 			width: 100%;
 			max-width: 450px;
+			@include adaptive(767) {
+				max-width: 100%;
+			}
 		}
 
 		&-title {
@@ -71,6 +110,15 @@
 			font-size: 36px;
 			line-height: 54px;
 			color: #121E31;
+			@include adaptive(1023) {
+				font-size: 30px;
+				line-height: 50px;
+			}
+			@include adaptive(767) {
+				padding-top: 20px;
+				font-size: 24px;
+				line-height: 36px;
+			}
 		}
 
 		&-desc {
@@ -79,9 +127,16 @@
 				font-size: 16px;
 				line-height: 26px;
 				color: #636B73;
+				@include adaptive(767) {
+					font-size: 14px;
+					line-height: 22px;
+				}
 
 				&:not(:last-of-type) {
 					padding-bottom: 20px;
+					@include adaptive(767) {
+						padding-bottom: 10px;
+					}
 				}
 			}
 		}
