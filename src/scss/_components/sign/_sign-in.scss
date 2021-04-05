@@ -3,8 +3,14 @@
 .sign {
 	padding-top: 235px;
 	padding-bottom: 100px;
-
-	&.p-sign-in {}
+	@include adaptive(1439) {
+		padding-top: 200px;
+		padding-bottom: 50px;
+	}
+	@include adaptive(767) {
+		padding-top: 120px;
+		padding-bottom: 15px;
+	}
 
 	&__wrapper {
 		width: 100%;
@@ -20,6 +26,14 @@
 		line-height: 73px;
 		text-align: center;
 		color: #121E31;
+		@include adaptive(1439) {
+			font-size: 40px;
+			padding-bottom: 20px;
+		}
+		@include adaptive(767) {
+			font-size: 24px;
+			line-height: normal;
+		}
 
 		&.sign__title--pb0 {
 			padding-bottom: 0;
@@ -32,6 +46,12 @@
 		line-height: 22px;
 		text-align: center;
 		color: #636B73;
+		@include adaptive(1439) {
+			padding-bottom: 20px;
+		}
+		@include adaptive(767) {
+			font-size: 14px;
+		}
 	}
 	
 	&__form {
@@ -41,6 +61,9 @@
 		&-group {
 			display: flex;
 			justify-content: space-between;
+			@include adaptive(767) {
+				flex-wrap: wrap;
+			}
 
 			&--action {
 				align-items: center;
@@ -50,6 +73,9 @@
 			> div {
 				width: 100%;
 				max-width: calc((100% - 10px) / 2);
+				@include adaptive(767) {
+					max-width: 100%;
+				}
 			}
 		}
 		
@@ -107,6 +133,9 @@
 			font-size: 14px;
 			line-height: 19px;
 			color: #3C3C3C;
+			@include adaptive(767) {
+				text-align: center;
+			}
 
 			a  {
 				margin-left: 5px;
@@ -129,6 +158,12 @@
 			right: 0;
 			width: 65px;
 			height: calc(100% - (15px + 29px));
+			@include transition(opacity);
+
+			&.is-active {
+				opacity: 0.55;
+				@include transition(opacity);
+			}
 
 			.icon-font {
 				font-size: 16px;
@@ -158,6 +193,13 @@
 		.c-btn {
 			width: 100%;
 			max-width: 250px;
+			@include adaptive(767) {
+				max-width: 100%;
+
+				&__wrapper {
+					justify-content: center;
+				}
+			}
 		}
 	}
 }

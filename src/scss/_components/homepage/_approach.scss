@@ -3,7 +3,11 @@
 .approach {
 	//z-index: 999;
 	position: relative;
+	display: flex;
+	align-items: center;
+	//min-height: 1531px;
 	padding-top: 50px;
+	padding-bottom: 30px;
 
 	&__title {
 		padding-bottom: 70px;

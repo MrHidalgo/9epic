@@ -118,8 +118,6 @@ function helperInnerSliderCB(id) {
 
 const foundationCB = () => {
 	$('.foundation__tab').on('click', (ev) => {
-		console.log(ev);
-		
 		const el = $(ev.currentTarget),
 			elID = el.attr('data-tab-id');
 		
@@ -129,8 +127,8 @@ const foundationCB = () => {
 		$('.foundation__tab-content').hide();
 		$('.foundation__tab-content[data-content-id="' + elID + '"]').fadeIn(550);
 		
-		helperApproachTabCB(elID);
-		helperSolutionTabCB(elID);
+		// helperApproachTabCB(elID);
+		// helperSolutionTabCB(elID);
 	});
 };
 
@@ -159,8 +157,8 @@ const solutionCB = () => {
 		$('.solution__tab-content').hide();
 		$('.solution__tab-content[data-tab-content="' + elID + '"]').fadeIn(550);
 		
-		helperApproachTabCB(elID);
-		helperFoundationTabCB(elID);
+		// helperApproachTabCB(elID);
+		// helperFoundationTabCB(elID);
 		helperInnerSliderCB(elID);
 	})
 	
@@ -181,8 +179,8 @@ const approachTabCB = () => {
 		$('.approach__tab-content').hide();
 		$('.approach__tab-content[data-tab-content="' + elID + '"]').fadeIn(550);
 		
-		helperSolutionTabCB(elID);
-		helperFoundationTabCB(elID);
+		// helperSolutionTabCB(elID);
+		// helperFoundationTabCB(elID);
 	});
 };
 
@@ -758,6 +756,8 @@ const headerChangeColor = () => {
 	let containerNode = $('#container')[0],
 		header = $('#header');
 	
+	if(!containerNode) return;
+	
 	if(isAnyPartOfElementInViewport(containerNode) && containerNode.getBoundingClientRect().top < 0) {
 		header.addClass('is-color');
 	} else {
@@ -787,6 +787,19 @@ const approachCollapse = () => {
 		el.siblings('.approach__collapse-body').slideToggle(550);
 	});
 };
+
+
+const passwordPreview = () => {
+	$('.sign__form-pass').on('click', (ev) => {
+		if($(ev.currentTarget).hasClass('is-active')) {
+			$(ev.currentTarget).removeClass('is-active');
+			$(ev.currentTarget).prev().attr('type', 'password');
+		} else {
+			$(ev.currentTarget).addClass('is-active');
+			$(ev.currentTarget).prev().attr('type', 'text');
+		}
+	});
+};
 /*
 * CALLBACK :: end
 * ============================================= */
@@ -805,6 +818,7 @@ const initNative = () => {
 	// lib
 	initSwiper();
 	initSmoothScroll();
+	initHamburger();
 	// ==========================================
 	
 	// callback
@@ -814,6 +828,7 @@ const initNative = () => {
 	homepageMainScrollAnimation();
 	headerChangeColor();
 	approachCollapse();
+	passwordPreview();
 	// ==========================================
 };
 

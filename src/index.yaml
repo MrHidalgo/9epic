@@ -12,16 +12,16 @@ PageList:
   ready: 55
 - file: sign-in.html
   titleName: Sign In
-  ready: 55
+  ready: 95
 - file: sign-up.html
   titleName: Sign Up
-  ready: 55
+  ready: 95
 - file: confirm.html
   titleName: Confiirm
-  ready: 55
+  ready: 95
 - file: reset-password.html
   titleName: Reset Password
-  ready: 55
+  ready: 95
 - file: new-password.html
   titleName: Set a New Password
-  ready: 55
+  ready: 95

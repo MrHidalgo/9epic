@@ -18,21 +18,44 @@
     <!-- STYLE :: END-->
   </head>
   <body>
-    <!-- HEADER :: START-->
-    <header class="header" id="header">
-      <div class="header__wrapper">
-        <div class="header__wrapper-left">
-          <div class="logo logo--header"><a class="logo__btn" href="#"><img class="logo__img" src="img/logo-white.svg" alt=""></a></div>
+  <!-- HEADER :: START-->
+  <header class="header" id="header">
+    <div class="header__wrapper">
+      <div class="header__wrapper-left">
+
+        <div class="logo logo--header">
+          <a class="logo__btn" href="#">
+            <img class="logo__img logo__img--desktop" src="img/logo-white.svg" alt="">
+            <img class="logo__img logo__img--mobile" src="img/logo-color.svg" alt="">
+          </a>
         </div>
-        <div class="header__wrapper-middle">
-          <nav class="header__nav"><a href="#">Home</a><a href="#">Solutions</a><a href="#">Approach</a><a href="#">Careers</a><a href="#">Contact</a></nav>
-        </div>
-        <div class="header__wrapper-right">
-          <div class="c-btn__wrapper"><a class="c-btn c-btn__bg c-btn__bg--white" href="#"><span>Sign in</span></a></div>
-        </div>
+
       </div>
-    </header>
-    <!-- HEADER :: END-->
+      <div class="header__wrapper-middle" mobile-block-js>
+        <nav class="header__nav">
+          <a href="#" anchor-js>Home</a>
+          <a href="#" anchor-js>Solutions</a>
+          <a href="#" anchor-js>Approach</a>
+          <a href="/career.html" anchor-js>Careers</a>
+          <a href="/contacts.html" anchor-js>Contact</a>
+        </nav>
+      </div>
+      <div class="header__wrapper-right">
+        <div class="header__btn c-btn__wrapper">
+          <a class="c-btn c-btn__bg c-btn__bg--white" href="#">
+            <span>Sign in</span>
+          </a>
+        </div>
+
+        <a href="#" class="hamburger hamburger--squeeze" hamburger-js>
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+        </a>
+      </div>
+    </div>
+  </header>
+  <!-- HEADER :: END-->
     <div class="body body--start p-sign-up">
       <!-- SECTION :: START-->
       <section class="sign sign--up" id="sign">

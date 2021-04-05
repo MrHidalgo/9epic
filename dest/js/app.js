@@ -16,6 +16,32 @@
 * */
 
 /**
+ * @name initHamburger
+ *
+ * @description Init hamburger logic with animated
+ */
+var initHamburger = function initHamburger() {
+
+	var btn = document.querySelector("[hamburger-js]"),
+	    hideScrollContainer = document.querySelectorAll("html, body"),
+	    mobileContainer = document.querySelector("[mobile-block-js]");
+
+	/**
+   * @description
+  */
+	btn.addEventListener("click", function (ev) {
+		var elem = ev.currentTarget;
+
+		elem.classList.toggle("is-active");
+		mobileContainer.classList.toggle("is-open");
+
+		hideScrollContainer.forEach(function (val, idx) {
+			val.classList.toggle("is-hideScroll");
+		});
+	});
+};
+
+/**
  * @name initHeaderFixed
  *
  * @description Fixing the site header in the scrolling page.
@@ -247,8 +273,6 @@ function helperInnerSliderCB(id) {
 
 var foundationCB = function foundationCB() {
 	$('.foundation__tab').on('click', function (ev) {
-		console.log(ev);
-
 		var el = $(ev.currentTarget),
 		    elID = el.attr('data-tab-id');
 
@@ -258,8 +282,8 @@ var foundationCB = function foundationCB() {
 		$('.foundation__tab-content').hide();
 		$('.foundation__tab-content[data-content-id="' + elID + '"]').fadeIn(550);
 
-		helperApproachTabCB(elID);
-		helperSolutionTabCB(elID);
+		// helperApproachTabCB(elID);
+		// helperSolutionTabCB(elID);
 	});
 };
 
@@ -287,8 +311,8 @@ var solutionCB = function solutionCB() {
 		$('.solution__tab-content').hide();
 		$('.solution__tab-content[data-tab-content="' + elID + '"]').fadeIn(550);
 
-		helperApproachTabCB(elID);
-		helperFoundationTabCB(elID);
+		// helperApproachTabCB(elID);
+		// helperFoundationTabCB(elID);
 		helperInnerSliderCB(elID);
 	});
 
@@ -308,8 +332,8 @@ var approachTabCB = function approachTabCB() {
 		$('.approach__tab-content').hide();
 		$('.approach__tab-content[data-tab-content="' + elID + '"]').fadeIn(550);
 
-		helperSolutionTabCB(elID);
-		helperFoundationTabCB(elID);
+		// helperSolutionTabCB(elID);
+		// helperFoundationTabCB(elID);
 	});
 };
 
@@ -789,6 +813,8 @@ var headerChangeColor = function headerChangeColor() {
 	var containerNode = $('#container')[0],
 	    header = $('#header');
 
+	if (!containerNode) return;
+
 	if (isAnyPartOfElementInViewport(containerNode) && containerNode.getBoundingClientRect().top < 0) {
 		header.addClass('is-color');
 	} else {
@@ -817,6 +843,18 @@ var approachCollapse = function approachCollapse() {
 		el.siblings('.approach__collapse-body').slideToggle(550);
 	});
 };
+
+var passwordPreview = function passwordPreview() {
+	$('.sign__form-pass').on('click', function (ev) {
+		if ($(ev.currentTarget).hasClass('is-active')) {
+			$(ev.currentTarget).removeClass('is-active');
+			$(ev.currentTarget).prev().attr('type', 'password');
+		} else {
+			$(ev.currentTarget).addClass('is-active');
+			$(ev.currentTarget).prev().attr('type', 'text');
+		}
+	});
+};
 /*
 * CALLBACK :: end
 * ============================================= */
@@ -834,6 +872,7 @@ var initNative = function initNative() {
 	// lib
 	initSwiper();
 	initSmoothScroll();
+	initHamburger();
 	// ==========================================
 
 	// callback
@@ -843,6 +882,7 @@ var initNative = function initNative() {
 	homepageMainScrollAnimation();
 	headerChangeColor();
 	approachCollapse();
+	passwordPreview();
 	// ==========================================
 };
 

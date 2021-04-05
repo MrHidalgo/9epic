@@ -2,7 +2,6 @@
 
 .header {
 	z-index: 1999;
-	opacity: 0;
 	overflow: hidden;
 	position: fixed;
 	top: 25px;
@@ -12,6 +11,17 @@
 	box-shadow: 0 10px 40px 0 rgba(64, 151, 217, 0.25);
 	background: linear-gradient(90deg, #4097D9 -14.97%, #30C4A0 54.44%, #00B94F 120.21%);
 	@include transition(top, left, width, border-radius, box-shadow);
+	@include adaptive(1439) {
+		top: 10px;
+		left: 10px;
+		width: calc(100% - 20px);
+	}
+	@include adaptive(767) {
+		top: 0;
+		left: 0;
+		width: 100%;
+		border-radius: 0;
+	}
 
 	&:after {
 		content: '';
@@ -32,6 +42,9 @@
 		width: 100%;
 		border-radius: 0 0 10px 10px;
 		@include transition(top, left, width, border-radius, box-shadow);
+		@include adaptive(767) {
+			border-radius: 0;
+		}
 
 		.header {
 			&__wrapper {
@@ -39,6 +52,9 @@
 				padding-top: 0;
 				padding-bottom: 0;
 				@include transition(height, padding-top, padding-bottom);
+				@include adaptive(767) {
+					height: 80px;
+				}
 			}
 		}
 	}
@@ -93,11 +109,33 @@
 		height: 120px;
 		padding: 10px 50px;
 		@include transition(height, padding-top, padding-bottom);
+		@include adaptive(1439) {
+			height: 100px;
+		}
+		@include adaptive(1023) {
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+		@include adaptive(767) {
+			height: 80px;
+			padding: 15px 20px;
+		}
 
 		&-left,
 		&-right {
 			width: 100%;
 			max-width: 200px;
+			@include adaptive(1023) {
+				max-width: 125px;
+			}
+		}
+
+		&-left {
+			@include adaptive(767) {
+			  flex: 1;
+				min-width: 1px;
+				max-width: 100%;
+			}
 		}
 
 		&-middle {
@@ -109,16 +147,53 @@
 			max-width: 100%;
 			padding-left: 50px;
 			padding-right: 50px;
+			@include adaptive(1023) {
+				padding-left: 15px;
+				padding-right: 15px;
+			}
+			@include adaptive(767) {
+				z-index: 999;
+				opacity: 0;
+				visibility: hidden;
+				transform: translateY(-20px);
+				overflow-y: auto;
+				position: fixed;
+				top: 80px;
+				left: 0;
+				flex-direction: column;
+				width: 100%;
+				height: calc(100% - 80px);
+				padding: 30px 50px;
+				background: linear-gradient(90deg, #4097D9 -14.97%, #30C4A0 54.44%, #00B94F 120.21%);
+				transform-origin: center;
+				@include transition(opacity, visibility, transform);
+
+				&.is-open {
+					opacity: 1;
+					visibility: visible;
+					transform: translateY(0);
+					@include transition(opacity, visibility, transform);
+				}
+			}
 		}
 
 		&-right {
 			display: flex;
 			justify-content: flex-end;
+			@include adaptive(767) {
+				align-items: center;
+				width: auto;
+				max-width: unset;
+				padding-left: 20px;
+			}
 		}
 	}
 
 	&__nav {
 		display: flex;
+		@include adaptive(767) {
+		  flex-direction: column;
+		}
 
 		a {
 			display: flex;
@@ -134,11 +209,31 @@
 			line-height: 22px;
 			text-align: center;
 			color: #FFFFFF;
+			@include adaptive(1023) {
+				padding-left: 10px;
+				padding-right: 10px;
+				margin-left: 5px;
+				margin-right: 5px;
+				font-size: 15px;
+			}
+			@include adaptive(767) {
+				align-items: center;
+				min-height: 55px;
+				margin: 0;
+				padding: 0;
+				font-size: 18px;
+			}
 		}
 	}
 
 	&__btn {
 		.c-btn {
+			@include adaptive(767) {
+				height: 40px;
+				padding-left: 20px;
+				padding-right: 20px;
+			}
+
 			&:after {
 				content: '';
 				opacity: 0;
@@ -157,6 +252,14 @@
 			span {
 				@include transition(color);
 			}
+		}
+	}
+
+	.hamburger {
+		display: none;
+		margin-left: 20px;
+		@include adaptive(767) {
+			display: flex;
 		}
 	}
 }

@@ -29,6 +29,13 @@
 		max-width: 100%;
 		height: auto;
 		max-height: 100%;
+		@include adaptive(1439) {
+			width: 100%;
+			max-width: 50px;
+		}
+		@include adaptive(767) {
+			max-width: 42px;
+		}
 	}
 }
 
