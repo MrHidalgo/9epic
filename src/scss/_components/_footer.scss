@@ -28,6 +28,10 @@
 			max-width: 100%;
 			border-radius: 10px 10px 0 0;
 		}
+		@include adaptive(767) {
+			height: calc(100% - 350px);
+			border-radius: 0;
+		}
 	}
 
 	&__wrapper {
@@ -42,6 +46,9 @@
 			@include adaptive(1279) {
 				padding: 30px;
 			}
+			@include adaptive(767) {
+				padding: 30px 20px;
+			}
 		}
 
 		&-2 {
@@ -50,6 +57,9 @@
 			margin-bottom: 50px;
 			padding-bottom: 50px;
 			border-bottom: 1px solid rgba(#fff, 0.1);
+			@include adaptive(767) {
+				flex-wrap: wrap;
+			}
 
 			> div {
 				&:nth-of-type(1) {
@@ -59,6 +69,9 @@
 					@include adaptive(1279) {
 						max-width: 50%;
 						flex-direction: column;
+					}
+					@include adaptive(767) {
+						max-width: 100%;
 					}
 
 					> div {
@@ -80,6 +93,11 @@
 								padding-left: 0;
 								margin-left: 0;
 							}
+							@include adaptive(767) {
+								margin-top: 20px;
+								padding-top: 20px;
+								padding-bottom: 50px;
+							}
 
 							&:after {
 								content: '';
@@ -93,10 +111,24 @@
 								@include adaptive(1279) {
 									display: none;
 								}
+								@include adaptive(767) {
+									top: 0;
+									right: 0;
+									transform: translateY(0);
+									display: block;
+									width: 100%;
+									max-width: 200px;
+									height: 1px;
+									margin-left: auto;
+									margin-right: auto;
+								}
 							}
 
 							.footer__heading {
 								opacity: 0;
+								@include adaptive(767) {
+									display: none;
+								}
 							}
 						}
 					}
@@ -108,9 +140,18 @@
 					min-width: 1px;
 					max-width: 100%;
 					padding-left: 90px;
+					@include adaptive(767) {
+						padding-left: 0;
+					}
 
 					> div {
 						white-space: nowrap;
+						@include adaptive(767) {
+							white-space: normal;
+							flex: 1;
+							min-width: 1px;
+							max-width: 100%;
+						}
 					}
 				}
 			}
@@ -119,18 +160,48 @@
 		&-3 {
 			display: flex;
 			align-items: center;
+			@include adaptive(767) {
+				align-items: flex-start;
+				flex-wrap: wrap;
+			}
 
 			> div {
+				&:nth-of-type(1) {
+					@include adaptive(767) {
+						width: 100%;
+						max-width: 70px;
+						padding-top: 5px;
+					}
+				}
 				&:nth-of-type(2) {
 					flex: 1;
 					min-width: 1px;
 					max-width: 100%;
 					padding-left: 30px;
 					padding-right: 55px;
+					@include adaptive(767) {
+						padding-left: 0;
+						padding-right: 0;
+						padding-bottom: 50px;
+					}
+				}
+				&:nth-of-type(3) {
+					@include adaptive(767) {
+						width: 100%;
+					}
 				}
 			}
 
 			.c-btn {
+				@include adaptive(767) {
+					width: 100%;
+					max-width: calc((100% - 15px) / 2);
+
+					&__wrapper {
+						justify-content: space-between;
+					}
+				}
+
 				&:not(:last-of-type) {
 					margin-right: 11px;
 				}
@@ -140,6 +211,10 @@
 		&-4 {
 			padding-top: 100px;
 			padding-bottom: 35px;
+			@include adaptive(767) {
+				padding-top: 50px;
+				padding-bottom: 50px;
+			}
 		}
 
 		&-bg {
@@ -166,6 +241,11 @@
 			font-size: 20px;
 			line-height: 30px;
 			color: #FFFFFF;
+			@include adaptive(767) {
+				padding-bottom: 30px;
+				font-size: 16px;
+				line-height: 24px;
+			}
 		}
 
 		&-group {
@@ -182,6 +262,10 @@
 				@include adaptive(1023) {
 					max-width: calc((100% - 30px) / 3);
 				}
+				@include adaptive(767) {
+					max-width: 100%;
+					padding-bottom: 30px;
+				}
 			}
 		}
 
@@ -196,6 +280,14 @@
 
 			.c-btn {
 				min-width: 140px;
+				@include adaptive(767) {
+					width: 100%;
+					max-width: 100%;
+
+					&__wrapper {
+						width: 100%;
+					}
+				}
 			}
 
 			label {
