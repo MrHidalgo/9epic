@@ -336,6 +336,8 @@ var approachTabCB = function approachTabCB() {
 };
 
 var homepageMainScrollAnimation = function homepageMainScrollAnimation() {
+	var vid1 = $('#video1')[0];
+
 	if ($('#main').length <= 0) {
 		return;
 	}
@@ -348,6 +350,8 @@ var homepageMainScrollAnimation = function homepageMainScrollAnimation() {
 	});
 
 	$('.main__bg').css({ opacity: 1 });
+
+	if (vid1.paused) vid1.play();
 
 	/* SCENE 1
  * ==================== */
@@ -415,7 +419,18 @@ var homepageMainScrollAnimation = function homepageMainScrollAnimation() {
 		duration: wrapperNode2H / 2 - 200
 	}).setTween(tween21)
 	// .addIndicators({name: 'laptop'})
-	.addTo(controller21);
+	.addTo(controller21).on("progress", function (event) {
+		var num = Number((event.progress * 100).toFixed(0));
+
+		console.log(num);
+
+		if (num >= 60) {
+			vid1.pause();
+			vid1.currentTime = 0;
+		} else if (num === 0) {
+			vid1.play();
+		}
+	});
 
 	scene22 = new ScrollMagic.Scene({
 		triggerElement: ".main__wrapper-4",
