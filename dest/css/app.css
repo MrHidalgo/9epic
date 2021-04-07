@@ -1933,15 +1933,15 @@ picture {
 /* line 59, src/scss/_components/homepage/_main.scss */
 .main__bg-grid > div > div#video2Wrapper > div {
   position: absolute;
-  left: -85px;
-  right: -85px;
-  width: -webkit-calc(100% + 170px);
-  width: calc(100% + 170px);
+  left: -100px;
+  right: -100px;
+  width: -webkit-calc(100% + 200px);
+  width: calc(100% + 200px);
   margin-left: auto;
   margin-right: auto;
-  -webkit-transform: translate(11px, 14px);
-      -ms-transform: translate(11px, 14px);
-          transform: translate(11px, 14px);
+  -webkit-transform: translate(11px, 35px);
+      -ms-transform: translate(11px, 35px);
+          transform: translate(11px, 35px);
 }
 
 /* line 69, src/scss/_components/homepage/_main.scss */
