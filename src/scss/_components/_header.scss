@@ -2,6 +2,8 @@
 
 .header {
 	z-index: 1999;
+	opacity: 0;
+	transform: translateY(-100%);
 	overflow: hidden;
 	position: fixed;
 	top: 25px;
@@ -10,7 +12,7 @@
 	border-radius: 10px;
 	box-shadow: 0 10px 40px 0 rgba(64, 151, 217, 0.25);
 	background: linear-gradient(90deg, #4097D9 -14.97%, #30C4A0 54.44%, #00B94F 120.21%);
-	@include transition(top, left, width, border-radius, box-shadow);
+	@include transition(top, left, width, border-radius, box-shadow, transform);
 	@include adaptive(1439) {
 		top: 10px;
 		left: 10px;
@@ -61,7 +63,7 @@
 
 	&.is-color {
 		box-shadow: 0 10px 40px 0 rgba(64, 151, 217, 0.25);
-		@include transition(box-shadow);
+		@include transition(box-shadow, transform);
 
 		&:after {
 			opacity: 1;

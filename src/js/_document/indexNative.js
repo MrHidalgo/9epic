@@ -61,7 +61,7 @@ function helperInnerSliderCB(id) {
 				new Swiper('.solutionSlider2' + i, {
 					effect: 'slide',
 					slidesPerView: 1,
-					spaceBetween: 20,
+					spaceBetween: 60,
 					speed: 1000,
 					navigation: {
 						nextEl: '.solution__slider-wrapper-2 .solution__slider-row-' + j + ' .solution__slider-btn--next',
@@ -88,7 +88,7 @@ function helperInnerSliderCB(id) {
 				new Swiper('.solutionSlider3' + i, {
 					effect: 'slide',
 					slidesPerView: 1,
-					spaceBetween: 20,
+					spaceBetween: 60,
 					speed: 1000,
 					navigation: {
 						nextEl: '.solution__slider-wrapper-3 .solution__slider-row-' + j + ' .solution__slider-btn--next',
@@ -333,7 +333,8 @@ const homepageMainScrollAnimation =() => {
 		scene32 = null,
 		controller3 = new ScrollMagic.Controller(),
 		controller31 = new ScrollMagic.Controller(),
-		controller32 = new ScrollMagic.Controller()
+		controller32 = new ScrollMagic.Controller(),
+		vid2 = $('#video2')[0]
 	;
 	
 	let wrapperNode3 = $('.main__wrapper-3'),
@@ -413,7 +414,18 @@ const homepageMainScrollAnimation =() => {
 	})
 		.setTween(tween3)
 		// .addIndicators({name: 'video-laptop'})
-		.addTo(controller3);
+		.addTo(controller3)
+		.on("progress", function (event) {
+			let num = Number((event.progress * 100).toFixed(0));
+			
+			if(num > 0) {
+				if(vid2.paused) vid2.play();
+			} else if(num === 0 && !vid2.paused) {
+				vid2.pause();
+				vid2.currentTime = 0;
+			}
+		})
+	;
 	
 	// scene31 = new ScrollMagic.Scene({
 	// 	triggerElement: ".main__wrapper-3",
@@ -520,7 +532,17 @@ const homepageMainScrollAnimation =() => {
 	})
 		.setTween(tween4)
 		// .addIndicators({name: 'device'})
-		.addTo(controller4);
+		.addTo(controller4)
+		.on("progress", function (event) {
+			let num = Number((event.progress * 100).toFixed(0));
+			
+			if(num >= 90 && $('#video2Wrapper').attr('style') === 'opacity: 0;') {
+				vid2.pause();
+				vid2.currentTime = 0;
+			} else {
+				if(vid2.paused) vid2.play();
+			}
+		});
 	
 	scene41 = new ScrollMagic.Scene({
 		triggerElement: ".main__wrapper-2",
@@ -555,7 +577,8 @@ const homepageMainScrollAnimation =() => {
 		controller5 = new ScrollMagic.Controller(),
 		controller51 = new ScrollMagic.Controller(),
 		controller52 = new ScrollMagic.Controller(),
-		controller53 = new ScrollMagic.Controller()
+		controller53 = new ScrollMagic.Controller(),
+		vid3 = $('#video3')[0]
 	;
 	
 	let wrapperNode5 = $('.main__wrapper-1'),
@@ -607,7 +630,17 @@ const homepageMainScrollAnimation =() => {
 	})
 		.setTween(tween5)
 		// .addIndicators({name: 'rect'})
-		.addTo(controller5);
+		.addTo(controller5)
+		.on("progress", function (event) {
+			let num = Number((event.progress * 100).toFixed(0));
+			
+			if(num > 0) {
+				if(vid3.paused) vid3.play();
+			} else if(num === 0 && !vid3.paused) {
+				vid3.pause();
+				vid3.currentTime = 0;
+			}
+		});
 
 	// scene51 = new ScrollMagic.Scene({
 	// 	triggerElement: ".main__wrapper-1",
@@ -743,6 +776,13 @@ const homepageMainScrollAnimation =() => {
 
 
 const headerChangeColor = () => {
+	const vid = $('#video3')[0];
+	
+	let containerNode = $('#container')[0],
+		header = $('#header');
+	
+	if(!containerNode) return;
+	
 	function isAnyPartOfElementInViewport(el) {
 		const rect = el.getBoundingClientRect();
 		const windowHeight = (window.innerHeight || document.documentElement.clientHeight);
@@ -752,29 +792,28 @@ const headerChangeColor = () => {
 
 		return (vertInView && horInView);
 	}
-	
-	let containerNode = $('#container')[0],
-		header = $('#header');
-	
-	if(!containerNode) return;
-	
-	if(isAnyPartOfElementInViewport(containerNode) && containerNode.getBoundingClientRect().top < 0) {
-		header.addClass('is-color');
-	} else {
-		header.removeClass('is-color');
+	function helperColorChange() {
+		if(isAnyPartOfElementInViewport(containerNode) && containerNode.getBoundingClientRect().top < 0) {
+			header.addClass('is-color');
+			vid.pause();
+			vid.currentTime = 0;
+		} else {
+			header.removeClass('is-color');
+			vid.play();
+		}
 	}
 	
+	helperColorChange();
+	
 	$(window).on('scroll', (ev) => {
-	 	if(isAnyPartOfElementInViewport(containerNode) && containerNode.getBoundingClientRect().top < 0) {
-		  header.addClass('is-color');
-	  } else {
-		  header.removeClass('is-color');
-	  }
+		helperColorChange();
   });
 	
 	setTimeout(() => {
-		header.animate({opacity: 1});
-	}, 350);
+		header
+			.animate({opacity: 1})
+			.css({transform: 'translateY(0)'});
+	}, 500);
 };
 
 

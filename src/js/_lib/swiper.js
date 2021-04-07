@@ -11,7 +11,7 @@ const initSwiper = () => {
     new Swiper('.solutionSlider1' + i, {
       effect: 'slide',
       slidesPerView: 1,
-      spaceBetween: 20,
+      spaceBetween: 60,
       speed: 1000,
       navigation: {
         nextEl: '.solution__slider-wrapper-1 .solution__slider-row-' + j + ' .solution__slider-btn--next',

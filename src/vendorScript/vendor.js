@@ -2,7 +2,7 @@
 *
 * Include :
 *
-* - jquery;
+* - jquery.js;
 * - TweenMax.min.js;
 *
 * */

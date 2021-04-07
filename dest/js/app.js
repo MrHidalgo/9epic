@@ -109,7 +109,7 @@ var initSwiper = function initSwiper() {
 		new Swiper('.solutionSlider1' + i, {
 			effect: 'slide',
 			slidesPerView: 1,
-			spaceBetween: 20,
+			spaceBetween: 60,
 			speed: 1000,
 			navigation: {
 				nextEl: '.solution__slider-wrapper-1 .solution__slider-row-' + j + ' .solution__slider-btn--next',
@@ -208,7 +208,7 @@ function helperInnerSliderCB(id) {
 				new Swiper('.solutionSlider2' + i, {
 					effect: 'slide',
 					slidesPerView: 1,
-					spaceBetween: 20,
+					spaceBetween: 60,
 					speed: 1000,
 					navigation: {
 						nextEl: '.solution__slider-wrapper-2 .solution__slider-row-' + j + ' .solution__slider-btn--next',
@@ -239,7 +239,7 @@ function helperInnerSliderCB(id) {
 				new Swiper('.solutionSlider3' + i, {
 					effect: 'slide',
 					slidesPerView: 1,
-					spaceBetween: 20,
+					spaceBetween: 60,
 					speed: 1000,
 					navigation: {
 						nextEl: '.solution__slider-wrapper-3 .solution__slider-row-' + j + ' .solution__slider-btn--next',
@@ -437,7 +437,8 @@ var homepageMainScrollAnimation = function homepageMainScrollAnimation() {
 	    scene32 = null,
 	    controller3 = new ScrollMagic.Controller(),
 	    controller31 = new ScrollMagic.Controller(),
-	    controller32 = new ScrollMagic.Controller();
+	    controller32 = new ScrollMagic.Controller(),
+	    vid2 = $('#video2')[0];
 
 	var wrapperNode3 = $('.main__wrapper-3'),
 	    wrapperNode3H = wrapperNode3.outerHeight(true);
@@ -509,7 +510,16 @@ var homepageMainScrollAnimation = function homepageMainScrollAnimation() {
 		duration: wrapperNode3H / 3
 	}).setTween(tween3)
 	// .addIndicators({name: 'video-laptop'})
-	.addTo(controller3);
+	.addTo(controller3).on("progress", function (event) {
+		var num = Number((event.progress * 100).toFixed(0));
+
+		if (num > 0) {
+			if (vid2.paused) vid2.play();
+		} else if (num === 0 && !vid2.paused) {
+			vid2.pause();
+			vid2.currentTime = 0;
+		}
+	});
 
 	// scene31 = new ScrollMagic.Scene({
 	// 	triggerElement: ".main__wrapper-3",
@@ -598,7 +608,16 @@ var homepageMainScrollAnimation = function homepageMainScrollAnimation() {
 		duration: wrapperNode4H / 4 - 100
 	}).setTween(tween4)
 	// .addIndicators({name: 'device'})
-	.addTo(controller4);
+	.addTo(controller4).on("progress", function (event) {
+		var num = Number((event.progress * 100).toFixed(0));
+
+		if (num >= 90 && $('#video2Wrapper').attr('style') === 'opacity: 0;') {
+			vid2.pause();
+			vid2.currentTime = 0;
+		} else {
+			if (vid2.paused) vid2.play();
+		}
+	});
 
 	scene41 = new ScrollMagic.Scene({
 		triggerElement: ".main__wrapper-2",
@@ -631,7 +650,8 @@ var homepageMainScrollAnimation = function homepageMainScrollAnimation() {
 	    controller5 = new ScrollMagic.Controller(),
 	    controller51 = new ScrollMagic.Controller(),
 	    controller52 = new ScrollMagic.Controller(),
-	    controller53 = new ScrollMagic.Controller();
+	    controller53 = new ScrollMagic.Controller(),
+	    vid3 = $('#video3')[0];
 
 	var wrapperNode5 = $('.main__wrapper-1'),
 	    wrapperNode5H = wrapperNode5.outerHeight(true);
@@ -678,7 +698,16 @@ var homepageMainScrollAnimation = function homepageMainScrollAnimation() {
 		duration: 300
 	}).setTween(tween5)
 	// .addIndicators({name: 'rect'})
-	.addTo(controller5);
+	.addTo(controller5).on("progress", function (event) {
+		var num = Number((event.progress * 100).toFixed(0));
+
+		if (num > 0) {
+			if (vid3.paused) vid3.play();
+		} else if (num === 0 && !vid3.paused) {
+			vid3.pause();
+			vid3.currentTime = 0;
+		}
+	});
 
 	// scene51 = new ScrollMagic.Scene({
 	// 	triggerElement: ".main__wrapper-1",
@@ -798,6 +827,13 @@ var homepageMainScrollAnimation = function homepageMainScrollAnimation() {
 };
 
 var headerChangeColor = function headerChangeColor() {
+	var vid = $('#video3')[0];
+
+	var containerNode = $('#container')[0],
+	    header = $('#header');
+
+	if (!containerNode) return;
+
 	function isAnyPartOfElementInViewport(el) {
 		var rect = el.getBoundingClientRect();
 		var windowHeight = window.innerHeight || document.documentElement.clientHeight;
@@ -807,29 +843,26 @@ var headerChangeColor = function headerChangeColor() {
 
 		return vertInView && horInView;
 	}
-
-	var containerNode = $('#container')[0],
-	    header = $('#header');
-
-	if (!containerNode) return;
-
-	if (isAnyPartOfElementInViewport(containerNode) && containerNode.getBoundingClientRect().top < 0) {
-		header.addClass('is-color');
-	} else {
-		header.removeClass('is-color');
-	}
-
-	$(window).on('scroll', function (ev) {
+	function helperColorChange() {
 		if (isAnyPartOfElementInViewport(containerNode) && containerNode.getBoundingClientRect().top < 0) {
 			header.addClass('is-color');
+			vid.pause();
+			vid.currentTime = 0;
 		} else {
 			header.removeClass('is-color');
+			vid.play();
 		}
+	}
+
+	helperColorChange();
+
+	$(window).on('scroll', function (ev) {
+		helperColorChange();
 	});
 
 	setTimeout(function () {
-		header.animate({ opacity: 1 });
-	}, 350);
+		header.animate({ opacity: 1 }).css({ transform: 'translateY(0)' });
+	}, 500);
 };
 
 var approachCollapse = function approachCollapse() {
