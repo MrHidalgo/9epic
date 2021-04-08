@@ -29,16 +29,18 @@ var initHamburger = function initHamburger() {
 	/**
    * @description
   */
-	btn.addEventListener("click", function (ev) {
-		var elem = ev.currentTarget;
+	if (btn) {
+		btn.addEventListener("click", function (ev) {
+			var elem = ev.currentTarget;
 
-		elem.classList.toggle("is-active");
-		mobileContainer.classList.toggle("is-open");
+			elem.classList.toggle("is-active");
+			mobileContainer.classList.toggle("is-open");
 
-		hideScrollContainer.forEach(function (val, idx) {
-			val.classList.toggle("is-hideScroll");
+			hideScrollContainer.forEach(function (val, idx) {
+				val.classList.toggle("is-hideScroll");
+			});
 		});
-	});
+	}
 };
 
 /**

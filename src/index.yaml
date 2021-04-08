@@ -27,4 +27,4 @@ PageList:
   ready: 95
 - file: dashboard.html
   titleName: Dashboard
-  ready: 0
+  ready: 1

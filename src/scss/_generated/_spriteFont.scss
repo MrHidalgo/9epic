@@ -33,41 +33,59 @@
 	@if $filename == build {
 		$char: "\E002";
 	}
-	@if $filename == circle-checked {
+	@if $filename == category {
 		$char: "\E003";
 	}
-	@if $filename == cloud-check {
+	@if $filename == chat {
 		$char: "\E004";
 	}
-	@if $filename == cloud {
+	@if $filename == circle-checked {
 		$char: "\E005";
 	}
-	@if $filename == database {
+	@if $filename == cloud-check {
 		$char: "\E006";
 	}
-	@if $filename == eye {
+	@if $filename == cloud {
 		$char: "\E007";
 	}
-	@if $filename == governance {
+	@if $filename == database {
 		$char: "\E008";
 	}
-	@if $filename == list-dots {
+	@if $filename == document {
 		$char: "\E009";
 	}
-	@if $filename == pen {
+	@if $filename == eye {
 		$char: "\E00A";
 	}
-	@if $filename == rocket {
+	@if $filename == governance {
 		$char: "\E00B";
 	}
-	@if $filename == security {
+	@if $filename == list-dots {
 		$char: "\E00C";
 	}
-	@if $filename == square-dashed {
+	@if $filename == logout {
 		$char: "\E00D";
 	}
-	@if $filename == terminal {
+	@if $filename == pen {
 		$char: "\E00E";
+	}
+	@if $filename == profile {
+		$char: "\E00F";
+	}
+	@if $filename == rocket {
+		$char: "\E010";
+	}
+	@if $filename == security {
+		$char: "\E011";
+	}
+	@if $filename == square-dashed {
+		$char: "\E012";
+	}
+	@if $filename == swap {
+		$char: "\E013";
+	}
+	@if $filename == terminal {
+		$char: "\E014";
 	}
 
 	@return $char;
@@ -92,6 +110,14 @@
 	@include icon(build);
 
 }
+.icon-category {
+	@include icon(category);
+
+}
+.icon-chat {
+	@include icon(chat);
+
+}
 .icon-circle-checked {
 	@include icon(circle-checked);
 
@@ -108,6 +134,10 @@
 	@include icon(database);
 
 }
+.icon-document {
+	@include icon(document);
+
+}
 .icon-eye {
 	@include icon(eye);
 
@@ -120,8 +150,16 @@
 	@include icon(list-dots);
 
 }
+.icon-logout {
+	@include icon(logout);
+
+}
 .icon-pen {
 	@include icon(pen);
+
+}
+.icon-profile {
+	@include icon(profile);
 
 }
 .icon-rocket {
@@ -134,6 +172,10 @@
 }
 .icon-square-dashed {
 	@include icon(square-dashed);
+
+}
+.icon-swap {
+	@include icon(swap);
 
 }
 .icon-terminal {
