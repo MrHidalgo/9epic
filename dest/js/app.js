@@ -23,8 +23,10 @@
 var initHamburger = function initHamburger() {
 
 	var btn = document.querySelector("[hamburger-js]"),
+	    btnDash = document.querySelector("[hamburger-dash-js]"),
 	    hideScrollContainer = document.querySelectorAll("html, body"),
-	    mobileContainer = document.querySelector("[mobile-block-js]");
+	    mobileContainer = document.querySelector("[mobile-block-js]"),
+	    menuNode = document.querySelector("[menu-block-js]");
 
 	/**
    * @description
@@ -38,6 +40,28 @@ var initHamburger = function initHamburger() {
 
 			hideScrollContainer.forEach(function (val, idx) {
 				val.classList.toggle("is-hideScroll");
+			});
+		});
+	}
+
+	if (btnDash) {
+		btnDash.addEventListener("click", function (ev) {
+			var elem = ev.currentTarget;
+
+			elem.classList.toggle("is-active");
+			menuNode.classList.toggle("is-open");
+
+			hideScrollContainer.forEach(function (val, idx) {
+				val.classList.toggle("is-hideScroll");
+			});
+		});
+
+		$('.menu__close').on('click', function (ev) {
+			$('[hamburger-dash-js]').removeClass('is-active');
+			menuNode.classList.remove("is-open");
+
+			hideScrollContainer.forEach(function (val, idx) {
+				val.classList.remove("is-hideScroll");
 			});
 		});
 	}

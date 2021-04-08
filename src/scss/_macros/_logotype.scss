@@ -16,6 +16,22 @@
 		}
 	}
 
+	&.logo--dashboard {
+		.logo {
+			&__btn {
+				@include adaptive(1023) {
+					max-width: 42px;
+				}
+
+				img {
+					display: block;
+					max-width: 100%;
+					height: auto;
+				}
+			}
+		}
+	}
+
 	&.logo--footer {}
 
 	&__btn {

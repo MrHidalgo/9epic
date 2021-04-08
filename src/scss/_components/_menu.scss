@@ -1,0 +1,145 @@
+// SECTION :: START
+
+.menu {
+	z-index: 2999;
+	opacity: 0;
+	visibility: hidden;
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(51, 50, 92, 0.2);
+	backdrop-filter: blur(2px);
+	@include transition(opacity, visibility);
+
+	&.is-open {
+		opacity: 1;
+		visibility: visible;
+		@include transition(opacity, visibility);
+
+		.menu {
+			&__wrapper {
+				opacity: 1;
+				visibility: visible;
+				transform: translateX(0);
+				@include transition(opacity, visibility, transform);
+			}
+		}
+	}
+
+	&__wrapper {
+		opacity: 0;
+		visibility: hidden;
+		transform: translateX(100%);
+		position: absolute;
+		top: 0;
+		right: 0;
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		max-width: 250px;
+		height: 100%;
+		padding: 90px 25px 30px;
+		background-color: #ffffff;
+		@include transition(opacity, visibility, transform);
+
+		&-top {
+			padding-bottom: 30px;
+			border-bottom: 1px solid rgba(#33325C, 0.2);
+		}
+
+		&-middle {
+			position: relative;
+			flex: 1;
+			min-width: 1px;
+			max-width: 100%;
+			padding-top: 30px;
+			padding-bottom: 30px;
+			font-size: 0;
+
+			&:before {
+				content: '';
+				display: inline-block;
+				vertical-align: middle;
+				height: 100%;
+			}
+		}
+
+		&-bottom {
+			padding-top: 30px;
+			border-top: 1px solid rgba(#33325C, 0.2);
+
+			a {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+				.icon-font,
+				span {
+					color: #33325C;
+				}
+
+				.icon-font {
+					font-size: 22px;
+
+					& + span {
+						padding-left: 10px;
+					}
+				}
+
+				span {
+					@extend %fontOpenSans;
+					font-weight: bold;
+					font-size: 14px;
+					line-height: 19px;
+				}
+			}
+		}
+	}
+
+	&__close {
+		z-index: 10;
+		position: absolute;
+		top: 20px;
+		right: 15px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 34px;
+		height: 34px;
+		border-radius: 10px;
+		background-color: rgba(#6C6C71, 0.1);
+
+		.icon-font {
+			color: #6c6c71;
+			font-size: 10px;
+			transform: rotate(45deg);
+		}
+	}
+
+	.dashboard__nav {
+		display: inline-block;
+		vertical-align: middle;
+
+		a {
+			padding-left: 10px;
+			padding-right: 10px;
+
+			&:not(:last-of-type) {
+				margin-bottom: 30px;
+			}
+
+			&:after {
+				display: none;
+			}
+
+			.icon-font,
+			span {
+				color: #33325c;
+			}
+		}
+	}
+}
+
+// SECTION :: END
