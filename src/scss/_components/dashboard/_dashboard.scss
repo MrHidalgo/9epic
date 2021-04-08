@@ -9,7 +9,7 @@
 		min-height: 100vh;
 		padding: 30px;
 		@include adaptive(1023) {
-			flex-wrap: wrap;
+			flex-direction: column;
 			padding: 0;
 		}
 
@@ -149,6 +149,10 @@
 			flex: 1;
 			min-height: 1px;
 			max-height: 100%;
+			@include adaptive(767) {
+				flex: unset;
+				max-height: unset;
+			}
 		}
 
 		&-bottom {
@@ -170,6 +174,20 @@
 		box-shadow: 0 10px 80px 0 rgba(18, 30, 49, 0.03);
 		border-radius: 10px;
 		background: #FFFFFF;
+		@include adaptive(1023) {
+			> div {
+				&:nth-of-type(1) {
+					width: 100%;
+				}
+				&:nth-of-type(2) {
+					display: none;
+				}
+			}
+		}
+		@include adaptive(767) {
+			height: 50px;
+			padding: 10px 15px;
+		}
 
 		> div {
 			min-height: 100%;
@@ -294,11 +312,23 @@
 			align-items: center;
 			justify-content: center;
 			min-height: 100%;
-			padding-right: 20px;
-			margin-right: 20px;
+			@include adaptive(767) {
+				&:nth-of-type(2),
+				&:nth-of-type(3) {
+					flex: 1;
+					min-width: 1px;
+					max-width: 100%;
+				}
+			}
 
 			&:not(:last-of-type) {
+				padding-right: 20px;
+				margin-right: 20px;
 				border-right: 1px solid rgba(#636B73, 0.2);
+				@include adaptive(767) {
+					padding-right: 10px;
+					margin-right: 10px;
+				}
 			}
 		}
 
@@ -310,6 +340,12 @@
 			height: 40px;
 			background-color: rgba(#10BD6A, 0.1);
 			border-radius: 30px;
+			@include adaptive(767) {
+				width: auto;
+				height: 30px;
+				padding-left: 15px;
+				padding-right: 15px;
+			}
 
 			span {
 				@extend %fontOpenSans;
@@ -340,6 +376,9 @@
 				font-weight: 600;
 				line-height: 19px;
 				color: #121e31;
+				@include adaptive(767) {
+					font-size: 12px;
+				}
 
 				span {
 					color: #4097d9;
@@ -365,6 +404,9 @@
 				font-size: 14px;
 				line-height: 19px;
 				color: #636B73;
+				@include adaptive(767) {
+					font-size: 12px;
+				}
 			}
 		}
 	}
@@ -381,6 +423,10 @@
 		border-radius: 10px;
 		box-shadow: 0 4px 50px 0 rgba(18, 30, 49, 0.05);
 		@include transition(background-color, box-shadow);
+		@include adaptive(767) {
+			height: 80px;
+			padding: 10px;
+		}
 
 		&:hover {
 			background-color: rgba(#4097D9, 0.8);
@@ -400,8 +446,16 @@
 			box-shadow: none;
 			border: 1px dashed rgba(#636B73, 0.5);
 			background-color: transparent;
+			@include adaptive(767) {
+				height: 57px;
+			}
 
 			> div {
+				@include adaptive(767) {
+					align-items: center;
+					flex-direction: row;
+				}
+
 				u {
 					display: flex;
 					align-items: center;
@@ -414,10 +468,19 @@
 					border-radius: 50%;
 					background-color: #FFFFFF;
 					text-decoration: none;
+					@include adaptive(767) {
+						width: 34px;
+						height: 34px;
+						margin-bottom: 0;
+						margin-right: 10px;
+					}
 
 					.icon-font {
 						font-size: 15px;
 						color: #262f56;
+						@include adaptive(767) {
+							font-size: 13px;
+						}
 					}
 				}
 
@@ -458,12 +521,20 @@
 				font-size: 18px;
 				line-height: 25px;
 				color: #33325C;
+				@include adaptive(767) {
+					font-size: 14px;
+					line-height: 19px;
+				}
 			}
 
 			span {
 				font-size: 14px;
 				line-height: 19px;
 				color: #33325C;
+				@include adaptive(767) {
+					font-size: 12px;
+					line-height: 16px;
+				}
 			}
 		}
 
@@ -473,6 +544,10 @@
 			display: flex;
 			flex-wrap: wrap;
 			width: calc(100% + 10px);
+			@include adaptive(767) {
+				left: -8px;
+				width: calc(100% + 8px);
+			}
 
 			> div {
 				width: 100%;
@@ -484,6 +559,15 @@
 				}
 				@include adaptive(1279) {
 					max-width: calc(100% / 3);
+				}
+				@include adaptive(767) {
+					max-width: calc(100% / 2);
+					padding-left: 8px;
+					padding-bottom: 8px;
+
+					&:nth-of-type(1) {
+						max-width: 100%;
+					}
 				}
 			}
 		}
@@ -508,6 +592,10 @@
 			line-height: 22px;
 			text-align: center;
 			color: #636B73;
+			@include adaptive(767) {
+				width: 34px;
+				height: 34px;
+			}
 
 			&:after {
 				content: '';
@@ -537,10 +625,24 @@
 	}
 
 	&__btn {
+		&--prev {}
+
+		&--next {
+			.icon-font {
+				transform: scaleX(-1);
+			}
+		}
+
 		.c-btn {
 			min-width: 157px;
 			height: 57px;
+			padding-left: 10px;
+			padding-right: 10px;
 			border-radius: 10px;
+			@include adaptive(767) {
+				min-width: 57px;
+				max-width: 57px;
+			}
 		}
 
 		&.is-disabled {
@@ -554,6 +656,7 @@
 					display: none;
 				}
 
+				.icon-font,
 				span {
 					color: rgba(#636B73, 0.3);
 				}
@@ -565,11 +668,24 @@
 			position: absolute;
 		}
 
+		.icon-font {
+			z-index: 2;
+			position: relative;
+			display: none;
+			color: #ffffff;
+			@include adaptive(767) {
+				display: flex;
+			}
+		}
+
 		span {
 			font-weight: 600;
 			font-size: 17px;
 			line-height: 23px;
 			text-align: center;
+			@include adaptive(767) {
+				display: none;
+			}
 		}
 	}
 }

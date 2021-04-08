@@ -48,56 +48,59 @@
 	@if $filename == cloud {
 		$char: "\E007";
 	}
-	@if $filename == database {
+	@if $filename == corner {
 		$char: "\E008";
 	}
-	@if $filename == document {
+	@if $filename == database {
 		$char: "\E009";
 	}
-	@if $filename == eye {
+	@if $filename == document {
 		$char: "\E00A";
 	}
-	@if $filename == governance {
+	@if $filename == eye {
 		$char: "\E00B";
 	}
-	@if $filename == list-dots {
+	@if $filename == governance {
 		$char: "\E00C";
 	}
-	@if $filename == logout {
+	@if $filename == list-dots {
 		$char: "\E00D";
 	}
-	@if $filename == message {
+	@if $filename == logout {
 		$char: "\E00E";
 	}
-	@if $filename == pen {
+	@if $filename == message {
 		$char: "\E00F";
 	}
-	@if $filename == plus {
+	@if $filename == pen {
 		$char: "\E010";
 	}
-	@if $filename == profile {
+	@if $filename == plus {
 		$char: "\E011";
 	}
-	@if $filename == right-arrow {
+	@if $filename == profile {
 		$char: "\E012";
 	}
-	@if $filename == rocket {
+	@if $filename == right-arrow {
 		$char: "\E013";
 	}
-	@if $filename == security {
+	@if $filename == rocket {
 		$char: "\E014";
 	}
-	@if $filename == square-dashed {
+	@if $filename == security {
 		$char: "\E015";
 	}
-	@if $filename == swap {
+	@if $filename == square-dashed {
 		$char: "\E016";
 	}
-	@if $filename == terminal {
+	@if $filename == swap {
 		$char: "\E017";
 	}
-	@if $filename == work {
+	@if $filename == terminal {
 		$char: "\E018";
+	}
+	@if $filename == work {
+		$char: "\E019";
 	}
 
 	@return $char;
@@ -140,6 +143,10 @@
 }
 .icon-cloud {
 	@include icon(cloud);
+
+}
+.icon-corner {
+	@include icon(corner);
 
 }
 .icon-database {

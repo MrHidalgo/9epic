@@ -182,7 +182,7 @@
 }
 
 /* line 23, src/scss/_generated/_spriteFont.scss */
-.icon-arrow:before, .icon-build:before, .icon-category:before, .icon-chat:before, .icon-circle-checked:before, .icon-cloud-check:before, .icon-cloud:before, .icon-database:before, .icon-document:before, .icon-eye:before, .icon-governance:before, .icon-list-dots:before, .icon-logout:before, .icon-message:before, .icon-pen:before, .icon-plus:before, .icon-profile:before, .icon-right-arrow:before, .icon-rocket:before, .icon-security:before, .icon-square-dashed:before, .icon-swap:before, .icon-terminal:before, .icon-work:before {
+.icon-arrow:before, .icon-build:before, .icon-category:before, .icon-chat:before, .icon-circle-checked:before, .icon-cloud-check:before, .icon-cloud:before, .icon-corner:before, .icon-database:before, .icon-document:before, .icon-eye:before, .icon-governance:before, .icon-list-dots:before, .icon-logout:before, .icon-message:before, .icon-pen:before, .icon-plus:before, .icon-profile:before, .icon-right-arrow:before, .icon-rocket:before, .icon-security:before, .icon-square-dashed:before, .icon-swap:before, .icon-terminal:before, .icon-work:before {
   font-family: "iconFont", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -193,124 +193,129 @@
   text-transform: none;
 }
 
-/* line 107, src/scss/_generated/_spriteFont.scss */
+/* line 110, src/scss/_generated/_spriteFont.scss */
 .icon-arrow:before {
   content: "";
 }
 
-/* line 107, src/scss/_generated/_spriteFont.scss */
+/* line 110, src/scss/_generated/_spriteFont.scss */
 .icon-build:before {
   content: "";
 }
 
-/* line 107, src/scss/_generated/_spriteFont.scss */
+/* line 110, src/scss/_generated/_spriteFont.scss */
 .icon-category:before {
   content: "";
 }
 
-/* line 107, src/scss/_generated/_spriteFont.scss */
+/* line 110, src/scss/_generated/_spriteFont.scss */
 .icon-chat:before {
   content: "";
 }
 
-/* line 107, src/scss/_generated/_spriteFont.scss */
+/* line 110, src/scss/_generated/_spriteFont.scss */
 .icon-circle-checked:before {
   content: "";
 }
 
-/* line 107, src/scss/_generated/_spriteFont.scss */
+/* line 110, src/scss/_generated/_spriteFont.scss */
 .icon-cloud-check:before {
   content: "";
 }
 
-/* line 107, src/scss/_generated/_spriteFont.scss */
+/* line 110, src/scss/_generated/_spriteFont.scss */
 .icon-cloud:before {
   content: "";
 }
 
-/* line 107, src/scss/_generated/_spriteFont.scss */
-.icon-database:before {
+/* line 110, src/scss/_generated/_spriteFont.scss */
+.icon-corner:before {
   content: "";
 }
 
-/* line 107, src/scss/_generated/_spriteFont.scss */
-.icon-document:before {
+/* line 110, src/scss/_generated/_spriteFont.scss */
+.icon-database:before {
   content: "";
 }
 
-/* line 107, src/scss/_generated/_spriteFont.scss */
-.icon-eye:before {
+/* line 110, src/scss/_generated/_spriteFont.scss */
+.icon-document:before {
   content: "";
 }
 
-/* line 107, src/scss/_generated/_spriteFont.scss */
-.icon-governance:before {
+/* line 110, src/scss/_generated/_spriteFont.scss */
+.icon-eye:before {
   content: "";
 }
 
-/* line 107, src/scss/_generated/_spriteFont.scss */
-.icon-list-dots:before {
+/* line 110, src/scss/_generated/_spriteFont.scss */
+.icon-governance:before {
   content: "";
 }
 
-/* line 107, src/scss/_generated/_spriteFont.scss */
-.icon-logout:before {
+/* line 110, src/scss/_generated/_spriteFont.scss */
+.icon-list-dots:before {
   content: "";
 }
 
-/* line 107, src/scss/_generated/_spriteFont.scss */
-.icon-message:before {
+/* line 110, src/scss/_generated/_spriteFont.scss */
+.icon-logout:before {
   content: "";
 }
 
-/* line 107, src/scss/_generated/_spriteFont.scss */
-.icon-pen:before {
+/* line 110, src/scss/_generated/_spriteFont.scss */
+.icon-message:before {
   content: "";
 }
 
-/* line 107, src/scss/_generated/_spriteFont.scss */
-.icon-plus:before {
+/* line 110, src/scss/_generated/_spriteFont.scss */
+.icon-pen:before {
   content: "";
 }
 
-/* line 107, src/scss/_generated/_spriteFont.scss */
-.icon-profile:before {
+/* line 110, src/scss/_generated/_spriteFont.scss */
+.icon-plus:before {
   content: "";
 }
 
-/* line 107, src/scss/_generated/_spriteFont.scss */
-.icon-right-arrow:before {
+/* line 110, src/scss/_generated/_spriteFont.scss */
+.icon-profile:before {
   content: "";
 }
 
-/* line 107, src/scss/_generated/_spriteFont.scss */
-.icon-rocket:before {
+/* line 110, src/scss/_generated/_spriteFont.scss */
+.icon-right-arrow:before {
   content: "";
 }
 
-/* line 107, src/scss/_generated/_spriteFont.scss */
-.icon-security:before {
+/* line 110, src/scss/_generated/_spriteFont.scss */
+.icon-rocket:before {
   content: "";
 }
 
-/* line 107, src/scss/_generated/_spriteFont.scss */
-.icon-square-dashed:before {
+/* line 110, src/scss/_generated/_spriteFont.scss */
+.icon-security:before {
   content: "";
 }
 
-/* line 107, src/scss/_generated/_spriteFont.scss */
-.icon-swap:before {
+/* line 110, src/scss/_generated/_spriteFont.scss */
+.icon-square-dashed:before {
   content: "";
 }
 
-/* line 107, src/scss/_generated/_spriteFont.scss */
-.icon-terminal:before {
+/* line 110, src/scss/_generated/_spriteFont.scss */
+.icon-swap:before {
   content: "";
 }
 
-/* line 107, src/scss/_generated/_spriteFont.scss */
-.icon-work:before {
+/* line 110, src/scss/_generated/_spriteFont.scss */
+.icon-terminal:before {
   content: "";
+}
+
+/* line 110, src/scss/_generated/_spriteFont.scss */
+.icon-work:before {
+  content: "";
 }
 
 /* line 1, src/scss/_shared/_main-setting-reset.scss */
@@ -5269,9 +5274,11 @@ picture {
 @media screen and (max-width: 1023px) {
   /* line 6, src/scss/_components/dashboard/_dashboard.scss */
   .dashboard__wrapper {
-    -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
     padding: 0;
   }
 }
@@ -5532,7 +5539,18 @@ picture {
   max-height: 100%;
 }
 
-/* line 154, src/scss/_components/dashboard/_dashboard.scss */
+@media screen and (max-width: 767px) {
+  /* line 148, src/scss/_components/dashboard/_dashboard.scss */
+  .dashboard__wrapper-middle {
+    -webkit-box-flex: unset;
+    -webkit-flex: unset;
+        -ms-flex: unset;
+            flex: unset;
+    max-height: unset;
+  }
+}
+
+/* line 158, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__wrapper-bottom {
   display: -webkit-box;
   display: -webkit-flex;
@@ -5550,13 +5568,13 @@ picture {
 }
 
 @media screen and (max-width: 1023px) {
-  /* line 154, src/scss/_components/dashboard/_dashboard.scss */
+  /* line 158, src/scss/_components/dashboard/_dashboard.scss */
   .dashboard__wrapper-bottom {
     padding-top: 30px;
   }
 }
 
-/* line 165, src/scss/_components/dashboard/_dashboard.scss */
+/* line 169, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__header {
   display: -webkit-box;
   display: -webkit-flex;
@@ -5575,17 +5593,36 @@ picture {
   background: #FFFFFF;
 }
 
-/* line 174, src/scss/_components/dashboard/_dashboard.scss */
+@media screen and (max-width: 1023px) {
+  /* line 179, src/scss/_components/dashboard/_dashboard.scss */
+  .dashboard__header > div:nth-of-type(1) {
+    width: 100%;
+  }
+  /* line 182, src/scss/_components/dashboard/_dashboard.scss */
+  .dashboard__header > div:nth-of-type(2) {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* line 169, src/scss/_components/dashboard/_dashboard.scss */
+  .dashboard__header {
+    height: 50px;
+    padding: 10px 15px;
+  }
+}
+
+/* line 192, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__header > div {
   min-height: 100%;
 }
 
-/* line 177, src/scss/_components/dashboard/_dashboard.scss */
+/* line 195, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__header > div:nth-of-type(2) {
   padding-left: 20px;
 }
 
-/* line 183, src/scss/_components/dashboard/_dashboard.scss */
+/* line 201, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__nav {
   display: -webkit-box;
   display: -webkit-flex;
@@ -5598,7 +5635,7 @@ picture {
           flex-direction: column;
 }
 
-/* line 187, src/scss/_components/dashboard/_dashboard.scss */
+/* line 205, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__nav a {
   position: relative;
   display: -webkit-box;
@@ -5612,7 +5649,7 @@ picture {
   padding-left: 30px;
 }
 
-/* line 193, src/scss/_components/dashboard/_dashboard.scss */
+/* line 211, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__nav a:after {
   content: '';
   opacity: 0;
@@ -5638,7 +5675,7 @@ picture {
 }
 
 @media screen and (max-width: 1279px) {
-  /* line 193, src/scss/_components/dashboard/_dashboard.scss */
+  /* line 211, src/scss/_components/dashboard/_dashboard.scss */
   .dashboard__nav a:after {
     width: 220px;
     -webkit-background-size: contain;
@@ -5646,7 +5683,7 @@ picture {
   }
 }
 
-/* line 215, src/scss/_components/dashboard/_dashboard.scss */
+/* line 233, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__nav a.is-active:after {
   opacity: 1;
   visibility: visible;
@@ -5660,7 +5697,7 @@ picture {
   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
-/* line 222, src/scss/_components/dashboard/_dashboard.scss */
+/* line 240, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__nav a.is-active .icon-font,
 .dashboard__nav a.is-active span {
   color: #4097d9;
@@ -5669,12 +5706,12 @@ picture {
   transition: color 0.3s ease-in-out;
 }
 
-/* line 229, src/scss/_components/dashboard/_dashboard.scss */
+/* line 247, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__nav a:not(:last-of-type) {
   margin-bottom: 50px;
 }
 
-/* line 233, src/scss/_components/dashboard/_dashboard.scss */
+/* line 251, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__nav a .icon-font,
 .dashboard__nav a span {
   z-index: 2;
@@ -5685,24 +5722,24 @@ picture {
   transition: color 0.3s ease-in-out;
 }
 
-/* line 241, src/scss/_components/dashboard/_dashboard.scss */
+/* line 259, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__nav a .icon-font {
   font-size: 20px;
 }
 
-/* line 244, src/scss/_components/dashboard/_dashboard.scss */
+/* line 262, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__nav a .icon-font + span {
   padding-left: 10px;
 }
 
-/* line 249, src/scss/_components/dashboard/_dashboard.scss */
+/* line 267, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__nav a span {
   font-weight: 600;
   font-size: 14px;
   line-height: 22px;
 }
 
-/* line 258, src/scss/_components/dashboard/_dashboard.scss */
+/* line 276, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__user {
   display: -webkit-box;
   display: -webkit-flex;
@@ -5714,7 +5751,7 @@ picture {
           align-items: center;
 }
 
-/* line 263, src/scss/_components/dashboard/_dashboard.scss */
+/* line 281, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__user > div:nth-of-type(1) {
   overflow: hidden;
   position: relative;
@@ -5725,12 +5762,12 @@ picture {
           border-radius: 50%;
 }
 
-/* line 275, src/scss/_components/dashboard/_dashboard.scss */
+/* line 293, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__user > div:nth-of-type(2) {
   padding-left: 10px;
 }
 
-/* line 280, src/scss/_components/dashboard/_dashboard.scss */
+/* line 298, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__user p {
   font-weight: bold;
   font-size: 14px;
@@ -5738,7 +5775,7 @@ picture {
   color: #121E31;
 }
 
-/* line 288, src/scss/_components/dashboard/_dashboard.scss */
+/* line 306, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__indicator {
   display: -webkit-box;
   display: -webkit-flex;
@@ -5747,7 +5784,7 @@ picture {
   min-height: 100%;
 }
 
-/* line 292, src/scss/_components/dashboard/_dashboard.scss */
+/* line 310, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__indicator > div {
   display: -webkit-box;
   display: -webkit-flex;
@@ -5762,16 +5799,36 @@ picture {
       -ms-flex-pack: center;
           justify-content: center;
   min-height: 100%;
-  padding-right: 20px;
-  margin-right: 20px;
 }
 
-/* line 300, src/scss/_components/dashboard/_dashboard.scss */
+@media screen and (max-width: 767px) {
+  /* line 316, src/scss/_components/dashboard/_dashboard.scss */
+  .dashboard__indicator > div:nth-of-type(2), .dashboard__indicator > div:nth-of-type(3) {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    min-width: 1px;
+    max-width: 100%;
+  }
+}
+
+/* line 324, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__indicator > div:not(:last-of-type) {
+  padding-right: 20px;
+  margin-right: 20px;
   border-right: 1px solid rgba(99, 107, 115, 0.2);
 }
 
-/* line 305, src/scss/_components/dashboard/_dashboard.scss */
+@media screen and (max-width: 767px) {
+  /* line 324, src/scss/_components/dashboard/_dashboard.scss */
+  .dashboard__indicator > div:not(:last-of-type) {
+    padding-right: 10px;
+    margin-right: 10px;
+  }
+}
+
+/* line 335, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__indicator-badge {
   display: -webkit-box;
   display: -webkit-flex;
@@ -5792,7 +5849,17 @@ picture {
           border-radius: 30px;
 }
 
-/* line 314, src/scss/_components/dashboard/_dashboard.scss */
+@media screen and (max-width: 767px) {
+  /* line 335, src/scss/_components/dashboard/_dashboard.scss */
+  .dashboard__indicator-badge {
+    width: auto;
+    height: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+/* line 350, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__indicator-badge span {
   font-weight: 600;
   font-size: 14px;
@@ -5801,7 +5868,7 @@ picture {
   color: #10BD6A;
 }
 
-/* line 324, src/scss/_components/dashboard/_dashboard.scss */
+/* line 360, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__indicator-project {
   display: -webkit-box;
   display: -webkit-flex;
@@ -5813,18 +5880,18 @@ picture {
           align-items: center;
 }
 
-/* line 328, src/scss/_components/dashboard/_dashboard.scss */
+/* line 364, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__indicator-project .icon-font {
   color: #121e31;
   font-size: 12px;
 }
 
-/* line 332, src/scss/_components/dashboard/_dashboard.scss */
+/* line 368, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__indicator-project .icon-font + p {
   padding-left: 6px;
 }
 
-/* line 337, src/scss/_components/dashboard/_dashboard.scss */
+/* line 373, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__indicator-project p {
   font-size: 14px;
   font-weight: 600;
@@ -5832,12 +5899,19 @@ picture {
   color: #121e31;
 }
 
-/* line 344, src/scss/_components/dashboard/_dashboard.scss */
+@media screen and (max-width: 767px) {
+  /* line 373, src/scss/_components/dashboard/_dashboard.scss */
+  .dashboard__indicator-project p {
+    font-size: 12px;
+  }
+}
+
+/* line 383, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__indicator-project p span {
   color: #4097d9;
 }
 
-/* line 350, src/scss/_components/dashboard/_dashboard.scss */
+/* line 389, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__indicator-email {
   display: -webkit-box;
   display: -webkit-flex;
@@ -5849,25 +5923,32 @@ picture {
           align-items: center;
 }
 
-/* line 354, src/scss/_components/dashboard/_dashboard.scss */
+/* line 393, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__indicator-email .icon-font {
   color: #121e31;
   font-size: 12px;
 }
 
-/* line 358, src/scss/_components/dashboard/_dashboard.scss */
+/* line 397, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__indicator-email .icon-font + span {
   padding-left: 6px;
 }
 
-/* line 363, src/scss/_components/dashboard/_dashboard.scss */
+/* line 402, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__indicator-email span {
   font-size: 14px;
   line-height: 19px;
   color: #636B73;
 }
 
-/* line 372, src/scss/_components/dashboard/_dashboard.scss */
+@media screen and (max-width: 767px) {
+  /* line 402, src/scss/_components/dashboard/_dashboard.scss */
+  .dashboard__indicator-email span {
+    font-size: 12px;
+  }
+}
+
+/* line 414, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__box {
   position: relative;
   display: -webkit-box;
@@ -5897,7 +5978,15 @@ picture {
   transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
 }
 
-/* line 385, src/scss/_components/dashboard/_dashboard.scss */
+@media screen and (max-width: 767px) {
+  /* line 414, src/scss/_components/dashboard/_dashboard.scss */
+  .dashboard__box {
+    height: 80px;
+    padding: 10px;
+  }
+}
+
+/* line 431, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__box:hover {
   background-color: rgba(64, 151, 217, 0.8);
   -webkit-box-shadow: 0 4px 50px 0 rgba(18, 30, 49, 0.05);
@@ -5909,7 +5998,7 @@ picture {
   transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
 }
 
-/* line 391, src/scss/_components/dashboard/_dashboard.scss */
+/* line 437, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__box:hover > div p,
 .dashboard__box:hover > div span {
   color: #ffffff;
@@ -5918,7 +6007,7 @@ picture {
   transition: color 0.3s ease-in-out;
 }
 
-/* line 399, src/scss/_components/dashboard/_dashboard.scss */
+/* line 445, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__box.dashboard__box--add {
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -5926,7 +6015,29 @@ picture {
   background-color: transparent;
 }
 
-/* line 405, src/scss/_components/dashboard/_dashboard.scss */
+@media screen and (max-width: 767px) {
+  /* line 445, src/scss/_components/dashboard/_dashboard.scss */
+  .dashboard__box.dashboard__box--add {
+    height: 57px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* line 453, src/scss/_components/dashboard/_dashboard.scss */
+  .dashboard__box.dashboard__box--add > div {
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+/* line 459, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__box.dashboard__box--add > div u {
   display: -webkit-box;
   display: -webkit-flex;
@@ -5951,13 +6062,30 @@ picture {
   text-decoration: none;
 }
 
-/* line 418, src/scss/_components/dashboard/_dashboard.scss */
+@media screen and (max-width: 767px) {
+  /* line 459, src/scss/_components/dashboard/_dashboard.scss */
+  .dashboard__box.dashboard__box--add > div u {
+    width: 34px;
+    height: 34px;
+    margin-bottom: 0;
+    margin-right: 10px;
+  }
+}
+
+/* line 478, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__box.dashboard__box--add > div u .icon-font {
   font-size: 15px;
   color: #262f56;
 }
 
-/* line 424, src/scss/_components/dashboard/_dashboard.scss */
+@media screen and (max-width: 767px) {
+  /* line 478, src/scss/_components/dashboard/_dashboard.scss */
+  .dashboard__box.dashboard__box--add > div u .icon-font {
+    font-size: 13px;
+  }
+}
+
+/* line 487, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__box.dashboard__box--add > div p {
   font-weight: 600;
   font-size: 14px;
@@ -5966,7 +6094,7 @@ picture {
   color: #33325C;
 }
 
-/* line 435, src/scss/_components/dashboard/_dashboard.scss */
+/* line 498, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__box > .icon-font {
   z-index: 5;
   position: absolute;
@@ -5979,7 +6107,7 @@ picture {
           transform: rotate(-45deg);
 }
 
-/* line 445, src/scss/_components/dashboard/_dashboard.scss */
+/* line 508, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__box > div {
   display: -webkit-box;
   display: -webkit-flex;
@@ -5993,7 +6121,7 @@ picture {
   text-align: center;
 }
 
-/* line 451, src/scss/_components/dashboard/_dashboard.scss */
+/* line 514, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__box > div p,
 .dashboard__box > div span {
   -webkit-transition: color 0.3s ease-in-out;
@@ -6001,7 +6129,7 @@ picture {
   transition: color 0.3s ease-in-out;
 }
 
-/* line 456, src/scss/_components/dashboard/_dashboard.scss */
+/* line 519, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__box > div p {
   font-weight: bold;
   font-size: 18px;
@@ -6009,14 +6137,30 @@ picture {
   color: #33325C;
 }
 
-/* line 463, src/scss/_components/dashboard/_dashboard.scss */
+@media screen and (max-width: 767px) {
+  /* line 519, src/scss/_components/dashboard/_dashboard.scss */
+  .dashboard__box > div p {
+    font-size: 14px;
+    line-height: 19px;
+  }
+}
+
+/* line 530, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__box > div span {
   font-size: 14px;
   line-height: 19px;
   color: #33325C;
 }
 
-/* line 470, src/scss/_components/dashboard/_dashboard.scss */
+@media screen and (max-width: 767px) {
+  /* line 530, src/scss/_components/dashboard/_dashboard.scss */
+  .dashboard__box > div span {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+
+/* line 541, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__box-wrapper {
   position: relative;
   left: -10px;
@@ -6031,7 +6175,16 @@ picture {
   width: calc(100% + 10px);
 }
 
-/* line 477, src/scss/_components/dashboard/_dashboard.scss */
+@media screen and (max-width: 767px) {
+  /* line 541, src/scss/_components/dashboard/_dashboard.scss */
+  .dashboard__box-wrapper {
+    left: -8px;
+    width: -webkit-calc(100% + 8px);
+    width: calc(100% + 8px);
+  }
+}
+
+/* line 552, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__box-wrapper > div {
   width: 100%;
   max-width: -webkit-calc(100% / 5);
@@ -6041,7 +6194,7 @@ picture {
 }
 
 @media screen and (max-width: 1535px) {
-  /* line 477, src/scss/_components/dashboard/_dashboard.scss */
+  /* line 552, src/scss/_components/dashboard/_dashboard.scss */
   .dashboard__box-wrapper > div {
     max-width: -webkit-calc(100% / 4);
     max-width: calc(100% / 4);
@@ -6049,14 +6202,28 @@ picture {
 }
 
 @media screen and (max-width: 1279px) {
-  /* line 477, src/scss/_components/dashboard/_dashboard.scss */
+  /* line 552, src/scss/_components/dashboard/_dashboard.scss */
   .dashboard__box-wrapper > div {
     max-width: -webkit-calc(100% / 3);
     max-width: calc(100% / 3);
   }
 }
 
-/* line 492, src/scss/_components/dashboard/_dashboard.scss */
+@media screen and (max-width: 767px) {
+  /* line 552, src/scss/_components/dashboard/_dashboard.scss */
+  .dashboard__box-wrapper > div {
+    max-width: -webkit-calc(100% / 2);
+    max-width: calc(100% / 2);
+    padding-left: 8px;
+    padding-bottom: 8px;
+  }
+  /* line 568, src/scss/_components/dashboard/_dashboard.scss */
+  .dashboard__box-wrapper > div:nth-of-type(1) {
+    max-width: 100%;
+  }
+}
+
+/* line 576, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__pagination {
   display: -webkit-box;
   display: -webkit-flex;
@@ -6072,7 +6239,7 @@ picture {
           justify-content: center;
 }
 
-/* line 497, src/scss/_components/dashboard/_dashboard.scss */
+/* line 581, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__pagination a {
   overflow: hidden;
   position: relative;
@@ -6099,7 +6266,15 @@ picture {
   color: #636B73;
 }
 
-/* line 512, src/scss/_components/dashboard/_dashboard.scss */
+@media screen and (max-width: 767px) {
+  /* line 581, src/scss/_components/dashboard/_dashboard.scss */
+  .dashboard__pagination a {
+    width: 34px;
+    height: 34px;
+  }
+}
+
+/* line 600, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__pagination a:after {
   content: '';
   z-index: 0;
@@ -6114,59 +6289,102 @@ picture {
   background: linear-gradient(180.59deg, #4097D9 -45.56%, #30C4A0 62.2%, #00B94F 156.76%), #EF2127;
 }
 
-/* line 524, src/scss/_components/dashboard/_dashboard.scss */
+/* line 612, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__pagination a.is-active {
   color: #ffffff;
 }
 
-/* line 527, src/scss/_components/dashboard/_dashboard.scss */
+/* line 615, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__pagination a.is-active:after {
   opacity: 1;
 }
 
-/* line 532, src/scss/_components/dashboard/_dashboard.scss */
+/* line 620, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__pagination a span {
   z-index: 2;
   position: relative;
 }
 
-/* line 540, src/scss/_components/dashboard/_dashboard.scss */
+/* line 631, src/scss/_components/dashboard/_dashboard.scss */
+.dashboard__btn--next .icon-font {
+  -webkit-transform: scaleX(-1);
+      -ms-transform: scaleX(-1);
+          transform: scaleX(-1);
+}
+
+/* line 636, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__btn .c-btn {
   min-width: 157px;
   height: 57px;
+  padding-left: 10px;
+  padding-right: 10px;
   -webkit-border-radius: 10px;
           border-radius: 10px;
 }
 
-/* line 547, src/scss/_components/dashboard/_dashboard.scss */
+@media screen and (max-width: 767px) {
+  /* line 636, src/scss/_components/dashboard/_dashboard.scss */
+  .dashboard__btn .c-btn {
+    min-width: 57px;
+    max-width: 57px;
+  }
+}
+
+/* line 649, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__btn.is-disabled .c-btn {
   pointer-events: none;
   background-color: transparent;
   border: 1px solid rgba(99, 107, 115, 0.3);
 }
 
-/* line 552, src/scss/_components/dashboard/_dashboard.scss */
+/* line 654, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__btn.is-disabled .c-btn:after, .dashboard__btn.is-disabled .c-btn:before {
   display: none;
 }
 
-/* line 557, src/scss/_components/dashboard/_dashboard.scss */
+/* line 659, src/scss/_components/dashboard/_dashboard.scss */
+.dashboard__btn.is-disabled .c-btn .icon-font,
 .dashboard__btn.is-disabled .c-btn span {
   color: rgba(99, 107, 115, 0.3);
 }
 
-/* line 563, src/scss/_components/dashboard/_dashboard.scss */
+/* line 666, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__btn:after {
   content: '';
   position: absolute;
 }
 
-/* line 568, src/scss/_components/dashboard/_dashboard.scss */
+/* line 671, src/scss/_components/dashboard/_dashboard.scss */
+.dashboard__btn .icon-font {
+  z-index: 2;
+  position: relative;
+  display: none;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 767px) {
+  /* line 671, src/scss/_components/dashboard/_dashboard.scss */
+  .dashboard__btn .icon-font {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+/* line 681, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__btn span {
   font-weight: 600;
   font-size: 17px;
   line-height: 23px;
   text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+  /* line 681, src/scss/_components/dashboard/_dashboard.scss */
+  .dashboard__btn span {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=maps/app.css.map */
