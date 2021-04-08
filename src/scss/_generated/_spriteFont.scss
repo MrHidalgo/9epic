@@ -66,26 +66,38 @@
 	@if $filename == logout {
 		$char: "\E00D";
 	}
-	@if $filename == pen {
+	@if $filename == message {
 		$char: "\E00E";
 	}
-	@if $filename == profile {
+	@if $filename == pen {
 		$char: "\E00F";
 	}
-	@if $filename == rocket {
+	@if $filename == plus {
 		$char: "\E010";
 	}
-	@if $filename == security {
+	@if $filename == profile {
 		$char: "\E011";
 	}
-	@if $filename == square-dashed {
+	@if $filename == right-arrow {
 		$char: "\E012";
 	}
-	@if $filename == swap {
+	@if $filename == rocket {
 		$char: "\E013";
 	}
-	@if $filename == terminal {
+	@if $filename == security {
 		$char: "\E014";
+	}
+	@if $filename == square-dashed {
+		$char: "\E015";
+	}
+	@if $filename == swap {
+		$char: "\E016";
+	}
+	@if $filename == terminal {
+		$char: "\E017";
+	}
+	@if $filename == work {
+		$char: "\E018";
 	}
 
 	@return $char;
@@ -154,12 +166,24 @@
 	@include icon(logout);
 
 }
+.icon-message {
+	@include icon(message);
+
+}
 .icon-pen {
 	@include icon(pen);
 
 }
+.icon-plus {
+	@include icon(plus);
+
+}
 .icon-profile {
 	@include icon(profile);
+
+}
+.icon-right-arrow {
+	@include icon(right-arrow);
 
 }
 .icon-rocket {
@@ -180,5 +204,9 @@
 }
 .icon-terminal {
 	@include icon(terminal);
+
+}
+.icon-work {
+	@include icon(work);
 
 }

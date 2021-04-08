@@ -855,6 +855,14 @@ const passwordPreview = () => {
 		}
 	});
 };
+
+
+const dashboardCB = () => {
+	$('.dashboard__nav a').on('click', (ev) => {
+		$('.dashboard__nav a').removeClass('is-active');
+		$(ev.currentTarget).addClass('is-active');
+	});
+};
 /*
 * CALLBACK :: end
 * ============================================= */
@@ -884,6 +892,7 @@ const initNative = () => {
 	headerChangeColor();
 	approachCollapse();
 	passwordPreview();
+	dashboardCB();
 	// ==========================================
 };
 

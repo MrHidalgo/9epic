@@ -2,7 +2,7 @@
 /* line 14, src/scss/_utilities/_extend.scss */
 .career__bg img, .describe__block-media img, .contacts__bg img, .office__block-head iframe,
 .office__block-head img,
-.office__block-head video {
+.office__block-head video, .dashboard__user > div:nth-of-type(1) img {
   position: absolute;
   top: 0;
   left: 0;
@@ -15,7 +15,7 @@
 }
 
 /* line 26, src/scss/_utilities/_extend.scss */
-.copyright__text, .c-btn span, .sign__form-field label, .sign__form-field input, .sign__form-link, .sign__form-info, .sign__form-confirm, .sign__form-back, .career__wrapper-2 p, .career__slogan, .describe__block-desc p, .contacts__wrapper-2 p, .contacts__slogan, .office__block-body span, .office__box-desc, .dashboard__wrapper-left-bottom a span, .dashboard__nav a span {
+.copyright__text, .c-btn span, .sign__form-field label, .sign__form-field input, .sign__form-link, .sign__form-info, .sign__form-confirm, .sign__form-back, .career__wrapper-2 p, .career__slogan, .describe__block-desc p, .contacts__wrapper-2 p, .contacts__slogan, .office__block-body span, .office__box-desc, .dashboard__wrapper-left-bottom a span, .dashboard__nav a span, .dashboard__indicator-badge span, .dashboard__indicator-project p, .dashboard__indicator-email span, .dashboard__box.dashboard__box--add > div p, .dashboard__box > div {
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -182,7 +182,7 @@
 }
 
 /* line 23, src/scss/_generated/_spriteFont.scss */
-.icon-arrow:before, .icon-build:before, .icon-category:before, .icon-chat:before, .icon-circle-checked:before, .icon-cloud-check:before, .icon-cloud:before, .icon-database:before, .icon-document:before, .icon-eye:before, .icon-governance:before, .icon-list-dots:before, .icon-logout:before, .icon-pen:before, .icon-profile:before, .icon-rocket:before, .icon-security:before, .icon-square-dashed:before, .icon-swap:before, .icon-terminal:before {
+.icon-arrow:before, .icon-build:before, .icon-category:before, .icon-chat:before, .icon-circle-checked:before, .icon-cloud-check:before, .icon-cloud:before, .icon-database:before, .icon-document:before, .icon-eye:before, .icon-governance:before, .icon-list-dots:before, .icon-logout:before, .icon-message:before, .icon-pen:before, .icon-plus:before, .icon-profile:before, .icon-right-arrow:before, .icon-rocket:before, .icon-security:before, .icon-square-dashed:before, .icon-swap:before, .icon-terminal:before, .icon-work:before {
   font-family: "iconFont", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -193,104 +193,124 @@
   text-transform: none;
 }
 
-/* line 95, src/scss/_generated/_spriteFont.scss */
+/* line 107, src/scss/_generated/_spriteFont.scss */
 .icon-arrow:before {
   content: "";
 }
 
-/* line 95, src/scss/_generated/_spriteFont.scss */
+/* line 107, src/scss/_generated/_spriteFont.scss */
 .icon-build:before {
   content: "";
 }
 
-/* line 95, src/scss/_generated/_spriteFont.scss */
+/* line 107, src/scss/_generated/_spriteFont.scss */
 .icon-category:before {
   content: "";
 }
 
-/* line 95, src/scss/_generated/_spriteFont.scss */
+/* line 107, src/scss/_generated/_spriteFont.scss */
 .icon-chat:before {
   content: "";
 }
 
-/* line 95, src/scss/_generated/_spriteFont.scss */
+/* line 107, src/scss/_generated/_spriteFont.scss */
 .icon-circle-checked:before {
   content: "";
 }
 
-/* line 95, src/scss/_generated/_spriteFont.scss */
+/* line 107, src/scss/_generated/_spriteFont.scss */
 .icon-cloud-check:before {
   content: "";
 }
 
-/* line 95, src/scss/_generated/_spriteFont.scss */
+/* line 107, src/scss/_generated/_spriteFont.scss */
 .icon-cloud:before {
   content: "";
 }
 
-/* line 95, src/scss/_generated/_spriteFont.scss */
+/* line 107, src/scss/_generated/_spriteFont.scss */
 .icon-database:before {
   content: "";
 }
 
-/* line 95, src/scss/_generated/_spriteFont.scss */
+/* line 107, src/scss/_generated/_spriteFont.scss */
 .icon-document:before {
   content: "";
 }
 
-/* line 95, src/scss/_generated/_spriteFont.scss */
+/* line 107, src/scss/_generated/_spriteFont.scss */
 .icon-eye:before {
   content: "";
 }
 
-/* line 95, src/scss/_generated/_spriteFont.scss */
+/* line 107, src/scss/_generated/_spriteFont.scss */
 .icon-governance:before {
   content: "";
 }
 
-/* line 95, src/scss/_generated/_spriteFont.scss */
+/* line 107, src/scss/_generated/_spriteFont.scss */
 .icon-list-dots:before {
   content: "";
 }
 
-/* line 95, src/scss/_generated/_spriteFont.scss */
+/* line 107, src/scss/_generated/_spriteFont.scss */
 .icon-logout:before {
   content: "";
 }
 
-/* line 95, src/scss/_generated/_spriteFont.scss */
-.icon-pen:before {
+/* line 107, src/scss/_generated/_spriteFont.scss */
+.icon-message:before {
   content: "";
 }
 
-/* line 95, src/scss/_generated/_spriteFont.scss */
-.icon-profile:before {
+/* line 107, src/scss/_generated/_spriteFont.scss */
+.icon-pen:before {
   content: "";
 }
 
-/* line 95, src/scss/_generated/_spriteFont.scss */
-.icon-rocket:before {
+/* line 107, src/scss/_generated/_spriteFont.scss */
+.icon-plus:before {
   content: "";
 }
 
-/* line 95, src/scss/_generated/_spriteFont.scss */
-.icon-security:before {
+/* line 107, src/scss/_generated/_spriteFont.scss */
+.icon-profile:before {
   content: "";
 }
 
-/* line 95, src/scss/_generated/_spriteFont.scss */
-.icon-square-dashed:before {
+/* line 107, src/scss/_generated/_spriteFont.scss */
+.icon-right-arrow:before {
   content: "";
 }
 
-/* line 95, src/scss/_generated/_spriteFont.scss */
-.icon-swap:before {
+/* line 107, src/scss/_generated/_spriteFont.scss */
+.icon-rocket:before {
   content: "";
 }
 
-/* line 95, src/scss/_generated/_spriteFont.scss */
-.icon-terminal:before {
+/* line 107, src/scss/_generated/_spriteFont.scss */
+.icon-security:before {
   content: "";
+}
+
+/* line 107, src/scss/_generated/_spriteFont.scss */
+.icon-square-dashed:before {
+  content: "";
+}
+
+/* line 107, src/scss/_generated/_spriteFont.scss */
+.icon-swap:before {
+  content: "";
+}
+
+/* line 107, src/scss/_generated/_spriteFont.scss */
+.icon-terminal:before {
+  content: "";
+}
+
+/* line 107, src/scss/_generated/_spriteFont.scss */
+.icon-work:before {
+  content: "";
 }
 
 /* line 1, src/scss/_shared/_main-setting-reset.scss */
@@ -5039,8 +5059,6 @@ picture {
   width: 100%;
   max-width: 300px;
   min-height: 100%;
-  max-height: -webkit-calc(100vh - 60px);
-  max-height: calc(100vh - 60px);
   padding: 50px;
   -webkit-border-radius: 20px;
           border-radius: 20px;
@@ -5070,9 +5088,11 @@ picture {
           flex: 1;
   min-height: 1px;
   max-height: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
-/* line 35, src/scss/_components/dashboard/_dashboard.scss */
+/* line 37, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__wrapper-left-bottom {
   position: relative;
   display: -webkit-box;
@@ -5091,7 +5111,7 @@ picture {
   padding-top: 50px;
 }
 
-/* line 43, src/scss/_components/dashboard/_dashboard.scss */
+/* line 45, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__wrapper-left-bottom:after {
   content: '';
   position: absolute;
@@ -5102,7 +5122,7 @@ picture {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-/* line 53, src/scss/_components/dashboard/_dashboard.scss */
+/* line 55, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__wrapper-left-bottom a {
   display: -webkit-box;
   display: -webkit-flex;
@@ -5118,23 +5138,23 @@ picture {
           justify-content: center;
 }
 
-/* line 58, src/scss/_components/dashboard/_dashboard.scss */
+/* line 60, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__wrapper-left-bottom a .icon-font,
 .dashboard__wrapper-left-bottom a span {
   color: #ffffff;
 }
 
-/* line 63, src/scss/_components/dashboard/_dashboard.scss */
+/* line 65, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__wrapper-left-bottom a .icon-font {
   font-size: 22px;
 }
 
-/* line 66, src/scss/_components/dashboard/_dashboard.scss */
+/* line 68, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__wrapper-left-bottom a .icon-font + span {
   padding-left: 10px;
 }
 
-/* line 71, src/scss/_components/dashboard/_dashboard.scss */
+/* line 73, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__wrapper-left-bottom a span {
   font-weight: bold;
   font-size: 14px;
@@ -5142,7 +5162,7 @@ picture {
   color: #FFFFFF;
 }
 
-/* line 82, src/scss/_components/dashboard/_dashboard.scss */
+/* line 84, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__wrapper-right {
   display: -webkit-box;
   display: -webkit-flex;
@@ -5160,17 +5180,15 @@ picture {
   min-width: 1px;
   max-width: 100%;
   min-height: 100%;
-  max-height: -webkit-calc(100vh - 60px);
-  max-height: calc(100vh - 60px);
   padding-left: 30px;
 }
 
-/* line 93, src/scss/_components/dashboard/_dashboard.scss */
+/* line 95, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__wrapper-top {
   padding-bottom: 50px;
 }
 
-/* line 97, src/scss/_components/dashboard/_dashboard.scss */
+/* line 99, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__wrapper-middle {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
@@ -5180,7 +5198,7 @@ picture {
   max-height: 100%;
 }
 
-/* line 103, src/scss/_components/dashboard/_dashboard.scss */
+/* line 105, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__wrapper-bottom {
   display: -webkit-box;
   display: -webkit-flex;
@@ -5197,9 +5215,18 @@ picture {
   padding-top: 50px;
 }
 
-/* line 111, src/scss/_components/dashboard/_dashboard.scss */
+/* line 113, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   min-height: 60px;
+  padding: 10px 20px;
   -webkit-box-shadow: 0 10px 80px 0 rgba(18, 30, 49, 0.03);
           box-shadow: 0 10px 80px 0 rgba(18, 30, 49, 0.03);
   -webkit-border-radius: 10px;
@@ -5207,7 +5234,17 @@ picture {
   background: #FFFFFF;
 }
 
-/* line 118, src/scss/_components/dashboard/_dashboard.scss */
+/* line 122, src/scss/_components/dashboard/_dashboard.scss */
+.dashboard__header > div {
+  min-height: 100%;
+}
+
+/* line 125, src/scss/_components/dashboard/_dashboard.scss */
+.dashboard__header > div:nth-of-type(2) {
+  padding-left: 20px;
+}
+
+/* line 131, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__nav {
   display: -webkit-box;
   display: -webkit-flex;
@@ -5218,10 +5255,9 @@ picture {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding-top: 50px;
 }
 
-/* line 123, src/scss/_components/dashboard/_dashboard.scss */
+/* line 135, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__nav a {
   position: relative;
   display: -webkit-box;
@@ -5235,7 +5271,7 @@ picture {
   padding-left: 30px;
 }
 
-/* line 129, src/scss/_components/dashboard/_dashboard.scss */
+/* line 141, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__nav a:after {
   content: '';
   opacity: 0;
@@ -5260,7 +5296,7 @@ picture {
   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
-/* line 147, src/scss/_components/dashboard/_dashboard.scss */
+/* line 159, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__nav a.is-active:after {
   opacity: 1;
   visibility: visible;
@@ -5274,7 +5310,7 @@ picture {
   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
-/* line 154, src/scss/_components/dashboard/_dashboard.scss */
+/* line 166, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__nav a.is-active .icon-font,
 .dashboard__nav a.is-active span {
   color: #4097d9;
@@ -5283,12 +5319,12 @@ picture {
   transition: color 0.3s ease-in-out;
 }
 
-/* line 161, src/scss/_components/dashboard/_dashboard.scss */
+/* line 173, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__nav a:not(:last-of-type) {
   margin-bottom: 50px;
 }
 
-/* line 165, src/scss/_components/dashboard/_dashboard.scss */
+/* line 177, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__nav a .icon-font,
 .dashboard__nav a span {
   z-index: 2;
@@ -5299,25 +5335,191 @@ picture {
   transition: color 0.3s ease-in-out;
 }
 
-/* line 173, src/scss/_components/dashboard/_dashboard.scss */
+/* line 185, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__nav a .icon-font {
   font-size: 20px;
 }
 
-/* line 176, src/scss/_components/dashboard/_dashboard.scss */
+/* line 188, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__nav a .icon-font + span {
   padding-left: 10px;
 }
 
-/* line 181, src/scss/_components/dashboard/_dashboard.scss */
+/* line 193, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__nav a span {
   font-weight: 600;
   font-size: 14px;
   line-height: 22px;
 }
 
-/* line 190, src/scss/_components/dashboard/_dashboard.scss */
+/* line 202, src/scss/_components/dashboard/_dashboard.scss */
+.dashboard__user {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* line 207, src/scss/_components/dashboard/_dashboard.scss */
+.dashboard__user > div:nth-of-type(1) {
+  overflow: hidden;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #FFFFFF;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+}
+
+/* line 219, src/scss/_components/dashboard/_dashboard.scss */
+.dashboard__user > div:nth-of-type(2) {
+  padding-left: 10px;
+}
+
+/* line 224, src/scss/_components/dashboard/_dashboard.scss */
+.dashboard__user p {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 21px;
+  color: #121E31;
+}
+
+/* line 232, src/scss/_components/dashboard/_dashboard.scss */
+.dashboard__indicator {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100%;
+}
+
+/* line 236, src/scss/_components/dashboard/_dashboard.scss */
+.dashboard__indicator > div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 100%;
+  padding-right: 20px;
+  margin-right: 20px;
+}
+
+/* line 244, src/scss/_components/dashboard/_dashboard.scss */
+.dashboard__indicator > div:not(:last-of-type) {
+  border-right: 1px solid rgba(99, 107, 115, 0.2);
+}
+
+/* line 249, src/scss/_components/dashboard/_dashboard.scss */
+.dashboard__indicator-badge {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100px;
+  height: 40px;
+  background-color: rgba(16, 189, 106, 0.1);
+  -webkit-border-radius: 30px;
+          border-radius: 30px;
+}
+
+/* line 258, src/scss/_components/dashboard/_dashboard.scss */
+.dashboard__indicator-badge span {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  text-align: center;
+  color: #10BD6A;
+}
+
+/* line 268, src/scss/_components/dashboard/_dashboard.scss */
+.dashboard__indicator-project {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* line 272, src/scss/_components/dashboard/_dashboard.scss */
+.dashboard__indicator-project .icon-font {
+  color: #121e31;
+  font-size: 12px;
+}
+
+/* line 276, src/scss/_components/dashboard/_dashboard.scss */
+.dashboard__indicator-project .icon-font + p {
+  padding-left: 6px;
+}
+
+/* line 281, src/scss/_components/dashboard/_dashboard.scss */
+.dashboard__indicator-project p {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 19px;
+  color: #121e31;
+}
+
+/* line 288, src/scss/_components/dashboard/_dashboard.scss */
+.dashboard__indicator-project p span {
+  color: #4097d9;
+}
+
+/* line 294, src/scss/_components/dashboard/_dashboard.scss */
+.dashboard__indicator-email {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* line 298, src/scss/_components/dashboard/_dashboard.scss */
+.dashboard__indicator-email .icon-font {
+  color: #121e31;
+  font-size: 12px;
+}
+
+/* line 302, src/scss/_components/dashboard/_dashboard.scss */
+.dashboard__indicator-email .icon-font + span {
+  padding-left: 6px;
+}
+
+/* line 307, src/scss/_components/dashboard/_dashboard.scss */
+.dashboard__indicator-email span {
+  font-size: 14px;
+  line-height: 19px;
+  color: #636B73;
+}
+
+/* line 316, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__box {
+  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5338,9 +5540,133 @@ picture {
           border-radius: 10px;
   -webkit-box-shadow: 0 4px 50px 0 rgba(18, 30, 49, 0.05);
           box-shadow: 0 4px 50px 0 rgba(18, 30, 49, 0.05);
+  -webkit-transition: background-color 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
 }
 
-/* line 201, src/scss/_components/dashboard/_dashboard.scss */
+/* line 329, src/scss/_components/dashboard/_dashboard.scss */
+.dashboard__box:hover {
+  background-color: rgba(64, 151, 217, 0.8);
+  -webkit-box-shadow: 0 4px 50px 0 rgba(18, 30, 49, 0.05);
+          box-shadow: 0 4px 50px 0 rgba(18, 30, 49, 0.05);
+  -webkit-transition: background-color 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+}
+
+/* line 335, src/scss/_components/dashboard/_dashboard.scss */
+.dashboard__box:hover > div p,
+.dashboard__box:hover > div span {
+  color: #ffffff;
+  -webkit-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+
+/* line 343, src/scss/_components/dashboard/_dashboard.scss */
+.dashboard__box.dashboard__box--add {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: 1px dashed rgba(99, 107, 115, 0.5);
+  background-color: transparent;
+}
+
+/* line 349, src/scss/_components/dashboard/_dashboard.scss */
+.dashboard__box.dashboard__box--add > div u {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 50px;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  background-color: #FFFFFF;
+  text-decoration: none;
+}
+
+/* line 362, src/scss/_components/dashboard/_dashboard.scss */
+.dashboard__box.dashboard__box--add > div u .icon-font {
+  font-size: 15px;
+  color: #262f56;
+}
+
+/* line 368, src/scss/_components/dashboard/_dashboard.scss */
+.dashboard__box.dashboard__box--add > div p {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  text-align: center;
+  color: #33325C;
+}
+
+/* line 379, src/scss/_components/dashboard/_dashboard.scss */
+.dashboard__box > .icon-font {
+  z-index: 5;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 14px;
+  color: #ffffff;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+/* line 389, src/scss/_components/dashboard/_dashboard.scss */
+.dashboard__box > div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+/* line 395, src/scss/_components/dashboard/_dashboard.scss */
+.dashboard__box > div p,
+.dashboard__box > div span {
+  -webkit-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+
+/* line 400, src/scss/_components/dashboard/_dashboard.scss */
+.dashboard__box > div p {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 25px;
+  color: #33325C;
+}
+
+/* line 407, src/scss/_components/dashboard/_dashboard.scss */
+.dashboard__box > div span {
+  font-size: 14px;
+  line-height: 19px;
+  color: #33325C;
+}
+
+/* line 414, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__box-wrapper {
   position: relative;
   left: -10px;
@@ -5355,13 +5681,126 @@ picture {
   width: calc(100% + 10px);
 }
 
-/* line 208, src/scss/_components/dashboard/_dashboard.scss */
+/* line 421, src/scss/_components/dashboard/_dashboard.scss */
 .dashboard__box-wrapper > div {
   width: 100%;
   max-width: -webkit-calc(100% / 5);
   max-width: calc(100% / 5);
   padding-left: 10px;
   padding-bottom: 10px;
+}
+
+/* line 430, src/scss/_components/dashboard/_dashboard.scss */
+.dashboard__pagination {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/* line 435, src/scss/_components/dashboard/_dashboard.scss */
+.dashboard__pagination a {
+  overflow: hidden;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 44px;
+  height: 44px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  color: #636B73;
+}
+
+/* line 450, src/scss/_components/dashboard/_dashboard.scss */
+.dashboard__pagination a:after {
+  content: '';
+  z-index: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: -webkit-linear-gradient(269.41deg, #4097D9 -45.56%, #30C4A0 62.2%, #00B94F 156.76%), #EF2127;
+  background: -o-linear-gradient(269.41deg, #4097D9 -45.56%, #30C4A0 62.2%, #00B94F 156.76%), #EF2127;
+  background: linear-gradient(180.59deg, #4097D9 -45.56%, #30C4A0 62.2%, #00B94F 156.76%), #EF2127;
+}
+
+/* line 462, src/scss/_components/dashboard/_dashboard.scss */
+.dashboard__pagination a.is-active {
+  color: #ffffff;
+}
+
+/* line 465, src/scss/_components/dashboard/_dashboard.scss */
+.dashboard__pagination a.is-active:after {
+  opacity: 1;
+}
+
+/* line 470, src/scss/_components/dashboard/_dashboard.scss */
+.dashboard__pagination a span {
+  z-index: 2;
+  position: relative;
+}
+
+/* line 478, src/scss/_components/dashboard/_dashboard.scss */
+.dashboard__btn .c-btn {
+  min-width: 157px;
+  height: 57px;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+}
+
+/* line 485, src/scss/_components/dashboard/_dashboard.scss */
+.dashboard__btn.is-disabled .c-btn {
+  pointer-events: none;
+  background-color: transparent;
+  border: 1px solid rgba(99, 107, 115, 0.3);
+}
+
+/* line 490, src/scss/_components/dashboard/_dashboard.scss */
+.dashboard__btn.is-disabled .c-btn:after, .dashboard__btn.is-disabled .c-btn:before {
+  display: none;
+}
+
+/* line 495, src/scss/_components/dashboard/_dashboard.scss */
+.dashboard__btn.is-disabled .c-btn span {
+  color: rgba(99, 107, 115, 0.3);
+}
+
+/* line 501, src/scss/_components/dashboard/_dashboard.scss */
+.dashboard__btn:after {
+  content: '';
+  position: absolute;
+}
+
+/* line 506, src/scss/_components/dashboard/_dashboard.scss */
+.dashboard__btn span {
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 23px;
+  text-align: center;
 }
 
 /*# sourceMappingURL=maps/app.css.map */

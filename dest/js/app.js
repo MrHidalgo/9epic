@@ -903,6 +903,13 @@ var passwordPreview = function passwordPreview() {
 		}
 	});
 };
+
+var dashboardCB = function dashboardCB() {
+	$('.dashboard__nav a').on('click', function (ev) {
+		$('.dashboard__nav a').removeClass('is-active');
+		$(ev.currentTarget).addClass('is-active');
+	});
+};
 /*
 * CALLBACK :: end
 * ============================================= */
@@ -931,6 +938,7 @@ var initNative = function initNative() {
 	headerChangeColor();
 	approachCollapse();
 	passwordPreview();
+	dashboardCB();
 	// ==========================================
 };
 
