@@ -448,7 +448,8 @@ var homepageMainScrollAnimation = function homepageMainScrollAnimation() {
 	.addTo(controller21).on("progress", function (event) {
 		var num = Number((event.progress * 100).toFixed(0));
 
-		console.log(num);
+		// console.log(`num: `, num);
+		// console.log(`vid1: `, vid1);
 
 		if (num >= 60) {
 			vid1.pause();
@@ -479,7 +480,8 @@ var homepageMainScrollAnimation = function homepageMainScrollAnimation() {
 	    controller3 = new ScrollMagic.Controller(),
 	    controller31 = new ScrollMagic.Controller(),
 	    controller32 = new ScrollMagic.Controller(),
-	    vid2 = $('#video2')[0];
+	    vid2 = $('#video2')[0],
+	    vidBool = true;
 
 	var wrapperNode3 = $('.main__wrapper-3'),
 	    wrapperNode3H = wrapperNode3.outerHeight(true);
@@ -554,11 +556,15 @@ var homepageMainScrollAnimation = function homepageMainScrollAnimation() {
 	.addTo(controller3).on("progress", function (event) {
 		var num = Number((event.progress * 100).toFixed(0));
 
-		if (num > 0) {
+		// console.log(`scene3 num: `, num);
+
+		if (num >= 0 && vidBool) {
 			if (vid2.paused) vid2.play();
-		} else if (num === 0 && !vid2.paused) {
+			vidBool = false;
+		} else if (num === 0) {
 			vid2.pause();
 			vid2.currentTime = 0;
+			vidBool = true;
 		}
 	});
 
@@ -652,11 +658,17 @@ var homepageMainScrollAnimation = function homepageMainScrollAnimation() {
 	.addTo(controller4).on("progress", function (event) {
 		var num = Number((event.progress * 100).toFixed(0));
 
-		if (num >= 90 && $('#video2Wrapper').attr('style') === 'opacity: 0;') {
+		console.log("scene4 num: ", num);
+		// console.log($('#video2Wrapper').attr('style'));
+		// console.log($('#video2Wrapper').attr('style') === 'opacity: 0;');
+		//
+		if ($('#video2Wrapper').attr('style') === 'opacity: 0;') {
+			vidBool = true;
 			vid2.pause();
 			vid2.currentTime = 0;
-		} else {
+		} else if (num <= 90 && vidBool) {
 			if (vid2.paused) vid2.play();
+			vidBool = false;
 		}
 	});
 
@@ -666,7 +678,15 @@ var homepageMainScrollAnimation = function homepageMainScrollAnimation() {
 		duration: wrapperNode4H - 200
 	}).setTween(tween41)
 	// .addIndicators({name: 'video'})
-	.addTo(controller41);
+	.addTo(controller41).on("progress", function (event) {
+		var num = Number((event.progress * 100).toFixed(0));
+
+		// console.log(`scene41 num: `, num);
+		//
+		// if(num <= 5) {
+		// 	if(vid2.paused) vid2.play();
+		// }
+	});
 
 	scene42 = new ScrollMagic.Scene({
 		triggerElement: ".main__wrapper-2",
