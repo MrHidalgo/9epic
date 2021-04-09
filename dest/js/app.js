@@ -950,8 +950,20 @@ var passwordPreview = function passwordPreview() {
 
 var dashboardCB = function dashboardCB() {
 	$('.dashboard__nav a').on('click', function (ev) {
+		var el = $(ev.currentTarget),
+		    elID = el.attr('data-id');
+
+		if (!elID) return;
+
 		$('.dashboard__nav a').removeClass('is-active');
-		$(ev.currentTarget).addClass('is-active');
+		el.addClass('is-active');
+
+		$('.dashboard__row').hide();
+		$('.dashboard__row[data-content-id="' + elID + '"]').fadeIn(550).css({ display: 'flex' });
+
+		if ($(window).width() < 768) {
+			$('.menu__close').trigger('click');
+		}
 	});
 };
 /*
