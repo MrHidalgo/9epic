@@ -9,10 +9,17 @@
 	padding-top: 100px;
 	padding-bottom: 100px;
 	background-color: #0a0a0a;
+	@include adaptive(767) {
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
 
 	&__title {
 		padding-bottom: 70px;
 		color: #fff;
+		@include adaptive(767) {
+			padding-bottom: 40px;
+		}
 	}
 
 	&__tab {
@@ -23,6 +30,16 @@
 		min-width: 1px;
 		max-width: 100%;
 		padding-left: 60px;
+		@include adaptive(1279) {
+			padding-left: 30px;
+		}
+		@include adaptive(1023) {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+		@include adaptive(767) {
+			flex-direction: column;
+		}
 
 		&:after {
 			content: '';
@@ -83,14 +100,24 @@
 				border-radius: 10px;
 				background-color: rgba(#C4CFDD, 0.15);
 				@include transition(background-color);
+				@include adaptive(767) {
+					width: 40px;
+					height: 40px;
+				}
 
 				.icon-font {
 					color: rgba(#fff, 0.5);
 					font-size: 15px;
 					@include transition(color);
+					@include adaptive(767) {
+						font-size: 12px;
+					}
 
 					&.icon-rocket {
 						font-size: 22px;
+						@include adaptive(767) {
+							font-size: 18px;
+						}
 					}
 				}
 			}
@@ -100,6 +127,9 @@
 				min-width: 1px;
 				max-width: 100%;
 				padding-left: 20px;
+				@include adaptive(767) {
+					padding-left: 0;
+				}
 			}
 
 			span {
@@ -108,6 +138,13 @@
 				line-height: 19px;
 				color: rgba(#fff, 0.5);
 				@include transition(color);
+				@include adaptive(767) {
+					display: block;
+					padding-top: 20px;
+					padding-bottom: 6px;
+					text-align: center;
+					font-size: 10px;
+				}
 			}
 
 			p {
@@ -117,6 +154,14 @@
 				line-height: 27px;
 				color: rgba(#fff, 0.5);
 				@include transition(color);
+				@include adaptive(1365) {
+					font-size: 18px;
+				}
+				@include adaptive(767) {
+					font-size: 14px;
+					line-height: 19px;
+					text-align: center;
+				}
 			}
 		}
 
@@ -144,6 +189,9 @@
 
 		&-body {
 			padding-bottom: 30px;
+			@include adaptive(767) {
+				padding-bottom: 0;
+			}
 		}
 
 		&-content {
@@ -154,10 +202,17 @@
 			display: flex;
 			justify-content: space-between;
 			padding-bottom: 60px;
+			@include adaptive(767) {
+				flex-wrap: wrap;
+				padding-bottom: 20px;
+			}
 
 			> div {
 				width: 100%;
 				max-width: calc((100% - 40px) / 2);
+				@include adaptive(767) {
+					max-width: 100%;
+				}
 			}
 
 			p {
@@ -166,6 +221,10 @@
 				font-size: 15px;
 				line-height: 26px;
 				color: #FFFFFF;
+				@include adaptive(767) {
+					font-size: 14px;
+					line-height: 24px;
+				}
 			}
 		}
 	}
@@ -204,20 +263,44 @@
 			font-size: 16px;
 			line-height: 22px;
 			color: #fff;
+			@include adaptive(767) {
+				font-size: 14px;
+				line-height: 19px;
+			}
 		}
 
 		&-wrapper {
+			position: relative;
 			display: flex;
 			padding: 40px 30px;
 			background-color: rgba(255, 255, 255, 0.04);
 			margin-bottom: 50px;
+			@include adaptive(1023) {
+				padding: 30px 20px;
+			}
+			@include adaptive(767) {
+				left: -15px;
+				flex-wrap: wrap;
+				width: calc(100% + 30px);
+				padding: 30px 15px;
+			}
 
 			> div {
 				position: relative;
 				width: 50%;
+				@include adaptive(767) {
+					width: 100%;
+				}
 
 				&:nth-of-type(1) {
 					padding-right: 60px;
+					@include adaptive(1023) {
+						padding-right: 30px;
+					}
+					@include adaptive(767) {
+						padding-right: 0;
+						padding-bottom: 15px;
+					}
 
 					&:after {
 						content: '';
@@ -227,10 +310,19 @@
 						width: 1px;
 						height: calc(100% - 60px);
 						background: rgba(#C4C4C4, 0.07);
+						@include adaptive(767) {
+							display: none;
+						}
 					}
 				}
 				&:nth-of-type(2) {
 					padding-left: 60px;
+					@include adaptive(1023) {
+						padding-left: 30px;
+					}
+					@include adaptive(767) {
+						padding-left: 0;
+					}
 				}
 			}
 		}
@@ -247,6 +339,16 @@
 			align-items: center;
 			justify-content: center;
 			padding-bottom: 30px;
+			@include adaptive(767) {
+				overflow-x: auto;
+				white-space: nowrap;
+				position: relative;
+				left: -15px;
+				padding-left: 20px;
+				padding-bottom: 20px;
+				display: block;
+				width: calc(100% + 30px);
+			}
 
 			a {
 				display: flex;
@@ -265,6 +367,26 @@
 				line-height: 19px;
 				text-align: center;
 				color: #FFFFFF;
+				@include adaptive(1023) {
+					padding-left: 25px;
+					padding-right: 25px;
+					margin-left: 5px;
+					margin-right: 5px;
+					font-size: 12px;
+				}
+				@include adaptive(767) {
+					display: inline-block;
+					height: 40px;
+					margin-left: 4px;
+					margin-right: 4px;
+					padding-left: 20px;
+					padding-right: 20px;
+					line-height: 40px;
+
+					&:last-of-type {
+						margin-right: 11px;
+					}
+				}
 
 				&.is-active {
 					background-color: #00B94F;
@@ -275,7 +397,9 @@
 		&-body {
 			display: flex;
 			min-height: 100%;
-			//align-items: center;
+			@include adaptive(767) {
+				flex-wrap: wrap;
+			}
 
 			> div {
 				&:nth-of-type(1) {
@@ -283,6 +407,18 @@
 					align-items: center;
 					justify-content: center;
 					width: 130px;
+					@include adaptive(1279) {
+						width: 100px;
+					}
+					@include adaptive(1023) {
+						width: 75px;
+					}
+					@include adaptive(767) {
+						order: 2;
+						width: 50%;
+						justify-content: flex-end;
+						padding-right: 10px;
+					}
 				}
 
 				&:nth-of-type(2) {
@@ -295,16 +431,42 @@
 					//padding: 60px;
 					background-color: #FFFFFF;
 					border-radius: 10px;
+					@include adaptive(767) {
+						order: 1;
+						flex: 100%;
+						flex-wrap: wrap;
+						margin-bottom: 30px;
+					}
 
 					> div {
 						width: 50%;
 						min-height: 100%;
+						@include adaptive(767) {
+							width: 100%;
+							min-height: unset;
+							height: auto;
+						}
 
 						&:nth-of-type(1) {
 							padding: 60px 30px 60px 60px;
+							@include adaptive(1279) {
+								padding: 30px 15px 30px 30px;
+							}
+							@include adaptive(767) {
+								padding: 30px;
+							}
 						}
 						&:nth-of-type(2) {
 							padding: 60px 60px 30px 60px;
+							@include adaptive(1279) {
+								padding: 30px 30px 15px 30px;
+							}
+							@include adaptive(1023) {
+								padding-left: 0;
+							}
+							@include adaptive(767) {
+								padding: 0 30px 30px;
+							}
 						}
 					}
 				}
@@ -314,6 +476,18 @@
 					align-items: center;
 					justify-content: center;
 					width: 130px;
+					@include adaptive(1279) {
+						width: 100px;
+					}
+					@include adaptive(1023) {
+						width: 75px;
+					}
+					@include adaptive(767) {
+						order: 3;
+						width: 50%;
+						justify-content: flex-start;
+						padding-left: 10px;
+					}
 				}
 			}
 		}
@@ -443,6 +617,15 @@
 						font-size: 30px;
 						line-height: 45px;
 						color: #121E31;
+						@include adaptive(1279) {
+							font-size: 26px;
+							line-height: 42px;
+						}
+						@include adaptive(767) {
+							padding-bottom: 10px;
+							font-size: 20px;
+							line-height: 30px;
+						}
 					}
 
 					p {
@@ -450,23 +633,38 @@
 						font-size: 15px;
 						line-height: 24px;
 						color: #636B73;
+						@include adaptive(1279) {
+							font-size: 14px;
+						}
+						@include adaptive(1023) {
+							padding-bottom: 32px;
+						}
+						@include adaptive(767) {
+							font-size: 13px;
+							line-height: 20px;
+						}
 					}
 
 					.c-btn {
+						@include adaptive(1023) {
+							width: 100%;
+						}
+
 						&:not(:last-of-type) {
 							margin-right: 10px;
+							@include adaptive(1023) {
+								margin-right: 0;
+								margin-bottom: 8px;
+							}
+						}
+
+						&__wrapper {
+							@include adaptive(1023) {
+								flex-direction: column;
+							}
 						}
 					}
 				}
-				//&:nth-of-type(2) {
-				//	img {
-				//		display: block;
-				//		max-width: 100%;
-				//		height: auto;
-				//		margin-left: auto;
-				//		margin-right: auto;
-				//	}
-				//}
 			}
 		}
 	}

@@ -5,6 +5,9 @@
 	position: relative;
 	padding-top: 150px;
 	background-color: #ffffff;
+	@include adaptive(767) {
+		padding-top: 0;
+	}
 }
 
 .copyright {

@@ -8,9 +8,16 @@
 	//min-height: 1343px;
 	padding-top: 100px;
 	padding-bottom: 100px;
+	@include adaptive(767) {
+		padding-top: 0;
+		padding-bottom: 50px;
+	}
 
 	&__title {
 		padding-bottom: 70px;
+		@include adaptive(767) {
+			padding-bottom: 40px;
+		}
 	}
 
 	&__subtitle {
@@ -19,6 +26,17 @@
 		font-size: 24px;
 		line-height: 32px;
 		color: #121E31;
+		@include adaptive(1365) {
+			font-size: 22px;
+			line-height: 30px;
+		}
+		@include adaptive(1023) {
+			font-size: 18px;
+			line-height: normal;
+		}
+		@include adaptive(767) {
+			padding-bottom: 25px;
+		}
 	}
 
 	&__desc {
@@ -28,6 +46,13 @@
 		font-size: 15px;
 		line-height: 26px;
 		color: #636B73;
+		@include adaptive(1023) {
+			font-size: 14px;
+			line-height: 22px;
+		}
+		@include adaptive(767) {
+			padding-bottom: 10px;
+		}
 	}
 
 	&__describe {
@@ -40,6 +65,17 @@
 		font-size: 16px;
 		line-height: 24px;
 		color: #636B73;
+		@include adaptive(1279) {
+			left: 0;
+			width: 100%;
+		}
+		@include adaptive(1023) {
+			font-size: 14px;
+			line-height: 24px;
+		}
+		@include adaptive(767) {
+			padding-top: 20px;
+		}
 	}
 
 	&__tab {
@@ -50,6 +86,16 @@
 		min-width: 1px;
 		max-width: 100%;
 		padding-left: 60px;
+		@include adaptive(1279) {
+			padding-left: 30px;
+		}
+		@include adaptive(1023) {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+		@include adaptive(767) {
+		  flex-direction: column;
+		}
 
 		&:after {
 			content: '';
@@ -105,14 +151,24 @@
 				border-radius: 10px;
 				background-color: rgba(#C4CFDD, 0.15);
 				@include transition(background-color);
+				@include adaptive(767) {
+					width: 40px;
+					height: 40px;
+				}
 
 				.icon-font {
 					color: rgba(#6E7E92, 1);
 					font-size: 15px;
 					@include transition(color);
+					@include adaptive(767) {
+						font-size: 12px;
+					}
 
 					&.icon-rocket {
 						font-size: 22px;
+						@include adaptive(767) {
+							font-size: 18px;
+						}
 					}
 				}
 			}
@@ -122,6 +178,9 @@
 				min-width: 1px;
 				max-width: 100%;
 				padding-left: 20px;
+				@include adaptive(767) {
+					padding-left: 0;
+				}
 			}
 
 			p {
@@ -131,6 +190,15 @@
 				line-height: 27px;
 				color: rgba(#6E7E92, 1);
 				@include transition(color);
+				@include adaptive(1365) {
+					font-size: 18px;
+				}
+				@include adaptive(767) {
+					padding-top: 10px;
+					font-size: 14px;
+					line-height: 19px;
+					text-align: center;
+				}
 			}
 		}
 
@@ -159,6 +227,10 @@
 		&-body {
 			padding-top: 40px;
 			padding-bottom: 30px;
+			@include adaptive(767) {
+				padding-top: 0;
+				padding-bottom: 0;
+			}
 		}
 
 		&-content {
@@ -183,6 +255,9 @@
 			border-radius: 10px;
 			box-shadow: 0px 4px 70px rgba(192, 218, 238, 0.5);
 			background-color: #FFFFFF;
+			@include adaptive(1023) {
+				padding: 20px;
+			}
 
 			> div {
 				&:nth-of-type(2) {
@@ -199,12 +274,24 @@
 			display: flex;
 			flex-wrap: wrap;
 			width: calc(100% + 20px);
+			@include adaptive(767) {
+				left: 0;
+				width: 100%;
+			  flex-wrap: wrap;
+			}
 
 			&-1 {
 				> div {
 					&:nth-of-type(1) {
 						width: calc(100% + 20px);
 						padding-left: 5px;
+						@include adaptive(1279) {
+							padding-left: 20px;
+						}
+						@include adaptive(767) {
+							width: 100%;
+							padding-left: 0;
+						}
 					}
 				}
 			}
@@ -214,6 +301,13 @@
 					&:nth-of-type(1) {
 						max-width: calc((100% / 3) * 2);
 						padding-left: 5px;
+						@include adaptive(1279) {
+							padding-left: 20px;
+						}
+						@include adaptive(767) {
+							max-width: 100%;
+							padding-left: 0;
+						}
 					}
 				}
 			}
@@ -223,6 +317,12 @@
 					&:nth-of-type(1) {
 						max-width: 100%;
 						padding-left: 5px;
+						@include adaptive(1279) {
+							padding-left: 20px;
+						}
+						@include adaptive(767) {
+							padding-left: 0;
+						}
 					}
 				}
 			}
@@ -233,6 +333,10 @@
 				max-width: calc(100% / 3);
 				padding-left: 20px;
 				padding-bottom: 20px;
+				@include adaptive(767) {
+					max-width: 100%;
+					padding-left: 0;
+				}
 			}
 		}
 
@@ -258,6 +362,10 @@
 			font-size: 18px;
 			line-height: 27px;
 			color: #121E31;
+			@include adaptive(767) {
+				font-size: 16px;
+				line-height: 24px;
+			}
 		}
 
 		&-desc {
@@ -266,6 +374,10 @@
 			font-size: 14px;
 			line-height: 22px;
 			color: #636B73;
+			@include adaptive(767) {
+				font-size: 13px;
+				line-height: 20px;
+			}
 		}
 
 		&-link {
@@ -274,6 +386,10 @@
 			font-size: 14px;
 			line-height: 22px;
 			color: #4097D9;
+			@include adaptive(767) {
+				font-size: 13px;
+				line-height: 20px;
+			}
 		}
 	}
 }

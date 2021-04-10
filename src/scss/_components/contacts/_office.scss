@@ -2,20 +2,14 @@
 
 .office {
 	padding-top: 50px;
-	padding-bottom: 80px;
-	@include adaptive(1023) {
-		padding-bottom: 50px;
-	}
+	padding-bottom: 50px;
 	@include adaptive(767) {
 		padding-bottom: 0;
 	}
 
 	&__wrapper {
 		&-1 {
-			padding-bottom: 140px;
-			@include adaptive(1023) {
-				padding-bottom: 100px;
-			}
+			padding-bottom: 80px;
 			@include adaptive(767) {
 				padding-bottom: 20px;
 			}
