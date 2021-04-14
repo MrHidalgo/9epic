@@ -10,6 +10,7 @@
 		visibility: hidden;
 		position: absolute;
 		left: -999999px;
+		height: 0;
 	}
 
 	[main-content-js] {
@@ -363,7 +364,6 @@
 
 .submain {
 	display: none;
-	padding-top: 120px;
 	padding-bottom: 50px;
 	@include adaptive(767) {
 		display: flex;
@@ -373,9 +373,16 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		padding-bottom: 50px;
+		height: 100vh;
+		min-height: 100vh;
+		max-height: 100vh;
+		padding-top: 80px;
 
 		&:not(:first-of-type) {
+			.submain__wrapper-left {
+				align-items: flex-start;
+			}
+			
 			.main__heading,
 			.main__label,
 			.main__desc {
@@ -388,10 +395,24 @@
 		}
 
 		&-left {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
 			width: 100%;
+			flex: 1;
+			min-height: 1px;
+			max-height: 100%;
 		}
 
 		&-right {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex: 1;
+			min-height: 1px;
+			max-height: 100%;
+
 			img,
 			video {
 				display: block;
@@ -407,6 +428,7 @@
 				width: 100%;
 
 				&__wrapper {
+					width: 100%;
 					padding-bottom: 35px;
 				}
 

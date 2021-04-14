@@ -3,7 +3,7 @@ ProjectTitle: 9epic
 PageList:
 - file: index.html
   titleName: Home
-  ready: 55
+  ready: 95
 - file: career.html
   titleName: Career
   ready: 95
