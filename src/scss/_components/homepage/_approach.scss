@@ -10,7 +10,7 @@
 	padding-bottom: 30px;
 	@include adaptive(767) {
 		padding-top: 50px;
-		padding-bottom: 50px;
+		padding-bottom: 0;
 	}
 
 	&__title {

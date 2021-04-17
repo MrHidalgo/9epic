@@ -3,14 +3,14 @@
 .office {
 	padding-top: 50px;
 	padding-bottom: 50px;
-	@include adaptive(767) {
+	@include adaptive(1279) {
 		padding-bottom: 0;
 	}
 
 	&__wrapper {
 		&-1 {
 			padding-bottom: 80px;
-			@include adaptive(767) {
+			@include adaptive(1279) {
 				padding-bottom: 20px;
 			}
 		}
@@ -70,6 +70,8 @@
 			img,
 			video {
 				@extend %imageResCoverAbs;
+				min-width: 100%;
+				*width: 100%;
 			}
 		}
 

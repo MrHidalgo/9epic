@@ -756,4 +756,14 @@ window.addEventListener('load', () => {
 	initNative();
 	
 	setTimeout(() => {$('#header').animate({opacity: 1});}, 500);
+	
+	$('body').on('click', function (e) {
+		const className = "[mobile-block-js], [hamburger-js]";
+		
+		if (!$(e.target).closest(className).length) {
+			$('[hamburger-js]').removeClass("is-active");
+			$('[mobile-block-js]').removeClass("is-open");
+			$('html, body').removeClass("is-hideScroll");
+		}
+	});
 });

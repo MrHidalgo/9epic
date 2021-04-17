@@ -168,9 +168,7 @@
 			> div {
 				&:nth-of-type(1) {
 					@include adaptive(767) {
-						width: 100%;
-						max-width: 70px;
-						padding-top: 5px;
+						display: none;
 					}
 				}
 				&:nth-of-type(2) {

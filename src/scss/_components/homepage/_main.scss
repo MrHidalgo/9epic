@@ -241,8 +241,8 @@
 			line-height: 82px;
 		}
 		@include adaptive(767) {
-			font-size: 24px;
-			line-height: 36px;
+			font-size: 30px;
+			line-height: 40px;
 			text-align: center;
 		}
 	}
@@ -267,8 +267,8 @@
 		}
 		@include adaptive(767) {
 			padding-bottom: 10px;
-			font-size: 16px;
-			line-height: 24px;
+			font-size: 18px;
+			line-height: 26px;
 			text-align: center;
 		}
 	}
@@ -317,8 +317,8 @@
 			line-height: 52px;
 		}
 		@include adaptive(767) {
-			font-size: 24px;
-			line-height: 36px;
+			font-size: 26px;
+			line-height: 40px;
 		}
 	}
 
@@ -333,8 +333,8 @@
 			line-height: 32px;
 		}
 		@include adaptive(767) {
-			font-size: 16px;
-			line-height: 24px;
+			font-size: 18px;
+			line-height: 26px;
 		}
 	}
 
@@ -364,6 +364,7 @@
 
 .submain {
 	display: none;
+	padding-top: 80px;
 	padding-bottom: 50px;
 	@include adaptive(767) {
 		display: flex;
@@ -373,10 +374,21 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		height: 100vh;
-		min-height: 100vh;
-		max-height: 100vh;
-		padding-top: 80px;
+		padding-top: 50px;
+		padding-bottom: 50px;
+
+		&.submain__wrapper-3,
+		&.submain__wrapper-5 {
+			.submain__wrapper-right {
+				overflow: hidden;
+
+				video {
+					position: relative;
+					width: calc(100% + 140px);
+					max-width: unset;
+				}
+			}
+		}
 
 		&:not(:first-of-type) {
 			.submain__wrapper-left {
@@ -400,18 +412,13 @@
 			align-items: center;
 			justify-content: center;
 			width: 100%;
-			flex: 1;
-			min-height: 1px;
-			max-height: 100%;
+			padding-bottom: 50px;
 		}
 
 		&-right {
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			flex: 1;
-			min-height: 1px;
-			max-height: 100%;
 
 			img,
 			video {

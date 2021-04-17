@@ -15,6 +15,10 @@ const initSmoothScroll = (
     let linkHref = $(e.currentTarget).attr('href'),
       headerHeight = $(".header").outerHeight() || 0,
       topHeightOffset = $(linkHref).offset().top - headerHeight;
+  
+    $('[hamburger-js]').removeClass("is-active");
+    $('[mobile-block-js]').removeClass("is-open");
+    $('html, body').removeClass("is-hideScroll");
 
     $('body, html').animate({
       scrollTop: topHeightOffset

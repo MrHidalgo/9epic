@@ -398,6 +398,7 @@
 			display: flex;
 			min-height: 100%;
 			@include adaptive(767) {
+				position: relative;
 				flex-wrap: wrap;
 			}
 
@@ -415,7 +416,12 @@
 					}
 					@include adaptive(767) {
 						order: 2;
-						width: 50%;
+						z-index: 10;
+						position: absolute;
+						top: 50%;
+						transform: translateY(-50%);
+						left: -15px;
+						width: 45px;
 						justify-content: flex-end;
 						padding-right: 10px;
 					}
@@ -435,7 +441,6 @@
 						order: 1;
 						flex: 100%;
 						flex-wrap: wrap;
-						margin-bottom: 30px;
 					}
 
 					> div {
@@ -453,7 +458,7 @@
 								padding: 30px 15px 30px 30px;
 							}
 							@include adaptive(767) {
-								padding: 30px;
+								padding: 30px 30px 0;
 							}
 						}
 						&:nth-of-type(2) {
@@ -484,7 +489,12 @@
 					}
 					@include adaptive(767) {
 						order: 3;
-						width: 50%;
+						z-index: 10;
+						position: absolute;
+						top: 50%;
+						transform: translateY(-50%);
+						right: -15px;
+						width: 45px;
 						justify-content: flex-start;
 						padding-left: 10px;
 					}
@@ -499,6 +509,10 @@
 			justify-content: center;
 			width: 100%;
 			height: 100%;
+			@include adaptive(767) {
+				padding-left: 50px !important;
+				padding-right: 50px !important;
+			}
 
 			img {
 				display: block;
@@ -521,15 +535,22 @@
 			justify-content: center;
 			width: 50px;
 			height: 50px;
-			box-shadow: 0px 10px 30px rgba(22, 58, 95, 0.05);
+			box-shadow: 0 10px 30px 0 rgba(22, 58, 95, 0.05);
 			border-radius: 50px;
 			background-color: #00b94f;
 			@include transition(background-color);
+			@include adaptive(767) {
+				width: 35px;
+				height: 35px;
+			}
 
 			&.swiper-button-disabled {
 				pointer-events: none;
 				background-color: rgba(#FFFFFF, 0.2);
 				@include transition(background-color);
+				@include adaptive(767) {
+					opacity: 0 !important;
+				}
 			}
 
 			&--prev {
@@ -545,6 +566,9 @@
 
 			.icon-font {
 				color: #ffffff;
+				@include adaptive(767) {
+					font-size: 12px;
+				}
 			}
 		}
 
@@ -640,6 +664,7 @@
 							padding-bottom: 32px;
 						}
 						@include adaptive(767) {
+							padding-bottom: 20px;
 							font-size: 13px;
 							line-height: 20px;
 						}
@@ -648,6 +673,9 @@
 					.c-btn {
 						@include adaptive(1023) {
 							width: 100%;
+						}
+						@include adaptive(767) {
+							height: 45px;
 						}
 
 						&:not(:last-of-type) {

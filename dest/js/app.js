@@ -119,6 +119,10 @@ var initSmoothScroll = function initSmoothScroll() {
 		    headerHeight = $(".header").outerHeight() || 0,
 		    topHeightOffset = $(linkHref).offset().top - headerHeight;
 
+		$('[hamburger-js]').removeClass("is-active");
+		$('[mobile-block-js]').removeClass("is-open");
+		$('html, body').removeClass("is-hideScroll");
+
 		$('body, html').animate({
 			scrollTop: topHeightOffset
 		}, animateSpeed);
@@ -820,4 +824,14 @@ window.addEventListener('load', function () {
 	setTimeout(function () {
 		$('#header').animate({ opacity: 1 });
 	}, 500);
+
+	$('body').on('click', function (e) {
+		var className = "[mobile-block-js], [hamburger-js]";
+
+		if (!$(e.target).closest(className).length) {
+			$('[hamburger-js]').removeClass("is-active");
+			$('[mobile-block-js]').removeClass("is-open");
+			$('html, body').removeClass("is-hideScroll");
+		}
+	});
 });
