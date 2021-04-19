@@ -755,7 +755,13 @@ const initNative = () => {
 window.addEventListener('load', () => {
 	initNative();
 	
-	setTimeout(() => {$('#header').animate({opacity: 1});}, 500);
+	setTimeout(() => {
+		$('#header').animate({opacity: 1});
+	
+		if($(window).width() < 768) {
+			$('#submain video, #submain img').animate({opacity: 1});
+		}
+	}, 500);
 	
 	$('body').on('click', function (e) {
 		const className = "[mobile-block-js], [hamburger-js]";

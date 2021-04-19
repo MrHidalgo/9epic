@@ -61,6 +61,7 @@
 		&-head {
 			overflow: hidden;
 			position: relative;
+			width: 100%;
 			height: 400px;
 			@include adaptive(1023) {
 				height: 300px;
@@ -69,9 +70,11 @@
 			iframe,
 			img,
 			video {
-				@extend %imageResCoverAbs;
+				position: relative;
+				display: block;
+				width: 100%;
 				min-width: 100%;
-				*width: 100%;
+				height: 100%;
 			}
 		}
 

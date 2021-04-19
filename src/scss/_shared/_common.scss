@@ -7,6 +7,7 @@
 	box-shadow: 0 -8px 30px 0 rgba(#000, 0.1);
 	background-color: #ffffff;
 	@include adaptive(767) {
+		box-shadow: none;
 		padding-top: 0;
 	}
 }

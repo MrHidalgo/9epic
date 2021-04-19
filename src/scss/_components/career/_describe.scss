@@ -1,7 +1,6 @@
 // SECTION :: START
 
 .describe {
-	padding-top: 50px;
 	padding-bottom: 100px;
 	@include adaptive(767) {
 		padding-bottom: 0;

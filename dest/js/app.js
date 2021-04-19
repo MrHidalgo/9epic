@@ -115,8 +115,19 @@ var initSmoothScroll = function initSmoothScroll() {
 	$(btnName).on("click", function (e) {
 		if ($(e.currentTarget).attr('href').length === 1) return;
 
-		var linkHref = $(e.currentTarget).attr('href'),
-		    headerHeight = $(".header").outerHeight() || 0,
+		var linkHref = '';
+
+		if ($(window).width() < 768) {
+			if ($(e.currentTarget).attr('href') === '#main') {
+				linkHref = $(e.currentTarget).attr('data-href');
+			} else {
+				linkHref = $(e.currentTarget).attr('href');
+			}
+		} else {
+			linkHref = $(e.currentTarget).attr('href');
+		}
+
+		var headerHeight = $(".header").outerHeight() || 0,
 		    topHeightOffset = $(linkHref).offset().top - headerHeight;
 
 		$('[hamburger-js]').removeClass("is-active");
@@ -823,6 +834,10 @@ window.addEventListener('load', function () {
 
 	setTimeout(function () {
 		$('#header').animate({ opacity: 1 });
+
+		if ($(window).width() < 768) {
+			$('#submain video, #submain img').animate({ opacity: 1 });
+		}
 	}, 500);
 
 	$('body').on('click', function (e) {
