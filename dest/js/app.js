@@ -110,7 +110,7 @@ var initPreventBehavior = function initPreventBehavior() {
  */
 var initSmoothScroll = function initSmoothScroll() {
 	var btnName = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "[anchor-js]";
-	var animateSpeed = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1000;
+	var animateSpeed = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 550;
 
 	$(btnName).on("click", function (e) {
 		if ($(e.currentTarget).attr('href').length === 1) return;
@@ -136,7 +136,9 @@ var initSmoothScroll = function initSmoothScroll() {
 
 		$('body, html').animate({
 			scrollTop: topHeightOffset
-		}, animateSpeed);
+		}, 250);
+
+		return false;
 	});
 };
 
@@ -416,13 +418,16 @@ var homepageMainScrollAnimation = function homepageMainScrollAnimation() {
 			borderRadius: 12,
 			boxShadow: '0px 5px 15px rgba(64, 62, 61, 0.3)', ease: Linear.easeNone });
 
+		var sceneOffset1 = $(window).outerHeight(true) / 2 + 10;
+		$(window).on('resize', function () {
+			sceneOffset1 = $(window).outerHeight(true) / 2 + 10;
+		});
+
 		scene1 = new ScrollMagic.Scene({
 			triggerElement: ".main__wrapper-5",
-			offset: $(window).outerHeight(true) / 2 + 10,
+			offset: sceneOffset1,
 			duration: $('.main__wrapper-5').outerHeight(true) - ($(window).outerHeight(true) / 2 + 10)
-		}).setTween(tween1)
-		// .addIndicators({name: 'video'})
-		.addTo(controller1);
+		}).setTween(tween1).addIndicators({ name: 'video' }).addTo(controller1);
 	}
 
 	if (document.documentElement.clientWidth >= 768) {
@@ -678,13 +683,16 @@ var homepageMainScrollAnimation = function homepageMainScrollAnimation() {
 
 	tweenTXT5.fromTo('.main__wrapper-4 .main__wrapper-left', 1, { opacity: 1 }, { opacity: 0, y: '-100%', ease: Linear.easeNone }, '-=0').fromTo('.main__wrapper-5 .main__wrapper-left', 1, { opacity: 0 }, { opacity: 1, y: 0, ease: Linear.easeNone }, '-=1');
 
+	var sceneOffset2 = $(window).outerHeight(true) / 2;
+	$(window).on('resize', function () {
+		sceneOffset2 = $(window).outerHeight(true) / 2;
+	});
+
 	sceneTXT1 = new ScrollMagic.Scene({
 		triggerElement: ".main__wrapper-5",
-		offset: wrapperNode5H / 4,
+		offset: $(window).outerHeight(true) / 2,
 		duration: wrapperNode5H + wrapperNode5H / 1.5
-	}).setTween(tweenTXT1)
-	// .addIndicators({name: '1 text'})
-	.addTo(controllerTXT1);
+	}).setTween(tweenTXT1).addIndicators({ name: '1 text' }).addTo(controllerTXT1);
 
 	sceneTXT2 = new ScrollMagic.Scene({
 		triggerElement: ".main__wrapper-4",
@@ -849,4 +857,12 @@ window.addEventListener('load', function () {
 			$('html, body').removeClass("is-hideScroll");
 		}
 	});
+});
+
+window.addEventListener('resize', function () {
+	setTimeout(function () {
+		if ($(window).width() < 768) {
+			$('#submain video, #submain img').animate({ opacity: 1 });
+		}
+	}, 500);
 });

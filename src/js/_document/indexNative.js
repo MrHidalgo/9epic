@@ -230,13 +230,18 @@ const homepageMainScrollAnimation =() => {
 			)
 		;
 		
+		let sceneOffset1 = ($(window).outerHeight(true) / 2) + 10;
+		$(window).on('resize', () => {
+			sceneOffset1 = ($(window).outerHeight(true) / 2) + 10;
+		});
+		
 		scene1 = new ScrollMagic.Scene({
 			triggerElement: ".main__wrapper-5",
-			offset: ($(window).outerHeight(true) / 2) + 10,
+			offset: sceneOffset1,
 			duration: $('.main__wrapper-5').outerHeight(true) - (($(window).outerHeight(true) / 2) + 10)
 		})
 			.setTween(tween1)
-			// .addIndicators({name: 'video'})
+			.addIndicators({name: 'video'})
 			.addTo(controller1);
 	}
 	
@@ -590,13 +595,18 @@ const homepageMainScrollAnimation =() => {
 		.fromTo('.main__wrapper-4 .main__wrapper-left', 1, {opacity: 1}, {opacity: 0, y: '-100%', ease: Linear.easeNone}, '-=0')
 		.fromTo('.main__wrapper-5 .main__wrapper-left', 1, {opacity: 0}, {opacity: 1, y: 0, ease: Linear.easeNone}, '-=1');
 	
+	let sceneOffset2 = $(window).outerHeight(true) / 2;
+	$(window).on('resize', () => {
+		sceneOffset2 = $(window).outerHeight(true) / 2;
+	});
+	
 	sceneTXT1 = new ScrollMagic.Scene({
 		triggerElement: ".main__wrapper-5",
-		offset: (wrapperNode5H / 4),
+		offset: $(window).outerHeight(true) / 2,
 		duration: wrapperNode5H + (wrapperNode5H / 1.5)
 	})
 		.setTween(tweenTXT1)
-		// .addIndicators({name: '1 text'})
+		.addIndicators({name: '1 text'})
 		.addTo(controllerTXT1);
 	
 	sceneTXT2 = new ScrollMagic.Scene({
@@ -772,4 +782,12 @@ window.addEventListener('load', () => {
 			$('html, body').removeClass("is-hideScroll");
 		}
 	});
+});
+
+window.addEventListener('resize', () => {
+	setTimeout(() => {
+		if($(window).width() < 768) {
+			$('#submain video, #submain img').animate({opacity: 1});
+		}
+	}, 500);
 });

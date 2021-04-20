@@ -5,7 +5,7 @@
  *
  * @description Smooth transition to anchors to the block.
  */
-const initSmoothScroll = (btnName = "[anchor-js]", animateSpeed = 1000) => {
+const initSmoothScroll = (btnName = "[anchor-js]", animateSpeed = 550) => {
   $(btnName).on("click", (e) => {
     if($(e.currentTarget).attr('href').length === 1) return;
   
@@ -30,6 +30,8 @@ const initSmoothScroll = (btnName = "[anchor-js]", animateSpeed = 1000) => {
 
     $('body, html').animate({
       scrollTop: topHeightOffset
-    }, animateSpeed);
+    }, 250);
+    
+    return false;
   });
 };
