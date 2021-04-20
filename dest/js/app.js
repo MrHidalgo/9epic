@@ -113,32 +113,43 @@ var initSmoothScroll = function initSmoothScroll() {
 	var animateSpeed = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 550;
 
 	$(btnName).on("click", function (e) {
-		if ($(e.currentTarget).attr('href').length === 1) return;
+		// if($(e.currentTarget).attr('href').length === 1) return;
+		//
+		// let linkHref = $(e.currentTarget).attr('href');
+		//
+		// if($(window).width() < 768) {
+		//   if($(e.currentTarget).attr('href') === '#main') {
+		//     linkHref = $(e.currentTarget).attr('data-href');
+		//   } else {
+		//     linkHref = $(e.currentTarget).attr('href');
+		//   }
+		// } else {
+		//   linkHref = $(e.currentTarget).attr('href');
+		// }
+		//
+		// let headerHeight = $(".header").outerHeight() || 0,
+		//   topHeightOffset = $(linkHref).offset().top - headerHeight;
+		//
+		// $('body, html').animate({
+		//   scrollTop: topHeightOffset
+		// }, 1000);
 
-		var linkHref = '';
+		// return false;
 
-		if ($(window).width() < 768) {
-			if ($(e.currentTarget).attr('href') === '#main') {
-				linkHref = $(e.currentTarget).attr('data-href');
-			} else {
-				linkHref = $(e.currentTarget).attr('href');
-			}
-		} else {
-			linkHref = $(e.currentTarget).attr('href');
-		}
-
-		var headerHeight = $(".header").outerHeight() || 0,
-		    topHeightOffset = $(linkHref).offset().top - headerHeight;
+		var scroll = new SmoothScroll('a[href*="#"]', {
+			header: '#header',
+			ignore: '.hamburger',
+			topOnEmptyHash: false,
+			speed: 2000,
+			easing: 'Linear',
+			updateURL: false,
+			popstate: false,
+			speedAsDuration: true
+		});
 
 		$('[hamburger-js]').removeClass("is-active");
 		$('[mobile-block-js]').removeClass("is-open");
 		$('html, body').removeClass("is-hideScroll");
-
-		$('body, html').animate({
-			scrollTop: topHeightOffset
-		}, 250);
-
-		return false;
 	});
 };
 
@@ -427,7 +438,9 @@ var homepageMainScrollAnimation = function homepageMainScrollAnimation() {
 			triggerElement: ".main__wrapper-5",
 			offset: sceneOffset1,
 			duration: $('.main__wrapper-5').outerHeight(true) - ($(window).outerHeight(true) / 2 + 10)
-		}).setTween(tween1).addIndicators({ name: 'video' }).addTo(controller1);
+		}).setTween(tween1)
+		// .addIndicators({name: 'video'})
+		.addTo(controller1);
 	}
 
 	if (document.documentElement.clientWidth >= 768) {
@@ -692,7 +705,9 @@ var homepageMainScrollAnimation = function homepageMainScrollAnimation() {
 		triggerElement: ".main__wrapper-5",
 		offset: $(window).outerHeight(true) / 2,
 		duration: wrapperNode5H + wrapperNode5H / 1.5
-	}).setTween(tweenTXT1).addIndicators({ name: '1 text' }).addTo(controllerTXT1);
+	}).setTween(tweenTXT1)
+	// .addIndicators({name: '1 text'})
+	.addTo(controllerTXT1);
 
 	sceneTXT2 = new ScrollMagic.Scene({
 		triggerElement: ".main__wrapper-4",

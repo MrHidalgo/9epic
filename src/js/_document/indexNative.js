@@ -241,7 +241,7 @@ const homepageMainScrollAnimation =() => {
 			duration: $('.main__wrapper-5').outerHeight(true) - (($(window).outerHeight(true) / 2) + 10)
 		})
 			.setTween(tween1)
-			.addIndicators({name: 'video'})
+			// .addIndicators({name: 'video'})
 			.addTo(controller1);
 	}
 	
@@ -606,7 +606,7 @@ const homepageMainScrollAnimation =() => {
 		duration: wrapperNode5H + (wrapperNode5H / 1.5)
 	})
 		.setTween(tweenTXT1)
-		.addIndicators({name: '1 text'})
+		// .addIndicators({name: '1 text'})
 		.addTo(controllerTXT1);
 	
 	sceneTXT2 = new ScrollMagic.Scene({
