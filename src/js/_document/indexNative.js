@@ -423,8 +423,8 @@ const homepageMainScrollAnimation =() => {
 		wrapperNode4H = wrapperNode4.outerHeight(true);
 	
 	tween4
-		.fromTo('#video2Wrapper', 0.5,
-			{opacity: 1}, {opacity: 0, ease: Power1.easeInOut}, '-=0'
+		.to('#video2Wrapper', 0.5,
+			{opacity: 0, ease: Power1.easeInOut}, '-=0'
 		)
 	;
 	

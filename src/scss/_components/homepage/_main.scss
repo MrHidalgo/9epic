@@ -74,6 +74,8 @@
 					}
 
 					&#video2Wrapper {
+						//opacity: 0;
+
 						> div {
 							position: absolute;
 							left: 0;
@@ -81,11 +83,13 @@
 							width: 100%;
 							margin-left: auto;
 							margin-right: auto;
+							padding: 0 50px;
 							transform: translate(11px, 35px);
 							@include adaptive(1279) {
 								left: -35px;
 								right: -35px;
 								width: calc(100% + 70px);
+								padding: 0 25px;
 								transform: translate(11px, 33px);
 							}
 						}

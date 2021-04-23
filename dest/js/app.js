@@ -568,7 +568,7 @@ var homepageMainScrollAnimation = function homepageMainScrollAnimation() {
 	var wrapperNode4 = $('.main__wrapper-2'),
 	    wrapperNode4H = wrapperNode4.outerHeight(true);
 
-	tween4.fromTo('#video2Wrapper', 0.5, { opacity: 1 }, { opacity: 0, ease: Power1.easeInOut }, '-=0');
+	tween4.to('#video2Wrapper', 0.5, { opacity: 0, ease: Power1.easeInOut }, '-=0');
 
 	tween41.fromTo('#anim4-bg rect', 0.5, {
 		opacity: 0,
