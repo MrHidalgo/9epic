@@ -144,6 +144,13 @@ var initSmoothScroll = function initSmoothScroll() {
 			easing: 'Linear',
 			updateURL: false,
 			popstate: false,
+			offset: function offset(anchor, toggle) {
+				if ($(toggle).attr('href') === '#solution') {
+					return -100;
+				} else {
+					return -100;
+				}
+			},
 			speedAsDuration: true
 		});
 
@@ -820,6 +827,20 @@ var dashboardCB = function dashboardCB() {
 		}
 	});
 };
+
+var hashPartners = function hashPartners() {
+	var hashName = window.location.hash;
+
+	switch (hashName) {
+		case '#BuiltRight':
+		case '#HeadStart':
+		case '#ZeroFriction':
+			$('#header .header__nav a[href="#solution"]')[0].click();
+			break;
+		default:
+			break;
+	}
+};
 /*
 * CALLBACK :: end
 * ============================================= */
@@ -849,6 +870,7 @@ var initNative = function initNative() {
 	approachCollapse();
 	passwordPreview();
 	dashboardCB();
+	hashPartners();
 	// ==========================================
 };
 

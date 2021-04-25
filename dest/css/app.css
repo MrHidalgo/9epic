@@ -2859,20 +2859,20 @@ picture {
   padding-bottom: 30px;
 }
 
-/* line 416, src/scss/_components/homepage/_main.scss */
-.submain__wrapper.submain__wrapper-3 .submain__wrapper-right, .submain__wrapper.submain__wrapper-5 .submain__wrapper-right {
+/* line 415, src/scss/_components/homepage/_main.scss */
+.submain__wrapper.submain__wrapper-5 .submain__wrapper-right {
   overflow: hidden;
 }
 
-/* line 419, src/scss/_components/homepage/_main.scss */
-.submain__wrapper.submain__wrapper-3 .submain__wrapper-right video, .submain__wrapper.submain__wrapper-5 .submain__wrapper-right video {
+/* line 418, src/scss/_components/homepage/_main.scss */
+.submain__wrapper.submain__wrapper-5 .submain__wrapper-right video {
   position: relative;
   width: -webkit-calc(100% + 140px);
   width: calc(100% + 140px);
   max-width: unset;
 }
 
-/* line 428, src/scss/_components/homepage/_main.scss */
+/* line 427, src/scss/_components/homepage/_main.scss */
 .submain__wrapper:not(:first-of-type) .submain__wrapper-left {
   -webkit-box-align: start;
   -webkit-align-items: flex-start;
@@ -2880,19 +2880,19 @@ picture {
           align-items: flex-start;
 }
 
-/* line 432, src/scss/_components/homepage/_main.scss */
+/* line 431, src/scss/_components/homepage/_main.scss */
 .submain__wrapper:not(:first-of-type) .main__heading,
 .submain__wrapper:not(:first-of-type) .main__label,
 .submain__wrapper:not(:first-of-type) .main__desc {
   text-align: left;
 }
 
-/* line 438, src/scss/_components/homepage/_main.scss */
+/* line 437, src/scss/_components/homepage/_main.scss */
 .submain__wrapper:not(:first-of-type) .main__desc {
   max-width: 100%;
 }
 
-/* line 443, src/scss/_components/homepage/_main.scss */
+/* line 442, src/scss/_components/homepage/_main.scss */
 .submain__wrapper-left {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2915,12 +2915,12 @@ picture {
   padding-bottom: 50px;
 }
 
-/* line 452, src/scss/_components/homepage/_main.scss */
+/* line 451, src/scss/_components/homepage/_main.scss */
 .submain__wrapper-left .c-btn__wrapper {
   padding-bottom: 0 !important;
 }
 
-/* line 458, src/scss/_components/homepage/_main.scss */
+/* line 457, src/scss/_components/homepage/_main.scss */
 .submain__wrapper-right {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2936,7 +2936,7 @@ picture {
           justify-content: center;
 }
 
-/* line 463, src/scss/_components/homepage/_main.scss */
+/* line 462, src/scss/_components/homepage/_main.scss */
 .submain__wrapper-right img,
 .submain__wrapper-right video {
   opacity: 0;
@@ -2948,16 +2948,16 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 474, src/scss/_components/homepage/_main.scss */
+  /* line 473, src/scss/_components/homepage/_main.scss */
   .submain__wrapper .c-btn {
     width: 100%;
   }
-  /* line 478, src/scss/_components/homepage/_main.scss */
+  /* line 477, src/scss/_components/homepage/_main.scss */
   .submain__wrapper .c-btn__wrapper {
     width: 100%;
     padding-bottom: 35px;
   }
-  /* line 483, src/scss/_components/homepage/_main.scss */
+  /* line 482, src/scss/_components/homepage/_main.scss */
   .submain__wrapper .c-btn span {
     font-size: 14px;
   }
@@ -4757,7 +4757,7 @@ picture {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-top: 50px;
+  padding-top: 100px;
   padding-bottom: 30px;
 }
 

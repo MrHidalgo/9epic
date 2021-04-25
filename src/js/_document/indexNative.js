@@ -728,6 +728,21 @@ const dashboardCB = () => {
 		}
 	});
 };
+
+
+const hashPartners = () => {
+	const hashName = window.location.hash;
+	
+	switch (hashName) {
+		case '#BuiltRight' :
+		case '#HeadStart' :
+		case '#ZeroFriction' :
+			$('#header .header__nav a[href="#solution"]')[0].click();
+			break;
+		default:
+			break;
+	}
+};
 /*
 * CALLBACK :: end
 * ============================================= */
@@ -758,6 +773,7 @@ const initNative = () => {
 	approachCollapse();
 	passwordPreview();
 	dashboardCB();
+	hashPartners();
 	// ==========================================
 };
 
