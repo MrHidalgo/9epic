@@ -3605,7 +3605,7 @@ picture {
 @media screen and (max-width: 767px) {
   /* line 3, src/scss/_components/homepage/_solution.scss */
   .solution {
-    padding-top: 50px;
+    padding-top: 80px;
     padding-bottom: 50px;
   }
 }
@@ -4764,7 +4764,7 @@ picture {
 @media screen and (max-width: 767px) {
   /* line 3, src/scss/_components/homepage/_approach.scss */
   .approach {
-    padding-top: 50px;
+    padding-top: 80px;
     padding-bottom: 0;
   }
 }

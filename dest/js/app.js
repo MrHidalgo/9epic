@@ -146,9 +146,17 @@ var initSmoothScroll = function initSmoothScroll() {
 			popstate: false,
 			offset: function offset(anchor, toggle) {
 				if ($(toggle).attr('href') === '#solution') {
-					return -100;
+					if ($(window).width() > 767) {
+						return -100;
+					} else {
+						return -80;
+					}
 				} else {
-					return -100;
+					if ($(window).width() > 767) {
+						return -100;
+					} else {
+						return -80;
+					}
 				}
 			},
 			speedAsDuration: true
@@ -829,13 +837,24 @@ var dashboardCB = function dashboardCB() {
 };
 
 var hashPartners = function hashPartners() {
+	function helperClick() {
+		$('#header .header__nav a[href="#solution"]')[0].click();
+	}
+
 	var hashName = window.location.hash;
 
 	switch (hashName) {
 		case '#BuiltRight':
+			helperClick();
+			$('.solution__tab[data-tab-id="0"]').click();
+			break;
 		case '#HeadStart':
+			helperClick();
+			$('.solution__tab[data-tab-id="1"]').click();
+			break;
 		case '#ZeroFriction':
-			$('#header .header__nav a[href="#solution"]')[0].click();
+			helperClick();
+			$('.solution__tab[data-tab-id="2"]').click();
 			break;
 		default:
 			break;

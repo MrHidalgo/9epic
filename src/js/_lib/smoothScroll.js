@@ -40,9 +40,17 @@ const initSmoothScroll = (btnName = "[anchor-js]", animateSpeed = 550) => {
       popstate: false,
       offset: function (anchor, toggle) {
         if($(toggle).attr('href') === '#solution') {
-          return -100;
+          if($(window).width() > 767) {
+            return -100;
+          } else {
+            return -80;
+          }
         } else {
-          return -100;
+          if($(window).width() > 767) {
+            return -100;
+          } else {
+            return -80;
+          }
         }
       },
       speedAsDuration: true

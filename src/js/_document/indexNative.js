@@ -731,13 +731,24 @@ const dashboardCB = () => {
 
 
 const hashPartners = () => {
+	function helperClick() {
+		$('#header .header__nav a[href="#solution"]')[0].click();
+	}
+	
 	const hashName = window.location.hash;
 	
 	switch (hashName) {
-		case '#BuiltRight' :
-		case '#HeadStart' :
-		case '#ZeroFriction' :
-			$('#header .header__nav a[href="#solution"]')[0].click();
+		case '#BuiltRight':
+			helperClick();
+			$('.solution__tab[data-tab-id="0"]').click();
+			break;
+		case '#HeadStart':
+			helperClick();
+			$('.solution__tab[data-tab-id="1"]').click();
+			break;
+		case '#ZeroFriction':
+			helperClick();
+			$('.solution__tab[data-tab-id="2"]').click();
 			break;
 		default:
 			break;
