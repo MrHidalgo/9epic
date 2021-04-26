@@ -13,7 +13,7 @@
 }
 
 /* line 26, src/scss/_utilities/_extend.scss */
-.copyright__text, .c-btn span, .menu__wrapper-bottom a span, .sign__form-field label, .sign__form-field input, .sign__form-link, .sign__form-info, .sign__form-confirm, .sign__form-back, .career__wrapper-2 p, .career__slogan, .describe__block-desc p, .contacts__wrapper-2 p, .contacts__slogan, .office__block-body span, .office__box-desc, .dashboard__wrapper-left-bottom a span, .dashboard__nav a span, .dashboard__indicator-badge span, .dashboard__indicator-project p, .dashboard__indicator-email span, .dashboard__box.dashboard__box--add > div p, .dashboard__box > div, .dashboard__account-details, .dashboard__switch, .nfound__desc, .nfound__btn {
+.copyright__text, .c-btn span, .footer__form-message > div p, .menu__wrapper-bottom a span, .sign__form-field label, .sign__form-field input, .sign__form-link, .sign__form-info, .sign__form-confirm, .sign__form-back, .career__wrapper-2 p, .career__slogan, .describe__block-desc p, .contacts__wrapper-2 p, .contacts__slogan, .office__block-body span, .office__box-desc, .dashboard__wrapper-left-bottom a span, .dashboard__nav a span, .dashboard__indicator-badge span, .dashboard__indicator-project p, .dashboard__indicator-email span, .dashboard__box.dashboard__box--add > div p, .dashboard__box > div, .dashboard__account-details, .dashboard__switch, .nfound__desc, .nfound__btn {
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -180,7 +180,7 @@
 }
 
 /* line 23, src/scss/_generated/_spriteFont.scss */
-.icon-arrow:before, .icon-build:before, .icon-category:before, .icon-chat:before, .icon-circle-checked:before, .icon-cloud-check:before, .icon-cloud:before, .icon-corner:before, .icon-database:before, .icon-document:before, .icon-eye:before, .icon-governance:before, .icon-list-dots:before, .icon-logout:before, .icon-message:before, .icon-pen:before, .icon-plus:before, .icon-profile:before, .icon-right-arrow:before, .icon-rocket:before, .icon-security:before, .icon-square-dashed:before, .icon-swap:before, .icon-terminal:before, .icon-work:before {
+.icon-arrow:before, .icon-build:before, .icon-category:before, .icon-chat:before, .icon-checked:before, .icon-circle-checked:before, .icon-close:before, .icon-cloud-check:before, .icon-cloud:before, .icon-corner:before, .icon-database:before, .icon-document:before, .icon-eye:before, .icon-governance:before, .icon-list-dots:before, .icon-logout:before, .icon-message:before, .icon-pen:before, .icon-plus:before, .icon-profile:before, .icon-right-arrow:before, .icon-rocket:before, .icon-security:before, .icon-square-dashed:before, .icon-swap:before, .icon-terminal:before, .icon-work:before {
   font-family: "iconFont", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -191,129 +191,139 @@
   text-transform: none;
 }
 
-/* line 110, src/scss/_generated/_spriteFont.scss */
+/* line 116, src/scss/_generated/_spriteFont.scss */
 .icon-arrow:before {
   content: "";
 }
 
-/* line 110, src/scss/_generated/_spriteFont.scss */
+/* line 116, src/scss/_generated/_spriteFont.scss */
 .icon-build:before {
   content: "";
 }
 
-/* line 110, src/scss/_generated/_spriteFont.scss */
+/* line 116, src/scss/_generated/_spriteFont.scss */
 .icon-category:before {
   content: "";
 }
 
-/* line 110, src/scss/_generated/_spriteFont.scss */
+/* line 116, src/scss/_generated/_spriteFont.scss */
 .icon-chat:before {
   content: "";
 }
 
-/* line 110, src/scss/_generated/_spriteFont.scss */
-.icon-circle-checked:before {
+/* line 116, src/scss/_generated/_spriteFont.scss */
+.icon-checked:before {
   content: "";
 }
 
-/* line 110, src/scss/_generated/_spriteFont.scss */
-.icon-cloud-check:before {
+/* line 116, src/scss/_generated/_spriteFont.scss */
+.icon-circle-checked:before {
   content: "";
 }
 
-/* line 110, src/scss/_generated/_spriteFont.scss */
-.icon-cloud:before {
+/* line 116, src/scss/_generated/_spriteFont.scss */
+.icon-close:before {
   content: "";
 }
 
-/* line 110, src/scss/_generated/_spriteFont.scss */
-.icon-corner:before {
+/* line 116, src/scss/_generated/_spriteFont.scss */
+.icon-cloud-check:before {
   content: "";
 }
 
-/* line 110, src/scss/_generated/_spriteFont.scss */
-.icon-database:before {
+/* line 116, src/scss/_generated/_spriteFont.scss */
+.icon-cloud:before {
   content: "";
 }
 
-/* line 110, src/scss/_generated/_spriteFont.scss */
-.icon-document:before {
+/* line 116, src/scss/_generated/_spriteFont.scss */
+.icon-corner:before {
   content: "";
 }
 
-/* line 110, src/scss/_generated/_spriteFont.scss */
-.icon-eye:before {
+/* line 116, src/scss/_generated/_spriteFont.scss */
+.icon-database:before {
   content: "";
 }
 
-/* line 110, src/scss/_generated/_spriteFont.scss */
-.icon-governance:before {
+/* line 116, src/scss/_generated/_spriteFont.scss */
+.icon-document:before {
   content: "";
 }
 
-/* line 110, src/scss/_generated/_spriteFont.scss */
-.icon-list-dots:before {
+/* line 116, src/scss/_generated/_spriteFont.scss */
+.icon-eye:before {
   content: "";
 }
 
-/* line 110, src/scss/_generated/_spriteFont.scss */
-.icon-logout:before {
+/* line 116, src/scss/_generated/_spriteFont.scss */
+.icon-governance:before {
   content: "";
 }
 
-/* line 110, src/scss/_generated/_spriteFont.scss */
-.icon-message:before {
+/* line 116, src/scss/_generated/_spriteFont.scss */
+.icon-list-dots:before {
   content: "";
 }
 
-/* line 110, src/scss/_generated/_spriteFont.scss */
-.icon-pen:before {
+/* line 116, src/scss/_generated/_spriteFont.scss */
+.icon-logout:before {
   content: "";
 }
 
-/* line 110, src/scss/_generated/_spriteFont.scss */
-.icon-plus:before {
+/* line 116, src/scss/_generated/_spriteFont.scss */
+.icon-message:before {
   content: "";
 }
 
-/* line 110, src/scss/_generated/_spriteFont.scss */
-.icon-profile:before {
+/* line 116, src/scss/_generated/_spriteFont.scss */
+.icon-pen:before {
   content: "";
 }
 
-/* line 110, src/scss/_generated/_spriteFont.scss */
-.icon-right-arrow:before {
+/* line 116, src/scss/_generated/_spriteFont.scss */
+.icon-plus:before {
   content: "";
 }
 
-/* line 110, src/scss/_generated/_spriteFont.scss */
-.icon-rocket:before {
+/* line 116, src/scss/_generated/_spriteFont.scss */
+.icon-profile:before {
   content: "";
 }
 
-/* line 110, src/scss/_generated/_spriteFont.scss */
-.icon-security:before {
+/* line 116, src/scss/_generated/_spriteFont.scss */
+.icon-right-arrow:before {
   content: "";
 }
 
-/* line 110, src/scss/_generated/_spriteFont.scss */
-.icon-square-dashed:before {
+/* line 116, src/scss/_generated/_spriteFont.scss */
+.icon-rocket:before {
   content: "";
 }
 
-/* line 110, src/scss/_generated/_spriteFont.scss */
-.icon-swap:before {
+/* line 116, src/scss/_generated/_spriteFont.scss */
+.icon-security:before {
   content: "";
 }
 
-/* line 110, src/scss/_generated/_spriteFont.scss */
-.icon-terminal:before {
+/* line 116, src/scss/_generated/_spriteFont.scss */
+.icon-square-dashed:before {
   content: "";
 }
 
-/* line 110, src/scss/_generated/_spriteFont.scss */
-.icon-work:before {
+/* line 116, src/scss/_generated/_spriteFont.scss */
+.icon-swap:before {
   content: "";
+}
+
+/* line 116, src/scss/_generated/_spriteFont.scss */
+.icon-terminal:before {
+  content: "";
+}
+
+/* line 116, src/scss/_generated/_spriteFont.scss */
+.icon-work:before {
+  content: "";
 }
 
 /* line 1, src/scss/_shared/_main-setting-reset.scss */
@@ -1818,31 +1828,50 @@ picture {
 
 /* line 274, src/scss/_components/_footer.scss */
 .footer__form-field.footer__form-field--btn {
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding-top: 15px;
 }
 
-/* line 279, src/scss/_components/_footer.scss */
+@media screen and (max-width: 767px) {
+  /* line 274, src/scss/_components/_footer.scss */
+  .footer__form-field.footer__form-field--btn {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+/* line 284, src/scss/_components/_footer.scss */
 .footer__form-field .c-btn {
   min-width: 140px;
 }
 
 @media screen and (max-width: 767px) {
-  /* line 279, src/scss/_components/_footer.scss */
+  /* line 284, src/scss/_components/_footer.scss */
   .footer__form-field .c-btn {
     width: 100%;
     max-width: 100%;
   }
-  /* line 285, src/scss/_components/_footer.scss */
+  /* line 290, src/scss/_components/_footer.scss */
   .footer__form-field .c-btn__wrapper {
     width: 100%;
   }
 }
 
-/* line 291, src/scss/_components/_footer.scss */
+/* line 296, src/scss/_components/_footer.scss */
 .footer__form-field label {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1856,7 +1885,7 @@ picture {
   width: 100%;
 }
 
-/* line 296, src/scss/_components/_footer.scss */
+/* line 301, src/scss/_components/_footer.scss */
 .footer__form-field label > span {
   display: block;
   font-family: 'Open Sans', sans-serif;
@@ -1867,7 +1896,7 @@ picture {
   color: #FFFFFF;
 }
 
-/* line 306, src/scss/_components/_footer.scss */
+/* line 311, src/scss/_components/_footer.scss */
 .footer__form-field label input,
 .footer__form-field label textarea {
   outline: none;
@@ -1940,7 +1969,7 @@ picture {
   color: rgba(255, 255, 255, 0.7);
 }
 
-/* line 331, src/scss/_components/_footer.scss */
+/* line 336, src/scss/_components/_footer.scss */
 .footer__form-field label input:focus,
 .footer__form-field label textarea:focus {
   border-color: #fff;
@@ -1949,12 +1978,85 @@ picture {
   transition: border-color 0.3s ease-in-out;
 }
 
-/* line 337, src/scss/_components/_footer.scss */
+/* line 342, src/scss/_components/_footer.scss */
 .footer__form-field label textarea {
   resize: none;
 }
 
-/* line 344, src/scss/_components/_footer.scss */
+@media screen and (max-width: 767px) {
+  /* line 348, src/scss/_components/_footer.scss */
+  .footer__form-message {
+    padding-bottom: 20px;
+  }
+}
+
+/* line 353, src/scss/_components/_footer.scss */
+.footer__form-message > div {
+  display: none;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* line 358, src/scss/_components/_footer.scss */
+.footer__form-message > div.error span {
+  background-color: #ff4b55;
+}
+
+/* line 363, src/scss/_components/_footer.scss */
+.footer__form-message > div.done span {
+  background-color: #00b94f;
+}
+
+/* line 368, src/scss/_components/_footer.scss */
+.footer__form-message > div.is-active {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* line 372, src/scss/_components/_footer.scss */
+.footer__form-message > div span {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 20px;
+  height: 20px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+}
+
+/* line 380, src/scss/_components/_footer.scss */
+.footer__form-message > div span + p {
+  padding-left: 10px;
+}
+
+/* line 384, src/scss/_components/_footer.scss */
+.footer__form-message > div span .icon-font {
+  color: #ffffff;
+  font-size: 8px;
+}
+
+/* line 390, src/scss/_components/_footer.scss */
+.footer__form-message > div p {
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 16px;
+  color: #FFFFFF;
+}
+
+/* line 401, src/scss/_components/_footer.scss */
 .footer__title {
   padding-bottom: 10px;
   font-weight: 600;
@@ -1963,7 +2065,7 @@ picture {
   color: #FFFFFF;
 }
 
-/* line 352, src/scss/_components/_footer.scss */
+/* line 409, src/scss/_components/_footer.scss */
 .footer__desc {
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
@@ -1971,7 +2073,7 @@ picture {
   color: #FFFFFF;
 }
 
-/* line 359, src/scss/_components/_footer.scss */
+/* line 416, src/scss/_components/_footer.scss */
 .footer__heading {
   padding-bottom: 10px;
   font-weight: 600;
@@ -1980,21 +2082,21 @@ picture {
   color: #FFFFFF;
 }
 
-/* line 367, src/scss/_components/_footer.scss */
+/* line 424, src/scss/_components/_footer.scss */
 .footer__link {
   font-size: 14px;
   line-height: 19px;
   color: rgba(255, 255, 255, 0.8);
 }
 
-/* line 373, src/scss/_components/_footer.scss */
+/* line 430, src/scss/_components/_footer.scss */
 .footer__address {
   font-size: 14px;
   line-height: 24px;
   color: rgba(255, 255, 255, 0.8);
 }
 
-/* line 378, src/scss/_components/_footer.scss */
+/* line 435, src/scss/_components/_footer.scss */
 .footer__address img {
   display: inline-block;
   vertical-align: middle;

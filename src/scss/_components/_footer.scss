@@ -272,8 +272,13 @@
 			width: 100%;
 
 			&.footer__form-field--btn {
-				justify-content: flex-end;
+				align-items: center;
+				justify-content: space-between;
 				padding-top: 15px;
+				@include adaptive(767) {
+					flex-direction: column;
+					justify-content: center;
+				}
 			}
 
 			.c-btn {
@@ -336,6 +341,58 @@
 
 				textarea {
 					resize: none;
+				}
+			}
+		}
+
+		&-message {
+			@include adaptive(767) {
+				padding-bottom: 20px;
+			}
+
+			> div {
+				display: none;
+				align-items: center;
+
+				&.error {
+					span {
+						background-color: #ff4b55;
+					}
+				}
+				&.done {
+					span {
+						background-color: #00b94f;
+					}
+				}
+
+				&.is-active {
+					display: flex;
+				}
+
+				span {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					width: 20px;
+					height: 20px;
+					border-radius: 50%;
+
+					& + p {
+						padding-left: 10px;
+					}
+
+					.icon-font {
+						color: #ffffff;
+						font-size: 8px;
+					}
+				}
+
+				p {
+					@extend %fontOpenSans;
+					font-weight: bold;
+					font-size: 12px;
+					line-height: 16px;
+					color: #FFFFFF;
 				}
 			}
 		}

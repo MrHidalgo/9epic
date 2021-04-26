@@ -39,68 +39,74 @@
 	@if $filename == chat {
 		$char: "\E004";
 	}
-	@if $filename == circle-checked {
+	@if $filename == checked {
 		$char: "\E005";
 	}
-	@if $filename == cloud-check {
+	@if $filename == circle-checked {
 		$char: "\E006";
 	}
-	@if $filename == cloud {
+	@if $filename == close {
 		$char: "\E007";
 	}
-	@if $filename == corner {
+	@if $filename == cloud-check {
 		$char: "\E008";
 	}
-	@if $filename == database {
+	@if $filename == cloud {
 		$char: "\E009";
 	}
-	@if $filename == document {
+	@if $filename == corner {
 		$char: "\E00A";
 	}
-	@if $filename == eye {
+	@if $filename == database {
 		$char: "\E00B";
 	}
-	@if $filename == governance {
+	@if $filename == document {
 		$char: "\E00C";
 	}
-	@if $filename == list-dots {
+	@if $filename == eye {
 		$char: "\E00D";
 	}
-	@if $filename == logout {
+	@if $filename == governance {
 		$char: "\E00E";
 	}
-	@if $filename == message {
+	@if $filename == list-dots {
 		$char: "\E00F";
 	}
-	@if $filename == pen {
+	@if $filename == logout {
 		$char: "\E010";
 	}
-	@if $filename == plus {
+	@if $filename == message {
 		$char: "\E011";
 	}
-	@if $filename == profile {
+	@if $filename == pen {
 		$char: "\E012";
 	}
-	@if $filename == right-arrow {
+	@if $filename == plus {
 		$char: "\E013";
 	}
-	@if $filename == rocket {
+	@if $filename == profile {
 		$char: "\E014";
 	}
-	@if $filename == security {
+	@if $filename == right-arrow {
 		$char: "\E015";
 	}
-	@if $filename == square-dashed {
+	@if $filename == rocket {
 		$char: "\E016";
 	}
-	@if $filename == swap {
+	@if $filename == security {
 		$char: "\E017";
 	}
-	@if $filename == terminal {
+	@if $filename == square-dashed {
 		$char: "\E018";
 	}
-	@if $filename == work {
+	@if $filename == swap {
 		$char: "\E019";
+	}
+	@if $filename == terminal {
+		$char: "\E01A";
+	}
+	@if $filename == work {
+		$char: "\E01B";
 	}
 
 	@return $char;
@@ -133,8 +139,16 @@
 	@include icon(chat);
 
 }
+.icon-checked {
+	@include icon(checked);
+
+}
 .icon-circle-checked {
 	@include icon(circle-checked);
+
+}
+.icon-close {
+	@include icon(close);
 
 }
 .icon-cloud-check {
