@@ -185,7 +185,7 @@ const approachTabCB = () => {
 };
 
 
-const homepageMainScrollAnimation =() => {
+/*const homepageMainScrollAnimation =() => {
 	const vid1 = $('#video1')[0];
 	
 	if($('#main').length <= 0) {
@@ -201,8 +201,8 @@ const homepageMainScrollAnimation =() => {
 	
 	$('.main__bg').css({opacity: 1});
 	
-	/* SCENE 1
-	* ==================== */
+	/!* SCENE 1
+	* ==================== *!/
 	let tween1 = null,
 		scene1 = null,
 		controller1 = null;
@@ -261,11 +261,11 @@ const homepageMainScrollAnimation =() => {
 		controller1.destroy(true);
 		scene1.destroy(true);
 	}
-	/* end :: SCENE 1
-	* ==================== */
+	/!* end :: SCENE 1
+	* ==================== *!/
 	
-	/* SCENE 2
-	* ==================== */
+	/!* SCENE 2
+	* ==================== *!/
 	let tween2 = new TimelineMax(),
 		tween21 = new TimelineMax(),
 		tween22 = new TimelineMax(),
@@ -356,12 +356,12 @@ const homepageMainScrollAnimation =() => {
 		.setTween(tween22)
 		// .addIndicators({name: 'laptop-circle'})
 		.addTo(controller22);
-	/* end :: SCENE 2
-	* ==================== */
+	/!* end :: SCENE 2
+	* ==================== *!/
 	
 	
-	/* SCENE 3
-	* ==================== */
+	/!* SCENE 3
+	* ==================== *!/
 	let tween3 = new TimelineMax(),
 		scene3 = null,
 		controller3 = new ScrollMagic.Controller(),
@@ -403,11 +403,11 @@ const homepageMainScrollAnimation =() => {
 		})
 	;
 	
-	/* end :: SCENE 3
-	* ==================== */
+	/!* end :: SCENE 3
+	* ==================== *!/
 	
-	/* SCENE 4
-	* ==================== */
+	/!* SCENE 4
+	* ==================== *!/
 	let tween4 = new TimelineMax(),
 		tween41 = new TimelineMax(),
 		tween42 = new TimelineMax(),
@@ -501,11 +501,11 @@ const homepageMainScrollAnimation =() => {
 		.setTween(tween42)
 		// .addIndicators({name:'box-sq'})
 		.addTo(controller42);
-	/* end :: SCENE 4
-	* ==================== */
+	/!* end :: SCENE 4
+	* ==================== *!/
 	
-	/* SCENE 5
-	* ==================== */
+	/!* SCENE 5
+	* ==================== *!/
 	let tween5 = new TimelineMax(),
 		tween52 = new TimelineMax(),
 		scene5 = null,
@@ -554,12 +554,12 @@ const homepageMainScrollAnimation =() => {
 		// .addIndicators({name: 'last-svg'})
 		.addTo(controller52);
 	
-	/* end :: SCENE 5
-	* ==================== */
+	/!* end :: SCENE 5
+	* ==================== *!/
 	
 	
-	/* TEXT
-	* ==================== */
+	/!* TEXT
+	* ==================== *!/
 	let tweenTXT1 = new TimelineMax(),
 		sceneTXT1 = null,
 		controllerTXT1 = new ScrollMagic.Controller(),
@@ -644,13 +644,13 @@ const homepageMainScrollAnimation =() => {
 		.setTween(tweenTXT5)
 		// .addIndicators({name: '5 text'})
 		.addTo(controllerTXT5);
-	/* end :: TEXT
-	* ==================== */
-};
+	/!* end :: TEXT
+	* ==================== *!/
+};*/
 
 
 const headerChangeColor = () => {
-	const vid = $('#video3')[0];
+	// const vid = $('#video3')[0];
 	
 	let containerNode = $('#container')[0],
 		header = $('#header');
@@ -670,11 +670,11 @@ const headerChangeColor = () => {
 	function helperColorChange() {
 		if(isAnyPartOfElementInViewport(containerNode) && containerNode.getBoundingClientRect().top < 0) {
 			header.addClass('is-color');
-			vid.pause();
-			vid.currentTime = 0;
+			// vid.pause();
+			// vid.currentTime = 0;
 		} else {
 			header.removeClass('is-color');
-			vid.play();
+			// vid.play();
 		}
 	}
 	
@@ -754,6 +754,68 @@ const hashPartners = () => {
 			break;
 	}
 };
+
+
+const mainSVGAnimation = () => {
+	const tween = new TimelineMax({repeat: -1, repeatDelay: 0.5}),
+		tween1 = new TimelineMax({repeat: -1, repeatDelay: 0.5});
+	
+	tween
+		.fromTo('#laptop-top', 0.5, {opacity: 0, scale: 0.5, transformOrigin: 'center',}, {opacity: 1, scale: 1, ease: Linear.easeNone})
+		.fromTo('#laptop-border', 0.5, {opacity: 0}, {opacity: 1, ease: Linear.easeNone}, '-=0.25')
+		.fromTo('#laptop-shadow', 0.5,
+			{opacity: 0, y: -5, scaleY: 0, transformOrigin: 'center'},
+			{opacity: 1, y: 0, scaleY: 1, ease: Linear.easeNone}, '-=0.25'
+		)
+		.fromTo('#laptop-line', 0.5, {opacity: 0}, {opacity: 1, ease: Linear.easeNone}, '-=0.25')
+		.fromTo('#laptop-bottom', 0.5,
+			{opacity: 0, y: -20, scaleX: 0.5, scaleY: 0, transformOrigin: 'center'},
+			{opacity: 1, y: 0, scaleX: 1, scaleY: 1, ease: Linear.easeNone}, '-=0.25'
+		)
+		.fromTo('#laptop-circle-1', 0.6,
+			{opacity: 0, x: 30, scale: 0.75, transformOrigin: 'center'},
+			{opacity: 1, x: 0, scale: 1, ease: Linear.easeNone}, '-=0.25'
+		)
+		.fromTo('#laptop-circle-2', 0.6,
+			{opacity: 0, x: 30, scale: 0.75, transformOrigin: 'center'},
+			{opacity: 1, x: 0, scale: 1, ease: Linear.easeNone}, '-=0.25'
+		)
+		.fromTo('#laptop-circle-3', 0.6,
+			{opacity: 0, x: 30, scale: 0.75, transformOrigin: 'center'},
+			{opacity: 1, x: 0, scale: 1, ease: Linear.easeNone}, '-=0.25'
+		)
+		.fromTo('#laptop-circle-4', 0.6,
+			{opacity: 0, x: 30, scale: 0.75, transformOrigin: 'center'},
+			{opacity: 1, x: 0, scale: 1, ease: Linear.easeNone}, '-=0.25'
+		)
+		.fromTo('#laptop-circle-5', 0.6,
+			{opacity: 0, x: 30, scale: 0.75, transformOrigin: 'center'},
+			{opacity: 1, x: 0, scale: 1, ease: Linear.easeNone}, '-=0.25'
+		);
+	
+	tween1
+		.fromTo('#anim4-bg rect', 0.5,
+			{opacity: 0, x: 30, y: 128, width: '677px', height: '453px', rotation: 0, transformOrigin: '140px 460px'},
+			{opacity: '0.4', x: 0, y: 0, width: '500px', height: '500px', rotation: 45, ease: Linear.easeNone}
+		)
+		.fromTo('#anim4-box-1', 1,
+			{opacity: 0, x: 14, y: 76, scale: 0.5, transformOrigin: 'center'}, {opacity: 1, x: 0, y: 0, scale: 1, ease: Bounce.easeOut}, '-=0')
+		.fromTo('#anim4-box-2', 1,
+			{opacity: 0, x: -23, y: 76, scale: 0.5, transformOrigin: 'center'}, {opacity: 1, x: 0, y: 0, scale: 1, ease: Bounce.easeOut}, '-=0')
+		.fromTo('#anim4-box-3', 1,
+			{opacity: 0, x: -58, y: 76, scale: 0.5, transformOrigin: 'center'}, {opacity: 1, x: 0, y: 0, scale: 1, ease: Bounce.easeOut}, '-=0')
+		.fromTo('#anim4-box-4', 1,
+			{opacity: 0, x: 62, y: 11, scale: 0.5, transformOrigin: 'center'}, {opacity: 1, x: 0, y: 0, scale: 1, ease: Bounce.easeOut}, '-=0')
+		.fromTo('#anim4-box-5', 1,
+			{opacity: 0, x: 27, y: 11, scale: 0.5, transformOrigin: 'center'}, {opacity: 1, x: 0, y: 0, scale: 1, ease: Bounce.easeOut}, '-=0')
+		.fromTo('#anim4-box-6', 1,
+			{opacity: 0, x: -9, y: 11, scale: 0.5, transformOrigin: 'center'}, {opacity: 1, x: 0, y: 0, scale: 1, ease: Bounce.easeOut}, '-=0')
+		.fromTo('#anim4-bg rect', 0.5,
+			{opacity: '0.4', x: 0, y: 0, width: '500px', height: '500px', rotation: 45, ease: Linear.easeNone},
+			{opacity: 0, x: 30, y: 128, width: '677px', height: '453px', rotation: 0, transformOrigin: '140px 460px'},
+		)
+	;
+};
 /*
 * CALLBACK :: end
 * ============================================= */
@@ -779,12 +841,13 @@ const initNative = () => {
 	approachTabCB();
 	solutionCB();
 	foundationCB();
-	homepageMainScrollAnimation();
+	// homepageMainScrollAnimation();
 	headerChangeColor();
 	approachCollapse();
 	passwordPreview();
 	dashboardCB();
 	hashPartners();
+	mainSVGAnimation();
 	// ==========================================
 };
 
@@ -795,9 +858,9 @@ window.addEventListener('load', () => {
 	setTimeout(() => {
 		$('#header').animate({opacity: 1});
 	
-		if($(window).width() < 768) {
-			$('#submain video, #submain img').animate({opacity: 1});
-		}
+		// if($(window).width() < 768) {
+		// 	$('#submain video, #submain img').animate({opacity: 1});
+		// }
 	}, 500);
 	
 	$('body').on('click', function (e) {
@@ -811,10 +874,10 @@ window.addEventListener('load', () => {
 	});
 });
 
-window.addEventListener('resize', () => {
-	setTimeout(() => {
-		if($(window).width() < 768) {
-			$('#submain video, #submain img').animate({opacity: 1});
-		}
-	}, 500);
-});
+// window.addEventListener('resize', () => {
+// 	setTimeout(() => {
+// 		if($(window).width() < 768) {
+// 			$('#submain video, #submain img').animate({opacity: 1});
+// 		}
+// 	}, 500);
+// });

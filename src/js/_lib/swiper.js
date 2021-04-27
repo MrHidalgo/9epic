@@ -32,4 +32,20 @@ const initSwiper = () => {
     });
   }
   
+  new Swiper('.mainSwiper', {
+    effect: 'slide',
+    speed: 1000,
+    slidesPerView: 1,
+    spaceBetween: 0,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    on: {
+      init: function (swiper) {
+        $(swiper.$el[0]).animate({opacity: 1}, 1250);
+      },
+    }
+  });
+  
 };

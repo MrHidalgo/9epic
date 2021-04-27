@@ -34,8 +34,8 @@ const initSmoothScroll = (btnName = "[anchor-js]", animateSpeed = 550) => {
       header: '#header',
       ignore: '.hamburger',
       topOnEmptyHash: false,
-      speed: 2000,
-      easing: 'Linear',
+      speed: 1250,
+      // easing: 'Linear',
       updateURL: false,
       popstate: false,
       offset: function (anchor, toggle) {
@@ -55,6 +55,23 @@ const initSmoothScroll = (btnName = "[anchor-js]", animateSpeed = 550) => {
       },
       speedAsDuration: true
     });
+  
+    var logScrollEvent = function (event) {
+      const btnAttr = $(event.detail.toggle).attr('data-section');
+  
+      switch (btnAttr) {
+        case 'foundation2':
+          $('.foundation__tab[data-tab-id="1"]').click();
+          break;
+        case 'foundation3':
+          $('.foundation__tab[data-tab-id="2"]').click();
+          break;
+        default:
+          break;
+      }
+    };
+
+    document.addEventListener('scrollStart', logScrollEvent, false);
     
     $('[hamburger-js]').removeClass("is-active");
     $('[mobile-block-js]').removeClass("is-open");

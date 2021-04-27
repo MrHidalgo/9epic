@@ -1,6 +1,244 @@
 // SECTION :: START
 
 .main {
+	position: relative;
+
+	.swiper {
+		&-container {
+			opacity: 0;
+		}
+
+		&-wrapper {}
+
+		&-slide {}
+
+		&-pagination {
+			bottom: 20px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			&-bullet {
+				opacity: 1;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 12px;
+				height: 12px;
+				background: linear-gradient(177.56deg, #4097D9 -48.98%, #30C4A0 68.87%, #00B94F 180.55%);
+
+				&:hover {
+					&:before {
+						transform: scale(0.5);
+						@include transition(transform);
+					}
+				}
+
+				&:before {
+					content: '';
+					position: absolute;
+					width: 8px;
+					height: 8px;
+					border-radius: 50%;
+					background-color: #ffffff;
+					transform: scale(1);
+					transform-origin: center;
+					@include transition(transform);
+				}
+
+				&-active {
+					background: linear-gradient(177.56deg, #4097D9 -48.98%, #30C4A0 68.87%, #00B94F 180.55%);
+
+					&:before {
+						opacity: 0;
+					}
+				}
+			}
+		}
+	}
+
+	&__wrapper {
+		display: flex;
+		align-items: center;
+		min-height: 600px;
+		height: 100vh;
+		padding-top: 120px;
+		padding-bottom: 120px;
+
+		&-left,
+		&-right {
+			width: 50%;
+		}
+
+		&-left {
+			> div {
+				width: 100%;
+				max-width: 465px;
+			}
+		}
+
+		&-right {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			img,
+			svg,
+			video,
+			iframe {
+				display: block;
+				max-width: 100%;
+				height: auto;
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+	}
+
+	&__title {
+		font-weight: bold;
+		font-size: 72px;
+		line-height: 109px;
+		color: #121E31;
+		@include adaptive(1439) {
+			font-size: 62px;
+			line-height: 99px;
+		}
+		@include adaptive(1279) {
+			font-size: 52px;
+			line-height: 89px;
+		}
+		@include adaptive(1023) {
+			font-size: 48px;
+			line-height: 82px;
+		}
+		@include adaptive(767) {
+			font-size: 30px;
+			line-height: 40px;
+			text-align: center;
+		}
+	}
+
+	&__subtitle {
+		padding-bottom: 20px;
+		font-weight: 600;
+		font-size: 36px;
+		line-height: 54px;
+		color: #121E31;
+		@include adaptive(1439) {
+			font-size: 33px;
+			line-height: 44px;
+		}
+		@include adaptive(1279) {
+			font-size: 30px;
+			line-height: 40px;
+		}
+		@include adaptive(1023) {
+			font-size: 26px;
+			line-height: 36px;
+		}
+		@include adaptive(767) {
+			padding-bottom: 10px;
+			font-size: 18px;
+			line-height: 26px;
+			text-align: center;
+		}
+	}
+
+	&__desc {
+		padding-bottom: 60px;
+		font-family: 'Open Sans', sans-serif;
+		font-size: 20px;
+		line-height: 30px;
+		color: #636B73;
+		@include adaptive(1439) {
+			font-size: 18px;
+			line-height: 28px;
+		}
+		@include adaptive(1023) {
+			font-size: 16px;
+			line-height: 26px;
+		}
+		@include adaptive(767) {
+			width: 100%;
+			max-width: 265px;
+			padding-bottom: 20px;
+			margin-left: auto;
+			margin-right: auto;
+			font-size: 14px;
+			line-height: 22px;
+			text-align: center;
+		}
+	}
+
+	&__heading {
+		font-weight: bold;
+		font-size: 48px;
+		line-height: 73px;
+		color: #121E31;
+		@include adaptive(1439) {
+			font-size: 44px;
+			line-height: 63px;
+		}
+		@include adaptive(1279) {
+			font-size: 40px;
+			line-height: 60px;
+		}
+		@include adaptive(1023) {
+			font-size: 35px;
+			line-height: 52px;
+		}
+		@include adaptive(767) {
+			font-size: 26px;
+			line-height: 40px;
+		}
+	}
+
+	&__label {
+		padding-bottom: 20px;
+		font-weight: 600;
+		font-size: 24px;
+		line-height: 36px;
+		color: #121E31;
+		@include adaptive(1439) {
+			font-size: 22px;
+			line-height: 32px;
+		}
+		@include adaptive(767) {
+			font-size: 18px;
+			line-height: 26px;
+		}
+	}
+
+	.c-btn {
+		min-width: 200px;
+		height: 69px;
+		@include adaptive(1439) {
+			height: 63px;
+		}
+		@include adaptive(1279) {
+			height: 60px;
+		}
+		@include adaptive(1023) {
+			min-width: 175px;
+			height: 57px;
+		}
+
+		& + .c-btn {
+			margin-left: 15px;
+		}
+
+		span {
+			font-weight: bold;
+			font-size: 17px;
+			@include adaptive(1023) {
+				font-size: 15px;
+			}
+		}
+	}
+}
+
+/*.main {
 	overflow: hidden;
 	position: relative;
 	padding-bottom: 200px;
@@ -485,6 +723,6 @@
 			}
 		}
 	}
-}
+}*/
 
 // SECTION :: END

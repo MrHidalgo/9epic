@@ -140,8 +140,8 @@ var initSmoothScroll = function initSmoothScroll() {
 			header: '#header',
 			ignore: '.hamburger',
 			topOnEmptyHash: false,
-			speed: 2000,
-			easing: 'Linear',
+			speed: 1250,
+			// easing: 'Linear',
 			updateURL: false,
 			popstate: false,
 			offset: function offset(anchor, toggle) {
@@ -161,6 +161,23 @@ var initSmoothScroll = function initSmoothScroll() {
 			},
 			speedAsDuration: true
 		});
+
+		var logScrollEvent = function logScrollEvent(event) {
+			var btnAttr = $(event.detail.toggle).attr('data-section');
+
+			switch (btnAttr) {
+				case 'foundation2':
+					$('.foundation__tab[data-tab-id="1"]').click();
+					break;
+				case 'foundation3':
+					$('.foundation__tab[data-tab-id="2"]').click();
+					break;
+				default:
+					break;
+			}
+		};
+
+		document.addEventListener('scrollStart', logScrollEvent, false);
 
 		$('[hamburger-js]').removeClass("is-active");
 		$('[mobile-block-js]').removeClass("is-open");
@@ -202,6 +219,22 @@ var initSwiper = function initSwiper() {
 	for (var i = 0, j = 1; i < $('.solution__slider-wrapper-1 .solution__slider-row').length; i++, j++) {
 		_loop(i, j);
 	}
+
+	new Swiper('.mainSwiper', {
+		effect: 'slide',
+		speed: 1000,
+		slidesPerView: 1,
+		spaceBetween: 0,
+		pagination: {
+			el: '.swiper-pagination',
+			clickable: true
+		},
+		on: {
+			init: function init(swiper) {
+				$(swiper.$el[0]).animate({ opacity: 1 }, 1250);
+			}
+		}
+	});
 };
 
 /**
@@ -404,363 +437,471 @@ var approachTabCB = function approachTabCB() {
 	});
 };
 
-var homepageMainScrollAnimation = function homepageMainScrollAnimation() {
-	var vid1 = $('#video1')[0];
-
-	if ($('#main').length <= 0) {
+/*const homepageMainScrollAnimation =() => {
+	const vid1 = $('#video1')[0];
+	
+	if($('#main').length <= 0) {
 		return;
 	}
-
-	$('.main__wrapper-left').css({ left: $('.main__wrapper')[0].getBoundingClientRect().left });
-	$('[main-content-js]').animate({ opacity: 1 }, 1000);
-
-	$(window).on('resize', function () {
-		$('.main__wrapper-left').css({ left: $('.main__wrapper')[0].getBoundingClientRect().left });
+	
+	$('.main__wrapper-left').css({left: $('.main__wrapper')[0].getBoundingClientRect().left});
+	$('[main-content-js]').animate({opacity: 1}, 1000);
+	
+	$(window).on('resize', () => {
+		$('.main__wrapper-left').css({left: $('.main__wrapper')[0].getBoundingClientRect().left});
 	});
-
-	$('.main__bg').css({ opacity: 1 });
-
-	/* SCENE 1
- * ==================== */
-	var tween1 = null,
-	    scene1 = null,
-	    controller1 = null;
-
+	
+	$('.main__bg').css({opacity: 1});
+	
+	/!* SCENE 1
+	* ==================== *!/
+	let tween1 = null,
+		scene1 = null,
+		controller1 = null;
+	
 	function helperScene1() {
 		tween1 = new TimelineMax();
 		controller1 = new ScrollMagic.Controller();
-
-		var laptopDimension = $('#laptop-fill')[0].getBoundingClientRect(),
-		    laptopDimensionW = laptopDimension.width - 5,
-		    laptopDimensionH = laptopDimension.height - 5;
-
-		tween1.fromTo('#video1WrapperBorder > i', 0.5, {
-			width: '50vw',
-			height: '100vh',
-			borderRadius: 0,
-			boxShadow: '0px 5px 15px rgba(64, 62, 61, 0)', transformOrigin: 'center' }, {
-			width: laptopDimensionW,
-			height: laptopDimensionH,
-			borderRadius: 12,
-			boxShadow: '0px 5px 15px rgba(64, 62, 61, 0.3)', ease: Linear.easeNone });
-
-		var sceneOffset1 = $(window).outerHeight(true) / 2 + 10;
-		$(window).on('resize', function () {
-			sceneOffset1 = $(window).outerHeight(true) / 2 + 10;
+		
+		let laptopDimension = $('#laptop-fill')[0].getBoundingClientRect(),
+			laptopDimensionW = laptopDimension.width - 5,
+			laptopDimensionH = laptopDimension.height - 5;
+		
+		tween1
+			.fromTo('#video1WrapperBorder > i', 0.5,
+				{
+					width: '50vw',
+					height: '100vh',
+					borderRadius: 0,
+					boxShadow: '0px 5px 15px rgba(64, 62, 61, 0)', transformOrigin: 'center'},
+				{
+					width: laptopDimensionW,
+					height: laptopDimensionH,
+					borderRadius: 12,
+					boxShadow: '0px 5px 15px rgba(64, 62, 61, 0.3)', ease: Linear.easeNone}
+			)
+		;
+		
+		let sceneOffset1 = ($(window).outerHeight(true) / 2) + 10;
+		$(window).on('resize', () => {
+			sceneOffset1 = ($(window).outerHeight(true) / 2) + 10;
 		});
-
+		
 		scene1 = new ScrollMagic.Scene({
 			triggerElement: ".main__wrapper-5",
 			offset: sceneOffset1,
-			duration: $('.main__wrapper-5').outerHeight(true) - ($(window).outerHeight(true) / 2 + 10)
-		}).setTween(tween1)
-		// .addIndicators({name: 'video'})
-		.addTo(controller1);
+			duration: $('.main__wrapper-5').outerHeight(true) - (($(window).outerHeight(true) / 2) + 10)
+		})
+			.setTween(tween1)
+			// .addIndicators({name: 'video'})
+			.addTo(controller1);
 	}
-
+	
 	if (document.documentElement.clientWidth >= 768) {
 		helperScene1();
 	}
-
-	window.addEventListener("resize", function () {
+	
+	window.addEventListener("resize", function() {
 		if (document.documentElement.clientWidth >= 768) {
 			helperScene1();
 		} else {
 			destroyController();
 		}
 	});
-
+	
 	function destroyController() {
 		controller1.destroy(true);
 		scene1.destroy(true);
 	}
-	/* end :: SCENE 1
- * ==================== */
-
-	/* SCENE 2
- * ==================== */
-	var tween2 = new TimelineMax(),
-	    tween21 = new TimelineMax(),
-	    tween22 = new TimelineMax(),
-	    scene2 = null,
-	    scene21 = null,
-	    scene22 = null,
-	    controller2 = new ScrollMagic.Controller(),
-	    controller21 = new ScrollMagic.Controller(),
-	    controller22 = new ScrollMagic.Controller();
-
-	var wrapperNode2 = $('.main__wrapper-4'),
-	    wrapperNode2H = wrapperNode2.outerHeight(true);
-
-	tween2.fromTo('#video1Wrapper video', 10, { opacity: 1 }, { opacity: 0, ease: Linear.easeNone }, '-=0');
-
-	tween21.fromTo('#laptop-border', 5, { opacity: 0 }, { opacity: 1, ease: Linear.easeNone }, '-=0').fromTo('#laptop-shadow', 5, { opacity: 0, y: -5, scaleY: 0, transformOrigin: 'center' }, { opacity: 1, y: 0, scaleY: 1, ease: Linear.easeNone }, '-=0').fromTo('#laptop-line', 5, { opacity: 0 }, { opacity: 1, ease: Linear.easeNone }, '-=0').fromTo('#laptop-bottom', 5, { opacity: 0, y: -20, scaleX: 0.5, scaleY: 0, transformOrigin: 'center' }, { opacity: 1, y: 0, scaleX: 1, scaleY: 1, ease: Linear.easeNone }, '-=0');
-
-	tween22.fromTo('#laptop-circle-1', 1, { opacity: 0, x: 30, scale: 0.75, transformOrigin: 'center' }, { opacity: 1, x: 0, scale: 1, ease: Linear.easeNone }, '-=0').fromTo('#laptop-circle-2', 1, { opacity: 0, x: 30, scale: 0.75, transformOrigin: 'center' }, { opacity: 1, x: 0, scale: 1, ease: Linear.easeNone }, '-=0').fromTo('#laptop-circle-3', 1, { opacity: 0, x: 30, scale: 0.75, transformOrigin: 'center' }, { opacity: 1, x: 0, scale: 1, ease: Linear.easeNone }, '-=0').fromTo('#laptop-circle-4', 1, { opacity: 0, x: 30, scale: 0.75, transformOrigin: 'center' }, { opacity: 1, x: 0, scale: 1, ease: Linear.easeNone }, '-=0').fromTo('#laptop-circle-5', 1, { opacity: 0, x: 30, scale: 0.75, transformOrigin: 'center' }, { opacity: 1, x: 0, scale: 1, ease: Linear.easeNone }, '-=0');
-
+	/!* end :: SCENE 1
+	* ==================== *!/
+	
+	/!* SCENE 2
+	* ==================== *!/
+	let tween2 = new TimelineMax(),
+		tween21 = new TimelineMax(),
+		tween22 = new TimelineMax(),
+		scene2 = null,
+		scene21 = null,
+		scene22 = null,
+		controller2 = new ScrollMagic.Controller(),
+		controller21 = new ScrollMagic.Controller(),
+		controller22 = new ScrollMagic.Controller()
+	;
+	
+	let wrapperNode2 = $('.main__wrapper-4'),
+		wrapperNode2H = wrapperNode2.outerHeight(true);
+	
+	tween2
+		.fromTo('#video1Wrapper video', 10,
+			{opacity: 1}, {opacity: 0, ease: Linear.easeNone}, '-=0'
+		)
+	;
+	
+	tween21
+		.fromTo('#laptop-border', 5,
+			{opacity: 0}, {opacity: 1, ease: Linear.easeNone}, '-=0'
+		)
+		.fromTo('#laptop-shadow', 5,
+			{opacity: 0, y: -5, scaleY: 0, transformOrigin: 'center'}, {opacity: 1, y: 0, scaleY: 1, ease: Linear.easeNone}, '-=0'
+		)
+		.fromTo('#laptop-line', 5,
+			{opacity: 0}, {opacity: 1, ease: Linear.easeNone}, '-=0'
+		)
+		.fromTo('#laptop-bottom', 5,
+			{opacity: 0, y: -20, scaleX: 0.5, scaleY: 0, transformOrigin: 'center'},
+			{opacity: 1, y: 0, scaleX: 1, scaleY: 1, ease: Linear.easeNone}, '-=0'
+		)
+	;
+	
+	tween22
+		.fromTo('#laptop-circle-1', 1,
+			{opacity: 0, x: 30, scale: 0.75, transformOrigin: 'center'}, {opacity: 1, x: 0, scale: 1, ease: Linear.easeNone}, '-=0'
+		)
+		.fromTo('#laptop-circle-2', 1,
+			{opacity: 0, x: 30, scale: 0.75, transformOrigin: 'center'}, {opacity: 1, x: 0, scale: 1, ease: Linear.easeNone}, '-=0'
+		)
+		.fromTo('#laptop-circle-3', 1,
+			{opacity: 0, x: 30, scale: 0.75, transformOrigin: 'center'}, {opacity: 1, x: 0, scale: 1, ease: Linear.easeNone}, '-=0'
+		)
+		.fromTo('#laptop-circle-4', 1,
+			{opacity: 0, x: 30, scale: 0.75, transformOrigin: 'center'}, {opacity: 1, x: 0, scale: 1, ease: Linear.easeNone}, '-=0'
+		)
+		.fromTo('#laptop-circle-5', 1,
+			{opacity: 0, x: 30, scale: 0.75, transformOrigin: 'center'}, {opacity: 1, x: 0, scale: 1, ease: Linear.easeNone}, '-=0'
+		)
+	;
+	
 	scene2 = new ScrollMagic.Scene({
 		triggerElement: ".main__wrapper-4",
 		offset: 0,
 		duration: wrapperNode2H / 5
-	}).setTween(tween2)
-	// .addIndicators({name: 'video-laptop'})
-	.addTo(controller2);
-
+	})
+		.setTween(tween2)
+		// .addIndicators({name: 'video-laptop'})
+		.addTo(controller2);
+	
 	scene21 = new ScrollMagic.Scene({
 		triggerElement: ".main__wrapper-4",
 		offset: 0,
 		duration: wrapperNode2H / 2 - 200
-	}).setTween(tween21)
-	// .addIndicators({name: 'laptop'})
-	.addTo(controller21).on("progress", function (event) {
-		var num = Number((event.progress * 100).toFixed(0));
-
-		if (num >= 60) {
-			vid1.pause();
-			vid1.currentTime = 0;
-		} else if (num === 0) {
-			vid1.play();
-		}
-	});
-
+	})
+		.setTween(tween21)
+		// .addIndicators({name: 'laptop'})
+		.addTo(controller21)
+		.on("progress", function (event) {
+			let num = Number((event.progress * 100).toFixed(0));
+			
+			if(num >= 60) {
+				vid1.pause();
+				vid1.currentTime = 0;
+			} else if(num === 0) {
+				vid1.play();
+			}
+		});
+	
 	scene22 = new ScrollMagic.Scene({
 		triggerElement: ".main__wrapper-4",
 		offset: wrapperNode2H / 2 - 200,
 		duration: wrapperNode2H / 2 + 100
-	}).setTween(tween22)
-	// .addIndicators({name: 'laptop-circle'})
-	.addTo(controller22);
-	/* end :: SCENE 2
- * ==================== */
-
-	/* SCENE 3
- * ==================== */
-	var tween3 = new TimelineMax(),
-	    scene3 = null,
-	    controller3 = new ScrollMagic.Controller(),
-	    vid2 = $('#video2')[0],
-	    vidBool = true;
-
-	var wrapperNode3 = $('.main__wrapper-3'),
-	    wrapperNode3H = wrapperNode3.outerHeight(true);
-
-	tween3.to(['#video1WrapperBorder > i', '#mainSVG1'], 0.5, { opacity: 0, ease: Power1.easeInOut }, '-=0').fromTo('#video2Wrapper', 1, { opacity: 0 }, { opacity: 1, ease: Power1.easeInOut }, '-=0.5');
-
+	})
+		.setTween(tween22)
+		// .addIndicators({name: 'laptop-circle'})
+		.addTo(controller22);
+	/!* end :: SCENE 2
+	* ==================== *!/
+	
+	
+	/!* SCENE 3
+	* ==================== *!/
+	let tween3 = new TimelineMax(),
+		scene3 = null,
+		controller3 = new ScrollMagic.Controller(),
+		vid2 = $('#video2')[0],
+		vidBool = true
+	;
+	
+	let wrapperNode3 = $('.main__wrapper-3'),
+		wrapperNode3H = wrapperNode3.outerHeight(true);
+	
+	tween3
+		.to(['#video1WrapperBorder > i', '#mainSVG1'], 0.5,
+			{opacity: 0, ease: Power1.easeInOut}, '-=0'
+		)
+		.fromTo('#video2Wrapper', 1,
+			{opacity: 0}, {opacity: 1, ease: Power1.easeInOut}, '-=0.5'
+		)
+	;
+	
 	scene3 = new ScrollMagic.Scene({
 		triggerElement: ".main__wrapper-3",
 		offset: 0,
 		duration: wrapperNode3H / 3
-	}).setTween(tween3)
-	// .addIndicators({name: 'video-laptop'})
-	.addTo(controller3).on("progress", function (event) {
-		var num = Number((event.progress * 100).toFixed(0));
-
-		if (num >= 0 && vidBool) {
-			if (vid2.paused) vid2.play();
-			vidBool = false;
-		} else if (num === 0) {
-			vid2.pause();
-			vid2.currentTime = 0;
-			vidBool = true;
-		}
-	});
-
-	/* end :: SCENE 3
- * ==================== */
-
-	/* SCENE 4
- * ==================== */
-	var tween4 = new TimelineMax(),
-	    tween41 = new TimelineMax(),
-	    tween42 = new TimelineMax(),
-	    scene4 = null,
-	    scene41 = null,
-	    scene42 = null,
-	    controller4 = new ScrollMagic.Controller(),
-	    controller41 = new ScrollMagic.Controller(),
-	    controller42 = new ScrollMagic.Controller();
-
-	var wrapperNode4 = $('.main__wrapper-2'),
-	    wrapperNode4H = wrapperNode4.outerHeight(true);
-
-	tween4.to('#video2Wrapper', 0.5, { opacity: 0, ease: Power1.easeInOut }, '-=0');
-
-	tween41.fromTo('#anim4-bg rect', 0.5, {
-		opacity: 0,
-		x: 30, y: 128,
-		width: '677px', height: '453px',
-		rotation: 0,
-		transformOrigin: '140px 460px'
-	}, {
-		opacity: '0.4',
-		x: 0, y: 0,
-		width: '500px', height: '500px',
-		rotation: 45,
-		ease: Linear.easeNone
-	}, '-=0.5');
-
-	tween42.fromTo('#anim4-box-1', 1, { opacity: 0, x: 14, y: 76, scale: 0.5, transformOrigin: 'center' }, { opacity: 1, x: 0, y: 0, scale: 1, ease: Bounce.easeOut }, '-=0').fromTo('#anim4-box-2', 1, { opacity: 0, x: -23, y: 76, scale: 0.5, transformOrigin: 'center' }, { opacity: 1, x: 0, y: 0, scale: 1, ease: Bounce.easeOut }, '-=0').fromTo('#anim4-box-3', 1, { opacity: 0, x: -58, y: 76, scale: 0.5, transformOrigin: 'center' }, { opacity: 1, x: 0, y: 0, scale: 1, ease: Bounce.easeOut }, '-=0').fromTo('#anim4-box-4', 1, { opacity: 0, x: 62, y: 11, scale: 0.5, transformOrigin: 'center' }, { opacity: 1, x: 0, y: 0, scale: 1, ease: Bounce.easeOut }, '-=0').fromTo('#anim4-box-5', 1, { opacity: 0, x: 27, y: 11, scale: 0.5, transformOrigin: 'center' }, { opacity: 1, x: 0, y: 0, scale: 1, ease: Bounce.easeOut }, '-=0').fromTo('#anim4-box-6', 1, { opacity: 0, x: -9, y: 11, scale: 0.5, transformOrigin: 'center' }, { opacity: 1, x: 0, y: 0, scale: 1, ease: Bounce.easeOut }, '-=0');
-
+	})
+		.setTween(tween3)
+		// .addIndicators({name: 'video-laptop'})
+		.addTo(controller3)
+		.on("progress", function (event) {
+			let num = Number((event.progress * 100).toFixed(0));
+			
+			if(num >= 0 && vidBool) {
+				if(vid2.paused) vid2.play();
+				vidBool = false;
+			} else if(num === 0) {
+				vid2.pause();
+				vid2.currentTime = 0;
+				vidBool = true;
+			}
+		})
+	;
+	
+	/!* end :: SCENE 3
+	* ==================== *!/
+	
+	/!* SCENE 4
+	* ==================== *!/
+	let tween4 = new TimelineMax(),
+		tween41 = new TimelineMax(),
+		tween42 = new TimelineMax(),
+		scene4 = null,
+		scene41 = null,
+		scene42 = null,
+		controller4 = new ScrollMagic.Controller(),
+		controller41 = new ScrollMagic.Controller(),
+		controller42 = new ScrollMagic.Controller()
+	;
+	
+	let wrapperNode4 = $('.main__wrapper-2'),
+		wrapperNode4H = wrapperNode4.outerHeight(true);
+	
+	tween4
+		.to('#video2Wrapper', 0.5,
+			{opacity: 0, ease: Power1.easeInOut}, '-=0'
+		)
+	;
+	
+	tween41
+		.fromTo('#anim4-bg rect', 0.5,
+			{
+				opacity: 0,
+				x: 30, y: 128,
+				width: '677px', height: '453px',
+				rotation: 0,
+				transformOrigin: '140px 460px'
+			},
+			{
+				opacity: '0.4',
+				x: 0, y: 0,
+				width: '500px', height: '500px',
+				rotation: 45,
+				ease: Linear.easeNone
+			},
+			'-=0.5'
+		)
+	;
+	
+	tween42
+		.fromTo('#anim4-box-1', 1,
+			{opacity: 0, x: 14, y: 76, scale: 0.5, transformOrigin: 'center'}, {opacity: 1, x: 0, y: 0, scale: 1, ease: Bounce.easeOut}, '-=0')
+		.fromTo('#anim4-box-2', 1,
+			{opacity: 0, x: -23, y: 76, scale: 0.5, transformOrigin: 'center'}, {opacity: 1, x: 0, y: 0, scale: 1, ease: Bounce.easeOut}, '-=0')
+		.fromTo('#anim4-box-3', 1,
+			{opacity: 0, x: -58, y: 76, scale: 0.5, transformOrigin: 'center'}, {opacity: 1, x: 0, y: 0, scale: 1, ease: Bounce.easeOut}, '-=0')
+		.fromTo('#anim4-box-4', 1,
+			{opacity: 0, x: 62, y: 11, scale: 0.5, transformOrigin: 'center'}, {opacity: 1, x: 0, y: 0, scale: 1, ease: Bounce.easeOut}, '-=0')
+		.fromTo('#anim4-box-5', 1,
+			{opacity: 0, x: 27, y: 11, scale: 0.5, transformOrigin: 'center'}, {opacity: 1, x: 0, y: 0, scale: 1, ease: Bounce.easeOut}, '-=0')
+		.fromTo('#anim4-box-6', 1,
+			{opacity: 0, x: -9, y: 11, scale: 0.5, transformOrigin: 'center'}, {opacity: 1, x: 0, y: 0, scale: 1, ease: Bounce.easeOut}, '-=0')
+	;
+	
 	scene4 = new ScrollMagic.Scene({
 		triggerElement: ".main__wrapper-2",
 		offset: -100,
 		duration: wrapperNode4H / 4 - 100
-	}).setTween(tween4)
-	// .addIndicators({name: 'device'})
-	.addTo(controller4).on("progress", function (event) {
-		var num = Number((event.progress * 100).toFixed(0));
-
-		if ($('#video2Wrapper').attr('style') === 'opacity: 0;') {
-			vidBool = true;
-			vid2.pause();
-			vid2.currentTime = 0;
-		} else if (num <= 90 && vidBool) {
-			if (vid2.paused) vid2.play();
-			vidBool = false;
-		}
-	});
-
+	})
+		.setTween(tween4)
+		// .addIndicators({name: 'device'})
+		.addTo(controller4)
+		.on("progress", function (event) {
+			let num = Number((event.progress * 100).toFixed(0));
+			
+			if($('#video2Wrapper').attr('style') === 'opacity: 0;') {
+				vidBool = true;
+				vid2.pause();
+				vid2.currentTime = 0;
+			} else if(num <= 90 && vidBool) {
+				if(vid2.paused) vid2.play();
+				vidBool = false;
+			}
+		});
+	
 	scene41 = new ScrollMagic.Scene({
 		triggerElement: ".main__wrapper-2",
 		offset: 0,
 		duration: wrapperNode4H - 200
-	}).setTween(tween41)
-	// .addIndicators({name: 'video'})
-	.addTo(controller41);
-
+	})
+		.setTween(tween41)
+		// .addIndicators({name: 'video'})
+		.addTo(controller41);
+	
 	scene42 = new ScrollMagic.Scene({
 		triggerElement: ".main__wrapper-2",
 		offset: 300,
 		duration: wrapperNode4H - 500
-	}).setTween(tween42)
-	// .addIndicators({name:'box-sq'})
-	.addTo(controller42);
-	/* end :: SCENE 4
- * ==================== */
-
-	/* SCENE 5
- * ==================== */
-	var tween5 = new TimelineMax(),
-	    tween52 = new TimelineMax(),
-	    scene5 = null,
-	    scene52 = null,
-	    controller5 = new ScrollMagic.Controller(),
-	    controller52 = new ScrollMagic.Controller(),
-	    vid3 = $('#video3')[0];
-
-	var wrapperNode5 = $('.main__wrapper-1'),
-	    wrapperNode5H = wrapperNode5.outerHeight(true);
-
-	tween5.to('#mainSVG3', 0.5, { opacity: 0 }, '-=0');
-
-	tween52.fromTo('#video3Wrapper', 1, { opacity: 0 }, { opacity: 1, ease: Linear.easeNone }, '-=0');
-
+	})
+		.setTween(tween42)
+		// .addIndicators({name:'box-sq'})
+		.addTo(controller42);
+	/!* end :: SCENE 4
+	* ==================== *!/
+	
+	/!* SCENE 5
+	* ==================== *!/
+	let tween5 = new TimelineMax(),
+		tween52 = new TimelineMax(),
+		scene5 = null,
+		scene52 = null,
+		controller5 = new ScrollMagic.Controller(),
+		controller52 = new ScrollMagic.Controller(),
+		vid3 = $('#video3')[0]
+	;
+	
+	let wrapperNode5 = $('.main__wrapper-1'),
+		wrapperNode5H = wrapperNode5.outerHeight(true);
+	
+	tween5
+		.to('#mainSVG3', 0.5, {opacity: 0}, '-=0')
+	;
+	
+	tween52
+		.fromTo('#video3Wrapper', 1, {opacity: 0}, {opacity: 1, ease: Linear.easeNone}, '-=0')
+	;
+	
 	scene5 = new ScrollMagic.Scene({
 		triggerElement: ".main__wrapper-1",
 		offset: 0,
 		duration: 300
-	}).setTween(tween5)
-	// .addIndicators({name: 'rect'})
-	.addTo(controller5).on("progress", function (event) {
-		var num = Number((event.progress * 100).toFixed(0));
-
-		if (num > 0) {
-			if (vid3.paused) vid3.play();
-		} else if (num === 0 && !vid3.paused) {
-			vid3.pause();
-			vid3.currentTime = 0;
-		}
-	});
-
+	})
+		.setTween(tween5)
+		// .addIndicators({name: 'rect'})
+		.addTo(controller5)
+		.on("progress", function (event) {
+			let num = Number((event.progress * 100).toFixed(0));
+			
+			if(num > 0) {
+				if(vid3.paused) vid3.play();
+			} else if(num === 0 && !vid3.paused) {
+				vid3.pause();
+				vid3.currentTime = 0;
+			}
+		});
+	
 	scene52 = new ScrollMagic.Scene({
 		triggerElement: ".main__wrapper-1",
 		offset: 200,
 		duration: 800
-	}).setTween(tween52)
-	// .addIndicators({name: 'last-svg'})
-	.addTo(controller52);
+	})
+		.setTween(tween52)
+		// .addIndicators({name: 'last-svg'})
+		.addTo(controller52);
+	
+	/!* end :: SCENE 5
+	* ==================== *!/
+	
+	
+	/!* TEXT
+	* ==================== *!/
+	let tweenTXT1 = new TimelineMax(),
+		sceneTXT1 = null,
+		controllerTXT1 = new ScrollMagic.Controller(),
+		tweenTXT2 = new TimelineMax(),
+		sceneTXT2 = null,
+		controllerTXT2 = new ScrollMagic.Controller(),
+		tweenTXT3 = new TimelineMax(),
+		sceneTXT3 = null,
+		controllerTXT3 = new ScrollMagic.Controller(),
+		tweenTXT4 = new TimelineMax(),
+		sceneTXT4 = null,
+		controllerTXT4 = new ScrollMagic.Controller(),
+		tweenTXT5 = new TimelineMax(),
+		sceneTXT5 = null,
+		controllerTXT5 = new ScrollMagic.Controller()
+	;
+	
+	tweenTXT1
+		.fromTo('.main__wrapper-1 .main__wrapper-left', 1, {opacity: 1, y: 0}, {opacity: 0, y: '-100%', ease: Linear.easeNone}, '-=0');
+	
+	tweenTXT2
+		.fromTo('.main__wrapper-2 .main__wrapper-left', 1, {opacity: 0}, {opacity: 1, y: 0, ease: Linear.easeNone}, '-=0');
 
-	/* end :: SCENE 5
- * ==================== */
+	tweenTXT3
+		.fromTo('.main__wrapper-2 .main__wrapper-left', 1, {opacity: 1}, {opacity: 0, y: '-100%', ease: Linear.easeNone}, '-=0')
+		.fromTo('.main__wrapper-3 .main__wrapper-left', 1, {opacity: 0}, {opacity: 1, y: 0, ease: Linear.easeNone}, '-=1');
 
-	/* TEXT
- * ==================== */
-	var tweenTXT1 = new TimelineMax(),
-	    sceneTXT1 = null,
-	    controllerTXT1 = new ScrollMagic.Controller(),
-	    tweenTXT2 = new TimelineMax(),
-	    sceneTXT2 = null,
-	    controllerTXT2 = new ScrollMagic.Controller(),
-	    tweenTXT3 = new TimelineMax(),
-	    sceneTXT3 = null,
-	    controllerTXT3 = new ScrollMagic.Controller(),
-	    tweenTXT4 = new TimelineMax(),
-	    sceneTXT4 = null,
-	    controllerTXT4 = new ScrollMagic.Controller(),
-	    tweenTXT5 = new TimelineMax(),
-	    sceneTXT5 = null,
-	    controllerTXT5 = new ScrollMagic.Controller();
-
-	tweenTXT1.fromTo('.main__wrapper-1 .main__wrapper-left', 1, { opacity: 1, y: 0 }, { opacity: 0, y: '-100%', ease: Linear.easeNone }, '-=0');
-
-	tweenTXT2.fromTo('.main__wrapper-2 .main__wrapper-left', 1, { opacity: 0 }, { opacity: 1, y: 0, ease: Linear.easeNone }, '-=0');
-
-	tweenTXT3.fromTo('.main__wrapper-2 .main__wrapper-left', 1, { opacity: 1 }, { opacity: 0, y: '-100%', ease: Linear.easeNone }, '-=0').fromTo('.main__wrapper-3 .main__wrapper-left', 1, { opacity: 0 }, { opacity: 1, y: 0, ease: Linear.easeNone }, '-=1');
-
-	tweenTXT4.fromTo('.main__wrapper-3 .main__wrapper-left', 1, { opacity: 1 }, { opacity: 0, y: '-100%', ease: Linear.easeNone }, '-=0').fromTo('.main__wrapper-4 .main__wrapper-left', 1, { opacity: 0 }, { opacity: 1, y: 0, ease: Linear.easeNone }, '-=1');
-
-	tweenTXT5.fromTo('.main__wrapper-4 .main__wrapper-left', 1, { opacity: 1 }, { opacity: 0, y: '-100%', ease: Linear.easeNone }, '-=0').fromTo('.main__wrapper-5 .main__wrapper-left', 1, { opacity: 0 }, { opacity: 1, y: 0, ease: Linear.easeNone }, '-=1');
-
-	var sceneOffset2 = $(window).outerHeight(true) / 2;
-	$(window).on('resize', function () {
+	tweenTXT4
+		.fromTo('.main__wrapper-3 .main__wrapper-left', 1, {opacity: 1}, {opacity: 0, y: '-100%', ease: Linear.easeNone}, '-=0')
+		.fromTo('.main__wrapper-4 .main__wrapper-left', 1, {opacity: 0}, {opacity: 1, y: 0, ease: Linear.easeNone}, '-=1');
+	
+	tweenTXT5
+		.fromTo('.main__wrapper-4 .main__wrapper-left', 1, {opacity: 1}, {opacity: 0, y: '-100%', ease: Linear.easeNone}, '-=0')
+		.fromTo('.main__wrapper-5 .main__wrapper-left', 1, {opacity: 0}, {opacity: 1, y: 0, ease: Linear.easeNone}, '-=1');
+	
+	let sceneOffset2 = $(window).outerHeight(true) / 2;
+	$(window).on('resize', () => {
 		sceneOffset2 = $(window).outerHeight(true) / 2;
 	});
-
+	
 	sceneTXT1 = new ScrollMagic.Scene({
 		triggerElement: ".main__wrapper-5",
 		offset: $(window).outerHeight(true) / 2,
-		duration: wrapperNode5H + wrapperNode5H / 1.5
-	}).setTween(tweenTXT1)
-	// .addIndicators({name: '1 text'})
-	.addTo(controllerTXT1);
-
+		duration: wrapperNode5H + (wrapperNode5H / 1.5)
+	})
+		.setTween(tweenTXT1)
+		// .addIndicators({name: '1 text'})
+		.addTo(controllerTXT1);
+	
 	sceneTXT2 = new ScrollMagic.Scene({
 		triggerElement: ".main__wrapper-4",
 		offset: 0,
 		duration: wrapperNode4H
-	}).setTween(tweenTXT2)
-	// .addIndicators({name: '2 text'})
-	.addTo(controllerTXT2);
-
+	})
+		.setTween(tweenTXT2)
+		// .addIndicators({name: '2 text'})
+		.addTo(controllerTXT2);
+	
 	sceneTXT3 = new ScrollMagic.Scene({
 		triggerElement: ".main__wrapper-3",
 		offset: 0,
 		duration: wrapperNode3H
-	}).setTween(tweenTXT3)
-	// .addIndicators({name: '3 text'})
-	.addTo(controllerTXT3);
-
+	})
+		.setTween(tweenTXT3)
+		// .addIndicators({name: '3 text'})
+		.addTo(controllerTXT3);
+	
 	sceneTXT4 = new ScrollMagic.Scene({
 		triggerElement: ".main__wrapper-2",
 		offset: 0,
 		duration: wrapperNode2H
-	}).setTween(tweenTXT4)
-	// .addIndicators({name: '4 text'})
-	.addTo(controllerTXT4);
-
+	})
+		.setTween(tweenTXT4)
+		// .addIndicators({name: '4 text'})
+		.addTo(controllerTXT4);
+	
 	sceneTXT5 = new ScrollMagic.Scene({
 		triggerElement: ".main__wrapper-1",
 		offset: 0,
 		duration: $('.main__wrapper-1').outerHeight(true) - 300
-	}).setTween(tweenTXT5)
-	// .addIndicators({name: '5 text'})
-	.addTo(controllerTXT5);
-	/* end :: TEXT
- * ==================== */
-};
+	})
+		.setTween(tweenTXT5)
+		// .addIndicators({name: '5 text'})
+		.addTo(controllerTXT5);
+	/!* end :: TEXT
+	* ==================== *!/
+};*/
 
 var headerChangeColor = function headerChangeColor() {
-	var vid = $('#video3')[0];
+	// const vid = $('#video3')[0];
 
 	var containerNode = $('#container')[0],
 	    header = $('#header');
@@ -780,11 +921,11 @@ var headerChangeColor = function headerChangeColor() {
 	function helperColorChange() {
 		if (isAnyPartOfElementInViewport(containerNode) && containerNode.getBoundingClientRect().top < 0) {
 			header.addClass('is-color');
-			vid.pause();
-			vid.currentTime = 0;
+			// vid.pause();
+			// vid.currentTime = 0;
 		} else {
 			header.removeClass('is-color');
-			vid.play();
+			// vid.play();
 		}
 	}
 
@@ -860,6 +1001,15 @@ var hashPartners = function hashPartners() {
 			break;
 	}
 };
+
+var mainSVGAnimation = function mainSVGAnimation() {
+	var tween = new TimelineMax({ repeat: -1, repeatDelay: 0.5 }),
+	    tween1 = new TimelineMax({ repeat: -1, repeatDelay: 0.5 });
+
+	tween.fromTo('#laptop-top', 0.5, { opacity: 0, scale: 0.5, transformOrigin: 'center' }, { opacity: 1, scale: 1, ease: Linear.easeNone }).fromTo('#laptop-border', 0.5, { opacity: 0 }, { opacity: 1, ease: Linear.easeNone }, '-=0.25').fromTo('#laptop-shadow', 0.5, { opacity: 0, y: -5, scaleY: 0, transformOrigin: 'center' }, { opacity: 1, y: 0, scaleY: 1, ease: Linear.easeNone }, '-=0.25').fromTo('#laptop-line', 0.5, { opacity: 0 }, { opacity: 1, ease: Linear.easeNone }, '-=0.25').fromTo('#laptop-bottom', 0.5, { opacity: 0, y: -20, scaleX: 0.5, scaleY: 0, transformOrigin: 'center' }, { opacity: 1, y: 0, scaleX: 1, scaleY: 1, ease: Linear.easeNone }, '-=0.25').fromTo('#laptop-circle-1', 0.6, { opacity: 0, x: 30, scale: 0.75, transformOrigin: 'center' }, { opacity: 1, x: 0, scale: 1, ease: Linear.easeNone }, '-=0.25').fromTo('#laptop-circle-2', 0.6, { opacity: 0, x: 30, scale: 0.75, transformOrigin: 'center' }, { opacity: 1, x: 0, scale: 1, ease: Linear.easeNone }, '-=0.25').fromTo('#laptop-circle-3', 0.6, { opacity: 0, x: 30, scale: 0.75, transformOrigin: 'center' }, { opacity: 1, x: 0, scale: 1, ease: Linear.easeNone }, '-=0.25').fromTo('#laptop-circle-4', 0.6, { opacity: 0, x: 30, scale: 0.75, transformOrigin: 'center' }, { opacity: 1, x: 0, scale: 1, ease: Linear.easeNone }, '-=0.25').fromTo('#laptop-circle-5', 0.6, { opacity: 0, x: 30, scale: 0.75, transformOrigin: 'center' }, { opacity: 1, x: 0, scale: 1, ease: Linear.easeNone }, '-=0.25');
+
+	tween1.fromTo('#anim4-bg rect', 0.5, { opacity: 0, x: 30, y: 128, width: '677px', height: '453px', rotation: 0, transformOrigin: '140px 460px' }, { opacity: '0.4', x: 0, y: 0, width: '500px', height: '500px', rotation: 45, ease: Linear.easeNone }).fromTo('#anim4-box-1', 1, { opacity: 0, x: 14, y: 76, scale: 0.5, transformOrigin: 'center' }, { opacity: 1, x: 0, y: 0, scale: 1, ease: Bounce.easeOut }, '-=0').fromTo('#anim4-box-2', 1, { opacity: 0, x: -23, y: 76, scale: 0.5, transformOrigin: 'center' }, { opacity: 1, x: 0, y: 0, scale: 1, ease: Bounce.easeOut }, '-=0').fromTo('#anim4-box-3', 1, { opacity: 0, x: -58, y: 76, scale: 0.5, transformOrigin: 'center' }, { opacity: 1, x: 0, y: 0, scale: 1, ease: Bounce.easeOut }, '-=0').fromTo('#anim4-box-4', 1, { opacity: 0, x: 62, y: 11, scale: 0.5, transformOrigin: 'center' }, { opacity: 1, x: 0, y: 0, scale: 1, ease: Bounce.easeOut }, '-=0').fromTo('#anim4-box-5', 1, { opacity: 0, x: 27, y: 11, scale: 0.5, transformOrigin: 'center' }, { opacity: 1, x: 0, y: 0, scale: 1, ease: Bounce.easeOut }, '-=0').fromTo('#anim4-box-6', 1, { opacity: 0, x: -9, y: 11, scale: 0.5, transformOrigin: 'center' }, { opacity: 1, x: 0, y: 0, scale: 1, ease: Bounce.easeOut }, '-=0').fromTo('#anim4-bg rect', 0.5, { opacity: '0.4', x: 0, y: 0, width: '500px', height: '500px', rotation: 45, ease: Linear.easeNone }, { opacity: 0, x: 30, y: 128, width: '677px', height: '453px', rotation: 0, transformOrigin: '140px 460px' });
+};
 /*
 * CALLBACK :: end
 * ============================================= */
@@ -884,12 +1034,13 @@ var initNative = function initNative() {
 	approachTabCB();
 	solutionCB();
 	foundationCB();
-	homepageMainScrollAnimation();
+	// homepageMainScrollAnimation();
 	headerChangeColor();
 	approachCollapse();
 	passwordPreview();
 	dashboardCB();
 	hashPartners();
+	mainSVGAnimation();
 	// ==========================================
 };
 
@@ -899,9 +1050,9 @@ window.addEventListener('load', function () {
 	setTimeout(function () {
 		$('#header').animate({ opacity: 1 });
 
-		if ($(window).width() < 768) {
-			$('#submain video, #submain img').animate({ opacity: 1 });
-		}
+		// if($(window).width() < 768) {
+		// 	$('#submain video, #submain img').animate({opacity: 1});
+		// }
 	}, 500);
 
 	$('body').on('click', function (e) {
@@ -915,10 +1066,10 @@ window.addEventListener('load', function () {
 	});
 });
 
-window.addEventListener('resize', function () {
-	setTimeout(function () {
-		if ($(window).width() < 768) {
-			$('#submain video, #submain img').animate({ opacity: 1 });
-		}
-	}, 500);
-});
+// window.addEventListener('resize', () => {
+// 	setTimeout(() => {
+// 		if($(window).width() < 768) {
+// 			$('#submain video, #submain img').animate({opacity: 1});
+// 		}
+// 	}, 500);
+// });
