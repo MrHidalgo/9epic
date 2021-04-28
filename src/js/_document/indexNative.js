@@ -650,8 +650,6 @@ const approachTabCB = () => {
 
 
 const headerChangeColor = () => {
-	// const vid = $('#video3')[0];
-	
 	let containerNode = $('#container')[0],
 		header = $('#header');
 	
@@ -670,11 +668,10 @@ const headerChangeColor = () => {
 	function helperColorChange() {
 		if(isAnyPartOfElementInViewport(containerNode) && containerNode.getBoundingClientRect().top < 0) {
 			header.addClass('is-color');
-			// vid.pause();
-			// vid.currentTime = 0;
+			$('#main').css({opacity: 0});
 		} else {
 			header.removeClass('is-color');
-			// vid.play();
+			$('#main').css({opacity: 1});
 		}
 	}
 	
@@ -755,12 +752,22 @@ const hashPartners = () => {
 	}
 };
 
+window.tweenAnimation1 = null;
+window.tweenAnimation2 = null;
 
 const mainSVGAnimation = () => {
-	const tween = new TimelineMax({repeat: -1, repeatDelay: 0.5}),
-		tween1 = new TimelineMax({repeat: -1, repeatDelay: 0.5});
+	tweenAnimation1 = new TimelineMax({
+		repeat: -1,
+		repeatDelay: 0.5,
+		paused: true
+	});
+	tweenAnimation2 = new TimelineMax({
+		repeat: -1,
+		repeatDelay: 0.5,
+		paused: true
+	});
 	
-	tween
+	tweenAnimation1
 		.fromTo('#laptop-top', 0.5, {opacity: 0, scale: 0.5, transformOrigin: 'center',}, {opacity: 1, scale: 1, ease: Linear.easeNone})
 		.fromTo('#laptop-border', 0.5, {opacity: 0}, {opacity: 1, ease: Linear.easeNone}, '-=0.25')
 		.fromTo('#laptop-shadow', 0.5,
@@ -793,7 +800,7 @@ const mainSVGAnimation = () => {
 			{opacity: 1, x: 0, scale: 1, ease: Linear.easeNone}, '-=0.25'
 		);
 	
-	tween1
+	tweenAnimation2
 		.fromTo('#anim4-bg rect', 0.5,
 			{opacity: 0, x: 30, y: 128, width: '677px', height: '453px', rotation: 0, transformOrigin: '140px 460px'},
 			{opacity: '0.4', x: 0, y: 0, width: '500px', height: '500px', rotation: 45, ease: Linear.easeNone}
