@@ -7,6 +7,21 @@
 	left: 0;
 	width: 100%;
 
+	#laptop-top,
+	#laptop-border,
+	#laptop-screen,
+	#laptop-shadow,
+	#laptop-top,
+	#laptop-line,
+	#laptop-bottom,
+	#laptop-circle-1,
+	#laptop-circle-2,
+	#laptop-circle-3,
+	#laptop-circle-4,
+	#laptop-circle-5 {
+		opacity: 0;
+	}
+
 	.swiper {
 		&-container {
 			opacity: 0;
@@ -211,6 +226,56 @@
 		@include adaptive(767) {
 			font-size: 18px;
 			line-height: 26px;
+		}
+	}
+
+	&__navigation {
+		z-index: 10;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 50px;
+		height: 50px;
+		box-shadow: 0 10px 30px 0 rgba(22, 58, 95, 0.05);
+		border-radius: 50px;
+		background-color: #00b94f;
+		@include transition(background-color);
+		@include adaptive(767) {
+			width: 35px;
+			height: 35px;
+		}
+
+		&.swiper-button-disabled {
+			pointer-events: none;
+			background-color: rgba(#00b94f, 0.5);
+			@include transition(background-color);
+			@include adaptive(767) {
+				opacity: 0 !important;
+			}
+		}
+
+		&--prev {
+			left: 25px;
+			padding-right: 4px;
+		}
+
+		&--next {
+			right: 25px;
+			padding-left: 4px;
+
+			.icon-font {
+				transform: scaleX(-1);
+			}
+		}
+
+		.icon-font {
+			color: #ffffff;
+			@include adaptive(767) {
+				font-size: 12px;
+			}
 		}
 	}
 

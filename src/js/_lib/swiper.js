@@ -32,40 +32,4 @@ const initSwiper = () => {
     });
   }
   
-  new Swiper('.mainSwiper', {
-    effect: 'slide',
-    speed: 1000,
-    slidesPerView: 1,
-    spaceBetween: 0,
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-    on: {
-      init: function (swiper) {
-        $(swiper.$el[0]).animate({opacity: 1}, 1250);
-      },
-      slideChange: function (swiper) {
-        let activeIDX = Number(swiper.realIndex);
-        
-        switch (activeIDX) {
-          case 1:
-            tweenAnimation1.play();
-            break;
-          case 2:
-            $('#video2')[0].play();
-            break;
-          case 3:
-            tweenAnimation2.play();
-            break;
-          case 4:
-            $('#video3')[0].play();
-            break;
-          default:
-            break;
-        }
-      },
-    }
-  });
-  
 };

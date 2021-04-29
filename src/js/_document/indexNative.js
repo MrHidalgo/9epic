@@ -756,72 +756,160 @@ window.tweenAnimation1 = null;
 window.tweenAnimation2 = null;
 
 const mainSVGAnimation = () => {
+	const vid1 = $('#video1'),
+		vid2 = $('#video2'),
+		vid3 = $('#video3');
+	
+	let mainSwiper = null;
+	
 	tweenAnimation1 = new TimelineMax({
-		repeat: -1,
-		repeatDelay: 0.5,
-		paused: true
+		paused: true,
+		onComplete: function(ev) {
+			setTimeout(() => {
+				mainSwiper.slideNext(1000, {});
+			}, 500);
+		}
 	});
 	tweenAnimation2 = new TimelineMax({
-		repeat: -1,
-		repeatDelay: 0.5,
-		paused: true
+		paused: true,
+		onComplete: function() {
+			mainSwiper.slideNext(1000, {});
+		}
+	});
+	
+	mainSwiper = new Swiper('.mainSwiper', {
+		effect: 'slide',
+		speed: 1000,
+		slidesPerView: 1,
+		spaceBetween: 0,
+		// initialSlide: 1,
+		pagination: {
+			el: '.swiper-pagination',
+			clickable: true,
+		},
+		navigation: {
+			nextEl: '.main__navigation--next',
+			prevEl: '.main__navigation--prev',
+		},
+		on: {
+			init: function (swiper) {
+				$(swiper.$el[0]).animate({opacity: 1}, 1250);
+			},
+			slideChange: function (swiper) {
+				let activeIDX = Number(swiper.realIndex);
+				
+				switch (activeIDX) {
+					case 0:
+						vid1[0].play();
+						
+						setTimeout(() => {
+							tweenAnimation1.kill().restart().pause();
+						}, 750);
+						
+						vid3[0].pause();
+						vid3[0].currentTime = 0;
+						break;
+					case 1:
+						setTimeout(() => {
+							vid1[0].pause();
+							vid1[0].currentTime = 0;
+						}, 1000);
+						
+						tweenAnimation1.play();
+						
+						vid2[0].pause();
+						vid2[0].currentTime = 0;
+						break;
+					case 2:
+						setTimeout(() => {
+							tweenAnimation1.kill().restart().pause();
+							tweenAnimation2.kill().restart().pause();
+						}, 750);
+						
+						vid2[0].play();
+						break;
+					case 3:
+						setTimeout(() => {
+							vid3[0].pause();
+							vid3[0].currentTime = 0;
+						}, 1000);
+						
+						tweenAnimation2.play();
+						break;
+					case 4:
+						setTimeout(() => {
+							tweenAnimation2.kill().restart().pause();
+						}, 750);
+						
+						vid3[0].play();
+						break;
+					default:
+						break;
+				}
+			},
+		}
 	});
 	
 	tweenAnimation1
-		.fromTo('#laptop-top', 0.5, {opacity: 0, scale: 0.5, transformOrigin: 'center',}, {opacity: 1, scale: 1, ease: Linear.easeNone})
-		.fromTo('#laptop-border', 0.5, {opacity: 0}, {opacity: 1, ease: Linear.easeNone}, '-=0.25')
-		.fromTo('#laptop-shadow', 0.5,
-			{opacity: 0, y: -5, scaleY: 0, transformOrigin: 'center'},
-			{opacity: 1, y: 0, scaleY: 1, ease: Linear.easeNone}, '-=0.25'
-		)
-		.fromTo('#laptop-line', 0.5, {opacity: 0}, {opacity: 1, ease: Linear.easeNone}, '-=0.25')
-		.fromTo('#laptop-bottom', 0.5,
-			{opacity: 0, y: -20, scaleX: 0.5, scaleY: 0, transformOrigin: 'center'},
-			{opacity: 1, y: 0, scaleX: 1, scaleY: 1, ease: Linear.easeNone}, '-=0.25'
-		)
-		.fromTo('#laptop-circle-1', 0.6,
-			{opacity: 0, x: 30, scale: 0.75, transformOrigin: 'center'},
-			{opacity: 1, x: 0, scale: 1, ease: Linear.easeNone}, '-=0.25'
-		)
-		.fromTo('#laptop-circle-2', 0.6,
-			{opacity: 0, x: 30, scale: 0.75, transformOrigin: 'center'},
-			{opacity: 1, x: 0, scale: 1, ease: Linear.easeNone}, '-=0.25'
-		)
-		.fromTo('#laptop-circle-3', 0.6,
-			{opacity: 0, x: 30, scale: 0.75, transformOrigin: 'center'},
-			{opacity: 1, x: 0, scale: 1, ease: Linear.easeNone}, '-=0.25'
-		)
-		.fromTo('#laptop-circle-4', 0.6,
-			{opacity: 0, x: 30, scale: 0.75, transformOrigin: 'center'},
-			{opacity: 1, x: 0, scale: 1, ease: Linear.easeNone}, '-=0.25'
-		)
-		.fromTo('#laptop-circle-5', 0.6,
-			{opacity: 0, x: 30, scale: 0.75, transformOrigin: 'center'},
-			{opacity: 1, x: 0, scale: 1, ease: Linear.easeNone}, '-=0.25'
-		);
+		.fromTo('#laptop-top', 1, {opacity: 0, scale: 0.75, transformOrigin: 'center',}, {opacity: 1, scale: 1, ease: Power2.easeInnOut})
+		// .fromTo('#laptop-border', 1, {opacity: 0}, {opacity: 1, ease: Power2.easeInnOut})
+		.fromTo('#laptop-screen', 1, {opacity: 0}, {opacity: 1, ease: Power2.easeInnOut})
+		.fromTo('#laptop-shadow', 1, {opacity: 0, y: -5, scaleY: 0, transformOrigin: 'center'}, {opacity: 1, y: 0, scaleY: 1, ease: Power2.easeInnOut},'-=1')
+		.fromTo('#laptop-line', 1, {opacity: 0}, {opacity: 1, ease: Power2.easeInnOut}, '-=1')
+		.fromTo('#laptop-bottom', 1, {opacity: 0, y: -20, scaleX: 0.5, scaleY: 0, transformOrigin: 'center'}, {opacity: 1, y: 0, scaleX: 1, scaleY: 1, ease: Power2.easeInnOut},'-=1')
+		.fromTo('#laptop-circle-1', 1.15, {opacity: 0, x: 30, scale: 0.75, transformOrigin: 'center'}, {opacity: 1, x: 0, scale: 1, ease: Power2.easeInnOut})
+		.fromTo('#laptop-circle-2', 1.15, {opacity: 0, x: 30, scale: 0.75, transformOrigin: 'center'}, {opacity: 1, x: 0, scale: 1, ease: Power2.easeInnOut}, '-=0.25')
+		.fromTo('#laptop-circle-3', 1.15, {opacity: 0, x: 30, scale: 0.75, transformOrigin: 'center'}, {opacity: 1, x: 0, scale: 1, ease: Power2.easeInnOut}, '-=0.25')
+		.fromTo('#laptop-circle-4', 1.15, {opacity: 0, x: 30, scale: 0.75, transformOrigin: 'center'}, {opacity: 1, x: 0, scale: 1, ease: Power2.easeInnOut}, '-=0.25')
+		.fromTo('#laptop-circle-5', 1.15, {opacity: 0, x: 30, scale: 0.75, transformOrigin: 'center'}, {opacity: 1, x: 0, scale: 1, ease: Power2.easeInnOut}, '-=0.25');
 	
 	tweenAnimation2
 		.fromTo('#anim4-bg rect', 0.5,
 			{opacity: 0, x: 30, y: 128, width: '677px', height: '453px', rotation: 0, transformOrigin: '140px 460px'},
 			{opacity: '0.4', x: 0, y: 0, width: '500px', height: '500px', rotation: 45, ease: Linear.easeNone}
 		)
-		.fromTo('#anim4-box-1', 1,
-			{opacity: 0, x: 14, y: 76, scale: 0.5, transformOrigin: 'center'}, {opacity: 1, x: 0, y: 0, scale: 1, ease: Bounce.easeOut}, '-=0')
-		.fromTo('#anim4-box-2', 1,
-			{opacity: 0, x: -23, y: 76, scale: 0.5, transformOrigin: 'center'}, {opacity: 1, x: 0, y: 0, scale: 1, ease: Bounce.easeOut}, '-=0')
-		.fromTo('#anim4-box-3', 1,
-			{opacity: 0, x: -58, y: 76, scale: 0.5, transformOrigin: 'center'}, {opacity: 1, x: 0, y: 0, scale: 1, ease: Bounce.easeOut}, '-=0')
-		.fromTo('#anim4-box-4', 1,
-			{opacity: 0, x: 62, y: 11, scale: 0.5, transformOrigin: 'center'}, {opacity: 1, x: 0, y: 0, scale: 1, ease: Bounce.easeOut}, '-=0')
-		.fromTo('#anim4-box-5', 1,
-			{opacity: 0, x: 27, y: 11, scale: 0.5, transformOrigin: 'center'}, {opacity: 1, x: 0, y: 0, scale: 1, ease: Bounce.easeOut}, '-=0')
-		.fromTo('#anim4-box-6', 1,
-			{opacity: 0, x: -9, y: 11, scale: 0.5, transformOrigin: 'center'}, {opacity: 1, x: 0, y: 0, scale: 1, ease: Bounce.easeOut}, '-=0')
+		.fromTo('#anim4-box-1', 1, {opacity: 0, x: 14, y: 76, scale: 0.5, transformOrigin: 'center'}, {opacity: 1, x: 0, y: 0, scale: 1, ease: Bounce.easeOut}, '-=0')
+		.fromTo('#anim4-box-2', 1, {opacity: 0, x: -23, y: 76, scale: 0.5, transformOrigin: 'center'}, {opacity: 1, x: 0, y: 0, scale: 1, ease: Bounce.easeOut}, '-=0')
+		.fromTo('#anim4-box-3', 1, {opacity: 0, x: -58, y: 76, scale: 0.5, transformOrigin: 'center'}, {opacity: 1, x: 0, y: 0, scale: 1, ease: Bounce.easeOut}, '-=0')
+		.fromTo('#anim4-box-4', 1, {opacity: 0, x: 62, y: 11, scale: 0.5, transformOrigin: 'center'}, {opacity: 1, x: 0, y: 0, scale: 1, ease: Bounce.easeOut}, '-=0')
+		.fromTo('#anim4-box-5', 1, {opacity: 0, x: 27, y: 11, scale: 0.5, transformOrigin: 'center'}, {opacity: 1, x: 0, y: 0, scale: 1, ease: Bounce.easeOut}, '-=0')
+		.fromTo('#anim4-box-6', 1, {opacity: 0, x: -9, y: 11, scale: 0.5, transformOrigin: 'center'}, {opacity: 1, x: 0, y: 0, scale: 1, ease: Bounce.easeOut}, '-=0')
 		.fromTo('#anim4-bg rect', 0.5,
 			{opacity: '0.4', x: 0, y: 0, width: '500px', height: '500px', rotation: 45, ease: Linear.easeNone},
 			{opacity: 0, x: 30, y: 128, width: '677px', height: '453px', rotation: 0, transformOrigin: '140px 460px'},
 		)
 	;
+	
+	vid1[0].addEventListener('ended', (event) => {
+		if(event.type === 'ended' && mainSwiper.realIndex === 0) {
+			mainSwiper.slideNext(1000, {});
+			
+			setTimeout(() => {
+				vid1[0].pause();
+				vid1[0].currentTime = 0;
+			}, 1000);
+		}
+	});
+	vid2[0].addEventListener('ended', (event) => {
+		if(event.type === 'ended' && mainSwiper.realIndex === 2) {
+			mainSwiper.slideNext(1000, {});
+			
+			setTimeout(() => {
+				vid2[0].pause();
+				vid2[0].currentTime = 0;
+			}, 1000);
+		}
+	});
+	vid3[0].addEventListener('ended', (event) => {
+		if(event.type === 'ended' && mainSwiper.realIndex === 4) {
+			mainSwiper.slideTo(0, 0, {});
+			
+			setTimeout(() => {
+				vid3[0].pause();
+				vid3[0].currentTime = 0;
+			}, 1000);
+		}
+	});
 };
 /*
 * CALLBACK :: end
