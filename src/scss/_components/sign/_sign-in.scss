@@ -92,7 +92,7 @@
 			label {
 				display: flex;
 				padding-bottom: 10px;
-				@extend %fontOpenSans;
+				// @extend %fontOpenSans;
 				font-size: 14px;
 				line-height: 19px;
 				color: #636B73;
@@ -107,7 +107,7 @@
 				border-radius: 10px;
 				border: 1px solid #CBDBE3;
 				background-color: #FAFAFA;
-				@extend %fontOpenSans;
+				// @extend %fontOpenSans;
 				font-size: 14px;
 				line-height: 19px;
 				color: #313731;
@@ -118,7 +118,7 @@
 		}
 
 		&-link {
-			@extend %fontOpenSans;
+			// @extend %fontOpenSans;
 			font-weight: 600;
 			font-size: 14px;
 			line-height: 19px;
@@ -128,7 +128,7 @@
 		}
 
 		&-info {
-			@extend %fontOpenSans;
+			// @extend %fontOpenSans;
 			text-align: right;
 			font-size: 14px;
 			line-height: 19px;
@@ -172,7 +172,7 @@
 		}
 
 		&-confirm {
-			@extend %fontOpenSans;
+			// @extend %fontOpenSans;
 			font-weight: 600;
 			font-size: 14px;
 			line-height: 19px;
@@ -182,7 +182,7 @@
 
 		&-back {
 			margin-top: 35px;
-			@extend %fontOpenSans;
+			// @extend %fontOpenSans;
 			font-weight: 600;
 			font-size: 14px;
 			line-height: 19px;

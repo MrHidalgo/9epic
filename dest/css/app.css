@@ -12,11 +12,6 @@
      object-position: center;
 }
 
-/* line 26, src/scss/_utilities/_extend.scss */
-.copyright__text, .c-btn span, .footer__form-message > div p, .menu__wrapper-bottom a span, .sign__form-field label, .sign__form-field input, .sign__form-link, .sign__form-info, .sign__form-confirm, .sign__form-back, .career__wrapper-2 p, .career__slogan, .describe__block-desc p, .contacts__wrapper-2 p, .contacts__slogan, .office__block-body span, .office__box-desc, .dashboard__wrapper-left-bottom a span, .dashboard__nav a span, .dashboard__indicator-badge span, .dashboard__indicator-project p, .dashboard__indicator-email span, .dashboard__box.dashboard__box--add > div p, .dashboard__box > div, .dashboard__account-details, .dashboard__switch, .nfound__desc, .nfound__btn {
-  font-family: 'Open Sans', sans-serif;
-}
-
 /*!
  * Hamburgers
  * @description Tasty CSS-animated hamburgers
@@ -357,7 +352,7 @@ body {
   line-height: 1.42857143;
   font-size: 14px;
   font-weight: normal;
-  font-family: "Prompt", sans-serif;
+  font-family: "Lato", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -2473,7 +2468,7 @@ picture {
 
 /* line 117, src/scss/_components/homepage/_main.scss */
 .main__title {
-  font-weight: bold;
+  font-weight: 800;
   font-size: 72px;
   line-height: 109px;
   color: #121E31;
@@ -2681,11 +2676,12 @@ picture {
           justify-content: center;
   width: 50px;
   height: 50px;
+  border: 1px solid #0A0A0A;
   -webkit-box-shadow: 0 10px 30px 0 rgba(22, 58, 95, 0.05);
           box-shadow: 0 10px 30px 0 rgba(22, 58, 95, 0.05);
   -webkit-border-radius: 50px;
           border-radius: 50px;
-  background-color: #00b94f;
+  background-color: transparent;
   -webkit-transition: background-color 0.3s ease-in-out;
   -o-transition: background-color 0.3s ease-in-out;
   transition: background-color 0.3s ease-in-out;
@@ -2699,94 +2695,94 @@ picture {
   }
 }
 
-/* line 251, src/scss/_components/homepage/_main.scss */
+/* line 252, src/scss/_components/homepage/_main.scss */
 .main__navigation.swiper-button-disabled {
+  opacity: 0.55;
   pointer-events: none;
-  background-color: rgba(0, 185, 79, 0.5);
   -webkit-transition: background-color 0.3s ease-in-out;
   -o-transition: background-color 0.3s ease-in-out;
   transition: background-color 0.3s ease-in-out;
 }
 
 @media screen and (max-width: 767px) {
-  /* line 251, src/scss/_components/homepage/_main.scss */
+  /* line 252, src/scss/_components/homepage/_main.scss */
   .main__navigation.swiper-button-disabled {
     opacity: 0 !important;
   }
 }
 
-/* line 260, src/scss/_components/homepage/_main.scss */
+/* line 261, src/scss/_components/homepage/_main.scss */
 .main__navigation--prev {
   left: 25px;
   padding-right: 4px;
 }
 
-/* line 265, src/scss/_components/homepage/_main.scss */
+/* line 266, src/scss/_components/homepage/_main.scss */
 .main__navigation--next {
   right: 25px;
   padding-left: 4px;
 }
 
-/* line 269, src/scss/_components/homepage/_main.scss */
+/* line 270, src/scss/_components/homepage/_main.scss */
 .main__navigation--next .icon-font {
   -webkit-transform: scaleX(-1);
       -ms-transform: scaleX(-1);
           transform: scaleX(-1);
 }
 
-/* line 274, src/scss/_components/homepage/_main.scss */
+/* line 275, src/scss/_components/homepage/_main.scss */
 .main__navigation .icon-font {
-  color: #ffffff;
+  color: #0A0A0A;
 }
 
 @media screen and (max-width: 767px) {
-  /* line 274, src/scss/_components/homepage/_main.scss */
+  /* line 275, src/scss/_components/homepage/_main.scss */
   .main__navigation .icon-font {
     font-size: 12px;
   }
 }
 
-/* line 282, src/scss/_components/homepage/_main.scss */
+/* line 283, src/scss/_components/homepage/_main.scss */
 .main .c-btn {
   min-width: 200px;
   height: 69px;
 }
 
 @media screen and (max-width: 1439px) {
-  /* line 282, src/scss/_components/homepage/_main.scss */
+  /* line 283, src/scss/_components/homepage/_main.scss */
   .main .c-btn {
     height: 63px;
   }
 }
 
 @media screen and (max-width: 1279px) {
-  /* line 282, src/scss/_components/homepage/_main.scss */
+  /* line 283, src/scss/_components/homepage/_main.scss */
   .main .c-btn {
     height: 60px;
   }
 }
 
 @media screen and (max-width: 1023px) {
-  /* line 282, src/scss/_components/homepage/_main.scss */
+  /* line 283, src/scss/_components/homepage/_main.scss */
   .main .c-btn {
     min-width: 175px;
     height: 57px;
   }
 }
 
-/* line 296, src/scss/_components/homepage/_main.scss */
+/* line 297, src/scss/_components/homepage/_main.scss */
 .main .c-btn + .c-btn {
   margin-left: 15px;
 }
 
-/* line 300, src/scss/_components/homepage/_main.scss */
+/* line 301, src/scss/_components/homepage/_main.scss */
 .main .c-btn span {
   font-weight: bold;
   font-size: 17px;
 }
 
 @media screen and (max-width: 1023px) {
-  /* line 300, src/scss/_components/homepage/_main.scss */
+  /* line 301, src/scss/_components/homepage/_main.scss */
   .main .c-btn span {
     font-size: 15px;
   }
