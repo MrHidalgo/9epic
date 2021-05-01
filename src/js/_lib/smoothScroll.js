@@ -34,7 +34,7 @@ const initSmoothScroll = (btnName = "[anchor-js]", animateSpeed = 550) => {
       header: '#header',
       ignore: '.hamburger',
       topOnEmptyHash: false,
-      speed: 1250,
+      speed: 750,
       // easing: 'Linear',
       updateURL: false,
       popstate: false,

@@ -2346,6 +2346,7 @@ picture {
 /* line 40, src/scss/_components/homepage/_main.scss */
 .main .swiper-pagination-bullet {
   opacity: 1;
+  outline: none;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2365,7 +2366,7 @@ picture {
   background: linear-gradient(177.56deg, #4097D9 -48.98%, #30C4A0 68.87%, #00B94F 180.55%);
 }
 
-/* line 50, src/scss/_components/homepage/_main.scss */
+/* line 51, src/scss/_components/homepage/_main.scss */
 .main .swiper-pagination-bullet:hover:before {
   -webkit-transform: scale(0.5);
       -ms-transform: scale(0.5);
@@ -2377,7 +2378,7 @@ picture {
   transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
-/* line 56, src/scss/_components/homepage/_main.scss */
+/* line 57, src/scss/_components/homepage/_main.scss */
 .main .swiper-pagination-bullet:before {
   content: '';
   position: absolute;
@@ -2399,19 +2400,19 @@ picture {
   transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
-/* line 68, src/scss/_components/homepage/_main.scss */
+/* line 69, src/scss/_components/homepage/_main.scss */
 .main .swiper-pagination-bullet-active {
   background: -webkit-linear-gradient(272.44deg, #4097D9 -48.98%, #30C4A0 68.87%, #00B94F 180.55%);
   background: -o-linear-gradient(272.44deg, #4097D9 -48.98%, #30C4A0 68.87%, #00B94F 180.55%);
   background: linear-gradient(177.56deg, #4097D9 -48.98%, #30C4A0 68.87%, #00B94F 180.55%);
 }
 
-/* line 71, src/scss/_components/homepage/_main.scss */
+/* line 72, src/scss/_components/homepage/_main.scss */
 .main .swiper-pagination-bullet-active:before {
   opacity: 0;
 }
 
-/* line 79, src/scss/_components/homepage/_main.scss */
+/* line 80, src/scss/_components/homepage/_main.scss */
 .main__wrapper {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2427,18 +2428,18 @@ picture {
   padding-bottom: 120px;
 }
 
-/* line 87, src/scss/_components/homepage/_main.scss */
+/* line 88, src/scss/_components/homepage/_main.scss */
 .main__wrapper-left, .main__wrapper-right {
   width: 50%;
 }
 
-/* line 93, src/scss/_components/homepage/_main.scss */
+/* line 94, src/scss/_components/homepage/_main.scss */
 .main__wrapper-left > div {
   width: 100%;
   max-width: 465px;
 }
 
-/* line 99, src/scss/_components/homepage/_main.scss */
+/* line 100, src/scss/_components/homepage/_main.scss */
 .main__wrapper-right {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2454,7 +2455,7 @@ picture {
           justify-content: center;
 }
 
-/* line 104, src/scss/_components/homepage/_main.scss */
+/* line 105, src/scss/_components/homepage/_main.scss */
 .main__wrapper-right img,
 .main__wrapper-right svg,
 .main__wrapper-right video,
@@ -2466,7 +2467,7 @@ picture {
   margin-right: auto;
 }
 
-/* line 117, src/scss/_components/homepage/_main.scss */
+/* line 118, src/scss/_components/homepage/_main.scss */
 .main__title {
   font-weight: 800;
   font-size: 72px;
@@ -2475,7 +2476,7 @@ picture {
 }
 
 @media screen and (max-width: 1439px) {
-  /* line 117, src/scss/_components/homepage/_main.scss */
+  /* line 118, src/scss/_components/homepage/_main.scss */
   .main__title {
     font-size: 62px;
     line-height: 99px;
@@ -2483,7 +2484,7 @@ picture {
 }
 
 @media screen and (max-width: 1279px) {
-  /* line 117, src/scss/_components/homepage/_main.scss */
+  /* line 118, src/scss/_components/homepage/_main.scss */
   .main__title {
     font-size: 52px;
     line-height: 89px;
@@ -2491,7 +2492,7 @@ picture {
 }
 
 @media screen and (max-width: 1023px) {
-  /* line 117, src/scss/_components/homepage/_main.scss */
+  /* line 118, src/scss/_components/homepage/_main.scss */
   .main__title {
     font-size: 48px;
     line-height: 82px;
@@ -2499,7 +2500,7 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 117, src/scss/_components/homepage/_main.scss */
+  /* line 118, src/scss/_components/homepage/_main.scss */
   .main__title {
     font-size: 30px;
     line-height: 40px;
@@ -2507,7 +2508,7 @@ picture {
   }
 }
 
-/* line 141, src/scss/_components/homepage/_main.scss */
+/* line 142, src/scss/_components/homepage/_main.scss */
 .main__subtitle {
   padding-bottom: 20px;
   font-weight: 600;
@@ -2517,7 +2518,7 @@ picture {
 }
 
 @media screen and (max-width: 1439px) {
-  /* line 141, src/scss/_components/homepage/_main.scss */
+  /* line 142, src/scss/_components/homepage/_main.scss */
   .main__subtitle {
     font-size: 33px;
     line-height: 44px;
@@ -2525,7 +2526,7 @@ picture {
 }
 
 @media screen and (max-width: 1279px) {
-  /* line 141, src/scss/_components/homepage/_main.scss */
+  /* line 142, src/scss/_components/homepage/_main.scss */
   .main__subtitle {
     font-size: 30px;
     line-height: 40px;
@@ -2533,7 +2534,7 @@ picture {
 }
 
 @media screen and (max-width: 1023px) {
-  /* line 141, src/scss/_components/homepage/_main.scss */
+  /* line 142, src/scss/_components/homepage/_main.scss */
   .main__subtitle {
     font-size: 26px;
     line-height: 36px;
@@ -2541,7 +2542,7 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 141, src/scss/_components/homepage/_main.scss */
+  /* line 142, src/scss/_components/homepage/_main.scss */
   .main__subtitle {
     padding-bottom: 10px;
     font-size: 18px;
@@ -2550,7 +2551,7 @@ picture {
   }
 }
 
-/* line 167, src/scss/_components/homepage/_main.scss */
+/* line 168, src/scss/_components/homepage/_main.scss */
 .main__desc {
   padding-bottom: 60px;
   font-family: 'Open Sans', sans-serif;
@@ -2560,7 +2561,7 @@ picture {
 }
 
 @media screen and (max-width: 1439px) {
-  /* line 167, src/scss/_components/homepage/_main.scss */
+  /* line 168, src/scss/_components/homepage/_main.scss */
   .main__desc {
     font-size: 18px;
     line-height: 28px;
@@ -2568,7 +2569,7 @@ picture {
 }
 
 @media screen and (max-width: 1023px) {
-  /* line 167, src/scss/_components/homepage/_main.scss */
+  /* line 168, src/scss/_components/homepage/_main.scss */
   .main__desc {
     font-size: 16px;
     line-height: 26px;
@@ -2576,7 +2577,7 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 167, src/scss/_components/homepage/_main.scss */
+  /* line 168, src/scss/_components/homepage/_main.scss */
   .main__desc {
     width: 100%;
     max-width: 265px;
@@ -2589,7 +2590,7 @@ picture {
   }
 }
 
-/* line 193, src/scss/_components/homepage/_main.scss */
+/* line 194, src/scss/_components/homepage/_main.scss */
 .main__heading {
   font-weight: bold;
   font-size: 48px;
@@ -2598,7 +2599,7 @@ picture {
 }
 
 @media screen and (max-width: 1439px) {
-  /* line 193, src/scss/_components/homepage/_main.scss */
+  /* line 194, src/scss/_components/homepage/_main.scss */
   .main__heading {
     font-size: 44px;
     line-height: 63px;
@@ -2606,7 +2607,7 @@ picture {
 }
 
 @media screen and (max-width: 1279px) {
-  /* line 193, src/scss/_components/homepage/_main.scss */
+  /* line 194, src/scss/_components/homepage/_main.scss */
   .main__heading {
     font-size: 40px;
     line-height: 60px;
@@ -2614,7 +2615,7 @@ picture {
 }
 
 @media screen and (max-width: 1023px) {
-  /* line 193, src/scss/_components/homepage/_main.scss */
+  /* line 194, src/scss/_components/homepage/_main.scss */
   .main__heading {
     font-size: 35px;
     line-height: 52px;
@@ -2622,14 +2623,14 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 193, src/scss/_components/homepage/_main.scss */
+  /* line 194, src/scss/_components/homepage/_main.scss */
   .main__heading {
     font-size: 26px;
     line-height: 40px;
   }
 }
 
-/* line 216, src/scss/_components/homepage/_main.scss */
+/* line 217, src/scss/_components/homepage/_main.scss */
 .main__label {
   padding-bottom: 20px;
   font-weight: 600;
@@ -2639,7 +2640,7 @@ picture {
 }
 
 @media screen and (max-width: 1439px) {
-  /* line 216, src/scss/_components/homepage/_main.scss */
+  /* line 217, src/scss/_components/homepage/_main.scss */
   .main__label {
     font-size: 22px;
     line-height: 32px;
@@ -2647,14 +2648,14 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 216, src/scss/_components/homepage/_main.scss */
+  /* line 217, src/scss/_components/homepage/_main.scss */
   .main__label {
     font-size: 18px;
     line-height: 26px;
   }
 }
 
-/* line 232, src/scss/_components/homepage/_main.scss */
+/* line 233, src/scss/_components/homepage/_main.scss */
 .main__navigation {
   z-index: 10;
   position: absolute;
@@ -2688,14 +2689,14 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 232, src/scss/_components/homepage/_main.scss */
+  /* line 233, src/scss/_components/homepage/_main.scss */
   .main__navigation {
     width: 35px;
     height: 35px;
   }
 }
 
-/* line 252, src/scss/_components/homepage/_main.scss */
+/* line 253, src/scss/_components/homepage/_main.scss */
 .main__navigation.swiper-button-disabled {
   opacity: 0.55;
   pointer-events: none;
@@ -2705,84 +2706,84 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 252, src/scss/_components/homepage/_main.scss */
+  /* line 253, src/scss/_components/homepage/_main.scss */
   .main__navigation.swiper-button-disabled {
     opacity: 0 !important;
   }
 }
 
-/* line 261, src/scss/_components/homepage/_main.scss */
+/* line 262, src/scss/_components/homepage/_main.scss */
 .main__navigation--prev {
   left: 25px;
   padding-right: 4px;
 }
 
-/* line 266, src/scss/_components/homepage/_main.scss */
+/* line 267, src/scss/_components/homepage/_main.scss */
 .main__navigation--next {
   right: 25px;
   padding-left: 4px;
 }
 
-/* line 270, src/scss/_components/homepage/_main.scss */
+/* line 271, src/scss/_components/homepage/_main.scss */
 .main__navigation--next .icon-font {
   -webkit-transform: scaleX(-1);
       -ms-transform: scaleX(-1);
           transform: scaleX(-1);
 }
 
-/* line 275, src/scss/_components/homepage/_main.scss */
+/* line 276, src/scss/_components/homepage/_main.scss */
 .main__navigation .icon-font {
   color: #0A0A0A;
 }
 
 @media screen and (max-width: 767px) {
-  /* line 275, src/scss/_components/homepage/_main.scss */
+  /* line 276, src/scss/_components/homepage/_main.scss */
   .main__navigation .icon-font {
     font-size: 12px;
   }
 }
 
-/* line 283, src/scss/_components/homepage/_main.scss */
+/* line 284, src/scss/_components/homepage/_main.scss */
 .main .c-btn {
   min-width: 200px;
   height: 69px;
 }
 
 @media screen and (max-width: 1439px) {
-  /* line 283, src/scss/_components/homepage/_main.scss */
+  /* line 284, src/scss/_components/homepage/_main.scss */
   .main .c-btn {
     height: 63px;
   }
 }
 
 @media screen and (max-width: 1279px) {
-  /* line 283, src/scss/_components/homepage/_main.scss */
+  /* line 284, src/scss/_components/homepage/_main.scss */
   .main .c-btn {
     height: 60px;
   }
 }
 
 @media screen and (max-width: 1023px) {
-  /* line 283, src/scss/_components/homepage/_main.scss */
+  /* line 284, src/scss/_components/homepage/_main.scss */
   .main .c-btn {
     min-width: 175px;
     height: 57px;
   }
 }
 
-/* line 297, src/scss/_components/homepage/_main.scss */
+/* line 298, src/scss/_components/homepage/_main.scss */
 .main .c-btn + .c-btn {
   margin-left: 15px;
 }
 
-/* line 301, src/scss/_components/homepage/_main.scss */
+/* line 302, src/scss/_components/homepage/_main.scss */
 .main .c-btn span {
   font-weight: bold;
   font-size: 17px;
 }
 
 @media screen and (max-width: 1023px) {
-  /* line 301, src/scss/_components/homepage/_main.scss */
+  /* line 302, src/scss/_components/homepage/_main.scss */
   .main .c-btn span {
     font-size: 15px;
   }

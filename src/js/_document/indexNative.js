@@ -798,6 +798,15 @@ const mainSVGAnimation = () => {
 			slideChange: function (swiper) {
 				let activeIDX = Number(swiper.realIndex);
 				
+				vid1[0].pause();
+				vid1[0].currentTime = 0;
+				vid2[0].pause();
+				vid2[0].currentTime = 0;
+				vid3[0].pause();
+				vid3[0].currentTime = 0;
+				tweenAnimation1.kill().restart().pause();
+				tweenAnimation2.kill().restart().pause();
+				
 				switch (activeIDX) {
 					case 0:
 						vid1[0].play();
@@ -909,6 +918,23 @@ const mainSVGAnimation = () => {
 				vid3[0].currentTime = 0;
 			}, 1000);
 		}
+	});
+	
+	$('[restart-js]').on('click', (ev) => {
+		vid1[0].pause();
+		vid1[0].currentTime = 0;
+		vid2[0].pause();
+		vid2[0].currentTime = 0;
+		vid3[0].pause();
+		vid3[0].currentTime = 0;
+		tweenAnimation1.kill().restart().pause();
+		tweenAnimation2.kill().restart().pause();
+		
+		mainSwiper.slideTo(0, 0, {});
+		
+		setTimeout(() => {
+			vid1[0].play();
+		}, 500);
 	});
 };
 /*
